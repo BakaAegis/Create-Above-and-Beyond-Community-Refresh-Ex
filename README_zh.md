@@ -31,4 +31,14 @@
 
 本整合包和原 **永无止境：超越常新（CABR）** 的存档是兼容的。
 
+### 特别感谢
+
+感谢原CABR制作组制作了原始的整合包版本。
+
+感谢Ein_Name提供美工和建议。
+
+感谢Qi-Month, Vanilla, Keyxel, Crpbnrz提供技术支持。
+
+感谢Kristin_Ketra提供建议。
+
 ## 协议声明：本项目使用 GPL-3.0 协议。

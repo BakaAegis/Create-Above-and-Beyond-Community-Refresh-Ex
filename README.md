@@ -31,4 +31,14 @@ The modpack adds a large number of blocks, items, and fluids, as well as custom 
 
 This modpack is compatible with original **Create: Above and Beyond Community Refresh (CABR)** saves.
 
+### Special Thanks
+
+Thanks to Original CABR Developing Team, they made the original verison of this modpack.
+
+Thanks to Ein_Name for making the icon and giving some ideas.
+
+Thanks to Qi-Month, Vanilla, Keyxel, Crpbnrz for technical support.
+
+Thanks to Kristin_Ketra for giving ideas. 
+
 ## License: This project uses the GPL-3.0 license.
