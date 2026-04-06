@@ -53,50 +53,23 @@
 				id: "tconstruct:sword"
 				Count: 1b
 				tag: {
+					tic_persistent: {
+						"tconstruct:sharpness": 36
+						upgrades: -4
+						"tconstruct:swiftstrike": 72
+					}
 					tic_multipliers: {
 						"tconstruct:mining_speed": 0.5f
 						"tconstruct:durability": 1.1f
 					}
-					tic_persistent: {
-						upgrades: -4
-						"tconstruct:sharpness": 36
-						"tconstruct:swiftstrike": 72
-					}
-					Damage: 0
 					tic_stats: {
+						"tconstruct:attack_speed": 1.5119998f
+						"tconstruct:mining_speed": 3.4375f
 						"tconstruct:attack_damage": 13.860001f
 						"tconstruct:harvest_tier": "minecraft:netherite"
 						"tconstruct:durability": 1312.0801f
-						"tconstruct:mining_speed": 3.4375f
-						"tconstruct:attack_speed": 1.5119998f
 					}
-					tic_upgrades: [
-						{
-							name: "tconstruct:swiftstrike"
-							level: 1s
-						}
-						{
-							name: "tconstruct:diamond"
-							level: 1s
-						}
-						{
-							name: "tconstruct:netherite"
-							level: 1s
-						}
-						{
-							name: "tconstruct:writable"
-							level: 1s
-						}
-						{
-							name: "tconstruct:sharpness"
-							level: 1s
-						}
-					]
-					tic_materials: [
-						"create_dd:industrial_iron"
-						"tconstruct:nahuatl"
-						"tconstruct:lead"
-					]
+					tic_broken: 0b
 					tic_modifiers: [
 						{
 							name: "tconstruct:swiftstrike"
@@ -135,12 +108,39 @@
 							level: 1s
 						}
 					]
-					tic_broken: 0b
+					tic_upgrades: [
+						{
+							name: "tconstruct:swiftstrike"
+							level: 1s
+						}
+						{
+							name: "tconstruct:diamond"
+							level: 1s
+						}
+						{
+							name: "tconstruct:netherite"
+							level: 1s
+						}
+						{
+							name: "tconstruct:writable"
+							level: 1s
+						}
+						{
+							name: "tconstruct:sharpness"
+							level: 1s
+						}
+					]
+					Damage: 0
+					tic_materials: [
+						"create_dd:industrial_iron"
+						"tconstruct:nahuatl"
+						"tconstruct:lead"
+					]
 					tic_volatile_data: {
+						abilities: 1
+						"tconstruct:rarity": 2
 						"tconstruct:indestructible": 1b
 						upgrades: 4
-						"tconstruct:rarity": 2
-						abilities: 1
 					}
 				}
 			}
@@ -182,50 +182,23 @@
 						id: "tconstruct:sword"
 						Count: 1b
 						tag: {
+							tic_persistent: {
+								"tconstruct:sharpness": 36
+								upgrades: -4
+								"tconstruct:swiftstrike": 72
+							}
 							tic_multipliers: {
 								"tconstruct:mining_speed": 0.5f
 								"tconstruct:durability": 1.1f
 							}
-							tic_persistent: {
-								upgrades: -4
-								"tconstruct:sharpness": 36
-								"tconstruct:swiftstrike": 72
-							}
-							Damage: 17
 							tic_stats: {
+								"tconstruct:attack_speed": 1.5119998f
+								"tconstruct:mining_speed": 3.4375f
 								"tconstruct:attack_damage": 13.860001f
 								"tconstruct:harvest_tier": "minecraft:netherite"
 								"tconstruct:durability": 1312.0801f
-								"tconstruct:mining_speed": 3.4375f
-								"tconstruct:attack_speed": 1.5119998f
 							}
-							tic_upgrades: [
-								{
-									name: "tconstruct:swiftstrike"
-									level: 1s
-								}
-								{
-									name: "tconstruct:diamond"
-									level: 1s
-								}
-								{
-									name: "tconstruct:netherite"
-									level: 1s
-								}
-								{
-									name: "tconstruct:writable"
-									level: 1s
-								}
-								{
-									name: "tconstruct:sharpness"
-									level: 1s
-								}
-							]
-							tic_materials: [
-								"create_dd:industrial_iron"
-								"tconstruct:nahuatl"
-								"tconstruct:lead"
-							]
+							tic_broken: 0b
 							tic_modifiers: [
 								{
 									name: "tconstruct:swiftstrike"
@@ -264,12 +237,39 @@
 									level: 1s
 								}
 							]
-							tic_broken: 0b
+							tic_upgrades: [
+								{
+									name: "tconstruct:swiftstrike"
+									level: 1s
+								}
+								{
+									name: "tconstruct:diamond"
+									level: 1s
+								}
+								{
+									name: "tconstruct:netherite"
+									level: 1s
+								}
+								{
+									name: "tconstruct:writable"
+									level: 1s
+								}
+								{
+									name: "tconstruct:sharpness"
+									level: 1s
+								}
+							]
+							Damage: 17
+							tic_materials: [
+								"create_dd:industrial_iron"
+								"tconstruct:nahuatl"
+								"tconstruct:lead"
+							]
 							tic_volatile_data: {
+								abilities: 1
+								"tconstruct:rarity": 2
 								"tconstruct:indestructible": 1b
 								upgrades: 4
-								"tconstruct:rarity": 2
-								abilities: 1
 							}
 						}
 					}
@@ -281,49 +281,22 @@
 						id: "tconstruct:pickaxe"
 						Count: 1b
 						tag: {
-							tic_multipliers: {
-								"tconstruct:mining_speed": 1.25f
-								"tconstruct:attack_damage": 1.25f
-							}
 							tic_persistent: {
 								upgrades: -5
 								"tconstruct:reinforced": 20
 							}
-							Damage: 12
+							tic_multipliers: {
+								"tconstruct:mining_speed": 1.25f
+								"tconstruct:attack_damage": 1.25f
+							}
 							tic_stats: {
+								"tconstruct:attack_speed": 1.3482001f
+								"tconstruct:mining_speed": 15.314376f
 								"tconstruct:attack_damage": 3.0f
 								"tconstruct:harvest_tier": "minecraft:netherite"
 								"tconstruct:durability": 1229.4f
-								"tconstruct:mining_speed": 15.314376f
-								"tconstruct:attack_speed": 1.3482001f
 							}
-							tic_upgrades: [
-								{
-									name: "tconstruct:diamond"
-									level: 1s
-								}
-								{
-									name: "tconstruct:reinforced"
-									level: 2s
-								}
-								{
-									name: "tconstruct:netherite"
-									level: 1s
-								}
-								{
-									name: "tconstruct:writable"
-									level: 1s
-								}
-								{
-									name: "tconstruct:emerald"
-									level: 1s
-								}
-							]
-							tic_materials: [
-								"tconstruct:rose_gold"
-								"tconstruct:cobalt"
-								"create_dd:industrial_iron"
-							]
+							tic_broken: 0b
 							tic_modifiers: [
 								{
 									name: "tconstruct:diamond"
@@ -362,12 +335,39 @@
 									level: 1s
 								}
 							]
-							tic_broken: 0b
+							tic_upgrades: [
+								{
+									name: "tconstruct:diamond"
+									level: 1s
+								}
+								{
+									name: "tconstruct:reinforced"
+									level: 2s
+								}
+								{
+									name: "tconstruct:netherite"
+									level: 1s
+								}
+								{
+									name: "tconstruct:writable"
+									level: 1s
+								}
+								{
+									name: "tconstruct:emerald"
+									level: 1s
+								}
+							]
+							Damage: 12
+							tic_materials: [
+								"tconstruct:rose_gold"
+								"tconstruct:cobalt"
+								"create_dd:industrial_iron"
+							]
 							tic_volatile_data: {
+								abilities: 1
+								"tconstruct:rarity": 2
 								"tconstruct:indestructible": 1b
 								upgrades: 5
-								"tconstruct:rarity": 2
-								abilities: 1
 							}
 						}
 					}
@@ -379,41 +379,22 @@
 						id: "tconstruct:pickadze"
 						Count: 1b
 						tag: {
-							tic_multipliers: {
-								"tconstruct:mining_speed": 0.9375f
-								"tconstruct:durability": 1.3f
-								"tconstruct:attack_damage": 1.4375f
-							}
 							tic_persistent: {
 								upgrades: -3
 							}
-							Damage: 316
+							tic_multipliers: {
+								"tconstruct:mining_speed": 0.9375f
+								"tconstruct:attack_damage": 1.4375f
+								"tconstruct:durability": 1.3f
+							}
 							tic_stats: {
+								"tconstruct:attack_speed": 0.97499996f
+								"tconstruct:mining_speed": 5.15625f
 								"tconstruct:attack_damage": 7.452f
 								"tconstruct:harvest_tier": "minecraft:netherite"
 								"tconstruct:durability": 4387.5f
-								"tconstruct:mining_speed": 5.15625f
-								"tconstruct:attack_speed": 0.97499996f
 							}
-							tic_upgrades: [
-								{
-									name: "tconstruct:diamond"
-									level: 1s
-								}
-								{
-									name: "tconstruct:emerald"
-									level: 1s
-								}
-								{
-									name: "tconstruct:netherite"
-									level: 1s
-								}
-							]
-							tic_materials: [
-								"create_dd:industrial_iron"
-								"create_dd:industrial_iron"
-								"create_dd:industrial_iron"
-							]
+							tic_broken: 0b
 							tic_modifiers: [
 								{
 									name: "tconstruct:diamond"
@@ -436,12 +417,31 @@
 									level: 3s
 								}
 							]
-							tic_broken: 0b
+							tic_upgrades: [
+								{
+									name: "tconstruct:diamond"
+									level: 1s
+								}
+								{
+									name: "tconstruct:emerald"
+									level: 1s
+								}
+								{
+									name: "tconstruct:netherite"
+									level: 1s
+								}
+							]
+							Damage: 316
+							tic_materials: [
+								"create_dd:industrial_iron"
+								"create_dd:industrial_iron"
+								"create_dd:industrial_iron"
+							]
 							tic_volatile_data: {
+								abilities: 1
+								"tconstruct:rarity": 2
 								"tconstruct:indestructible": 1b
 								upgrades: 3
-								"tconstruct:rarity": 2
-								abilities: 1
 							}
 						}
 					}
@@ -453,41 +453,22 @@
 						id: "tconstruct:hand_axe"
 						Count: 1b
 						tag: {
+							tic_persistent: {
+								abilities: -1
+								upgrades: -2
+							}
 							tic_multipliers: {
 								"tconstruct:mining_speed": 1.25f
 								"tconstruct:attack_damage": 1.25f
 							}
-							tic_persistent: {
-								upgrades: -2
-								abilities: -1
-							}
-							Damage: 550
 							tic_stats: {
+								"tconstruct:attack_speed": 0.72225f
+								"tconstruct:mining_speed": 5.885f
 								"tconstruct:attack_damage": 10.9f
 								"tconstruct:harvest_tier": "minecraft:diamond"
 								"tconstruct:durability": 2812.5f
-								"tconstruct:mining_speed": 5.885f
-								"tconstruct:attack_speed": 0.72225f
 							}
-							tic_upgrades: [
-								{
-									name: "tconstruct:diamond"
-									level: 1s
-								}
-								{
-									name: "tconstruct:emerald"
-									level: 1s
-								}
-								{
-									name: "tconstruct:silky"
-									level: 1s
-								}
-							]
-							tic_materials: [
-								"create_dd:industrial_iron"
-								"create_dd:industrial_iron"
-								"tconstruct:cobalt"
-							]
+							tic_broken: 0b
 							tic_modifiers: [
 								{
 									name: "tconstruct:diamond"
@@ -514,10 +495,29 @@
 									level: 1s
 								}
 							]
-							tic_broken: 0b
+							tic_upgrades: [
+								{
+									name: "tconstruct:diamond"
+									level: 1s
+								}
+								{
+									name: "tconstruct:emerald"
+									level: 1s
+								}
+								{
+									name: "tconstruct:silky"
+									level: 1s
+								}
+							]
+							Damage: 550
+							tic_materials: [
+								"create_dd:industrial_iron"
+								"create_dd:industrial_iron"
+								"tconstruct:cobalt"
+							]
 							tic_volatile_data: {
-								"tconstruct:rarity": 1
 								abilities: 1
+								"tconstruct:rarity": 1
 								upgrades: 3
 							}
 						}

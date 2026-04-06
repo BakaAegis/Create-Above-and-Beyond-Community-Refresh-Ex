@@ -462,11 +462,11 @@
 						id: "create_confectionery:full_black_chocolate_bar"
 						Count: 1b
 						tag: {
+							RepairCost: 0
 							Damage: 0
 							display: {
 								Name: "{\"text\":\"玛氏巧克力\"}"
 							}
-							RepairCost: 0
 						}
 					}
 				}

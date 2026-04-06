@@ -567,238 +567,238 @@
 							{
 								id: "exchangers:end_exchanger"
 								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									voidItems: 0b
+									fuzzyPlacement: 0b
+									range: 0
 									blockstate: {
 										Name: "minecraft:air"
 									}
-									mode: 0
 									Damage: 0
-									forceDropItems: 0b
-									voidItems: 0b
-									fuzzyPlacementChance: 100
-									range: 0
-									fuzzyPlacement: 0b
-									directionalPlacement: 0b
 								}
 								Count: 1b
 							}
 							{
 								id: "exchangers:leadstone_exchanger"
 								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									voidItems: 0b
+									fuzzyPlacement: 0b
+									range: 0
 									blockstate: {
 										Name: "minecraft:air"
 									}
-									mode: 0
 									Damage: 0
-									forceDropItems: 0b
-									voidItems: 0b
-									fuzzyPlacementChance: 100
-									range: 0
-									fuzzyPlacement: 0b
-									directionalPlacement: 0b
 								}
 								Count: 1b
 							}
 							{
 								id: "exchangers:hardened_exchanger"
 								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									voidItems: 0b
+									fuzzyPlacement: 0b
+									range: 0
 									blockstate: {
 										Name: "minecraft:air"
 									}
-									mode: 0
 									Damage: 0
-									forceDropItems: 0b
-									voidItems: 0b
-									fuzzyPlacementChance: 100
-									range: 0
-									fuzzyPlacement: 0b
-									directionalPlacement: 0b
 								}
 								Count: 1b
 							}
 							{
 								id: "exchangers:reinforced_exchanger"
 								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									voidItems: 0b
+									fuzzyPlacement: 0b
+									range: 0
 									blockstate: {
 										Name: "minecraft:air"
 									}
-									mode: 0
 									Damage: 0
-									forceDropItems: 0b
-									voidItems: 0b
-									fuzzyPlacementChance: 100
-									range: 0
-									fuzzyPlacement: 0b
-									directionalPlacement: 0b
 								}
 								Count: 1b
 							}
 							{
 								id: "exchangers:signalum_exchanger"
 								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									voidItems: 0b
+									fuzzyPlacement: 0b
+									range: 0
 									blockstate: {
 										Name: "minecraft:air"
 									}
-									mode: 0
 									Damage: 0
-									forceDropItems: 0b
-									voidItems: 0b
-									fuzzyPlacementChance: 100
-									range: 0
-									fuzzyPlacement: 0b
-									directionalPlacement: 0b
 								}
 								Count: 1b
 							}
 							{
 								id: "exchangers:resonant_exchanger"
 								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									voidItems: 0b
+									fuzzyPlacement: 0b
+									range: 0
 									blockstate: {
 										Name: "minecraft:air"
 									}
-									mode: 0
 									Damage: 0
-									forceDropItems: 0b
-									voidItems: 0b
-									fuzzyPlacementChance: 100
-									range: 0
-									fuzzyPlacement: 0b
-									directionalPlacement: 0b
 								}
 								Count: 1b
 							}
 							{
 								id: "exchangers:tuberous_exchanger"
 								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									voidItems: 0b
+									fuzzyPlacement: 0b
+									range: 0
 									blockstate: {
 										Name: "minecraft:air"
 									}
-									mode: 0
 									Damage: 0
-									forceDropItems: 0b
-									voidItems: 0b
-									fuzzyPlacementChance: 100
-									range: 0
-									fuzzyPlacement: 0b
-									directionalPlacement: 0b
 								}
 								Count: 1b
 							}
 							{
 								id: "exchangers:creative_exchanger"
 								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									voidItems: 0b
+									fuzzyPlacement: 0b
+									range: 0
 									blockstate: {
 										Name: "minecraft:air"
 									}
-									mode: 0
 									Damage: 0
-									forceDropItems: 0b
-									voidItems: 0b
-									fuzzyPlacementChance: 100
-									range: 0
-									fuzzyPlacement: 0b
-									directionalPlacement: 0b
 								}
 								Count: 1b
 							}
 							{
 								id: "exchangers:wooden_exchanger"
 								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									voidItems: 0b
+									fuzzyPlacement: 0b
+									range: 0
 									blockstate: {
 										Name: "minecraft:air"
 									}
-									mode: 0
 									Damage: 0
-									forceDropItems: 0b
-									voidItems: 0b
-									fuzzyPlacementChance: 100
-									range: 0
-									fuzzyPlacement: 0b
-									directionalPlacement: 0b
 								}
 								Count: 1b
 							}
 							{
 								id: "exchangers:stone_exchanger"
 								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									voidItems: 0b
+									fuzzyPlacement: 0b
+									range: 0
 									blockstate: {
 										Name: "minecraft:air"
 									}
-									mode: 0
 									Damage: 0
-									forceDropItems: 0b
-									voidItems: 0b
-									fuzzyPlacementChance: 100
-									range: 0
-									fuzzyPlacement: 0b
-									directionalPlacement: 0b
 								}
 								Count: 1b
 							}
 							{
 								id: "exchangers:golden_exchanger"
 								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									voidItems: 0b
+									fuzzyPlacement: 0b
+									range: 0
 									blockstate: {
 										Name: "minecraft:air"
 									}
-									mode: 0
 									Damage: 0
-									forceDropItems: 0b
-									voidItems: 0b
-									fuzzyPlacementChance: 100
-									range: 0
-									fuzzyPlacement: 0b
-									directionalPlacement: 0b
 								}
 								Count: 1b
 							}
 							{
 								id: "exchangers:iron_exchanger"
 								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									voidItems: 0b
+									fuzzyPlacement: 0b
+									range: 0
 									blockstate: {
 										Name: "minecraft:air"
 									}
-									mode: 0
 									Damage: 0
-									forceDropItems: 0b
-									voidItems: 0b
-									fuzzyPlacementChance: 100
-									range: 0
-									fuzzyPlacement: 0b
-									directionalPlacement: 0b
 								}
 								Count: 1b
 							}
 							{
 								id: "exchangers:diamond_exchanger"
 								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									voidItems: 0b
+									fuzzyPlacement: 0b
+									range: 0
 									blockstate: {
 										Name: "minecraft:air"
 									}
-									mode: 0
 									Damage: 0
-									forceDropItems: 0b
-									voidItems: 0b
-									fuzzyPlacementChance: 100
-									range: 0
-									fuzzyPlacement: 0b
-									directionalPlacement: 0b
 								}
 								Count: 1b
 							}
 							{
 								id: "exchangers:emerald_exchanger"
 								tag: {
+									mode: 0
+									fuzzyPlacementChance: 100
+									directionalPlacement: 0b
+									forceDropItems: 0b
+									voidItems: 0b
+									fuzzyPlacement: 0b
+									range: 0
 									blockstate: {
 										Name: "minecraft:air"
 									}
-									mode: 0
 									Damage: 0
-									forceDropItems: 0b
-									voidItems: 0b
-									fuzzyPlacementChance: 100
-									range: 0
-									fuzzyPlacement: 0b
-									directionalPlacement: 0b
 								}
 								Count: 1b
 							}

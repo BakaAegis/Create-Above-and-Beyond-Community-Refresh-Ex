@@ -237,22 +237,22 @@
 				tag: {
 					Properties: { }
 					BlockEntityTag: {
-						AmountIn: 1000
 						AmountOut: 1000
 						RSControl: {
-							RSMode: 0b
 							RSThreshold: 0b
+							RSMode: 0b
+						}
+						Xfer: {
+							XferOut: 1b
+							XferIn: 0b
 						}
 						TankInv: [{
-							Amount: 32000
 							FluidName: "kubejs:matrix"
 							Capacity: 32000
 							Tank: 0b
+							Amount: 32000
 						}]
-						Xfer: {
-							XferIn: 0b
-							XferOut: 1b
-						}
+						AmountIn: 1000
 					}
 				}
 			}

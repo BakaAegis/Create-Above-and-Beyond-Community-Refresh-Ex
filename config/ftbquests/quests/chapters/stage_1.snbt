@@ -477,9 +477,6 @@
 						id: "metalbarrels:copper_barrel"
 						Count: 1b
 						tag: {
-							display: {
-								Lore: ["\"(+NBT)\""]
-							}
 							BlockEntityTag: {
 								inv: {
 									Size: 45
@@ -556,8 +553,11 @@
 										}
 									]
 								}
-								id: "metalbarrels:copper_tile"
 								ForgeCaps: { }
+								id: "metalbarrels:copper_tile"
+							}
+							display: {
+								Lore: ["\"(+NBT)\""]
 							}
 						}
 					}
