@@ -16,35 +16,515 @@
 	disable_toast: true
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
-	quests: [{
-		title: "{quest.thanks.list.title}"
-		x: -9.0d
-		y: -7.0d
-		shape: "circle"
-		subtitle: "{quest.thanks.list.subtitle}"
-		description: [
-			"{quest.thanks.list.text1}"
-			"{quest.thanks.list.text2}"
-			"{quest.thanks.list.text3}"
-			"{quest.thanks.list.text4}"
-		]
-		dependencies: ["7494ABC1DCFC7F69"]
-		hide: true
-		size: 2.2d
-		id: "09842CDC7A331BEE"
-		tasks: [{
-			id: "7C16EA0DB0F54BCB"
-			type: "item"
-			item: "minecraft:stick"
-		}]
-		rewards: [{
-			id: "70BC5824FF4A3B74"
-			type: "item"
-			team_reward: true
-			auto: "enabled"
-			item: "minecraft:debug_stick"
-			only_one: true
-		}]
-	}]
+	quests: [
+		{
+			title: "{quest.thanks.list.title}"
+			x: -9.0d
+			y: -7.0d
+			shape: "circle"
+			subtitle: "{quest.thanks.list.subtitle}"
+			description: [
+				"{quest.thanks.list.text1}"
+				"{quest.thanks.list.text2}"
+				"{quest.thanks.list.text3}"
+				"{quest.thanks.list.text4}"
+			]
+			dependencies: ["7494ABC1DCFC7F69"]
+			hide: true
+			size: 2.2d
+			id: "09842CDC7A331BEE"
+			tasks: [{
+				id: "7C16EA0DB0F54BCB"
+				type: "item"
+				item: "minecraft:stick"
+			}]
+			rewards: [{
+				id: "70BC5824FF4A3B74"
+				type: "item"
+				team_reward: true
+				auto: "enabled"
+				item: "minecraft:debug_stick"
+				only_one: true
+			}]
+		}
+		{
+			title: "{quest.thanks.list.title}"
+			icon: {
+				id: "tconstruct:sword"
+				Count: 1b
+				tag: {
+					tic_multipliers: {
+						"tconstruct:mining_speed": 0.5f
+						"tconstruct:durability": 1.1f
+					}
+					tic_persistent: {
+						upgrades: -4
+						"tconstruct:sharpness": 36
+						"tconstruct:swiftstrike": 72
+					}
+					Damage: 0
+					tic_stats: {
+						"tconstruct:attack_damage": 13.860001f
+						"tconstruct:harvest_tier": "minecraft:netherite"
+						"tconstruct:durability": 1312.0801f
+						"tconstruct:mining_speed": 3.4375f
+						"tconstruct:attack_speed": 1.5119998f
+					}
+					tic_upgrades: [
+						{
+							name: "tconstruct:swiftstrike"
+							level: 1s
+						}
+						{
+							name: "tconstruct:diamond"
+							level: 1s
+						}
+						{
+							name: "tconstruct:netherite"
+							level: 1s
+						}
+						{
+							name: "tconstruct:writable"
+							level: 1s
+						}
+						{
+							name: "tconstruct:sharpness"
+							level: 1s
+						}
+					]
+					tic_materials: [
+						"create_dd:industrial_iron"
+						"tconstruct:nahuatl"
+						"tconstruct:lead"
+					]
+					tic_modifiers: [
+						{
+							name: "tconstruct:swiftstrike"
+							level: 1s
+						}
+						{
+							name: "tconstruct:diamond"
+							level: 1s
+						}
+						{
+							name: "tconstruct:netherite"
+							level: 1s
+						}
+						{
+							name: "tconstruct:sharpness"
+							level: 1s
+						}
+						{
+							name: "tconstruct:magnetic"
+							level: 1s
+						}
+						{
+							name: "tconstruct:lacerating"
+							level: 1s
+						}
+						{
+							name: "tconstruct:heavy"
+							level: 1s
+						}
+						{
+							name: "tconstruct:silky_shears"
+							level: 1s
+						}
+						{
+							name: "tconstruct:writable"
+							level: 1s
+						}
+					]
+					tic_broken: 0b
+					tic_volatile_data: {
+						"tconstruct:indestructible": 1b
+						upgrades: 4
+						"tconstruct:rarity": 2
+						abilities: 1
+					}
+				}
+			}
+			x: -9.0d
+			y: -3.0d
+			shape: "circle"
+			subtitle: "CABR:EX制作人员表"
+			description: [
+				"感谢以往的创作者们，是他们才让这个整合包成为可能。"
+				"感谢一路走来的支持者们，是他们帮助我制作了这个整合包。"
+				"感谢你，是你玩到了这里，才看到了这句话。"
+				""
+				"STAFF:"
+				"魔改：一只神盾，ein_Name"
+				"美术：ein_Name"
+				"特别鸣谢：Qi_Month，Vanilla"
+				"{quest.overview.stage_5_finish.text3}"
+			]
+			dependencies: ["09842CDC7A331BEE"]
+			size: 2.2d
+			id: "182C3E91408D9C3E"
+			tasks: [
+				{
+					id: "19AA5951B7B7E897"
+					type: "checkmark"
+					title: "好的"
+				}
+				{
+					id: "550CD90413F901ED"
+					type: "checkmark"
+					title: "作者毕业时候的装备→"
+				}
+			]
+			rewards: [
+				{
+					id: "4DEE12AB7AE75FE5"
+					type: "item"
+					item: {
+						id: "tconstruct:sword"
+						Count: 1b
+						tag: {
+							tic_multipliers: {
+								"tconstruct:mining_speed": 0.5f
+								"tconstruct:durability": 1.1f
+							}
+							tic_persistent: {
+								upgrades: -4
+								"tconstruct:sharpness": 36
+								"tconstruct:swiftstrike": 72
+							}
+							Damage: 17
+							tic_stats: {
+								"tconstruct:attack_damage": 13.860001f
+								"tconstruct:harvest_tier": "minecraft:netherite"
+								"tconstruct:durability": 1312.0801f
+								"tconstruct:mining_speed": 3.4375f
+								"tconstruct:attack_speed": 1.5119998f
+							}
+							tic_upgrades: [
+								{
+									name: "tconstruct:swiftstrike"
+									level: 1s
+								}
+								{
+									name: "tconstruct:diamond"
+									level: 1s
+								}
+								{
+									name: "tconstruct:netherite"
+									level: 1s
+								}
+								{
+									name: "tconstruct:writable"
+									level: 1s
+								}
+								{
+									name: "tconstruct:sharpness"
+									level: 1s
+								}
+							]
+							tic_materials: [
+								"create_dd:industrial_iron"
+								"tconstruct:nahuatl"
+								"tconstruct:lead"
+							]
+							tic_modifiers: [
+								{
+									name: "tconstruct:swiftstrike"
+									level: 1s
+								}
+								{
+									name: "tconstruct:diamond"
+									level: 1s
+								}
+								{
+									name: "tconstruct:netherite"
+									level: 1s
+								}
+								{
+									name: "tconstruct:sharpness"
+									level: 1s
+								}
+								{
+									name: "tconstruct:magnetic"
+									level: 1s
+								}
+								{
+									name: "tconstruct:lacerating"
+									level: 1s
+								}
+								{
+									name: "tconstruct:heavy"
+									level: 1s
+								}
+								{
+									name: "tconstruct:silky_shears"
+									level: 1s
+								}
+								{
+									name: "tconstruct:writable"
+									level: 1s
+								}
+							]
+							tic_broken: 0b
+							tic_volatile_data: {
+								"tconstruct:indestructible": 1b
+								upgrades: 4
+								"tconstruct:rarity": 2
+								abilities: 1
+							}
+						}
+					}
+				}
+				{
+					id: "0EF08887FC7277E7"
+					type: "item"
+					item: {
+						id: "tconstruct:pickaxe"
+						Count: 1b
+						tag: {
+							tic_multipliers: {
+								"tconstruct:mining_speed": 1.25f
+								"tconstruct:attack_damage": 1.25f
+							}
+							tic_persistent: {
+								upgrades: -5
+								"tconstruct:reinforced": 20
+							}
+							Damage: 12
+							tic_stats: {
+								"tconstruct:attack_damage": 3.0f
+								"tconstruct:harvest_tier": "minecraft:netherite"
+								"tconstruct:durability": 1229.4f
+								"tconstruct:mining_speed": 15.314376f
+								"tconstruct:attack_speed": 1.3482001f
+							}
+							tic_upgrades: [
+								{
+									name: "tconstruct:diamond"
+									level: 1s
+								}
+								{
+									name: "tconstruct:reinforced"
+									level: 2s
+								}
+								{
+									name: "tconstruct:netherite"
+									level: 1s
+								}
+								{
+									name: "tconstruct:writable"
+									level: 1s
+								}
+								{
+									name: "tconstruct:emerald"
+									level: 1s
+								}
+							]
+							tic_materials: [
+								"tconstruct:rose_gold"
+								"tconstruct:cobalt"
+								"create_dd:industrial_iron"
+							]
+							tic_modifiers: [
+								{
+									name: "tconstruct:diamond"
+									level: 1s
+								}
+								{
+									name: "tconstruct:reinforced"
+									level: 2s
+								}
+								{
+									name: "tconstruct:netherite"
+									level: 1s
+								}
+								{
+									name: "tconstruct:emerald"
+									level: 1s
+								}
+								{
+									name: "tconstruct:pierce"
+									level: 1s
+								}
+								{
+									name: "tconstruct:lightweight"
+									level: 1s
+								}
+								{
+									name: "tconstruct:magnetic"
+									level: 1s
+								}
+								{
+									name: "tconstruct:enhanced"
+									level: 1s
+								}
+								{
+									name: "tconstruct:writable"
+									level: 1s
+								}
+							]
+							tic_broken: 0b
+							tic_volatile_data: {
+								"tconstruct:indestructible": 1b
+								upgrades: 5
+								"tconstruct:rarity": 2
+								abilities: 1
+							}
+						}
+					}
+				}
+				{
+					id: "7A9A5E30F6A4ED5A"
+					type: "item"
+					item: {
+						id: "tconstruct:pickadze"
+						Count: 1b
+						tag: {
+							tic_multipliers: {
+								"tconstruct:mining_speed": 0.9375f
+								"tconstruct:durability": 1.3f
+								"tconstruct:attack_damage": 1.4375f
+							}
+							tic_persistent: {
+								upgrades: -3
+							}
+							Damage: 316
+							tic_stats: {
+								"tconstruct:attack_damage": 7.452f
+								"tconstruct:harvest_tier": "minecraft:netherite"
+								"tconstruct:durability": 4387.5f
+								"tconstruct:mining_speed": 5.15625f
+								"tconstruct:attack_speed": 0.97499996f
+							}
+							tic_upgrades: [
+								{
+									name: "tconstruct:diamond"
+									level: 1s
+								}
+								{
+									name: "tconstruct:emerald"
+									level: 1s
+								}
+								{
+									name: "tconstruct:netherite"
+									level: 1s
+								}
+							]
+							tic_materials: [
+								"create_dd:industrial_iron"
+								"create_dd:industrial_iron"
+								"create_dd:industrial_iron"
+							]
+							tic_modifiers: [
+								{
+									name: "tconstruct:diamond"
+									level: 1s
+								}
+								{
+									name: "tconstruct:emerald"
+									level: 1s
+								}
+								{
+									name: "tconstruct:netherite"
+									level: 1s
+								}
+								{
+									name: "tconstruct:pathing"
+									level: 1s
+								}
+								{
+									name: "tconstruct:magnetic"
+									level: 3s
+								}
+							]
+							tic_broken: 0b
+							tic_volatile_data: {
+								"tconstruct:indestructible": 1b
+								upgrades: 3
+								"tconstruct:rarity": 2
+								abilities: 1
+							}
+						}
+					}
+				}
+				{
+					id: "6F7E215B765AD15E"
+					type: "item"
+					item: {
+						id: "tconstruct:hand_axe"
+						Count: 1b
+						tag: {
+							tic_multipliers: {
+								"tconstruct:mining_speed": 1.25f
+								"tconstruct:attack_damage": 1.25f
+							}
+							tic_persistent: {
+								upgrades: -2
+								abilities: -1
+							}
+							Damage: 550
+							tic_stats: {
+								"tconstruct:attack_damage": 10.9f
+								"tconstruct:harvest_tier": "minecraft:diamond"
+								"tconstruct:durability": 2812.5f
+								"tconstruct:mining_speed": 5.885f
+								"tconstruct:attack_speed": 0.72225f
+							}
+							tic_upgrades: [
+								{
+									name: "tconstruct:diamond"
+									level: 1s
+								}
+								{
+									name: "tconstruct:emerald"
+									level: 1s
+								}
+								{
+									name: "tconstruct:silky"
+									level: 1s
+								}
+							]
+							tic_materials: [
+								"create_dd:industrial_iron"
+								"create_dd:industrial_iron"
+								"tconstruct:cobalt"
+							]
+							tic_modifiers: [
+								{
+									name: "tconstruct:diamond"
+									level: 1s
+								}
+								{
+									name: "tconstruct:emerald"
+									level: 1s
+								}
+								{
+									name: "tconstruct:silky"
+									level: 1s
+								}
+								{
+									name: "tconstruct:stripping"
+									level: 1s
+								}
+								{
+									name: "tconstruct:magnetic"
+									level: 2s
+								}
+								{
+									name: "tconstruct:lightweight"
+									level: 1s
+								}
+							]
+							tic_broken: 0b
+							tic_volatile_data: {
+								"tconstruct:rarity": 1
+								abilities: 1
+								upgrades: 3
+							}
+						}
+					}
+				}
+			]
+		}
+	]
 	quest_links: [ ]
 }

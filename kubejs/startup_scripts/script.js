@@ -9,11 +9,14 @@ onEvent('item.registry', event => {
 	// 烦人数学
 	event.create('three_cast').texture("kubejs:item/three_cast").unstackable()
 	event.create('eight_cast').texture("kubejs:item/eight_cast").unstackable()
+	event.create('bzero_cast').texture("kubejs:item/bzero_cast").unstackable()
+	event.create('bone_cast').texture("kubejs:item/bone_cast").unstackable()
 	event.create('plus_cast').texture("kubejs:item/plus_cast").unstackable()
 	event.create('minus_cast').texture("kubejs:item/minus_cast").unstackable()
 	event.create('multiply_cast').texture("kubejs:item/multiply_cast").unstackable()
 	event.create('divide_cast').texture("kubejs:item/divide_cast").unstackable()
 	event.create('computation_matrix').parentModel("kubejs:item/computation_matrix").unstackable().rarity(RARITY_EPIC)
+	event.create('advanced_computation_matrix').parentModel("kubejs:item/advanced_computation_matrix").unstackable().rarity(RARITY_EPIC)
 
 	// 数字
 	let number = (id, name) => {
@@ -35,6 +38,7 @@ onEvent('item.registry', event => {
 	number('Multiply', '×')
 	number('Divide', '÷')
 	number('Missingno', '#DIV/0')
+
 
 	// 石英种子
 	let types = ["certus", "fluix"]
@@ -66,13 +70,20 @@ onEvent('item.registry', event => {
 	mechanism('Inductive', RARITY_UNCOMMON)
 	mechanism('Abstruse', RARITY_RARE)
 	mechanism('Calculation', RARITY_RARE)
+	mechanism('Overclocking', RARITY_EPIC)
+	mechanism('Energy', RARITY_EPIC)
+	mechanism('Smart', RARITY_EPIC)
+	mechanism('Ultimate', RARITY_EPIC)
 	event.create('broken_precision_mechanism').texture("kubejs:item/mechanism/broken_precision_mechanism")
+	event.create('bzero').texture("kubejs:item/math/bzero").glow(true).rarity(RARITY_EPIC)
+	event.create('bone').texture("kubejs:item/math/bone").glow(true).rarity(RARITY_EPIC)
 
 	// 工具
 	event.create('netherite_saw').parentModel("kubejs:item/tool/netherite_saw").maxDamage(2653)
 	event.create('chromatic_resonator').texture("kubejs:item/tool/chromatic_resonator").maxDamage(512).rarity(RARITY_UNCOMMON)
 	event.create('calculator').texture("kubejs:item/tool/calculator").maxDamage(256).rarity(RARITY_UNCOMMON)
 	event.create('flash_drive').texture("kubejs:item/tool/boot_medium").maxDamage(256).rarity(RARITY_UNCOMMON)
+	event.create('data_module').texture("kubejs:item/tool/data_module").maxDamage(256).rarity(RARITY_UNCOMMON)
 
 	// 粉末
 	event.create('brass_dust').texture("kubejs:item/dust/brass_dust")
@@ -125,6 +136,7 @@ onEvent('item.registry', event => {
 	event.create('polar_algal_blend').texture("kubejs:item/polar_algal_blend")
 	event.create('ae2_supply_card').texture("kubejs:item/ae2_supply_card").unstackable().rarity(RARITY_EPIC)
 	event.create('creative_card').texture("kubejs:item/creative_card").unstackable().rarity(RARITY_EPIC)
+	event.create('quantum_entangled_singularity_stackable').texture("kubejs:item/quantum_entangled_singularity_stackable").rarity(RARITY_EPIC)
 
 	// 粉碎矿石
 	event.create('crushed_raw_cobalt').texture("kubejs:item/ore/crushed_raw_cobalt")
@@ -161,12 +173,18 @@ onEvent('item.registry', event => {
 	// event.create("incomplete_desh_support", 'create:sequenced_assembly')
 	// event.create("incomplete_ostrum_support", 'create:sequenced_assembly')
 	// event.create("incomplete_calorite_support", 'create:sequenced_assembly')
-	event.create("incomplete_encased_steel_engine", 'create:sequenced_assembly').parentModel("kubejs:block/incomplete_encased_steel_engine")
-	event.create("incomplete_encased_desh_engine", 'create:sequenced_assembly').parentModel("kubejs:block/incomplete_encased_desh_engine")
-	event.create("incomplete_encased_ostrum_engine", 'create:sequenced_assembly').parentModel("kubejs:block/incomplete_encased_ostrum_engine")
-	event.create("incomplete_encased_calorite_engine", 'create:sequenced_assembly').parentModel("kubejs:block/incomplete_encased_calorite_engine")
-	event.create("incomplete_rocket_computer", 'create:sequenced_assembly').parentModel("kubejs:block/incomplete_rocket_computer")
-	event.create("incomplete_signal_transmission_antenna", 'create:sequenced_assembly').parentModel("kubejs:block/incomplete_signal_transmission_antenna")
+	event.create("incomplete_encased_steel_engine", 'create:sequenced_assembly').parentModel("kubejs:block/encased_steel_engine")
+	event.create("incomplete_encased_desh_engine", 'create:sequenced_assembly').parentModel("kubejs:block/encased_desh_engine")
+	event.create("incomplete_encased_ostrum_engine", 'create:sequenced_assembly').parentModel("kubejs:block/encased_ostrum_engine")
+	event.create("incomplete_encased_calorite_engine", 'create:sequenced_assembly').parentModel("kubejs:block/encased_calorite_engine")
+	event.create("incomplete_rocket_computer", 'create:sequenced_assembly').parentModel("kubejs:block/rocket_computer")
+	event.create("incomplete_signal_transmission_antenna", 'create:sequenced_assembly').parentModel("kubejs:block/signal_transmission_antenna")
+
+	//mek合金
+	event.create('incomplete_alloy_reinforced').texture("kubejs:item/mekanism/incomplete_alloy_reinforced")
+	event.create('incomplete_alloy_infused').texture("kubejs:item/mekanism/incomplete_alloy_infused")
+	event.create('incomplete_alloy_atomic').texture("kubejs:item/mekanism/incomplete_alloy_atomic")
+	event.create('alloy_hardener_item').texture("kubejs:item/alloy_hardener_item")
 })
 
 onEvent('block.registry', event => {
@@ -196,6 +214,7 @@ onEvent('block.registry', event => {
 			.renderType(layer)
 			.tagBlock("create:wrench_pickup")
 			.tagBlock("minecraft:mineable/pickaxe")
+			.property(BlockProperties.HORIZONTAL_FACING).placementState(callblock => { let yaw = callblock.player.yaw; let facing; if (yaw >= -45 && yaw < 45) { facing = "north" } else if (yaw >= 45 && yaw < 135) { facing = "east" } else if (yaw >= -135 && yaw < -45) { facing = "west" } else { facing = "south" }; callblock.set(BlockProperties.HORIZONTAL_FACING, facing) })
 	}
 
 	machine('Andesite', "translucent", "lantern")
@@ -204,6 +223,9 @@ onEvent('block.registry', event => {
 	machine('Obsidian', "translucent", "lantern")
 	machine('Zinc', "cutout", "lantern")
 	machine('Enderium', "cutout", "lantern")
+	machine('Energy', "cutout", "lantern")
+	machine('Overclocking', "cutout", "lantern")
+	machine('Smart', "cutout", "lantern")
 	// machine('Inductive', "translucent", "lantern")
 
 	// 火箭相关
@@ -212,6 +234,7 @@ onEvent('block.registry', event => {
 	// event.create("ostrum_support").material("stone").hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").renderType("cutout").suffocating(false)
 	// event.create("calorite_support").material("stone").hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").renderType("cutout").suffocating(false)
 
+	
 	event.create("encased_steel_fuel_tank").model('kubejs:block/encased_steel_fuel_tank').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 	event.create("encased_desh_fuel_tank").model('kubejs:block/encased_desh_fuel_tank').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 	event.create("encased_ostrum_fuel_tank").model('kubejs:block/encased_ostrum_fuel_tank').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
@@ -226,7 +249,13 @@ onEvent('block.registry', event => {
 
 	// event.create("rocket_loading_computer").model('kubejs:block/rocket_loading_computer').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 	// .property(BlockProperties.HORIZONTAL_FACING).placementState(callblock => { let yaw = callblock.player.yaw; let facing; if (yaw >= -45 && yaw < 45) { facing = "north" } else if (yaw >= 45 && yaw < 135) { facing = "east" } else if (yaw >= -135 && yaw < -45) { facing = "west" } else { facing = "south" }; callblock.set(BlockProperties.HORIZONTAL_FACING, facing) })
-	event.create("guide_computer").model('kubejs:block/guide_computer').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	event.create("guide_computer_tier1").model('kubejs:block/guide_computer_tier1').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	.property(BlockProperties.HORIZONTAL_FACING).placementState(callblock => { let yaw = callblock.player.yaw; let facing; if (yaw >= -45 && yaw < 45) { facing = "north" } else if (yaw >= 45 && yaw < 135) { facing = "east" } else if (yaw >= -135 && yaw < -45) { facing = "west" } else { facing = "south" }; callblock.set(BlockProperties.HORIZONTAL_FACING, facing) })
+	event.create("guide_computer_tier2").model('kubejs:block/guide_computer_tier2').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	.property(BlockProperties.HORIZONTAL_FACING).placementState(callblock => { let yaw = callblock.player.yaw; let facing; if (yaw >= -45 && yaw < 45) { facing = "north" } else if (yaw >= 45 && yaw < 135) { facing = "east" } else if (yaw >= -135 && yaw < -45) { facing = "west" } else { facing = "south" }; callblock.set(BlockProperties.HORIZONTAL_FACING, facing) })
+	event.create("guide_computer_tier3").model('kubejs:block/guide_computer_tier3').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	.property(BlockProperties.HORIZONTAL_FACING).placementState(callblock => { let yaw = callblock.player.yaw; let facing; if (yaw >= -45 && yaw < 45) { facing = "north" } else if (yaw >= 45 && yaw < 135) { facing = "east" } else if (yaw >= -135 && yaw < -45) { facing = "west" } else { facing = "south" }; callblock.set(BlockProperties.HORIZONTAL_FACING, facing) })
+	event.create("guide_computer_tier4").model('kubejs:block/guide_computer_tier4').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 	.property(BlockProperties.HORIZONTAL_FACING).placementState(callblock => { let yaw = callblock.player.yaw; let facing; if (yaw >= -45 && yaw < 45) { facing = "north" } else if (yaw >= 45 && yaw < 135) { facing = "east" } else if (yaw >= -135 && yaw < -45) { facing = "west" } else { facing = "south" }; callblock.set(BlockProperties.HORIZONTAL_FACING, facing) })
 
 
@@ -240,12 +269,22 @@ onEvent('fluid.registry', event => {
 	// event.create("waste").bucketColor(0x123d36).stillTexture('kubejs:fluid/waste_still').flowingTexture('kubejs:fluid/waste_flow').noBlock()
 
 	event.create("sky_stone").bucketColor(0x595959).stillTexture('kubejs:fluid/sky_stone_still').flowingTexture('kubejs:fluid/sky_stone_flowing').noBlock()
-
+	event.create("condensed_skyslime").bucketColor(0x1F53D5).stillTexture('kubejs:fluid/condensed_skyslime_still').flowingTexture('kubejs:fluid/condensed_skyslime_flowing').noBlock()
+	event.create("liquid_oil_gas").bucketColor(0xFFF180).stillTexture('kubejs:fluid/liquid_oil_gas_still').flowingTexture('kubejs:fluid/liquid_oil_gas_flow').noBlock()
 	event.create('raw_logic').stillTexture('kubejs:fluid/number_still').flowingTexture('kubejs:fluid/number_flow').color(0xE7FFCB).noBlock()
 	let colors = [0xCBE827, 0xAEE827, 0x68E827, 0x27E86E, 0x27E8B1, 0x27DEE8, 0x27B5E8, 0x2798E8, 0x2778E8, 0x2748E8]
 	for (let i = 0; i < 10; i++)
 		event.create('number_' + i).stillTexture('kubejs:fluid/number_still').flowingTexture('kubejs:fluid/number_flow').color(colors[i]).noBlock()
 	event.create('matrix').stillTexture('kubejs:fluid/matrix_still').flowingTexture('kubejs:fluid/matrix_flow').bucketColor(colors[0]).noBlock()
+	event.create('pelletium').stillTexture('kubejs:fluid/pelletium_still').flowingTexture('kubejs:fluid/pelletium_flow').bucketColor(0x22767E).noBlock()
+})
+
+onEvent("mekanism.gas.registry", event => {
+	event.create('oil_gas').color(0xFFF180).displayName('石油气').fuel(30, 120000)
+})
+
+onEvent('mekanism.infuse_type.registry', event => {
+	event.create('alloy_hardener').color(0xDFDEDA)
 })
 
 onEvent('item.modification', event => {

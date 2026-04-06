@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "kubejs:block/guide_computer_tier4",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "kubejs:block/guide_computer_tier4"
+    },
+    "facing=south": {
+      "model": "kubejs:block/guide_computer_tier4",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "kubejs:block/guide_computer_tier4",
+      "y": 270
+    }
+  }
+}

@@ -444,7 +444,7 @@
 		{
 			title: "{quest.overview.stage_5_finish.title}"
 			icon: "beyond_earth:moon_stone"
-			x: 2.5d
+			x: 11.5d
 			y: 0.0d
 			shape: "hexagon"
 			subtitle: "{quest.overview.stage_5_finish.subtitle}"
@@ -453,14 +453,27 @@
 				"{quest.overview.stage_5_finish.text2}"
 				"{quest.overview.stage_5_finish.text3}"
 			]
-			dependencies: ["5E62059675895213"]
+			dependencies: [
+				"571AE9A001459450"
+				"426417F4BA892000"
+			]
 			size: 2.0d
 			id: "4F7A70041B67A348"
-			tasks: [{
-				id: "638DC41EF1C7C493"
-				type: "checkmark"
-				title: "{tip.kubejs.unlock_challenage}"
-			}]
+			tasks: [
+				{
+					id: "75A8489F2288E77E"
+					type: "advancement"
+					title: "完成第八章 &7主线&r"
+					icon: "beyond_earth:calorite_engine"
+					advancement: "beyond_earth:rocket_tier_4_advancement"
+					criterion: ""
+				}
+				{
+					id: "7848E8E1D22BF643"
+					type: "checkmark"
+					title: "{tip.kubejs.unlock_challenage}"
+				}
+			]
 		}
 		{
 			title: "{quest.overview.stage_4a.title}"
@@ -518,6 +531,297 @@
 				auto: "disabled"
 				command: "/give @p kubejs:ae2_supply_card"
 				player_command: true
+			}]
+		}
+		{
+			title: "&6&l运算变速"
+			icon: "minecraft:netherite_ingot"
+			x: 3.5d
+			y: 0.0d
+			shape: "circle"
+			subtitle: "&6第六章"
+			description: [
+				"你在地球上的工作已经做的足够多了，现在，让我们把目光投向广阔的太空吧。"
+				""
+				"远古的东西总是蕴含着强大的能量，只要我们加以利用，将会大有前景。"
+				""
+				"点选上方复选项以解锁&6第六章：运算变速&r。"
+				"&7具体任务细节可以在左边侧栏选择查看。"
+			]
+			dependencies: ["05BBDC84DA10AE5F"]
+			id: "039CEB56AB660C20"
+			tasks: [{
+				id: "191DCA62D97981E3"
+				type: "checkmark"
+				title: "&6解锁&5第六章\\"
+			}]
+		}
+		{
+			title: "航天时代"
+			icon: "kubejs:computation_matrix"
+			x: 2.0d
+			y: 0.0d
+			subtitle: "里程碑"
+			description: [
+				"有了火箭，你将可以往返于多个星球。遥遥38万公里的航程是个挑战，也是个机遇。"
+				""
+				"现在，更远的深空已经向你走来，带好随身物品，带上回来的油料，准备点火吧。"
+				"&7休斯顿，我不记得今天预定有卫星发射任务。"
+			]
+			min_required_dependencies: 2
+			dependencies: [
+				"5E62059675895213"
+				"47965C310D9847DC"
+				"3CE551AFBF9FFA42"
+			]
+			id: "05BBDC84DA10AE5F"
+			tasks: [{
+				id: "121B4A19BAEA38CD"
+				type: "advancement"
+				title: "完成第五章 &7主线&r"
+				icon: "beyond_earth:steel_engine"
+				advancement: "beyond_earth:rocket_advancement"
+				criterion: ""
+			}]
+		}
+		{
+			title: "加速时代"
+			icon: "kubejs:overclocking_mechanism"
+			x: 5.0d
+			y: 0.0d
+			subtitle: "里程碑"
+			description: [
+				"对计算构件的研究使我们来到了这里，现在我们拥有了更快的速度，可以制作更复杂的结构了。"
+				""
+				"即使这离我们的目标依旧很远，但是你们的确走出了很多很多步了。"
+				"&7这就是你的征途。"
+			]
+			dependencies: [
+				"039CEB56AB660C20"
+				"635C2C3BDBBBF08F"
+			]
+			id: "3F28EBD4FC256D25"
+			tasks: [{
+				id: "2624337687947925"
+				type: "advancement"
+				title: "完成第六章 &7主线\\"
+				icon: "beyond_earth:desh_engine"
+				advancement: "beyond_earth:rocket_tier_2_advancement"
+				criterion: ""
+			}]
+		}
+		{
+			title: "&l电力革新"
+			icon: "ae2:charged_certus_quartz_crystal"
+			x: 5.5d
+			y: 1.5d
+			shape: "circle"
+			subtitle: "第六章 支线"
+			description: [
+				"你是否曾经因效率过低的机器而抓耳挠腮？那么输入过足够能量的能量构件能够解决这一问题。那么就让我们放手去做吧！"
+				"&7勾选上方复选框，揭幕第六章的额外支线内容。"
+			]
+			dependencies: ["3F28EBD4FC256D25"]
+			id: "75D34F60255D2591"
+			tasks: [{
+				id: "180BB60FF3A23892"
+				type: "checkmark"
+				title: "&3解锁第六章&r 支线"
+			}]
+		}
+		{
+			title: "能量时代"
+			x: 7.0d
+			y: 2.5d
+			subtitle: "挑战"
+			description: ["能量充沛！现在在拥有了这些构件以后，你是会升级你的机器，还是制作新的工具，还是摆起来收藏？无论如何，这些构件都是对效率的巨大提升。"]
+			dependencies: ["75D34F60255D2591"]
+			id: "39AA4D5EC1C599F5"
+			tasks: [{
+				id: "2651D59C26AB0254"
+				type: "item"
+				item: "kubejs:energy_mechanism"
+				count: 64L
+				consume_items: false
+			}]
+		}
+		{
+			icon: "create:wrench"
+			disable_toast: true
+			x: 0.0d
+			y: -2.0d
+			shape: "circle"
+			description: [
+				"这个CE版本是与原存档兼容的，所以我们给你留了一条路，让你快速跟上进度。"
+				""
+				"点选复选框，以从新的第六章开始，同时重置第五章以后的进度。"
+				"&7路还很长，让我们慢慢走吧。"
+			]
+			hide_dependency_lines: true
+			dependencies: [
+				"4958836B3A14899C"
+				"0E88C673CC9972EE"
+			]
+			hide: true
+			dependency_requirement: "one_completed"
+			optional: true
+			invisible_until_tasks: 1
+			ignore_reward_blocking: true
+			progression_mode: "flexible"
+			id: "3CE551AFBF9FFA42"
+			tasks: [{
+				id: "4E278DD986077214"
+				type: "checkmark"
+				title: "原CABR玩家？"
+			}]
+			rewards: [
+				{
+					id: "74607E06FFEDB5F2"
+					type: "command"
+					title: "这是你已经走过的路"
+					icon: "kubejs:kinetic_mechanism"
+					team_reward: true
+					auto: "no_toast"
+					ignore_reward_blocking: true
+					command: "/ftbquests change_progress @a reset 4F7A70041B67A348"
+					silent: true
+				}
+				{
+					id: "44386BCCEBD08BD0"
+					type: "command"
+					title: "这是你已经走过的路"
+					icon: "kubejs:sealed_mechanism"
+					team_reward: true
+					auto: "no_toast"
+					ignore_reward_blocking: true
+					command: "/ftbquests change_progress @a reset 657693918A79B7A4"
+					silent: true
+				}
+				{
+					id: "38E4ACDDAC2E747A"
+					type: "command"
+					title: "这是你已经走过的路"
+					icon: "create:precision_mechanism"
+					auto: "no_toast"
+					ignore_reward_blocking: true
+					command: "/ftbquests change_progress @a reset 4A38517AC2118B36"
+					silent: true
+				}
+				{
+					id: "5EDFF3F9FF5CBB6E"
+					type: "command"
+					title: "这是你已经走过的路"
+					icon: "kubejs:inductive_mechanism"
+					team_reward: true
+					auto: "no_toast"
+					ignore_reward_blocking: true
+					command: "/ftbquests change_progress @a reset 65B9D982E9FB4AA9"
+					silent: true
+				}
+				{
+					id: "0289821187875E24"
+					type: "command"
+					title: "这是你已经走过的路"
+					icon: "kubejs:abstruse_mechanism"
+					team_reward: true
+					auto: "no_toast"
+					ignore_reward_blocking: true
+					command: "/ftbquests change_progress @a reset 4958836B3A14899C"
+					silent: true
+				}
+				{
+					id: "2ADFC27395F9894A"
+					type: "command"
+					title: "这是你已经走过的路"
+					icon: "kubejs:calculation_mechanism"
+					team_reward: true
+					auto: "no_toast"
+					ignore_reward_blocking: true
+					command: "/ftbquests change_progress @a reset 09842CDC7A331BEE"
+					silent: true
+				}
+				{
+					id: "1BE1B13C1C80B864"
+					type: "command"
+					title: "这是你已经走过的路"
+					icon: "beyond_earth:moon_globe"
+					auto: "no_toast"
+					ignore_reward_blocking: true
+					command: "/ftbquests change_progress @a reset 58E321BA4B90929F"
+					silent: true
+				}
+			]
+		}
+		{
+			title: "&6&l控制强化"
+			icon: "mekanism:elite_control_circuit"
+			x: 6.5d
+			y: 0.0d
+			shape: "circle"
+			subtitle: "&6第七章"
+			description: [
+				"在对超频构件的研究结束以后，我们仍然需要一种能更高效并且支持范围更广的控制方式。"
+				""
+				"现在，我们需要对超频构件进一步升级，以达成这一目标。前路很长，请多加耐心。"
+				""
+				"点选上方复选项以解锁&6第七章：控制强化&r。"
+				"&7具体任务细节可以在左边侧栏选择查看。"
+			]
+			dependencies: ["3F28EBD4FC256D25"]
+			id: "2D16E669377D3A0F"
+			tasks: [{
+				id: "62FE53114A1C923C"
+				type: "checkmark"
+				title: "&6解锁&5第七章\\"
+			}]
+		}
+		{
+			title: "互联时代"
+			icon: "kubejs:smart_mechanism"
+			x: 8.0d
+			y: 0.0d
+			subtitle: "里程碑"
+			description: [
+				"藉由新的控制电路，我们获得了能让机器控制更加精细的可能。"
+				""
+				"看看你背后的路，很长很长，但是依旧清晰可见。"
+				"&7路不远了。"
+			]
+			dependencies: [
+				"2D16E669377D3A0F"
+				"6F5DD8FE6931AEAB"
+			]
+			id: "3CC196543AE64CCB"
+			tasks: [{
+				id: "64E36B0E11064B8A"
+				type: "advancement"
+				title: "完成第七章 &7主线&r"
+				icon: "beyond_earth:ostrum_engine"
+				advancement: "beyond_earth:rocket_tier_3_advancement"
+				criterion: ""
+			}]
+		}
+		{
+			title: "&6&l星海征程"
+			icon: "mekanism:alloy_atomic"
+			x: 9.5d
+			y: 0.0d
+			shape: "circle"
+			subtitle: "&6最终章"
+			description: [
+				"一步，还有一步，就到了。"
+				""
+				"吞吐着巨额能量的运算矩阵是计算轨道的先决条件，但是这依旧很困难。不过，前方是否已经能看到曙光了？"
+				""
+				"点选上方复选项以解锁&6第八章：星海征程&r。"
+				"&7具体任务细节可以在左边侧栏选择查看。"
+			]
+			dependencies: ["3CC196543AE64CCB"]
+			id: "571AE9A001459450"
+			tasks: [{
+				id: "37A0F636D0A70697"
+				type: "checkmark"
+				title: "解锁第八章"
 			}]
 		}
 	]

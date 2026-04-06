@@ -1,0 +1,439 @@
+{
+	id: "0A5308D4D3171408"
+	group: "331B6409EF6A7840"
+	order_index: 10
+	filename: "fl8r"
+	title: "&f&l8&r 星海征程"
+	icon: "mekanism:sps_port"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	images: [{
+		x: -1.5d
+		y: 9.0d
+		width: 6.3d
+		height: 3.0d
+		rotation: 0.0d
+		image: "kubejs:textures/ftbq/code.png"
+		hover: [ ]
+		click: ""
+		dev: false
+		corner: false
+		dependency: "2945F0C51D0AC651"
+	}]
+	quests: [
+		{
+			icon: "kubejs:smart_mechanism"
+			x: -2.0d
+			y: -3.0d
+			shape: "hexagon"
+			description: [
+				"这是最后一步了。"
+				""
+				"在反物质的驱动下，新的导航电脑将会为你指引方向。"
+				""
+				"海量能源的供应下，我相信这对你来说不成问题。路不长了，继续前进吧。"
+			]
+			dependencies: ["571AE9A001459450"]
+			hide: true
+			size: 2.0d
+			id: "7F7CD9E3EB7ECC43"
+			tasks: [{
+				id: "08E0F63242DB56F0"
+				type: "checkmark"
+				title: "星海征程"
+			}]
+		}
+		{
+			title: "橙色岩石"
+			icon: "beyond_earth:venus_stone"
+			x: -5.0d
+			y: -1.0d
+			description: ["依旧是熟悉的再生……"]
+			dependencies: ["7F7CD9E3EB7ECC43"]
+			id: "5F72547C0F2BC2B9"
+			tasks: [
+				{
+					id: "0AE2A22CC034AA0A"
+					type: "item"
+					item: "beyond_earth:venus_stone"
+					consume_items: false
+				}
+				{
+					id: "7343C21DCE7027ED"
+					type: "checkmark"
+					title: "自动生产"
+				}
+			]
+		}
+		{
+			title: "原子物理初步"
+			icon: "mekanism:raw_uranium"
+			x: -5.0d
+			y: 0.0d
+			description: ["金星的铀含量出奇的高，这也让从金星石中提取铀成为可能。"]
+			dependencies: ["5F72547C0F2BC2B9"]
+			id: "58D5781369C2375A"
+			tasks: [
+				{
+					id: "79AC9895F7D84B61"
+					type: "item"
+					item: "mekanism:raw_uranium"
+					consume_items: false
+				}
+				{
+					id: "1AE9A832C3252D95"
+					type: "checkmark"
+					title: "自动生产"
+				}
+			]
+		}
+		{
+			title: "氧化反应"
+			icon: "mekanism:yellow_cake_uranium"
+			x: -5.0d
+			y: 1.0d
+			description: ["虽然是黄色的，但是似乎也不是饼的样子……？"]
+			dependencies: ["58D5781369C2375A"]
+			id: "3DC0859F6007408A"
+			tasks: [
+				{
+					id: "797FD47A6EDEB05C"
+					type: "item"
+					item: "mekanism:yellow_cake_uranium"
+					consume_items: false
+				}
+				{
+					id: "74277FB45C78BF34"
+					type: "checkmark"
+					title: "自动生产"
+				}
+			]
+		}
+		{
+			title: "释放结合能"
+			icon: "mekanism:pellet_polonium"
+			x: -5.0d
+			y: 2.0d
+			description: [
+				"放射性很高，但是显然具有出乎人意料的理化性质。"
+				""
+				"&7记得防辐射，不然棺材都得用铅做了。"
+			]
+			dependencies: ["3DC0859F6007408A"]
+			id: "2A9CDBEF645A7F58"
+			tasks: [
+				{
+					id: "41041E60A47239D3"
+					type: "item"
+					icon: "mekanism:pellet_polonium"
+					item: "mekanism:pellet_polonium"
+					consume_items: false
+				}
+				{
+					id: "7DA00082FDFFDCB3"
+					type: "checkmark"
+					title: "自动生产"
+				}
+			]
+		}
+		{
+			title: "不应存在"
+			icon: "mekanism:pellet_antimatter"
+			x: -4.0d
+			y: 3.0d
+			description: ["超临界移相器是必须的，通过这一复杂的装置，你可以将一些元素转化为反物质，同时消耗巨大的能量。"]
+			dependencies: ["2A9CDBEF645A7F58"]
+			id: "2E53743C7203349F"
+			tasks: [{
+				id: "2BC2905BD9769244"
+				type: "checkmark"
+				title: "自动生产"
+			}]
+		}
+		{
+			title: "快上加快"
+			icon: "mekanism:ultimate_control_circuit"
+			x: -3.0d
+			y: 4.0d
+			description: ["在反物质驱动下的控制电路终于解放了全部的算力，可以承担更复杂的计算了。"]
+			dependencies: [
+				"2E53743C7203349F"
+				"00B387C693B63807"
+			]
+			id: "332F7FA8C5BF1DAB"
+			tasks: [
+				{
+					id: "4C3573859DEAC5F9"
+					type: "item"
+					item: "mekanism:ultimate_control_circuit"
+					consume_items: false
+				}
+				{
+					id: "1606F8D04CFC6B03"
+					type: "checkmark"
+					title: "自动生产"
+				}
+			]
+		}
+		{
+			title: "快速检验"
+			icon: "mekanism:elite_control_circuit"
+			x: -3.0d
+			y: 2.5d
+			description: ["你应该已经拥有一些了。"]
+			hide_dependency_lines: true
+			dependencies: ["7F7CD9E3EB7ECC43"]
+			id: "00B387C693B63807"
+			tasks: [
+				{
+					id: "58A9E9B977653171"
+					type: "item"
+					item: "mekanism:elite_control_circuit"
+					consume_items: false
+				}
+				{
+					id: "41278284F5BA3933"
+					type: "checkmark"
+					title: "自动生产"
+				}
+			]
+		}
+		{
+			title: "快速检验"
+			icon: "kubejs:smart_mechanism"
+			x: -1.0d
+			y: 2.5d
+			description: ["你应该已经准备过了。"]
+			hide_dependency_lines: true
+			dependencies: ["7F7CD9E3EB7ECC43"]
+			id: "5D80DCC76AB07BB6"
+			tasks: [
+				{
+					id: "7A872116272D6348"
+					type: "item"
+					item: "kubejs:smart_mechanism"
+					consume_items: false
+				}
+				{
+					id: "536D768BD0DA8859"
+					type: "checkmark"
+					title: "自动生产"
+				}
+			]
+		}
+		{
+			title: "最终之物"
+			icon: "kubejs:ultimate_mechanism"
+			x: -1.0d
+			y: 4.0d
+			description: ["快到了，就快到了。"]
+			dependencies: [
+				"5D80DCC76AB07BB6"
+				"332F7FA8C5BF1DAB"
+			]
+			id: "2078E40B8B108E75"
+			tasks: [
+				{
+					id: "12ED3E4099D4C2F2"
+					type: "item"
+					item: "kubejs:ultimate_mechanism"
+					consume_items: false
+				}
+				{
+					id: "4275A5C060BD0B71"
+					type: "checkmark"
+					title: "自动生产"
+				}
+			]
+		}
+		{
+			title: "0"
+			icon: "kubejs:bzero"
+			x: 1.0d
+			y: 3.0d
+			description: ["用终极构件压制得到的0的二进制版本。"]
+			dependencies: ["2078E40B8B108E75"]
+			id: "2945F0C51D0AC651"
+			tasks: [
+				{
+					id: "1185A421FFD36AAC"
+					type: "item"
+					item: "kubejs:bzero"
+					consume_items: false
+				}
+				{
+					id: "666EA507902BA85C"
+					type: "checkmark"
+					title: "自动生产"
+				}
+			]
+		}
+		{
+			title: "1"
+			icon: "kubejs:bone"
+			x: 1.0d
+			y: 5.0d
+			description: ["用终极构件压制得到的1的二进制版本。"]
+			dependencies: ["2078E40B8B108E75"]
+			id: "51ED35E47FD3BC91"
+			tasks: [
+				{
+					id: "5EECFD09FB3CA4FB"
+					type: "item"
+					item: "kubejs:bone"
+					consume_items: false
+				}
+				{
+					id: "2D9D2608E00381DD"
+					type: "checkmark"
+					title: "自动生产"
+				}
+			]
+		}
+		{
+			title: "汇编入门"
+			icon: "kubejs:computation_matrix"
+			x: -6.0d
+			y: 7.0d
+			description: [
+				"在装备了最新的控制电路以后，你最终将能够获得可以承担起复杂计算的最终版计算矩阵。"
+				""
+				"然而，出了点问题……"
+				""
+				"计算矩阵需要一系列特定的二进制代码输入才能完全激活全部的算力，这很复杂，但是并非不能实现。"
+				""
+				"右边是提供的汇编版本的指令，以下是指令集，需要你进行输入，注意，单独出现的数字需要转换成二进制再进行输入。"
+				""
+				"addi 01000000     iflss 00100010"
+				"sub 00000001     ifgeq 00100101"
+				"io 00000111    REG0 00000000"
+				"REG1 00000001     REG3 00000011"
+			]
+			hide_dependency_lines: true
+			dependencies: [
+				"51ED35E47FD3BC91"
+				"2945F0C51D0AC651"
+			]
+			hide: true
+			dependency_requirement: "one_completed"
+			id: "3CDACB2641D0EC9A"
+			tasks: [
+				{
+					id: "751F6E7A1D8E7755"
+					type: "item"
+					item: "kubejs:computation_matrix"
+					consume_items: false
+				}
+				{
+					id: "0E42FE1032AE3DE6"
+					type: "checkmark"
+					title: "自动生产"
+				}
+			]
+		}
+		{
+			title: "只欠东风"
+			x: 3.0d
+			y: 7.0d
+			description: ["这就是最后的矩阵了，装配进你的引导计算机吧。"]
+			dependencies: ["3CDACB2641D0EC9A"]
+			id: "72E71B5176CA2F58"
+			tasks: [{
+				id: "0028E2ABBE599CCA"
+				type: "item"
+				item: "kubejs:advanced_computation_matrix"
+				consume_items: false
+			}]
+		}
+		{
+			title: "最终章完成！"
+			icon: "beyond_earth:glacio_globe"
+			x: -2.0d
+			y: 0.0d
+			shape: "hexagon"
+			description: [
+				"在经历了这一切之后，你还记得你的来路吗？"
+				"你还记得获得的第一块木头，合成的第一个机壳吗？"
+				"此时此刻，你就在这里，准备探索一块全新的土地。"
+				""
+				"路就到这里了，更远的，需要你自己探索了。"
+				"准备发射吧。"
+			]
+			hide_dependency_lines: true
+			dependencies: [
+				"72E71B5176CA2F58"
+				"7F7CD9E3EB7ECC43"
+			]
+			hide: false
+			size: 2.0d
+			id: "426417F4BA892000"
+			tasks: [{
+				id: "651F9CB628F124DB"
+				type: "advancement"
+				title: "制作 四阶火箭"
+				icon: "beyond_earth:calorite_engine"
+				advancement: "beyond_earth:rocket_tier_4_advancement"
+				criterion: ""
+			}]
+			rewards: [{
+				id: "1460390F5B37D72F"
+				type: "command"
+				title: "要听听歌吗？"
+				icon: {
+					id: "mekanism:hdpe_elytra"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+				team_reward: false
+				exclude_from_claim_all: true
+				ignore_reward_blocking: true
+				command: "playsound projectwingman:endgame.landing music @a"
+				player_command: true
+			}]
+		}
+		{
+			title: "滴-滴！"
+			icon: "mekanism:alloy_atomic"
+			x: -2.0d
+			y: 3.0d
+			description: ["&7原子合金用钚做，也很合理吧？"]
+			dependencies: ["332F7FA8C5BF1DAB"]
+			id: "5412694D5F21C052"
+			tasks: [
+				{
+					id: "582F850FF2797E7E"
+					type: "item"
+					item: "mekanism:alloy_atomic"
+					consume_items: false
+				}
+				{
+					id: "5775C08D7CD8C7F1"
+					type: "checkmark"
+					title: "自动生产"
+				}
+			]
+		}
+		{
+			x: -1.5d
+			y: 7.0d
+			description: [
+				"只需要把转换后的数字直接用机械手装配进运算矩阵，不必理会空格，然后用按钮换行。"
+				"只需要执行一个循环就可以了。"
+				""
+				"举例：执行一次addi，然后换行再执行一次addi"
+				"用机械手按如下顺序装配入矩阵："
+				"0,1,0,0,0,0,0,0,按钮,0,1,0,0,0,0,0,0"
+			]
+			dependencies: ["3CDACB2641D0EC9A"]
+			id: "5814EF6E35403E12"
+			tasks: [{
+				id: "078C4D34B512E92C"
+				type: "checkmark"
+				title: "提示"
+			}]
+		}
+	]
+	quest_links: [ ]
+}

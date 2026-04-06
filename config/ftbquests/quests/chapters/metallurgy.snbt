@@ -70,8 +70,8 @@
 				tag: {
 					Damage: 0
 					Enchantments: [{
-						lvl: 3s
 						id: "minecraft:fortune"
+						lvl: 3s
 					}]
 				}
 			}

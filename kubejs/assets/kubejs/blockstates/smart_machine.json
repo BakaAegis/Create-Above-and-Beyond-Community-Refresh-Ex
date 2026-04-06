@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "kubejs:block/smart_machine",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "kubejs:block/smart_machine"
+    },
+    "facing=south": {
+      "model": "kubejs:block/smart_machine",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "kubejs:block/smart_machine",
+      "y": 270
+    }
+  }
+}

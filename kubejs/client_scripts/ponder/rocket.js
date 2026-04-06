@@ -1,5 +1,10 @@
 onEvent("ponder.registry", (event) => {
-    event.create("kubejs:guide_computer")
+    let tier = ["kubejs:guide_computer_tier1",
+		"kubejs:guide_computer_tier2",
+		"kubejs:guide_computer_tier3",
+		"kubejs:guide_computer_tier4"]
+	for (let i of tier) {
+    event.create(`${i}`)
         .tag("kubejs:rocket")
         .scene("kubejs:rocket_1-3", "{kubejs.ponder.rocket_1-3.header}", "kubejs:rocket1-3", (scene) => {
             // 显示地基
@@ -98,8 +103,12 @@ onEvent("ponder.registry", (event) => {
             scene.world.setBlocks([1, 2, 2], "kubejs:encased_desh_fuel_tank")
             scene.idle(3)
             scene.world.setBlocks([2, 2, 1], "kubejs:encased_desh_fuel_tank")
-            scene.idle(25)
-            scene.world.showSection([3, 3, 1, 1, 8, 3], Direction.DOWN)
+            scene.idle(20)
+            scene.world.showSection([3, 3, 1, 1, 3, 3], Direction.DOWN)
+            scene.idle(20)
+            scene.world.setBlocks([2, 3, 1], "kubejs:guide_computer_tier2")
+            scene.idle(10)
+            scene.world.showSection([3, 4, 1, 1, 8, 3], Direction.DOWN)
             scene.text(50, "{kubejs.ponder.rocket_1-3.text_3}").attachKeyFrame()
             scene.idleSeconds(2)
 
@@ -125,8 +134,11 @@ onEvent("ponder.registry", (event) => {
             scene.world.setBlocks([1, 2, 2], "kubejs:encased_ostrum_fuel_tank")
             scene.idle(3)
             scene.world.setBlocks([2, 2, 1], "kubejs:encased_ostrum_fuel_tank")
-            scene.idle(25)
-            scene.world.showSection([3, 3, 1, 1, 8, 3], Direction.DOWN)
+            scene.world.showSection([3, 3, 1, 1, 3, 3], Direction.DOWN)
+            scene.idle(20)
+            scene.world.setBlocks([2, 3, 1], "kubejs:guide_computer_tier3")
+            scene.idle(10)
+            scene.world.showSection([3, 4, 1, 1, 8, 3], Direction.DOWN)
             scene.text(50, "{kubejs.ponder.rocket_1-3.text_4}").attachKeyFrame()
             scene.idleSeconds(4)
 
@@ -238,7 +250,7 @@ onEvent("ponder.registry", (event) => {
             scene.idle(10)
             scene.world.createItemEntity([2.5, 1.5, 2.5], Direction.DOWN, "beyond_earth:rocket_t4")
             scene.text(80, "{kubejs.ponder.guide_computer_4.text_4}").attachKeyFrame()
-        })
+        })}
 
 
 })

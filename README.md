@@ -1,17 +1,15 @@
-# Create: Above and Beyond Community Refresh Modpack
+# Create: Above and Beyond Community Refresh-Ex Modpack
 
 > [!IMPORTANT]
-> This Modpack is currently in the development phase. You are welcome to download the preliminary version using the git clone command. Please note that the current state does not reflect the ultimate quality of the product.
+> This modpack is a modificated CABR version, please DO NOT report problem of this modpack to original CABR developing team.
 
 English / [简体中文](README_zh.md)
 
-## Create: Above and Beyond 1.18.2 Community Refreshed version
+## Create: Above and Beyond 1.18.2 Community Refreshed-Ex version
 
-This is a modpack based on **Create: Above and Beyond (CAB)** and **[CABF] Cabricality**, running on **Forge 1.18.2**. This modpack resets and implements the entire game process inspired by Create: Above and Beyond. We welcome every challenger and sincerely hope you enjoy the world of Minecraft!
+This is a modpack based on **Create: Above and Beyond Community Refresh (CABR)** and added an extended tasks line, running on **Forge 1.18.2**. This modpack added Mekanism, and a lot of modifications are done to reorganize it, trying to make it adapted with Create. We welcome every challenger and sincerely hope you enjoy the world of Minecraft!
 
-Here, you can follow the guidance of tasks and build your own factory using Create and mainstream tech mods! From wandering in the valleys to traveling in space stations, the possibilities of technological development are up to you! There are about 50 mechanical devices between you and the moon. Thousands of machines and parts will be sent into the ever-growing automated factory, wishing you to explore the next level of technology.
-
-Each step towards space is different, and some steps even vary depending on the world seed.
+Based on original task line, the modpack adds a series of guidance, which offered the path to the sky. From the explosion on orbit to the overclocked fusion reactor, even a simple machine code programing, the way to another star is waiting for you.
 
 Tired of repetitive labor? Earn coins from various chores or professions of your choice. Automate the trading process or gather other players to help you complete tasks. You can then buy various resources, treasures, and building blocks from the market.
 
@@ -28,5 +26,9 @@ A variety of items can be bought and sold, which is a significant game-changing 
 ### Extra Efforts
 
 The modpack adds a large number of blocks, items, and fluids, as well as custom scripts that provide new interactions between machines and materials. Additionally, some mods have received new textures to make them more cohesive overall.
+
+### Compatibility
+
+This modpack is compatible with original **Create: Above and Beyond Community Refresh (CABR)** saves.
 
 ## License: This project uses the GPL-3.0 license.

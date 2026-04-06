@@ -248,7 +248,10 @@ onEvent('item.tags', event => {
 		.add('kubejs:encased_calorite_fuel_tank')
 		.add('kubejs:matter_casing')
 		.add('kubejs:signal_transmission_antenna')
-		.add('kubejs:guide_computer')
+		.add('kubejs:guide_computer_tier1')
+		.add('kubejs:guide_computer_tier2')
+		.add('kubejs:guide_computer_tier3')
+		.add('kubejs:guide_computer_tier4')
 		.add('#minecraft:climbable')
 })
 

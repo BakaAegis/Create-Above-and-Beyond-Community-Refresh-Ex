@@ -22,7 +22,6 @@
 				""
 				"{quest.challenge.introduce.text3}"
 			]
-			dependencies: ["638DC41EF1C7C493"]
 			hide: true
 			size: 2.0d
 			id: "58E321BA4B90929F"

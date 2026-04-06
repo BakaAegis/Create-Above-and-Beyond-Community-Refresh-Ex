@@ -2823,6 +2823,27 @@
 				item: "kubejs:trade_card_tin_ingot"
 			}]
 		}
+		{
+			title: "1x 下界合金锭"
+			icon: "minecraft:netherite_ingot"
+			x: -3.0d
+			y: 9.0d
+			shape: "hexagon"
+			subtitle: "4金币"
+			can_repeat: true
+			id: "7D35BE7528DFB614"
+			tasks: [{
+				id: "7E9B6B9B87C26C08"
+				type: "item"
+				item: "thermal:gold_coin"
+				count: 4L
+			}]
+			rewards: [{
+				id: "4704C2E259791917"
+				type: "item"
+				item: "minecraft:netherite_ingot"
+			}]
+		}
 	]
 	quest_links: [ ]
 }

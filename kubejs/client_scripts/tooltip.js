@@ -13,6 +13,7 @@ onEvent('item.tooltip', tooltip => {
 
 	let holds = (id, slots) => tooltip.add("metalbarrels:" + id + "_barrel", [`§7${slots}`, Text.translate("tooltip.kubejs.slot")])
 	let main_assembly = (id, stage) => tooltip.add(id, [Text.translate(`tooltip.kubejs.stage_${stage}`), Text.translate("tooltip.kubejs.main_mechanism")])
+	let main_assembly_unautomatic = (id, stage) => tooltip.add(id, [Text.translate(`tooltip.kubejs.stage_${stage}`)])
 	let bonus_assembly = (id, stage) => tooltip.add(id, [Text.translate(`tooltip.kubejs.stage_${stage}`)])
 	let not_consumed = (id) => tooltip.add(id, [Text.translate("tooltip.kubejs.not_consumed")])
 	let warning = (id) => tooltip.add(id, [Text.translate("tooltip.kubejs.warning")])
@@ -38,6 +39,18 @@ onEvent('item.tooltip', tooltip => {
 	bonus_assembly('kubejs:abstruse_mechanism', "3a")
 	//第四章
 	main_assembly('kubejs:calculation_mechanism', "4")
+	//第五章
+	main_assembly_unautomatic('beyond_earth:rocket_t1', "5")
+	//第六章
+	main_assembly('kubejs:overclocking_mechanism', "6")
+	main_assembly_unautomatic('beyond_earth:rocket_t2', "6")
+	bonus_assembly('kubejs:energy_mechanism', "6a")
+	//第七章
+	main_assembly('kubejs:smart_mechanism', "7")
+	main_assembly_unautomatic('beyond_earth:rocket_t3', "7")
+	//第八章
+	main_assembly('kubejs:ultimate_mechanism', "8")
+	main_assembly_unautomatic('beyond_earth:rocket_t4', "8")
 
 	not_consumed('cb_microblock:stone_saw')
 	not_consumed('cb_microblock:iron_saw')
@@ -46,6 +59,7 @@ onEvent('item.tooltip', tooltip => {
 	not_consumed('kubejs:screwdriver')
 	not_consumed('kubejs:chromatic_resonator')
 	not_consumed('kubejs:flash_drive')
+	not_consumed('kubejs:data_module')
 	// not_consumed('createindustry:prospector_tool')
 	// not_consumed('kubejs:metamorphic_lich_rod')
 	// not_consumed('kubejs:hop_slime')

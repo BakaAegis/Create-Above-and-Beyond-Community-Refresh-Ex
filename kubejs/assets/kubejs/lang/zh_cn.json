@@ -6,6 +6,7 @@
 "item.kubejs.multiply_cast":"运算符铸模 (x)",
 "item.kubejs.divide_cast":"运算符铸模 (÷)",
 "item.kubejs.computation_matrix":"计算矩阵",
+"item.kubejs.advanced_computation_matrix":"先进计算矩阵",
 
 "item.kubejs.zero":"0",
 "item.kubejs.one":"1",
@@ -22,6 +23,8 @@
 "item.kubejs.multiply":"×",
 "item.kubejs.divide":"÷",
 "item.kubejs.missingno":"错误：除数为零",
+"item.kubejs.bzero":"0",
+"item.kubejs.bone":"1",
 
 "item.kubejs.growing_certus_seed":"赛特斯石英种子",
 "item.kubejs.tiny_certus_crystal":"微型赛特斯石英",
@@ -46,20 +49,29 @@
 "item.kubejs.sturdy_mechanism":"坚实构件",
 "item.kubejs.infernal_mechanism":"酷热构件",
 "item.kubejs.inductive_mechanism":"感应构件",
-"item.kubejs.abstruse_mechanism":"§3谐振构件",
+"item.kubejs.abstruse_mechanism":"谐振构件",
 "item.kubejs.calculation_mechanism":"计算构件",
+"item.kubejs.overclocking_mechanism":"超频构件",
+"item.kubejs.energy_mechanism":"能量构件",
+"item.kubejs.smart_mechanism":"智能构件",
+"item.kubejs.ultimate_mechanism":"§d终极构件§r",
 "item.kubejs.incomplete_kinetic_mechanism":"动力构件（未完成）",
 "item.kubejs.incomplete_sealed_mechanism":"密封构件（未完成）",
 "item.kubejs.incomplete_sturdy_mechanism":"坚实构件（未完成）",
 "item.kubejs.incomplete_infernal_mechanism":"酷热构件（未完成）",
 "item.kubejs.incomplete_inductive_mechanism":"感应构件（未完成）",
-"item.kubejs.incomplete_abstruse_mechanism":"§3谐振构件（未完成）",
+"item.kubejs.incomplete_abstruse_mechanism":"谐振构件（未完成）",
 "item.kubejs.incomplete_calculation_mechanism":"计算构件（未完成）",
+"item.kubejs.incomplete_overclocking_mechanism":"超频构件（未完成）",
+"item.kubejs.incomplete_energy_mechanism":"能量构件（未完成）",
+"item.kubejs.incomplete_smart_mechanism":"智能构件（未完成）",
+"item.kubejs.incomplete_ultimate_mechanism":"终极构件（未完成）",
 
 "item.kubejs.netherite_saw":"下界合金手锯",
 "item.kubejs.chromatic_resonator":"异彩共鸣器",
 "item.kubejs.calculator":"计算器",
 "item.kubejs.flash_drive":"闪存盘",
+"item.kubejs.data_module":"数据模块",
 
 "item.kubejs.brass_dust":"黄铜粉",
 "item.kubejs.cobalt_dust":"钴粉",
@@ -113,9 +125,17 @@
 "item.kubejs.crushed_ostrum_ore":"粉碎紫金矿石",
 "item.kubejs.crushed_calorite_ore":"粉碎耐热金属矿石",
 
+"item.kubejs.quantum_entangled_singularity_stackable":"量子缠绕态奇点（可堆叠）",
 "item.kubejs.silicon_compound":"硅混合物",
 "item.kubejs.nickel_compound":"铁镍混合物",
 "item.kubejs.invar_compound":"殷瓦钢胚",
+
+"item.kubejs.incomplete_alloy_infused":"灌注合金（未完成）",
+"item.kubejs.incomplete_alloy_reinforced":"强化合金（未完成）",
+"item.kubejs.incomplete_alloy_atomic":"原子合金（未完成）",
+"item.kubejs.alloy_hardener_item":"合金硬化剂",
+"infuse_type.kubejs.alloy_hardener":"合金硬化剂",
+
 
 "item.kubejs.sewing_spool":"缝纫线轴",
 "item.kubejs.incomplete_upgrade_base":"空白背包升级（半成品）",
@@ -159,7 +179,10 @@
 "block.kubejs.signal_transmission_antenna":"信号发射天线",
 
 "block.kubejs.rocket_loading_computer":"火箭装载计算机",
-"block.kubejs.guide_computer":"火箭引导计算机",
+"block.kubejs.guide_computer_tier1":"一阶火箭引导计算机",
+"block.kubejs.guide_computer_tier2":"二阶火箭引导计算机",
+"block.kubejs.guide_computer_tier3":"三阶火箭引导计算机",
+"block.kubejs.guide_computer_tier4":"四阶火箭引导计算机",
 
 "block.kubejs.ponder_laser_lamp":"镭射灯",
 "block.kubejs.ponder_laser_lamp_on":"镭射灯",
@@ -178,6 +201,9 @@
 "block.kubejs.zinc_machine":"锌机器",
 "block.kubejs.enderium_machine":"谐振机器",
 "block.kubejs.inductive_machine":"物流机器",
+"block.kubejs.energy_machine":"能量机器",
+"block.kubejs.overclocking_machine":"超频机器",
+"block.kubejs.smart_machine":"智能机器",
 
 "fluid.kubejs.fine_sand":"细沙",
 "fluid.kubejs.waste":"异彩废液",
@@ -194,6 +220,10 @@
 "fluid.kubejs.number_8":"玻色-爱因斯坦凝聚态逻辑（8）",
 "fluid.kubejs.number_9":"玻色-爱因斯坦凝聚态逻辑（9）",
 "fluid.kubejs.matrix":"§d液态智能§r",
+
+"fluid.kubejs.pelletium":"钚",
+"fluid.kubejs.condensed_skyslime":"浓缩碧空黏液",
+"fluid.kubejs.liquid_oil_gas":"液态石油气",
 
 "block.kubejs.failed_alchemy_0":"沉重炼金混合物",
 "block.kubejs.failed_alchemy_1":"微光炼金混合物",
@@ -422,6 +452,9 @@
 "item.kubejs.raw_logic_bucket":"玻色-爱因斯坦凝聚态逻辑（未处理）桶",
 "item.kubejs.sky_stone_bucket":"不稳陨石桶",
 "item.kubejs.fine_sand_bucket":"细沙桶",
+"item.kubejs.pelletium_bucket":"钚桶",
+"item.kubejs.condensed_skyslime_bucket":"浓缩碧空黏液桶",
+"item.kubejs.liquid_oil_gas_bucket":"液态石油气桶",
 
 "tip.kubejs.repeatable":"可重复",
 "tip.kubejs.clear_bad_omen":"清除 不祥之兆 效果",
@@ -910,7 +943,7 @@
 "quest.overview.supply.text2":"穿过堆积如山的破旧机械，你的脚步在寂静中格外清晰。突然，角落里一个漆黑的石制箱子引起了你的注意。它半掩在油布下，锁扣已经被撬开，仿佛有人匆忙翻动过。箱体上模糊的标签依稀能辨认出“&6&l智能计算机&r”的字样，但具体内容已被涂黑。",
 "tip.kubejs.supply":"获得AE2初始物资补给卡[需要开启作弊]",
 "quest.overview.supply.text3":"你可以通过输入下面的指令来重复获得该物品。",
-"quest.overview.supply.text4":"&6注：该物品为作弊道具，用于前期跳科技用。",
+"quest.overview.supply.text4":"&6注：改物品为作弊道具，用于前期跳科技用。",
 "quest.overview.supply.text5":"&6 /give @p kubejs:ae2_supply_card",
 
 "quest.overview.basic_machines.title":"&f&l准备得当",
@@ -1004,7 +1037,7 @@
 "quest.overview.stage_5.text3":"点击上方复选项以解锁&6第五章：意识上传。",
 
 "quest.overview.stage_5_finish.title":"&5&l...我踏上了另一个土地",
-"quest.overview.stage_5_finish.subtitle":"&6最终章",
+"quest.overview.stage_5_finish.subtitle":"&6尾声",
 "quest.overview.stage_5_finish.text1":"&o这也许只是你的一小步，却是&9全人类&r的一大步。",
 "quest.overview.stage_5_finish.text2":"&o我能陪你走到这里是我的荣幸。看到了你们的飞速发展，我的使命也就圆满完成了。&9真正的旅途才刚刚开始，我们明日再见。&r",
 "quest.overview.stage_5_finish.text3":"&9&l&o世界很大，生活更大。",
@@ -1751,7 +1784,7 @@
 "quest.stage_5.rocket.text1":"火箭是模块化的多方块结构，通过思索火箭引导计算器可查看相关搭建教程。",
 "quest.stage_5.rocket.text2":"尽你最大的努力，毕竟这是你的最终目标。",
 "quest.stage_5.rocket.text3":"通过下方指令可直接思索火箭搭建。",
-"quest.stage_5.rocket.text4":"&6 /c ponder kubejs:guide_computer",
+"quest.stage_5.rocket.text4":"&6 /c ponder kubejs:guide_computer_tier1",
 
 "quest.stage_5.rover.subtitle":"步骤 50-A",
 "quest.stage_5.rover.text1":"外星代步工具。",
@@ -1759,7 +1792,7 @@
 "tip.kubejs.any_flag":"任意旗帜",
 "tip.kubejs.rocket":"制作 一阶火箭",
 
-"quest.stage_5.finish.title":"&f&l第六章完成！&r",
+"quest.stage_5.finish.title":"&f&l第五章完成！&r",
 "quest.stage_5.finish.text1":"当一切就绪、计算矩阵编程完毕时，你可以准备开始发射火箭了，手持火箭右键发射平台将火箭放置在发射平台上，Shift+右键火箭打开火箭燃料Gui，将燃油桶放入以为火箭填装燃油。",
 "quest.stage_5.finish.text2":"花一点时间合成一个旗帜，代表你去月球的太空计划。这面旗帜就上的图案可以像原版一样自己更改。",
 "quest.stage_5.finish.text3":"找一个好时候，坐在飞船上，然后按下空格键。",
@@ -1776,7 +1809,12 @@
 "tooltip.kubejs.stage_2b":"§7附加目标: §6章节 2B",
 "tooltip.kubejs.stage_3":"§7主目标: §6章节 3",
 "tooltip.kubejs.stage_3a":"§7附加目标: §6章节 3A",
-"tooltip.kubejs.stage_4":"§7主目标: §6最终章",
+"tooltip.kubejs.stage_4":"§7主目标: §6章节 4",
+"tooltip.kubejs.stage_5":"§7主目标: §6章节 5",
+"tooltip.kubejs.stage_6":"§7主目标: §6章节 6",
+"tooltip.kubejs.stage_6a":"§7附加目标: §6章节 6A",
+"tooltip.kubejs.stage_7":"§7主目标: §6章节 7",
+"tooltip.kubejs.stage_8":"§7主目标: §6章节 8",
 "tooltip.kubejs.slot":"格",
 "tooltip.kubejs.not_consumed":"§7在§7装配线§7中不消耗，仅消耗耐久",
 "tooltip.kubejs.warning":"§3该物品的性质可能会破坏机械动力基本基调，请酌情使用。"

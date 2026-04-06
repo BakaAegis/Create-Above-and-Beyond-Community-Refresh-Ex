@@ -1,0 +1,14 @@
+{
+  "endgame.landing": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "projectwingman:custom/endgame.landing",
+        "volume": 1,
+        "pitch": 1,
+        "stream": true,
+        "weight": 1
+      }
+    ]
+  }
+}

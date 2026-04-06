@@ -36,6 +36,9 @@ let Q = (id, x) => MOD("quark", id, x)
 let IW = (id, x) => MOD("immersive_weathering", id, x)
 let CRD = (id, x) => MOD("create_dd", id, x)
 let CRC = (id, x) => MOD("create_connected", id, x)
+let UA = (id, x) => MOD("upgrade_aquatic", id, x)
+let CEI = (id,x) => MOD("create_enchantment_industry", id, x)
+let BE = (id,x) => MOD("beyond_earth", id, x)
 
 settings.logAddedRecipes = true
 settings.logRemovedRecipes = true
@@ -77,7 +80,10 @@ onEvent('recipes', event => {
 	brassMachine(event)
 
 	zincMachine(event)
-
+	overclocking_mechanism(event)
+	energyMachine(event)
+	smartMachine(event)
+	ultimateStage(event)
 	obsidianMachine(event)
 
 	radiant_coil(event)
@@ -785,18 +791,6 @@ function tweaks(event) {
 	striping('biomesoplenty:fir_wood','biomesoplenty:stripped_fir_wood')
 	striping('architects_palette:twisted_wood','architects_palette:stripped_twisted_wood')
 	striping('create_dd:rose_wood','create_dd:stripped_rose_wood')
-
-	event.remove({ id: TC('smeltery/melting/metal/iron/cauldron')})
-	event.custom({
-		"type": "tconstruct:melting",
-		"ingredient": { "item": MC("cauldron") },
-		"result": {
-			"fluid": TC("molten_iron"),
-			"amount": 300
-		},
-		"temperature": 200,
-		"time": 20
-	})
 }
 
 onEvent('recipes.compostables',event=>{
@@ -1009,7 +1003,7 @@ function casing(event) {
 	tweak_casing('kubejs:zinc_casing', 'create:zinc_ingot', '#forge:stone')
 	tweak_casing('kubejs:invar_casing', 'thermal:invar_ingot', 'minecraft:basalt')
 	tweak_casing('kubejs:enderium_casing', 'minecraft:ender_pearl', '#forge:obsidian')
-	tweak_casing('kubejs:fluix_casing', 'thermal:lead_ingot', 'minecraft:blackstone')
+	tweak_casing('kubejs:fluix_casing', 'ae2:fluix_crystal', 'minecraft:blackstone')
 	tweak_casing('create_dd:refined_radiance_casing', 'create:refined_radiance', '#create_dd:glow_base')
 	tweak_casing('create_dd:shadow_steel_casing', 'create_dd:shadow_steel', '#forge:obsidian')
 	tweak_casing('kubejs:creative_casing', 'architects_palette:unobtanium', '#kubejs:alien_stone')
@@ -1184,6 +1178,19 @@ function pipes(event) {
 		M: MC('redstone')
 	})
 
+	event.shaped("8x pipez:gas_pipe", [
+		'PMP'
+	], {
+		M: CR('fluid_pipe'),
+		P: TE('cured_rubber')
+	})
+
+	event.shaped("8x pipez:fluid_pipe", [
+		'PMP'
+	], {
+		P: 'mekanism:electric_pump',
+		M: 'create:fluid_pipe'
+	})
 	// event.shaped("8x pipez:gas_pipe", [
 	// 	'PMP'
 	// ], {
@@ -3597,6 +3604,581 @@ function brassMachine(event) {
 
 }
 
+function overclocking_mechanism(event) {
+	//富集远古残骸母岩
+
+	let mnsd = BE('moon_sand')
+	event.recipes.createSequencedAssembly([
+		UA('elder_prismarine_coral_block'),
+	], BE('moon_sand'), [
+		event.recipes.createFilling(mnsd, [mnsd, Fluid.of(CEI("experience"), 54)]),
+		event.recipes.createFilling(mnsd, [mnsd, Fluid.of(MC("lava"), 500)]),
+		event.recipes.createFilling(mnsd, [mnsd, Fluid.of(MC("lava"), 500)])
+	]).transitionalItem(mnsd)
+		.loops(1)
+		.id('kubejs:elder_prismarine_coral_block')
+
+	//远古残骸碎片
+	let explodedim = ["beyond_earth:earth_orbit",
+		"beyond_earth:moon_orbit",
+		"beyond_earth:glacio_orbit",
+		"beyond_earth:mars_orbit",
+		"beyond_earth:venus_orbit",
+		"beyond_earth:mercury_orbit"
+            ]
+	for (let i of explodedim) {
+		event.custom({
+    	"type":"lychee:item_exploding",
+    	"item_in": { "item": UA('elder_prismarine_coral_block') },
+    	"post":  {  "type": "drop_item",  "item": "tconstruct:debris_nugget"},
+    	"contextual": {
+		"type":"location",
+		"predicate": {"dimension": `${i}`}}
+		})
+	}
+	//远古残骸熔炼
+	event.recipes.thermal.smelter("minecraft:netherite_scrap", [TC("debris_nugget", 9)]).energy(10000)
+	event.recipes.createCompacting(MC("ancient_debris"), [MC('netherite_scrap'), MC('netherite_scrap'), MC('netherite_scrap')])
+	
+	//删除旧配方
+	event.replaceInput('mekanism:energy_tablet', 'kubejs:energy_mechanism')
+	event.replaceInput('mekanism:basic_energy_cube', 'thermal:energy_cell')
+	event.remove({ output: 'minecraft:ancient_debris' })
+	//event.remove({ input: 'mekanism:alloy_infused' })
+	event.remove({ output: 'mekanism:alloy_infused' })
+	//event.remove({ input: 'mekanism:alloy_reinforced' })
+	event.remove({ output: 'mekanism:alloy_reinforced' })
+	event.remove({ output: 'mekanism:alloy_atomic' })
+	event.remove({ input: 'mekanism:basic_energy_cube' })
+	//event.remove({ input: 'mekanism:alloy_atomic' })
+	//event.remove({ input: 'mekanism:basic_control_circuit' })
+	event.remove({ output: 'mekanism:basic_control_circuit' })
+	event.remove({ output: 'mekanism:advanced_control_circuit' })
+	//event.remove({ input: 'mekanism:advanced_control_circuit' })
+	event.remove({ output: 'mekanism:elite_control_circuit' })
+	//event.remove({ input: 'mekanism:elite_control_circuit' })
+	event.remove({ output: 'mekanism:ultimate_control_circuit' })
+	//event.remove({ input: 'mekanism:ultimate_control_circuit' })
+	event.remove({ output: 'mekanism:energy_tablet' })
+	//event.remove({ input: 'mekanism:energy_tablet' })
+	event.remove({ output: 'mekanismgenerators:bio_generator' })
+	event.remove({ output: 'mekanism:personal_barrel' })
+	event.remove({ output: 'mekanism:rotary_condensentrator' })
+	event.remove({ output: 'mekanism:free_runners' })
+	event.remove({ output: 'mekanism:jetpack' })
+	event.remove({ output: 'mekanism:personal_chest' })
+	event.remove({ output: 'mekanismgenerators:fusion_reactor_controller' })
+	event.remove({ input: 'mekanism:energy_tablet' })
+	event.remove({ output: 'mekanism:modification_station' })
+	event.remove({ output: 'mekanismgenerators:fusion_reactor_frame' })
+	event.remove({ output: '#minecraft:freeze_immune_wearables' })
+	event.remove({ output: /^mekanism:module_[a-z_]+_unit$/ })
+	event.remove({ output: /^mekanismgenerators:module_[a-z_]+_unit$/ })
+	event.remove({ id: /^mekanism:module_[a-z_]+_unit$/ })
+	event.remove({ id: /^mekanismgenerators:module_[a-z_]+_unit$/ })
+	event.remove({ output: '#mekanism:clumps' })
+    event.remove({ output: '#mekanism:crystals' })
+    event.remove({ output: '#mekanism:shards' })
+    event.remove({ output: '#mekanism:dirty_dusts' })
+	event.remove({ input: '#mekanism:clumps' })
+    event.remove({ input: '#mekanism:crystals' })
+    event.remove({ input: '#mekanism:shards' })
+    event.remove({ input: '#mekanism:dirty_dusts' })
+	event.remove({ output: 'mekanism:sps_port' })
+	event.replaceInput('mekanism:basic_energy_cube', 'thermal:energy_cell')
+	event.remove({ output: 'mekanism:basic_logistical_transporter' })
+	event.remove({ output: 'mekanism:advanced_logistical_transporter' })
+	event.remove({ output: 'mekanism:elite_logistical_transporter' })
+	event.remove({ output: 'mekanism:ultimate_logistical_transporter' })
+	event.remove({ output: 'mekanism:basic_mechanical_pipe' })
+	event.remove({ output: 'mekanism:advanced_mechanical_pipe' })
+	event.remove({ output: 'mekanism:elite_mechanical_pipe' })
+	event.remove({ output: 'mekanism:ultimate_mechanical_pipe' })
+	event.remove({ output: 'mekanism:basic_pressurized_tube' })
+	event.remove({ output: 'mekanism:advanced_pressurized_tube' })
+	event.remove({ output: 'mekanism:elite_pressurized_tube' })
+	event.remove({ output: 'mekanism:ultimate_pressurized_tube' })
+	event.remove({ output: 'mekanism:basic_universal_cable' })
+	event.remove({ output: 'mekanism:advanced_universal_cable' })
+	event.remove({ output: 'mekanism:elite_universal_cable' })
+	event.remove({ output: 'mekanism:ultimate_universal_cable' })
+	event.remove({ output: 'mekanism:restrictive_transporter' })
+	event.remove({ output: 'mekanism:diversion_transporter' })
+	event.remove({ output: 'mekanism:chemical_crystallizer' })
+
+	event.shaped(MEK('rotary_condensentrator'), [
+		'GSG',
+		'TCL',
+		'GSG'
+	], {
+		C: KJ('overclocking_machine'),
+		S: MEK('advanced_control_circuit'),
+		G: '#forge:glass',
+		T: MEK('basic_fluid_tank'),
+		L: MEK('basic_chemical_tank')
+	})
+		let cm = KJ('calculation_mechanism')
+	event.recipes.createSequencedAssembly([
+		KJ('overclocking_mechanism'),
+	], ('kubejs:calculation_mechanism'), [
+		event.recipes.createFilling(cm, [cm, Fluid.of(TC("molten_netherite"), 135)]),
+		event.recipes.createFilling(cm, [cm, Fluid.of(TC("molten_netherite"), 135)]),
+		event.custom({
+			"type":"vintageimprovements:laser_cutting",
+			"ingredients": [
+			{
+		  		"item": cm
+			}
+			],
+			"results": [
+			{
+				"item": cm,
+		  		"count": 1
+			}
+			],
+			"energy": 2000,
+			"maxChargeRate": 50
+		})
+	]).transitionalItem(cm)
+		.loops(1)
+		.id('kubejs:overclocking_mechanism')
+
+}
+
+function energyMachine(event) {
+	let iem = KJ('incomplete_energy_mechanism')
+	event.recipes.createSequencedAssembly([
+		KJ('energy_mechanism'),
+	], ('kubejs:overclocking_mechanism'), [
+		event.recipes.createDeploying(iem, [iem, AE2("charged_certus_quartz_crystal")]),
+		event.recipes.createDeploying(iem, [iem, AE2("charged_certus_quartz_crystal")]),
+		event.recipes.createDeploying(iem, [iem, AE2("charged_certus_quartz_crystal")]),
+		event.recipes.createDeploying(iem, [iem, AE2("charged_certus_quartz_crystal")]),
+		event.custom({
+			"type":"vintageimprovements:laser_cutting",
+			"ingredients": [
+			{
+		  		"item":iem
+			}
+			],
+			"results": [
+			{
+				"item": iem,
+		  		"count": 1
+			}
+			],
+			"energy": 2000,
+			"maxChargeRate": 50
+		})
+	]).transitionalItem(iem)
+		.loops(2)
+		.id('kubejs:energy_mechanism')
+
+	let energy_machine = (id, amount, other_ingredient) => {
+		event.remove({ output: id })
+		if (other_ingredient) {
+			event.smithing(Item.of(id, amount), 'kubejs:energy_machine', other_ingredient)
+			event.recipes.createMechanicalCrafting(Item.of(id, amount), "AB", { A: 'kubejs:energy_machine', B: other_ingredient })
+		}
+		else
+			event.stonecutting(Item.of(id, amount), 'kubejs:energy_machine')
+	}
+
+	event.shaped('mekanism:atomic_disassembler', [
+		'ABC',
+		'DE ',
+		' F '
+	], {
+		A: 'create_dd:lapis_sheet',
+		B: 'kubejs:energy_mechanism',
+		C: 'mekanism:advanced_control_circuit',
+		D: 'mekanism:alloy_infused',
+		E: 'thermal:energy_cell',
+		F: 'vintageimprovements:signalum_rod'
+	})
+
+	energy_machine("mekanism:upgrade_speed", 1, "thermal:machine_speed_augment")
+	energy_machine("mekanism:upgrade_energy", 1, "thermal:machine_efficiency_augment")
+	energy_machine("mekanism:basic_tier_installer", 1, "mekanism:basic_control_circuit")
+	energy_machine("mekanism:advanced_tier_installer", 1, "mekanism:advanced_control_circuit")
+	energy_machine("mekanism:elite_tier_installer", 1, "mekanism:elite_control_circuit")
+	energy_machine("mekanism:ultimate_tier_installer", 1, "mekanism:ultimate_control_circuit")
+
+	event.shaped(KJ('energy_machine'), [
+		'SSS',
+		'SCS',
+		'SSS'
+	], {
+		C: [KJ('fluix_casing')],
+		S: KJ('energy_mechanism')
+	})
+}
+
+function smartMachine(event) {
+
+	//mek机器
+	let overclocking_machine = (id, amount, other_ingredient) => {
+		event.remove({ output: id })
+		if (other_ingredient) {
+			event.smithing(Item.of(id, amount), 'kubejs:overclocking_machine', other_ingredient)
+			event.recipes.createMechanicalCrafting(Item.of(id, amount), "AB", { A: 'kubejs:overclocking_machine', B: other_ingredient })
+		}
+		else
+			event.stonecutting(Item.of(id, amount), 'kubejs:overclocking_machine')
+	}
+
+	overclocking_machine('mekanism:crusher', 1, TE('machine_pulverizer'))
+	overclocking_machine('mekanism:metallurgic_infuser', 1, TE('machine_refinery'))
+	overclocking_machine('mekanism:pressurized_reaction_chamber', 1, 'mekanism:advanced_control_circuit')
+	overclocking_machine('mekanism:osmium_compressor', 1, 'mekanism:advanced_chemical_tank')
+	overclocking_machine('mekanismgenerators:gas_burning_generator', 1, 'kubejs:energy_machine')
+
+	event.recipes.createCompacting(CRD('steel_ingot'), MEK('enriched_iron')).superheated()
+
+	event.remove({ output: 'mekanism:dust_refined_obsidian' })
+	event.remove({ input: 'mekanism:dust_refined_obsidian' })
+	event.remove({ output: 'mekanism:ingot_refined_glowstone' })
+	event.remove({ input: 'mekanism:ingot_refined_glowstone' })
+	event.remove({ id: 'create:crushing/diorite_recycling' })
+	event.remove({ id: 'mekanism:chemical_infusing/sulfuric_trioxide' })
+	event.remove({ id: 'mekanism:chemical_infusing/sulfuric_acid' })
+	event.remove({ id: 'mekanism:processing/steel/enriched_iron_to_dust' })
+	event.remove({ id: 'mekanism:metallurgic_infuser' })
+	event.remove({ id: 'mekanismgenerators:fission_reactor/casing' })
+	event.remove({ output:'mekanism:chemical_dissolution_chamber'})
+	event.remove({ output:'mekanism:chemical_washer'})
+	event.remove({ output:'mekanism:antiprotonic_nucleosynthesizer'})
+	event.replaceInput({mod: 'mekanism'}, MEK('steel_casing'), KJ('overclocking_machine'))
+
+	event.custom({ // 凝灰岩
+		"type": "thermal:rock_gen",
+		"adjacent": MC("packed_ice"),
+		"below": "kubejs:overclocking_machine",
+		"result": { "item": 'minecraft:tuff' }
+	})
+	event.custom({
+		"type": "create:crushing",
+  		"ingredients": [
+    	{"item": "minecraft:tuff"}],
+  		"results": [
+			{"item": "minecraft:flint","chance": 0.25},
+    		{"item": "minecraft:gold_nugget","chance": 0.1},
+			{"item": "create:copper_nugget","chance": 0.1},
+    		{"item": "create:zinc_nugget","chance": 0.1},
+    		{"item": "minecraft:iron_nugget","chance": 0.1},
+			{"item": "thermal:nickel_nugget","chance": 0.1},
+			{"item": "create_dd:tin_nugget","chance": 0.1},
+			{"item": "vintageimprovements:vanadium_nugget", "chance": 0.1},
+			{"item": "thermal:lead_nugget", "chance": 0.1}
+  		],
+  		"processingTime": 350
+	}).id('create:crushing/tuff')
+	event.remove({ input: 'minecraft:tuff' ,type: 'create:crushing'})
+	//合金
+	event.recipes.createMixing([Fluid.of('kubejs:condensed_skyslime', 100)], [Fluid.of('tconstruct:sky_slime', 300)]).superheated()	
+	event.recipes.createFilling(KJ('incomplete_alloy_reinforced'), [MEK('alloy_infused'), Fluid.of('kubejs:condensed_skyslime', 100)])
+	event.recipes.createFilling(KJ('incomplete_alloy_infused'), [CR('andesite_alloy'), Fluid.of('tconstruct:blazing_blood', 100)])
+	event.recipes.createFilling(KJ('incomplete_alloy_atomic'), [MEK('alloy_reinforced'), Fluid.of('kubejs:pelletium', 50)])
+
+	event.custom({
+		"type":"mekanism:rotary",
+		"fluidInput":{"amount":1,"fluid":"kubejs:liquid_oil_gas"},
+		"gasOutput":{"gas":"kubejs:oil_gas","amount":1},
+		"gasInput":{"amount":1,"gas":"kubejs:oil_gas"},
+		"fluidOutput":{"fluid":"kubejs:liquid_oil_gas","amount":1}
+	})
+
+	event.recipes.createMixing([Fluid.of("tconstruct:blazing_blood", 50), CR('empty_blaze_burner')], [CR('blaze_burner')]).superheated()
+
+	
+	let alloy_types = ["alloy_reinforced" ,"alloy_infused" ,"alloy_atomic"]
+	alloy_types.forEach(element => {
+		event.custom({
+		"type":"mekanism:metallurgic_infusing",
+		"itemInput":{"ingredient":{"item":('kubejs:incomplete_' + element)}},
+		"chemicalInput":{"amount":40,"infuse_type":"kubejs:alloy_hardener"},
+		"output":{"item":('mekanism:' + element)}
+	})});
+
+	event.custom({
+		"type":"mekanism:infusion_conversion",
+		"input":{"ingredient":[{"item":"kubejs:alloy_hardener_item"}]},
+		"output":{"infuse_type":"kubejs:alloy_hardener","amount":20}}
+	)
+
+	event.recipes.thermal.refinery([Fluid.of('kubejs:liquid_oil_gas', 100), Fluid.of('createdieselgenerators:gasoline', 100), Item.of('thermal:sulfur_dust').withChance(0.20)], Fluid.of('thermal:light_oil', 100)).energy(6000)
+	event.recipes.thermal.refinery([Fluid.of('kubejs:liquid_oil_gas', 100), Fluid.of('createdieselgenerators:diesel', 100), Item.of('thermal:tar').withChance(0.20)], Fluid.of('thermal:heavy_oil', 100)).energy(6000)
+	event.recipes.thermal.refinery([Fluid.of('mekanism:ethene', 100)], Fluid.of('beyond_earth:fuel', 100)).energy(9000)
+	event.remove({ id: 'mekanism:reaction/substrate/water_hydrogen' })
+
+	event.shaped('mekanism:substrate', [
+		'WWW',
+		'WBW',
+		'EEE'
+	], {
+		W: MC('water_bucket'),
+		E: MEK('ethene_bucket'),
+		B: KJ('matter_plastics')
+	})
+	
+	event.shaped(KJ('alloy_hardener_item'), [
+		' S ',
+		'SCS',
+		' S '
+	], {
+		S: MC('snowball'),
+		C: CR('wheat_flour')
+	})
+
+	event.recipes.thermal.centrifuge([Item.of('mekanism:ingot_osmium').withChance(0.25), Item.of('tconstruct:debris_nugget', 3)], Item.of('minecraft:ancient_debris')).energy(4000)
+	event.recipes.mekanism.compressing('mekanism:basic_control_circuit', 'create_dd:integrated_circuit' , {gas: 'mekanism:osmium', amount: 2})
+
+	let bcc = MEK('basic_control_circuit')
+	event.recipes.createSequencedAssembly([
+		MEK('advanced_control_circuit'),
+	], MEK('basic_control_circuit'), [
+		event.recipes.createDeploying(bcc, [bcc, MEK('enriched_gold')]),
+		event.recipes.createDeploying(bcc, [bcc, MEK('enriched_redstone')]),
+		event.recipes.createDeploying(bcc, [bcc, MEK('enriched_redstone')])
+	]).transitionalItem(bcc)
+		.loops(2)
+
+	event.custom({
+	"type": "createaddition:liquid_burning",
+	"input": {"fluid": "beyond_earth:fuel","amount": 1000},
+	"burnTime": 48000,
+	"superheated": true
+	})
+
+	event.recipes.createCrushing([Item.of(MEK('fluorite_gem'),3).withChance(0.5)], MC('diorite')).processingTime(100)
+	event.recipes.createMixing(MEK('elite_control_circuit'), [Fluid.of("mekanism:hydrofluoric_acid", 500), MEK('advanced_control_circuit'), Item.of('phantasm:hanging_pream_berry', 4)]).superheated()	
+	
+	let om = KJ('overclocking_mechanism')
+	event.recipes.createSequencedAssembly([
+		KJ('smart_mechanism'),
+	], om, [
+		event.recipes.createDeploying(om, [om, MEK('alloy_reinforced')]),
+		event.recipes.createDeploying(om, [om, MEK('alloy_reinforced')]),
+		event.recipes.createDeploying(om, [om, MEK('elite_control_circuit')]),
+		event.recipes.createDeploying(om, [om, KJ('data_module')])
+	]).transitionalItem(om)
+		.loops(1)
+		.id('kubejs:smart_mechanism')
+	event.shaped(KJ('smart_machine'), [
+		'SSS',
+		'SCS',
+		'SSS'
+	], {
+		C: [KJ('fluix_casing')],
+		S: KJ('smart_mechanism')
+	})
+	event.shaped(KJ('data_module'), [
+		'HHH',
+		'ICH',
+		'HHH'
+	], {
+		H: MEK('hdpe_sheet'),
+		C: MEK('elite_control_circuit'),
+		I: AE2('cable_interface')
+	})
+}
+
+function ultimateStage(event) {
+	event.shaped(MEK('personal_chest'), [
+		'SOS',
+		'BCB',
+		'SOS'
+	], {
+		C: '#forge:chests',
+		B: MEK('basic_control_circuit'),
+		O: KJ('overclocking_machine'),
+		S: CRD('steel_sheet')
+	})
+
+	event.recipes.thermal.centrifuge([Item.of('mekanism:raw_uranium').withChance(0.25), Item.of('beyond_earth:venus_sand')], Item.of('beyond_earth:venus_stone')).energy(4000)
+
+	let sm = KJ('smart_mechanism')
+	event.recipes.createSequencedAssembly([
+		KJ('ultimate_mechanism'),
+	], sm, [
+		event.recipes.createDeploying(sm, [sm, MEK('alloy_atomic')]),
+		event.recipes.createDeploying(sm, [sm, MEK('alloy_atomic')]),
+		event.recipes.createDeploying(sm, [sm, MEK('ultimate_control_circuit')]),
+		event.recipes.createDeploying(sm, [sm, KJ('data_module')])
+	]).transitionalItem(sm)
+		.loops(1)
+		.id('kubejs:ultimate_mechanism')
+
+	event.shaped(MEK('laser'), [
+		'ES ',
+		'ETC',
+		'ES '
+	], {
+		C: 'ae2:quartz_vibrant_glass',
+		T: KJ('smart_machine'),
+		E: MEK('alloy_reinforced'),
+		S: 'thermal:energy_cell'
+	})
+
+	event.shaped(MEK('laser_amplifier'), [
+		'EEE',
+		'EKC',
+		'EEE'
+	], {
+		E: '#forge:ingots/steel',
+		K: 'thermal:energy_cell',
+		C: 'ae2:quartz_vibrant_glass'
+	})
+
+	event.shaped(('4x mekanismgenerators:fission_reactor_casing'), [
+		' S ',
+		'SCS',
+		' S '
+	], {
+		C: KJ('smart_machine'),
+		S: TE('lead_ingot')
+	})
+
+	event.shaped(('2x mekanismgenerators:fission_reactor_port'), [
+		' S ',
+		'SCS',
+		' S '
+	], {
+		S: 'mekanismgenerators:fission_reactor_casing',
+		C: MEK('elite_control_circuit')
+	})
+
+	event.shaped(('mekanismgenerators:control_rod_assembly'), [
+		'SCS',
+		'TST',
+		'TST'
+	], {
+		C: MEK('elite_control_circuit'),
+		S: TE('lead_ingot'),
+		T: TE('steel_ingot')
+	})
+
+	event.shaped(('mekanismgenerators:fusion_reactor_controller'), [
+		'EGE',
+		'CTC',
+		'CCC'
+	], {
+		C: 'mekanismgenerators:fusion_reactor_frame',
+		T: 'mekanism:basic_chemical_tank',
+		G: '#forge:glass_panes',
+		E: MEK('elite_control_circuit')
+	})
+
+	event.shaped(('4x mekanismgenerators:fusion_reactor_frame')	, [
+		'SCS',
+		'CIC',
+		'SCS'
+	], {
+		S: MEK('alloy_reinforced'),
+		C: MEK('pellet_polonium'),
+		I: KJ('smart_machine')
+	})
+
+	event.shaped(('mekanism:antiprotonic_nucleosynthesizer'), [
+		'ECE',
+		'KTK',
+		'ECE'
+	], {
+		C: MEK('ultimate_control_circuit'),
+		E: 'mekanism:advanced_chemical_tank',
+		T: KJ('smart_machine'),
+		K: MEK('pellet_antimatter')
+	})
+
+	event.custom({
+		"type":"mekanism:nucleosynthesizing",
+		"itemInput":{"ingredient":{"item":"mekanism:elite_control_circuit"}},
+		"gasInput":{"amount":4,"gas":"mekanism:antimatter"},
+		"output":{"item":"mekanism:ultimate_control_circuit"},
+		"duration":500
+	})
+
+	event.shaped(('mekanism:sps_port'), [
+		' C ',
+		'CSC',
+		' C '
+	], {
+		C: MEK('elite_control_circuit'),
+		S: 'mekanism:sps_casing'
+	})
+
+	event.recipes.createMixing(Fluid.of("kubejs:pelletium", 50), [MEK('pellet_plutonium')]).superheated()
+
+	event.remove({ output: 'mekanism:configurator' })
+	event.shaped(MEK('configurator'), [
+		' C ',
+		'PSP',
+		' T '
+	], {
+		C: 'minecraft:lapis_lazuli',
+		P: MEK('alloy_infused'),
+		S: KJ('overclocking_mechanism'),
+		T: MC('stick')
+	})
+
+	event.shaped(('mekanism:chemical_crystallizer'), [
+		'GSG',
+		'TCT',
+		'GSG'
+	], {
+		C: KJ('smart_machine'),
+		S: MEK('elite_control_circuit'),
+		G: MEK('alloy_atomic'),
+		T: MEK('elite_control_circuit')
+	})
+
+	event.custom({
+	"type": "vintageimprovements:curving",
+	"itemAsHead": "kubejs:bzero_cast",
+	"ingredients": [
+		{
+		  "item": "kubejs:ultimate_mechanism"
+		}
+	],
+	"results": [
+		{
+		  "item": "kubejs:bzero"
+		}
+	]})
+
+	event.custom({
+	"type": "vintageimprovements:curving",
+	"itemAsHead": "kubejs:bone_cast",
+	"ingredients": [
+		{
+		  "item": "kubejs:ultimate_mechanism"
+		}
+	],
+	"results": [
+		{
+		  "item": "kubejs:bone"
+		}
+	]})
+
+	let zero = event.recipes.createDeploying(KJ('computation_matrix'), [KJ('computation_matrix'), KJ('bzero')]);
+	let one = event.recipes.createDeploying(KJ('computation_matrix'), [KJ('computation_matrix'), KJ('bone')]);
+	let enter = event.recipes.createDeploying(KJ('advanced_computation_matrix'), [KJ('advanced_computation_matrix'), '#minecraft:buttons']);
+	event.recipes.createSequencedAssembly([
+	Item.of(KJ('advanced_computation_matrix')),
+	], KJ('computation_matrix'), [
+	zero,one,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,one,one,one,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,enter,
+	zero,one,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,one,one,one,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,one,enter,
+	zero,zero,one,zero,zero,zero,one,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,one,zero,zero,zero,one,one,zero,zero,zero,enter,
+	zero,zero,zero,zero,zero,zero,zero,one,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,one,zero,zero,zero,zero,zero,zero,zero,zero,enter,
+	zero,one,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,one,one,zero,zero,zero,zero,zero,zero,zero,one,zero,zero,zero,zero,zero,zero,one,one,enter,
+	zero,zero,one,zero,zero,one,zero,one,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,one,zero,zero,zero,zero,one,one,zero,zero,enter,
+	zero,one,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,one,one,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,one,one,one,enter,
+	zero,one,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,zero,one,one,one,enter
+	]).transitionalItem(KJ('computation_matrix'))
+		.loops(1)
+		.id('kubejs:advanced_computation_matrix')
+}	
+
 function zincMachine(event) {
 
 	// event.custom({
@@ -3623,6 +4205,7 @@ function zincMachine(event) {
 	event.remove({ id: TC('smeltery/melting/soul/sand') })
 	event.remove({ id: CRD('sequenced_assembly/infernal_mechanism') })
 	event.remove({ id: CRD('crafting/ember_alloy') })
+	event.remove({ id: UA('elder_prismarine_coral_block') })
 
 	//焦黑炉核心
 	donutCraft(event, TC('foundry_controller'), TC('scorched_bricks'), KJ('infernal_mechanism'))
@@ -3632,8 +4215,6 @@ function zincMachine(event) {
 	// 余烬合金
 	event.recipes.createMixing(CRD('ember_alloy'), [CRD('smoked_planks'), CR('cinder_flour'), Fluid.of(TC("blazing_blood"), 50)]).heated()
 	event.recipes.createMixing(CRD('ember_alloy'), [CRD('smoked_planks'), Fluid.of(TC("liquid_soul"), 250), Fluid.of(TC("blazing_blood"), 50)]).heated()
-
-	//
 
 	let t = KJ('incomplete_infernal_mechanism')
 	event.recipes.createSequencedAssembly([
@@ -3900,6 +4481,7 @@ function invarMachine(event) {
 
 	let dyes = [MC('orange_dye'), MC('magenta_dye'), MC('light_blue_dye'), MC('yellow_dye'), MC('lime_dye'), MC('pink_dye'), MC('cyan_dye'), MC('purple_dye'), MC('blue_dye'), MC('brown_dye'), MC('green_dye'), MC('red_dye')]
 	event.recipes.createCompacting('1x ' + KJ("dye_entangled_singularity"), [dyes, Item.of(AE2('quantum_entangled_singularity'), 1)])
+	event.recipes.createCompacting('1x ' + KJ("dye_entangled_singularity"), [dyes, Item.of(KJ('quantum_entangled_singularity_stackable'), 1)])
 	event.recipes.createConversion([AE2('quantum_entangled_singularity')], AE2("singularity"))
 	event.recipes.createCrushing([
 		Item.of(AE2("red_paint_ball"), 1).withChance(.90),
@@ -3916,7 +4498,7 @@ function invarMachine(event) {
 			continue;
 		event.recipes.createEmptying([AE2(colors[index + 1] + '_paint_ball'), Fluid.of(CRD('chromatic_waste'), 250)], AE2(element + '_paint_ball'))
 	}
-
+	event.shapeless(KJ('quantum_entangled_singularity_stackable'), [AE2('quantum_entangled_singularity')])
 	event.recipes.createMechanicalCrafting(CRD('chromatic_compound'), [
 		'AA',
 		'AA'
@@ -5419,7 +6001,7 @@ function rocketScience(event) {
 	event.recipes.create.itemApplication("kubejs:encased_ostrum_fuel_tank", ["kubejs:matter_casing", "beyond_earth:ostrum_tank"])
 	event.recipes.create.itemApplication("kubejs:encased_calorite_fuel_tank", ["kubejs:matter_casing", "beyond_earth:calorite_tank"])
 
-	event.recipes.createMechanicalCrafting('kubejs:guide_computer', [
+	event.recipes.createMechanicalCrafting('kubejs:guide_computer_tier1', [
 		'PPPPP',
 		'PMMMP',
 		'GM MG',
@@ -5430,6 +6012,54 @@ function rocketScience(event) {
 		M: 'kubejs:computation_matrix',
 		G: 'thermal:diamond_gear',
 		C: 'ae2:controller'
+	})
+
+	event.recipes.createMechanicalCrafting('kubejs:guide_computer_tier2', [
+		'PPPPP',
+		'POMOP',
+		'GDTDG',
+		'POOOP',
+		'PPCPP'
+	], {
+		P: 'kubejs:matter_plastics',
+		M: 'kubejs:computation_matrix',
+		G: 'thermal:diamond_gear',
+		C: 'ae2:controller',
+		T: 'kubejs:guide_computer_tier1',
+		O: 'kubejs:overclocking_mechanism',
+		D: 'beyond_earth:compressed_desh'
+	})
+
+	event.recipes.createMechanicalCrafting('kubejs:guide_computer_tier3', [
+		'PPPPP',
+		'PMMMP',
+		'GOTOG',
+		'PSSSP',
+		'PPCPP'
+	], {
+		P: 'kubejs:matter_plastics',
+		M: 'kubejs:computation_matrix',
+		G: 'thermal:diamond_gear',
+		C: 'ae2:controller',
+		T: 'kubejs:guide_computer_tier2',
+		S: 'kubejs:smart_mechanism',
+		O: 'beyond_earth:compressed_ostrum'
+	})
+
+	event.recipes.createMechanicalCrafting('kubejs:guide_computer_tier4', [
+		'PPPPP',
+		'PMSMP',
+		'GOTOG',
+		'PMMMP',
+		'PPCPP'
+	], {
+		P: 'kubejs:matter_plastics',
+		M: 'kubejs:advanced_computation_matrix',
+		G: 'thermal:diamond_gear',
+		C: 'ae2:controller',
+		T: 'kubejs:guide_computer_tier3',
+		S: 'kubejs:ultimate_mechanism',
+		O: 'beyond_earth:compressed_calorite'
 	})
 
 	// event.shapeless("kubejs:deployed_disk", ["kubejs:deployed_cell", "ae2:item_cell_housing"])
@@ -8216,7 +8846,11 @@ onEvent("block.right_click", event => {
 	if (!(event.getItem().hasTag("forge:wrenches"))) return;
 	if (event.getPlayer().isCrouching()) return
 	let block = event.getBlock()
-	if (block.id != "kubejs:guide_computer") return;
+	let computerTier;
+	if (block.id === "kubejs:guide_computer_tier1") {computerTier = 1} else
+	if (block.id === "kubejs:guide_computer_tier2") {computerTier = 2} else
+	if (block.id === "kubejs:guide_computer_tier3") {computerTier = 3} else
+	if (block.id === "kubejs:guide_computer_tier4") {computerTier = 4} else {return;}
 	let facing = block.getProperties().facing
 	let rocketTier = 0
 	for (let rocket of rockets) {
@@ -8236,9 +8870,9 @@ onEvent("block.right_click", event => {
 			}
 		}
 
-		if (isValid) {
-			rocketTier = rocket.tier;
-			break;
+		if (isValid && rocket.tier === computerTier) {
+    	rocketTier = computerTier;
+    	break;
 		}
 	}
 	if (!rocketTier) return;

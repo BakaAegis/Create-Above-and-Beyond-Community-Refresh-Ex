@@ -1,0 +1,9 @@
+{
+    "endgame.landing":{
+        "sounds": [
+            {
+                "name": "kubejs:landing"
+            }
+        ]
+    }
+}
