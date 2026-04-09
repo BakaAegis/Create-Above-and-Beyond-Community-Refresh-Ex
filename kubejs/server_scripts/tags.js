@@ -93,6 +93,7 @@ onEvent('item.tags', event => {
 	event.get('forge:screwdrivers').add(PR_C('screwdriver'))
 	event.get('forge:chromatic_resonators').add(KJ('chromatic_resonator'))
 	event.get('forge:flash_drives').add(KJ('flash_drive'))
+	event.get('forge:data_modules').add(KJ('data_module'))
 	event.get('forge:ender_staffs').add(RQ('ender_staff'))
 	event.get('forge:cross_of_mercys').add(RQ('mercy_cross'))
 	event.get('forge:super_glues').add(CR('super_glue'))

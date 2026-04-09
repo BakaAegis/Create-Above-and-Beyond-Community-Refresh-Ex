@@ -3960,7 +3960,7 @@ function smartMachine(event) {
 		event.recipes.createDeploying(om, [om, MEK('alloy_reinforced')]),
 		event.recipes.createDeploying(om, [om, MEK('alloy_reinforced')]),
 		event.recipes.createDeploying(om, [om, MEK('elite_control_circuit')]),
-		event.recipes.createDeploying(om, [om, KJ('data_module')])
+		event.recipes.createDeploying(om, [om, F('#data_modules')])
 	]).transitionalItem(om)
 		.loops(1)
 		.id('kubejs:smart_mechanism')
@@ -4093,7 +4093,7 @@ function ultimateStage(event) {
 	event.custom({
 		"type":"mekanism:nucleosynthesizing",
 		"itemInput":{"ingredient":{"item":"mekanism:elite_control_circuit"}},
-		"gasInput":{"amount":4,"gas":"mekanism:antimatter"},
+		"gasInput":{"amount":2,"gas":"mekanism:antimatter"},
 		"output":{"item":"mekanism:ultimate_control_circuit"},
 		"duration":500
 	})
