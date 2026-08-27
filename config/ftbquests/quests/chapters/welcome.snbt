@@ -1,166 +1,160 @@
 {
-	id: "2EE5FBD9BD7C0265"
-	group: ""
-	order_index: 0
-	filename: "welcome"
-	title: "{quest.chapter.welcome.name}"
-	icon: "minecraft:spore_blossom"
-	disable_toast: true
-	default_quest_shape: ""
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	disable_toast: true
+	filename: "welcome"
+	group: ""
+	icon: "minecraft:spore_blossom"
+	id: "2EE5FBD9BD7C0265"
+	order_index: 0
+	quest_links: [ ]
 	quests: [
 		{
-			title: "{quest.welcome.introduce.title}"
-			icon: "minecraft:gold_ore"
-			disable_toast: true
-			x: -3.5d
-			y: -5.0d
-			shape: "hexagon"
-			subtitle: "{quest.welcome.introduce.subtitle}"
 			description: [
 				"{quest.welcome.introduce.text1}"
 				"{quest.welcome.introduce.text2}"
 			]
-			size: 2.0d
+			disable_toast: true
+			icon: "minecraft:gold_ore"
 			id: "09356B3BEF298E06"
+			rewards: [
+				{
+					id: "1EE277823ACFB886"
+					item: "minecraft:flower_pot"
+					type: "item"
+				}
+				{
+					id: "5C2CE7A2FA929728"
+					item: "minecraft:cornflower"
+					type: "item"
+				}
+				{
+					id: "0C5FE046D9FAD48D"
+					item: "ftbquests:book"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "{quest.welcome.introduce.subtitle}"
 			tasks: [{
 				id: "7670232EEE67FE29"
 				type: "checkmark"
 			}]
-			rewards: [
-				{
-					id: "1EE277823ACFB886"
-					type: "item"
-					item: "minecraft:flower_pot"
-				}
-				{
-					id: "5C2CE7A2FA929728"
-					type: "item"
-					item: "minecraft:cornflower"
-				}
-				{
-					id: "0C5FE046D9FAD48D"
-					type: "item"
-					item: "ftbquests:book"
-				}
-			]
+			title: "{quest.welcome.introduce.title}"
+			x: -3.5d
+			y: -5.0d
 		}
 		{
-			title: "{quest.welcome.about_quests.title}"
-			icon: "minecraft:grass_block"
-			disable_toast: true
-			x: -3.5d
-			y: -2.5d
-			shape: "hexagon"
-			subtitle: "{quest.welcome.about_quests.subtitle}"
+			dependencies: ["09356B3BEF298E06"]
 			description: [
 				"{quest.welcome.about_quests.text1}"
 				""
 				"{quest.welcome.about_quests.text2}"
 			]
+			disable_toast: true
 			hide_dependency_lines: true
-			dependencies: ["09356B3BEF298E06"]
-			size: 1.5d
+			icon: "minecraft:grass_block"
 			id: "69D55492A8F42A94"
+			rewards: [{
+				count: 8
+				id: "3CA638263588DC20"
+				item: "create:tree_fertilizer"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "{quest.welcome.about_quests.subtitle}"
 			tasks: [{
 				id: "0680791525813778"
 				type: "checkmark"
 			}]
-			rewards: [{
-				id: "3CA638263588DC20"
-				type: "item"
-				item: "create:tree_fertilizer"
-				count: 8
-			}]
+			title: "{quest.welcome.about_quests.title}"
+			x: -3.5d
+			y: -2.5d
 		}
 		{
-			title: "{quest.welcome.first.title}"
-			icon: "create:cogwheel"
-			disable_toast: true
-			x: -4.0d
-			y: -1.0d
-			shape: "hexagon"
-			subtitle: "{quest.welcome.first.subtitle}"
+			dependencies: ["69D55492A8F42A94"]
 			description: [
 				"{quest.welcome.first.text1}"
 				"{quest.welcome.first.text2}"
 			]
-			dependencies: ["69D55492A8F42A94"]
-			size: 1.5d
+			disable_toast: true
+			icon: "create:cogwheel"
 			id: "407236D2B1D2257D"
+			rewards: [{
+				id: "3D4250D2B4800C1C"
+				item: "create:builders_tea"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "{quest.welcome.first.subtitle}"
 			tasks: [{
 				id: "71C8186F3C7861F2"
 				type: "checkmark"
 			}]
-			rewards: [{
-				id: "3D4250D2B4800C1C"
-				type: "item"
-				item: "create:builders_tea"
-			}]
+			title: "{quest.welcome.first.title}"
+			x: -4.0d
+			y: -1.0d
 		}
 		{
-			title: "{quest.welcome.second.title}"
-			icon: "create:large_cogwheel"
-			disable_toast: true
-			x: -3.5d
-			y: 0.5d
-			shape: "hexagon"
-			subtitle: "{quest.welcome.second.subtitle}"
+			dependencies: ["407236D2B1D2257D"]
 			description: [
 				"{quest.welcome.second.text1}"
 				""
 				"{quest.welcome.second.text2}"
 				"{quest.welcome.second.text3}"
 			]
-			dependencies: ["407236D2B1D2257D"]
-			size: 1.5d
+			disable_toast: true
+			icon: "create:large_cogwheel"
 			id: "2C7ADB6C11B918B1"
+			rewards: [{
+				id: "1BF6428DE53BC0FF"
+				item: "minecraft:cookie"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "{quest.welcome.second.subtitle}"
 			tasks: [{
 				id: "36AF6DA4FFED8DC2"
 				type: "checkmark"
 			}]
-			rewards: [{
-				id: "1BF6428DE53BC0FF"
-				type: "item"
-				item: "minecraft:cookie"
-			}]
+			title: "{quest.welcome.second.title}"
+			x: -3.5d
+			y: 0.5d
 		}
 		{
-			title: "{quest.welcome.third.title}"
-			icon: "kubejs:andesite_machine"
-			disable_toast: true
-			x: -2.0d
-			y: 1.0d
-			shape: "hexagon"
-			subtitle: "{quest.welcome.third.subtitle}"
+			dependencies: ["2C7ADB6C11B918B1"]
 			description: [
 				"{quest.welcome.third.text1}"
 				""
 				"{quest.welcome.third.text2}"
 				"{quest.welcome.third.text3}"
 			]
-			dependencies: ["2C7ADB6C11B918B1"]
-			size: 1.5d
+			disable_toast: true
+			icon: "kubejs:andesite_machine"
 			id: "1947C6CE179EBAC6"
+			rewards: [{
+				count: 4
+				id: "4000DE1B90DA84CE"
+				item: "minecraft:wheat_seeds"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "{quest.welcome.third.subtitle}"
 			tasks: [{
 				id: "235CD0501F0E807C"
 				type: "checkmark"
 			}]
-			rewards: [{
-				id: "4000DE1B90DA84CE"
-				type: "item"
-				item: "minecraft:wheat_seeds"
-				count: 4
-			}]
+			title: "{quest.welcome.third.title}"
+			x: -2.0d
+			y: 1.0d
 		}
 		{
-			title: "{quest.welcome.forth.title}"
-			icon: "thermal:machine_press"
-			disable_toast: true
-			x: -0.5d
-			y: 0.5d
-			shape: "hexagon"
-			subtitle: "{quest.welcome.forth.subtitle}"
+			dependencies: ["1947C6CE179EBAC6"]
 			description: [
 				"{quest.welcome.forth.text1}"
 				""
@@ -168,33 +162,28 @@
 				""
 				"{quest.welcome.forth.text3}"
 			]
-			dependencies: ["1947C6CE179EBAC6"]
-			size: 1.5d
+			disable_toast: true
+			icon: "thermal:machine_press"
 			id: "58E38BA6D927409F"
+			rewards: [{
+				count: 32
+				id: "583C35BA7A7B9004"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "{quest.welcome.forth.subtitle}"
 			tasks: [{
 				id: "3A69DCA5AB7A36F2"
 				type: "checkmark"
 			}]
-			rewards: [{
-				id: "583C35BA7A7B9004"
-				type: "item"
-				item: "thermal:silver_coin"
-				count: 32
-			}]
+			title: "{quest.welcome.forth.title}"
+			x: -0.5d
+			y: 0.5d
 		}
 		{
-			title: "{quest.welcome.quest_overview.title}"
-			icon: {
-				id: "occultism:book_of_calling_djinni_manage_machine"
-				Count: 1b
-				tag: {
-					spiritName: "Barsalmared"
-				}
-			}
-			disable_toast: true
-			x: -1.5d
-			y: -1.5d
-			shape: "hexagon"
+			dependencies: ["58E38BA6D927409F"]
 			description: [
 				"{quest.welcome.quest_overview.text1}"
 				""
@@ -208,40 +197,51 @@
 				""
 				"{quest.welcome.quest_overview.text6}"
 			]
-			dependencies: ["58E38BA6D927409F"]
-			size: 1.5d
+			disable_toast: true
+			icon: {
+				Count: 1
+				id: "occultism:book_of_calling_djinni_manage_machine"
+				tag: {
+					spiritName: "Barsalmared"
+				}
+			}
 			id: "00003FCBB33E62C4"
+			rewards: [{
+				id: "67E25D801A479C56"
+				item: "minecraft:writable_book"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
 			tasks: [{
 				id: "181383A364ECB6F1"
 				type: "checkmark"
 			}]
-			rewards: [{
-				id: "67E25D801A479C56"
-				type: "item"
-				item: "minecraft:writable_book"
-			}]
+			title: "{quest.welcome.quest_overview.title}"
+			x: -1.5d
+			y: -1.5d
 		}
 		{
-			title: "{quest.welcome.start.title}"
-			icon: "minecraft:gold_block"
-			disable_toast: true
-			x: 2.0d
-			y: -1.5d
-			shape: "hexagon"
-			description: ["{quest.welcome.start.text1}"]
 			dependencies: ["00003FCBB33E62C4"]
-			size: 2.0d
+			description: ["{quest.welcome.start.text1}"]
+			disable_toast: true
+			icon: "minecraft:gold_block"
 			id: "31EDFA6D2FF86CB0"
-			tasks: [{
-				id: "422CD0E2E5F2F158"
-				type: "checkmark"
-			}]
 			rewards: [{
 				id: "27FC36C810ADB897"
 				type: "xp_levels"
 				xp_levels: 3
 			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "422CD0E2E5F2F158"
+				type: "checkmark"
+			}]
+			title: "{quest.welcome.start.title}"
+			x: 2.0d
+			y: -1.5d
 		}
 	]
-	quest_links: [ ]
+	title: "{quest.chapter.welcome.name}"
 }

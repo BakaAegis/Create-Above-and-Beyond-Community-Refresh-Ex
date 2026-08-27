@@ -1,20 +1,16 @@
 {
-	id: "0E88C673CC9972EE"
-	group: "331B6409EF6A7840"
-	order_index: 1
-	filename: "challenge"
-	title: "{quest.chapter.challenges.name}"
-	icon: "minecraft:enchanting_table"
-	default_quest_shape: ""
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "challenge"
+	group: "331B6409EF6A7840"
+	hide_quest_details_until_startable: true
+	icon: "minecraft:enchanting_table"
+	id: "0E88C673CC9972EE"
+	order_index: 1
+	quest_links: [ ]
 	quests: [
 		{
-			title: "{quest.challenge.introduce.title}"
-			icon: "minecraft:enchanting_table"
-			x: 0.0d
-			y: 0.0d
-			shape: "hexagon"
-			subtitle: "{quest.challenge.introduce.subtitle}"
+			dependencies: ["7848E8E1D22BF643"]
 			description: [
 				"{quest.challenge.introduce.text1}"
 				""
@@ -22,109 +18,110 @@
 				""
 				"{quest.challenge.introduce.text3}"
 			]
-			hide: true
-			size: 2.0d
+			hide_until_deps_complete: true
+			icon: "minecraft:enchanting_table"
 			id: "58E321BA4B90929F"
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "{quest.challenge.introduce.subtitle}"
 			tasks: [
 				{
 					id: "35C83EAF34860A67"
-					type: "checkmark"
 					title: "{tip.kubejs.sure}"
+					type: "checkmark"
 				}
 				{
 					id: "7494ABC1DCFC7F69"
-					type: "checkmark"
 					title: "{tip.kubejs.unlock_thanks}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.challenge.introduce.title}"
+			x: 0.0d
+			y: 0.0d
 		}
 		{
-			title: "{quest.challenge.bullet.title}"
-			icon: "cgm:advanced_bullet"
-			x: -2.0d
-			y: 0.0d
-			shape: "hexagon"
-			subtitle: "{quest.challenge.bullet.subtitle}"
+			dependencies: ["58E321BA4B90929F"]
 			description: ["{quest.challenge.bullet.text1}"]
 			hide_dependency_lines: true
-			dependencies: ["58E321BA4B90929F"]
-			optional: true
+			icon: "cgm:advanced_bullet"
 			id: "65B9D982E9FB4AA9"
+			optional: true
+			rewards: [{
+				count: 16
+				id: "460E8FC66220D703"
+				item: "quark:gunpowder_sack"
+				type: "item"
+			}]
+			shape: "hexagon"
+			subtitle: "{quest.challenge.bullet.subtitle}"
 			tasks: [
 				{
+					consume_items: false
 					id: "094A2E17F8B29BF9"
-					type: "item"
 					item: {
+						Count: 1
 						id: "createbigcannons:machine_gun_round"
-						Count: 1b
 						tag: { }
 					}
-					consume_items: false
+					type: "item"
 				}
 				{
+					consume_items: false
 					id: "1D4E08D8322B9C47"
-					type: "item"
 					item: "cgm:shell"
-					consume_items: false
+					type: "item"
 				}
 				{
+					consume_items: false
 					id: "3E3A4FD371E3E9C8"
-					type: "item"
 					item: "cgm:missile"
-					consume_items: false
+					type: "item"
 				}
 				{
-					id: "38580839BD71EAF0"
-					type: "item"
-					item: "cgm:basic_bullet"
 					consume_items: false
+					id: "38580839BD71EAF0"
+					item: "cgm:basic_bullet"
+					type: "item"
 				}
 				{
 					id: "526C86E7908E437D"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
-			rewards: [{
-				id: "460E8FC66220D703"
-				type: "item"
-				item: "quark:gunpowder_sack"
-				count: 16
-			}]
+			title: "{quest.challenge.bullet.title}"
+			x: -2.0d
+			y: 0.0d
 		}
 		{
-			title: "{quest.challenge.chocolate.title}"
-			icon: "create:bar_of_chocolate"
-			x: 2.0d
-			y: 0.0d
-			shape: "hexagon"
-			subtitle: "{quest.challenge.chocolate.subtitle}"
+			dependencies: ["58E321BA4B90929F"]
 			description: ["{quest.challenge.chocolate.text1}"]
 			hide_dependency_lines: true
-			dependencies: ["58E321BA4B90929F"]
-			optional: true
+			icon: "create:bar_of_chocolate"
 			id: "4A38517AC2118B36"
+			optional: true
+			shape: "hexagon"
+			subtitle: "{quest.challenge.chocolate.subtitle}"
 			tasks: [
 				{
-					id: "6CA0771EB2C213FC"
-					type: "item"
-					item: "create:chocolate_bucket"
 					consume_items: false
+					id: "6CA0771EB2C213FC"
+					item: "create:chocolate_bucket"
+					type: "item"
 				}
 				{
 					id: "457570ABE5AECC38"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.challenge.chocolate.title}"
+			x: 2.0d
+			y: 0.0d
 		}
 		{
-			title: "{quest.challenge.creative.title}"
-			icon: "kubejs:creative_card"
-			x: 0.0d
-			y: -2.0d
-			shape: "hexagon"
-			subtitle: "{quest.challenge.creative.subtitle}"
+			dependencies: ["58E321BA4B90929F"]
 			description: [
 				"{quest.challenge.creative.text1}"
 				""
@@ -133,22 +130,27 @@
 				"{quest.challenge.creative.text3}"
 			]
 			hide_dependency_lines: true
-			dependencies: ["58E321BA4B90929F"]
-			optional: true
+			icon: "kubejs:creative_card"
 			id: "657693918A79B7A4"
+			optional: true
+			rewards: [{
+				command: "/give @p kubejs:creative_card"
+				icon: "kubejs:creative_card"
+				id: "72C3D07498F7E463"
+				title: "{tip.kubejs.creative}"
+				type: "command"
+			}]
+			shape: "hexagon"
+			subtitle: "{quest.challenge.creative.subtitle}"
 			tasks: [{
 				id: "72B3935AB0FABA16"
-				type: "checkmark"
 				title: "好的"
+				type: "checkmark"
 			}]
-			rewards: [{
-				id: "72C3D07498F7E463"
-				type: "command"
-				title: "{tip.kubejs.creative}"
-				icon: "kubejs:creative_card"
-				command: "/give @p kubejs:creative_card"
-			}]
+			title: "{quest.challenge.creative.title}"
+			x: 0.0d
+			y: -2.0d
 		}
 	]
-	quest_links: [ ]
+	title: "{quest.chapter.challenges.name}"
 }

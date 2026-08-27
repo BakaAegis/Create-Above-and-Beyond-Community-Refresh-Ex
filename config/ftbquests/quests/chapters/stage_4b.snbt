@@ -1,19 +1,15 @@
 {
-	id: "102E012616516E5D"
-	group: "331B6409EF6A7840"
-	order_index: 6
-	filename: "stage_4b"
-	title: "{quest.chapter.stage_4a.name}"
-	icon: "kubejs:substrate_chaos"
-	default_quest_shape: ""
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "stage_4b"
+	group: "331B6409EF6A7840"
+	icon: "kubejs:substrate_chaos"
+	id: "102E012616516E5D"
+	order_index: 6
+	quest_links: [ ]
 	quests: [
 		{
-			title: "{quest.stage_4a.introduce.title}"
-			icon: "kubejs:inductive_mechanism"
-			x: 1.75d
-			y: 2.0d
-			shape: "hexagon"
+			dependencies: ["75F9C570E6B95343"]
 			description: [
 				"{quest.stage_4a.introduce.text1}"
 				""
@@ -21,26 +17,27 @@
 				""
 				"{quest.stage_4a.introduce.text3}"
 			]
-			dependencies: ["75F9C570E6B95343"]
-			hide: true
-			size: 2.0d
+			hide_until_deps_complete: true
+			icon: "kubejs:inductive_mechanism"
 			id: "05446225038D260A"
-			tasks: [{
-				id: "38B2DFD6233E49FD"
-				type: "checkmark"
-				title: "{tip.kubejs.start}"
-			}]
 			rewards: [{
 				id: "4AF4A93C5D5FB6DD"
-				type: "item"
 				item: "farmersdelight:hot_cocoa"
+				type: "item"
 			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "38B2DFD6233E49FD"
+				title: "{tip.kubejs.start}"
+				type: "checkmark"
+			}]
+			title: "{quest.stage_4a.introduce.title}"
+			x: 1.75d
+			y: 2.0d
 		}
 		{
-			title: "{quest.stage_4a.encapsulate_decapsulate.title}"
-			x: -0.25d
-			y: 2.0d
-			shape: "circle"
+			dependencies: ["05446225038D260A"]
 			description: [
 				"{quest.stage_4a.encapsulate_decapsulate.text1}"
 				""
@@ -50,509 +47,501 @@
 				""
 				"{quest.stage_4a.encapsulate_decapsulate.text4}"
 			]
-			dependencies: ["05446225038D260A"]
 			id: "42B615F7BECA6E58"
+			shape: "circle"
 			tasks: [
 				{
+					consume_items: false
 					id: "39000CC22827EE50"
-					type: "item"
 					item: "thermal:machine_bottler"
-					consume_items: false
+					type: "item"
 				}
 				{
+					consume_items: false
 					id: "6485567EC6630BF2"
-					type: "item"
 					item: "thermal:machine_sawmill"
-					consume_items: false
+					type: "item"
 				}
 				{
-					id: "75F82E2858B93DBD"
-					type: "item"
-					item: "thermal:machine_centrifuge"
 					consume_items: false
+					id: "75F82E2858B93DBD"
+					item: "thermal:machine_centrifuge"
+					type: "item"
 				}
 			]
+			title: "{quest.stage_4a.encapsulate_decapsulate.title}"
+			x: -0.25d
+			y: 2.0d
 		}
 		{
-			x: -5.0d
-			y: 0.5d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "36A2C5B3E20C28DF"
 			tasks: [{
-				id: "1E93F39E5F1F678E"
-				type: "item"
-				item: "kubejs:substrate_andesite"
 				consume_items: false
+				id: "1E93F39E5F1F678E"
+				item: "kubejs:substrate_andesite"
+				type: "item"
 			}]
+			x: -5.0d
+			y: 0.5d
 		}
 		{
-			x: -5.0d
-			y: 1.5d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "60F7A50F984284F1"
 			tasks: [{
-				id: "5D98554C2EF24A62"
-				type: "item"
-				item: "kubejs:substrate_diorite"
 				consume_items: false
+				id: "5D98554C2EF24A62"
+				item: "kubejs:substrate_diorite"
+				type: "item"
 			}]
+			x: -5.0d
+			y: 1.5d
 		}
 		{
-			x: -5.0d
-			y: 2.5d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "35406FED565B7EFF"
 			tasks: [{
-				id: "090BAD8069B5962C"
-				type: "item"
-				item: "kubejs:substrate_granite"
 				consume_items: false
+				id: "090BAD8069B5962C"
+				item: "kubejs:substrate_granite"
+				type: "item"
 			}]
+			x: -5.0d
+			y: 2.5d
 		}
 		{
-			x: -5.0d
-			y: 3.5d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "6CBB7512CDFF4C2E"
 			tasks: [{
-				id: "739A22504FFAC363"
-				type: "item"
-				item: "kubejs:substrate_cobblestone"
 				consume_items: false
+				id: "739A22504FFAC363"
+				item: "kubejs:substrate_cobblestone"
+				type: "item"
 			}]
+			x: -5.0d
+			y: 3.5d
 		}
 		{
-			x: -5.0d
-			y: 4.5d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "0F688EAF792BAE96"
 			tasks: [{
-				id: "2F714B82CD1A3FDD"
-				type: "item"
-				item: "kubejs:substrate_basalt"
 				consume_items: false
+				id: "2F714B82CD1A3FDD"
+				item: "kubejs:substrate_basalt"
+				type: "item"
 			}]
+			x: -5.0d
+			y: 4.5d
 		}
 		{
-			x: -5.0d
-			y: 5.5d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "560F2995CE2862D7"
 			tasks: [{
-				id: "6F2432F797A27549"
-				type: "item"
-				item: "kubejs:substrate_gabbro"
 				consume_items: false
+				id: "6F2432F797A27549"
+				item: "kubejs:substrate_gabbro"
+				type: "item"
 			}]
+			x: -5.0d
+			y: 5.5d
 		}
 		{
-			x: -2.5d
-			y: 3.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "3978E4B39C9DB44D"
 			tasks: [{
-				id: "0A7F5C2865C6F5F5"
-				type: "item"
-				item: "kubejs:substrate_red"
 				consume_items: false
+				id: "0A7F5C2865C6F5F5"
+				item: "kubejs:substrate_red"
+				type: "item"
 			}]
+			x: -2.5d
+			y: 3.0d
 		}
 		{
-			x: -3.5d
-			y: 4.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "122D3D6743D1DD04"
 			tasks: [{
-				id: "6FD70BEFECE67F2C"
-				type: "item"
-				item: "kubejs:substrate_orange"
 				consume_items: false
+				id: "6FD70BEFECE67F2C"
+				item: "kubejs:substrate_orange"
+				type: "item"
 			}]
+			x: -3.5d
+			y: 4.0d
 		}
 		{
-			x: -2.5d
-			y: 4.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "1E856F69C03B1D75"
 			tasks: [{
-				id: "2A79E5D1D6C6787F"
-				type: "item"
-				item: "kubejs:substrate_yellow"
 				consume_items: false
+				id: "2A79E5D1D6C6787F"
+				item: "kubejs:substrate_yellow"
+				type: "item"
 			}]
+			x: -2.5d
+			y: 4.0d
 		}
 		{
-			x: -3.5d
-			y: 5.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "49957428564E8101"
 			tasks: [{
-				id: "183677E3CD7A38E0"
-				type: "item"
-				item: "kubejs:substrate_green"
 				consume_items: false
+				id: "183677E3CD7A38E0"
+				item: "kubejs:substrate_green"
+				type: "item"
 			}]
+			x: -3.5d
+			y: 5.0d
 		}
 		{
-			x: -2.5d
-			y: 5.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "678C5FC6A898E988"
 			tasks: [{
-				id: "7E01B9B59066FD90"
-				type: "item"
-				item: "kubejs:substrate_blue"
 				consume_items: false
+				id: "7E01B9B59066FD90"
+				item: "kubejs:substrate_blue"
+				type: "item"
 			}]
+			x: -2.5d
+			y: 5.0d
 		}
 		{
-			x: -3.5d
-			y: 3.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "3377A2C391B6F03A"
 			tasks: [{
-				id: "217E5A578A83222B"
-				type: "item"
-				item: "kubejs:substrate_magenta"
 				consume_items: false
+				id: "217E5A578A83222B"
+				item: "kubejs:substrate_magenta"
+				type: "item"
 			}]
+			x: -3.5d
+			y: 3.0d
 		}
 		{
-			x: 1.0d
-			y: 4.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "616D07DC2CE17BA4"
 			tasks: [{
-				id: "119E7FC4D7BB242F"
-				type: "item"
-				item: "kubejs:substrate_blaze"
 				consume_items: false
+				id: "119E7FC4D7BB242F"
+				item: "kubejs:substrate_blaze"
+				type: "item"
 			}]
+			x: 1.0d
+			y: 4.0d
 		}
 		{
-			x: 1.0d
-			y: 5.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "758B836F53187B8C"
 			tasks: [{
-				id: "6B17F1E13DF99E50"
-				type: "item"
-				item: "kubejs:substrate_slime"
 				consume_items: false
+				id: "6B17F1E13DF99E50"
+				item: "kubejs:substrate_slime"
+				type: "item"
 			}]
+			x: 1.0d
+			y: 5.0d
 		}
 		{
-			x: 0.0d
-			y: 4.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "4E3B9AA2062424F4"
 			tasks: [{
-				id: "0F0273B7441B6840"
-				type: "item"
-				item: "kubejs:substrate_nether"
 				consume_items: false
+				id: "0F0273B7441B6840"
+				item: "kubejs:substrate_nether"
+				type: "item"
 			}]
+			x: 0.0d
+			y: 4.0d
 		}
 		{
-			x: 0.0d
-			y: 5.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "20AA864C5201C638"
 			tasks: [{
-				id: "465B3645832D5B9A"
-				type: "item"
-				item: "kubejs:substrate_obsidian"
 				consume_items: false
+				id: "465B3645832D5B9A"
+				item: "kubejs:substrate_obsidian"
+				type: "item"
 			}]
+			x: 0.0d
+			y: 5.0d
 		}
 		{
-			x: -1.0d
-			y: 4.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "35A6E3BBD80FB00F"
 			tasks: [{
-				id: "3D85594FB65E7A91"
-				type: "item"
-				item: "kubejs:substrate_gunpowder"
 				consume_items: false
+				id: "3D85594FB65E7A91"
+				item: "kubejs:substrate_gunpowder"
+				type: "item"
 			}]
+			x: -1.0d
+			y: 4.0d
 		}
 		{
-			x: -1.0d
-			y: 5.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "03DB1FCC30B7321C"
 			tasks: [{
-				id: "6BE52A47FB071345"
-				type: "item"
-				item: "kubejs:substrate_prismarine"
 				consume_items: false
+				id: "6BE52A47FB071345"
+				item: "kubejs:substrate_prismarine"
+				type: "item"
 			}]
+			x: -1.0d
+			y: 5.0d
 		}
 		{
-			x: 2.5d
-			y: 4.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "421E285B7D642676"
 			tasks: [{
-				id: "10EF9D8072B539A4"
-				type: "item"
-				item: "kubejs:substrate_arcane"
 				consume_items: false
+				id: "10EF9D8072B539A4"
+				item: "kubejs:substrate_arcane"
+				type: "item"
 			}]
+			x: 2.5d
+			y: 4.0d
 		}
 		{
-			x: 2.5d
-			y: 5.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "6E154A8C81D8DD5F"
 			tasks: [{
-				id: "0E7911464600ABEC"
-				type: "item"
-				item: "kubejs:substrate_apatite"
 				consume_items: false
+				id: "0E7911464600ABEC"
+				item: "kubejs:substrate_apatite"
+				type: "item"
 			}]
+			x: 2.5d
+			y: 5.0d
 		}
 		{
-			x: 4.5d
-			y: 5.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "58A0EA80BB3A3262"
 			tasks: [{
-				id: "3106C362414AB238"
-				type: "item"
-				item: "kubejs:substrate_sulfur"
 				consume_items: false
+				id: "3106C362414AB238"
+				item: "kubejs:substrate_sulfur"
+				type: "item"
 			}]
+			x: 4.5d
+			y: 5.0d
 		}
 		{
-			x: 3.5d
-			y: 4.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "2C6EE5BEB945F154"
 			tasks: [{
-				id: "665D6D91F09233AE"
-				type: "item"
-				item: "kubejs:substrate_niter"
 				consume_items: false
+				id: "665D6D91F09233AE"
+				item: "kubejs:substrate_niter"
+				type: "item"
 			}]
+			x: 3.5d
+			y: 4.0d
 		}
 		{
-			x: 3.5d
-			y: 5.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "7CA6AC3B07E07D81"
 			tasks: [{
-				id: "6C839FAE45EC2AB4"
-				type: "item"
-				item: "kubejs:substrate_certus"
 				consume_items: false
+				id: "6C839FAE45EC2AB4"
+				item: "kubejs:substrate_certus"
+				type: "item"
 			}]
+			x: 3.5d
+			y: 5.0d
 		}
 		{
-			x: 4.5d
-			y: 4.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "40FDCF626F5EBB08"
 			tasks: [{
-				id: "55AA2EC101DB9047"
-				type: "item"
-				item: "kubejs:substrate_quartz"
 				consume_items: false
+				id: "55AA2EC101DB9047"
+				item: "kubejs:substrate_quartz"
+				type: "item"
 			}]
+			x: 4.5d
+			y: 4.0d
 		}
 		{
-			x: 7.0d
-			y: 3.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "5C0CE1EDF9BF49C9"
 			tasks: [{
-				id: "185775BFC6FE2D89"
-				type: "item"
-				item: "kubejs:substrate_zinc"
 				consume_items: false
+				id: "185775BFC6FE2D89"
+				item: "kubejs:substrate_zinc"
+				type: "item"
 			}]
+			x: 7.0d
+			y: 3.0d
 		}
 		{
-			x: 7.0d
-			y: 4.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "5A957C9B5D8DE1A1"
 			tasks: [{
-				id: "3FA02655BC1E99A6"
-				type: "item"
-				item: "kubejs:substrate_copper"
 				consume_items: false
+				id: "3FA02655BC1E99A6"
+				item: "kubejs:substrate_copper"
+				type: "item"
 			}]
+			x: 7.0d
+			y: 4.0d
 		}
 		{
-			x: 7.0d
-			y: 5.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "2995ADCCB6496A22"
 			tasks: [{
-				id: "4932CD6D8FE77BB7"
-				type: "item"
-				item: "kubejs:substrate_iron"
 				consume_items: false
+				id: "4932CD6D8FE77BB7"
+				item: "kubejs:substrate_iron"
+				type: "item"
 			}]
+			x: 7.0d
+			y: 5.0d
 		}
 		{
-			x: 6.0d
-			y: 3.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "285F815678D5F32A"
 			tasks: [{
-				id: "0EFBC080DFC4F106"
-				type: "item"
-				item: "kubejs:substrate_nickel"
 				consume_items: false
+				id: "0EFBC080DFC4F106"
+				item: "kubejs:substrate_nickel"
+				type: "item"
 			}]
+			x: 6.0d
+			y: 3.0d
 		}
 		{
-			x: 6.0d
-			y: 4.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "394A502BD8B5B1A0"
 			tasks: [{
-				id: "08F2F111C97B57CD"
-				type: "item"
-				item: "kubejs:substrate_lead"
 				consume_items: false
+				id: "08F2F111C97B57CD"
+				item: "kubejs:substrate_lead"
+				type: "item"
 			}]
+			x: 6.0d
+			y: 4.0d
 		}
 		{
-			x: 6.0d
-			y: 5.0d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "22F0C935130ADCF4"
 			tasks: [{
-				id: "4A4C9D6E372A5466"
-				type: "item"
-				item: "kubejs:substrate_gold"
 				consume_items: false
+				id: "4A4C9D6E372A5466"
+				item: "kubejs:substrate_gold"
+				type: "item"
 			}]
+			x: 6.0d
+			y: 5.0d
 		}
 		{
-			x: 8.5d
-			y: 1.5d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "235264EC150EDB4B"
 			tasks: [{
-				id: "2D94A57470F15112"
-				type: "item"
-				item: "kubejs:substrate_lapis"
 				consume_items: false
+				id: "2D94A57470F15112"
+				item: "kubejs:substrate_lapis"
+				type: "item"
 			}]
+			x: 8.5d
+			y: 1.5d
 		}
 		{
-			x: 8.5d
-			y: 0.5d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "33B3AB3394DD012A"
 			tasks: [{
-				id: "01253AF4C04D6EE2"
-				type: "item"
-				item: "kubejs:substrate_cinnabar"
 				consume_items: false
+				id: "01253AF4C04D6EE2"
+				item: "kubejs:substrate_cinnabar"
+				type: "item"
 			}]
+			x: 8.5d
+			y: 0.5d
 		}
 		{
-			x: 8.5d
-			y: 2.5d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "58A6D5414035EEA1"
 			tasks: [{
-				id: "09ADE0525C1D7379"
-				type: "item"
-				item: "kubejs:substrate_sapphire"
 				consume_items: false
+				id: "09ADE0525C1D7379"
+				item: "kubejs:substrate_sapphire"
+				type: "item"
 			}]
+			x: 8.5d
+			y: 2.5d
 		}
 		{
-			x: 8.5d
-			y: 3.5d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "2EECFBC4E2BF1F37"
 			tasks: [{
-				id: "36A7406CD330E7AB"
-				type: "item"
-				item: "kubejs:substrate_emerald"
 				consume_items: false
+				id: "36A7406CD330E7AB"
+				item: "kubejs:substrate_emerald"
+				type: "item"
 			}]
+			x: 8.5d
+			y: 3.5d
 		}
 		{
-			x: 8.5d
-			y: 4.5d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "2FD7D312EE63EA53"
 			tasks: [{
-				id: "68CD031A5C815200"
-				type: "item"
-				item: "kubejs:substrate_ruby"
 				consume_items: false
+				id: "68CD031A5C815200"
+				item: "kubejs:substrate_ruby"
+				type: "item"
 			}]
+			x: 8.5d
+			y: 4.5d
 		}
 		{
-			x: 8.5d
-			y: 5.5d
-			hide_dependency_lines: true
 			dependencies: ["05446225038D260A"]
+			hide_dependency_lines: true
 			id: "2644760FA76D5F30"
 			tasks: [{
-				id: "61BF1495FCB27EEB"
-				type: "item"
-				item: "kubejs:substrate_diamond"
 				consume_items: false
+				id: "61BF1495FCB27EEB"
+				item: "kubejs:substrate_diamond"
+				type: "item"
 			}]
+			x: 8.5d
+			y: 5.5d
 		}
 		{
-			x: -5.0d
-			y: 7.0d
-			shape: "circle"
-			description: [
-				"{quest.stage_4a.igneous.text1}"
-				""
-				"{quest.stage_4a.igneous.text2}"
-				""
-				"{quest.stage_4a.igneous.text3}"
-			]
-			hide_dependency_lines: true
 			dependencies: [
 				"36A2C5B3E20C28DF"
 				"60F7A50F984284F1"
@@ -561,24 +550,26 @@
 				"6CBB7512CDFF4C2E"
 				"560F2995CE2862D7"
 			]
-			id: "3EB5CD9776DF0E63"
-			tasks: [{
-				id: "34B1FAA6107B2411"
-				type: "item"
-				item: "kubejs:substrate_igneous"
-				consume_items: false
-			}]
-		}
-		{
-			x: -2.5d
-			y: 6.5d
-			shape: "circle"
 			description: [
-				"{quest.stage_4a.herbal.text1}"
+				"{quest.stage_4a.igneous.text1}"
 				""
-				"{quest.stage_4a.herbal.text2}"
+				"{quest.stage_4a.igneous.text2}"
+				""
+				"{quest.stage_4a.igneous.text3}"
 			]
 			hide_dependency_lines: true
+			id: "3EB5CD9776DF0E63"
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "34B1FAA6107B2411"
+				item: "kubejs:substrate_igneous"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 7.0d
+		}
+		{
 			dependencies: [
 				"3377A2C391B6F03A"
 				"3978E4B39C9DB44D"
@@ -587,24 +578,24 @@
 				"1E856F69C03B1D75"
 				"122D3D6743D1DD04"
 			]
-			id: "2B195E5B195246F5"
-			tasks: [{
-				id: "1F5A37CC8E10B3DB"
-				type: "item"
-				item: "kubejs:substrate_herbal"
-				consume_items: false
-			}]
-		}
-		{
-			x: 0.0d
-			y: 6.25d
-			shape: "circle"
 			description: [
-				"{quest.stage_4a.volatile.text1}"
+				"{quest.stage_4a.herbal.text1}"
 				""
-				"{quest.stage_4a.volatile.text2}"
+				"{quest.stage_4a.herbal.text2}"
 			]
 			hide_dependency_lines: true
+			id: "2B195E5B195246F5"
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "1F5A37CC8E10B3DB"
+				item: "kubejs:substrate_herbal"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 6.5d
+		}
+		{
 			dependencies: [
 				"4E3B9AA2062424F4"
 				"616D07DC2CE17BA4"
@@ -613,24 +604,24 @@
 				"20AA864C5201C638"
 				"35A6E3BBD80FB00F"
 			]
-			id: "62EB94758A862091"
-			tasks: [{
-				id: "744E156650A1F4B3"
-				type: "item"
-				item: "kubejs:substrate_volatile"
-				consume_items: false
-			}]
-		}
-		{
-			x: 3.5d
-			y: 6.25d
-			shape: "circle"
 			description: [
-				"{quest.stage_4a.crystal.text1}"
+				"{quest.stage_4a.volatile.text1}"
 				""
-				"{quest.stage_4a.crystal.text2}"
+				"{quest.stage_4a.volatile.text2}"
 			]
 			hide_dependency_lines: true
+			id: "62EB94758A862091"
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "744E156650A1F4B3"
+				item: "kubejs:substrate_volatile"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.25d
+		}
+		{
 			dependencies: [
 				"58A0EA80BB3A3262"
 				"2C6EE5BEB945F154"
@@ -639,24 +630,24 @@
 				"421E285B7D642676"
 				"6E154A8C81D8DD5F"
 			]
-			id: "549D7F67A97CD2CE"
-			tasks: [{
-				id: "0881E44E3823D060"
-				type: "item"
-				item: "kubejs:substrate_crystal"
-				consume_items: false
-			}]
-		}
-		{
-			x: 6.0d
-			y: 6.5d
-			shape: "circle"
 			description: [
-				"{quest.stage_4a.metal.text1}"
+				"{quest.stage_4a.crystal.text1}"
 				""
-				"{quest.stage_4a.metal.text2}"
+				"{quest.stage_4a.crystal.text2}"
 			]
 			hide_dependency_lines: true
+			id: "549D7F67A97CD2CE"
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "0881E44E3823D060"
+				item: "kubejs:substrate_crystal"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 6.25d
+		}
+		{
 			dependencies: [
 				"2995ADCCB6496A22"
 				"5C0CE1EDF9BF49C9"
@@ -665,24 +656,24 @@
 				"394A502BD8B5B1A0"
 				"285F815678D5F32A"
 			]
-			id: "0CC92E94D10E681D"
-			tasks: [{
-				id: "4E81FAFD3B80DFE9"
-				type: "item"
-				item: "kubejs:substrate_metal"
-				consume_items: false
-			}]
-		}
-		{
-			x: 8.5d
-			y: 7.0d
-			shape: "circle"
 			description: [
-				"{quest.stage_4a.gem.text1}"
+				"{quest.stage_4a.metal.text1}"
 				""
-				"{quest.stage_4a.gem.text2}"
+				"{quest.stage_4a.metal.text2}"
 			]
 			hide_dependency_lines: true
+			id: "0CC92E94D10E681D"
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "4E81FAFD3B80DFE9"
+				item: "kubejs:substrate_metal"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 6.5d
+		}
+		{
 			dependencies: [
 				"235264EC150EDB4B"
 				"2644760FA76D5F30"
@@ -691,25 +682,24 @@
 				"2EECFBC4E2BF1F37"
 				"33B3AB3394DD012A"
 			]
+			description: [
+				"{quest.stage_4a.gem.text1}"
+				""
+				"{quest.stage_4a.gem.text2}"
+			]
+			hide_dependency_lines: true
 			id: "5200AD3B32D219C6"
+			shape: "circle"
 			tasks: [{
-				id: "10F212525DABED77"
-				type: "item"
-				item: "kubejs:substrate_gem"
 				consume_items: false
+				id: "10F212525DABED77"
+				item: "kubejs:substrate_gem"
+				type: "item"
 			}]
+			x: 8.5d
+			y: 7.0d
 		}
 		{
-			title: "{quest.stage_4a.chaos.title}"
-			x: 1.75d
-			y: 7.5d
-			shape: "circle"
-			description: [
-				"{quest.stage_4a.chaos.text1}"
-				""
-				"{quest.stage_4a.chaos.text2}"
-				"{quest.stage_4a.chaos.text3}"
-			]
 			dependencies: [
 				"3EB5CD9776DF0E63"
 				"549D7F67A97CD2CE"
@@ -718,19 +708,26 @@
 				"0CC92E94D10E681D"
 				"5200AD3B32D219C6"
 			]
+			description: [
+				"{quest.stage_4a.chaos.text1}"
+				""
+				"{quest.stage_4a.chaos.text2}"
+				"{quest.stage_4a.chaos.text3}"
+			]
 			id: "7A9AA27029185035"
+			shape: "circle"
 			tasks: [{
-				id: "3299FF447F8110CF"
-				type: "item"
-				item: "kubejs:substrate_chaos"
 				consume_items: false
+				id: "3299FF447F8110CF"
+				item: "kubejs:substrate_chaos"
+				type: "item"
 			}]
+			title: "{quest.stage_4a.chaos.title}"
+			x: 1.75d
+			y: 7.5d
 		}
 		{
-			title: "{quest.stage_4a.silicon.title}"
-			x: 1.0d
-			y: 8.5d
-			shape: "circle"
+			dependencies: ["7A9AA27029185035"]
 			description: [
 				"{quest.stage_4a.silicon.text1}"
 				""
@@ -738,21 +735,20 @@
 				""
 				"{quest.stage_4a.silicon.text3}"
 			]
-			dependencies: ["7A9AA27029185035"]
 			id: "6FDC8DA2FDED5FDD"
+			shape: "circle"
 			tasks: [{
-				id: "68FBEFA1BC6479ED"
-				type: "item"
-				item: "kubejs:substrate_silicon"
 				consume_items: false
+				id: "68FBEFA1BC6479ED"
+				item: "kubejs:substrate_silicon"
+				type: "item"
 			}]
+			title: "{quest.stage_4a.silicon.title}"
+			x: 1.0d
+			y: 8.5d
 		}
 		{
-			title: "{quest.stage_4a.laser_lamp.title}"
-			icon: "kubejs:ponder_laser_lamp_on"
-			x: 3.75d
-			y: 2.0d
-			shape: "circle"
+			dependencies: ["05446225038D260A"]
 			description: [
 				"{quest.stage_4a.laser_lamp.text1}"
 				""
@@ -762,102 +758,105 @@
 				""
 				"{quest.stage_4a.laser_lamp.text4}"
 			]
-			dependencies: ["05446225038D260A"]
+			icon: "kubejs:ponder_laser_lamp_on"
 			id: "1D1D1FEAF49C5E11"
+			rewards: [{
+				command: "/c ponder kubejs:ponder_laser_lamp"
+				icon: "minecraft:writable_book"
+				id: "2EC9684867CC5066"
+				team_reward: false
+				title: "思索 炼金镭射"
+				type: "command"
+			}]
+			shape: "circle"
 			tasks: [{
 				id: "04CC23968DBD8CC9"
-				type: "checkmark"
 				title: "{tip.kubejs.sure}"
+				type: "checkmark"
 			}]
-			rewards: [{
-				id: "2EC9684867CC5066"
-				type: "command"
-				title: "思索 炼金镭射"
-				icon: "minecraft:writable_book"
-				team_reward: false
-				command: "/c ponder kubejs:ponder_laser_lamp"
-				player_command: true
-			}]
+			title: "{quest.stage_4a.laser_lamp.title}"
+			x: 3.75d
+			y: 2.0d
 		}
 		{
-			title: "{quest.stage_4a.transmutating.title}"
-			icon: "minecraft:hopper_minecart"
-			x: 2.5d
-			y: 9.0d
-			subtitle: "{quest.stage_4a.transmutating.text1}"
+			dependencies: ["6FDC8DA2FDED5FDD"]
 			description: [
 				"{quest.stage_4a.transmutating.text2}"
 				""
 				"{quest.stage_4a.transmutating.text3}"
 			]
-			dependencies: ["6FDC8DA2FDED5FDD"]
+			icon: "minecraft:hopper_minecart"
 			id: "630DA0C83959E9D8"
+			subtitle: "{quest.stage_4a.transmutating.text1}"
 			tasks: [{
 				id: "3E080B5561AD314E"
-				type: "checkmark"
 				title: "{tip.kubejs.automated}"
+				type: "checkmark"
 			}]
+			title: "{quest.stage_4a.transmutating.title}"
+			x: 2.5d
+			y: 9.0d
 		}
 		{
-			title: "{quest.stage_4a.completed.title}"
-			icon: "create:warped_window_pane"
-			x: 1.75d
-			y: 11.0d
-			shape: "hexagon"
-			description: ["{quest.stage_4a.completed.text1}"]
 			dependencies: ["630DA0C83959E9D8"]
-			size: 2.0d
+			description: ["{quest.stage_4a.completed.text1}"]
+			icon: "create:warped_window_pane"
 			id: "3B431AAADE8845FA"
+			shape: "hexagon"
+			size: 2.0d
 			tasks: [{
 				id: "7201E3A86096F5CF"
-				type: "checkmark"
 				title: "{tip.kubejs.sure}"
+				type: "checkmark"
 			}]
+			title: "{quest.stage_4a.completed.title}"
+			x: 1.75d
+			y: 11.0d
 		}
 		{
-			title: "{quest.stage_4a.accellerator.title}"
-			x: -6.5d
-			y: 5.0d
-			shape: "circle"
+			dependencies: ["05446225038D260A"]
 			description: [
 				"{quest.stage_4a.accellerator.text1}"
 				""
 				"{quest.stage_4a.accellerator.text2}"
 			]
 			hide_dependency_lines: true
-			dependencies: ["05446225038D260A"]
-			optional: true
 			id: "1BCFB709E97A74FA"
+			optional: true
+			shape: "circle"
 			tasks: [
 				{
-					id: "6A30FCE70C7C7289"
-					type: "item"
-					item: "kubejs:accellerator_redstone"
 					consume_items: false
+					id: "6A30FCE70C7C7289"
+					item: "kubejs:accellerator_redstone"
+					type: "item"
 				}
 				{
-					id: "3D9F64E8128BB9A6"
-					type: "item"
-					item: "kubejs:accellerator_glowstone"
 					consume_items: false
+					id: "3D9F64E8128BB9A6"
+					item: "kubejs:accellerator_glowstone"
+					type: "item"
 				}
 			]
+			title: "{quest.stage_4a.accellerator.title}"
+			x: -6.5d
+			y: 5.0d
 		}
 		{
-			x: 10.0d
-			y: 5.0d
-			shape: "circle"
+			dependencies: ["05446225038D260A"]
 			description: ["{quest.stage_4a.silver.text1}"]
 			hide_dependency_lines: true
-			dependencies: ["05446225038D260A"]
 			id: "566E72AE7D580917"
+			shape: "circle"
 			tasks: [{
-				id: "7EA2895F0FB5A5D6"
-				type: "item"
-				item: "kubejs:substrate_silver"
 				consume_items: false
+				id: "7EA2895F0FB5A5D6"
+				item: "kubejs:substrate_silver"
+				type: "item"
 			}]
+			x: 10.0d
+			y: 5.0d
 		}
 	]
-	quest_links: [ ]
+	title: "{quest.chapter.stage_4a.name}"
 }

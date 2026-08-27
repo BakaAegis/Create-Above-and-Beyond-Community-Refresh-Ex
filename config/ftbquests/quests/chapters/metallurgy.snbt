@@ -1,72 +1,71 @@
 {
-	id: "1B927DD15CF28E13"
-	group: "0810E42B2DD79973"
-	order_index: 4
-	filename: "metallurgy"
-	title: "{quest.chapter.metallurgy.name}"
-	icon: "thermal:silver_ingot"
-	subtitle: ["适用于大部分矿物"]
-	default_quest_shape: ""
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "metallurgy"
+	group: "0810E42B2DD79973"
+	icon: "thermal:silver_ingot"
+	id: "1B927DD15CF28E13"
+	order_index: 4
+	quest_links: [ ]
 	quests: [
 		{
-			title: "{quest.metallurgy.introduce.title}"
-			icon: "minecraft:raw_gold"
-			x: -9.0d
-			y: -4.0d
-			shape: "circle"
 			description: [
 				"{quest.metallurgy.introduce.text1}"
 				""
 				"{quest.metallurgy.introduce.text2}"
 			]
+			icon: "minecraft:raw_gold"
 			id: "6B03056FA21424C0"
+			shape: "circle"
 			tasks: [{
 				id: "4220B0B7F6BF4327"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.introduce.title}"
+			x: -9.0d
+			y: -4.0d
 		}
 		{
-			title: "{quest.metallurgy.mining.title}"
+			dependencies: ["6B03056FA21424C0"]
 			icon: {
+				Count: 1
 				id: "minecraft:iron_pickaxe"
-				Count: 1b
 				tag: {
 					Damage: 0
 				}
 			}
-			x: -7.0d
-			y: -3.0d
-			subtitle: "1 -> 1"
-			dependencies: ["6B03056FA21424C0"]
 			id: "7967324CAC77AF60"
+			subtitle: "1 -> 1"
 			tasks: [{
 				id: "4B6F024B97BC278F"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.mining.title}"
+			x: -7.0d
+			y: -3.0d
 		}
 		{
-			title: "{quest.metallurgy.crushed_ore.title}"
-			icon: "create:crushed_raw_gold"
-			x: -9.0d
-			y: -2.0d
-			shape: "circle"
 			dependencies: [
 				"7967324CAC77AF60"
 				"005F2C4E203E7E62"
 			]
 			dependency_requirement: "one_completed"
+			icon: "create:crushed_raw_gold"
 			id: "612100C7C6E0A7C9"
+			shape: "circle"
 			tasks: [{
 				id: "720C60FFE33E9E3B"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.crushed_ore.title}"
+			x: -9.0d
+			y: -2.0d
 		}
 		{
-			title: "{quest.metallurgy.fortune.title}"
+			dependencies: ["6B03056FA21424C0"]
 			icon: {
+				Count: 1
 				id: "minecraft:golden_pickaxe"
-				Count: 1b
 				tag: {
 					Damage: 0
 					Enchantments: [{
@@ -75,72 +74,67 @@
 					}]
 				}
 			}
-			x: -5.0d
-			y: -3.0d
-			subtitle: "1 -> 1-2"
-			dependencies: ["6B03056FA21424C0"]
 			id: "005F2C4E203E7E62"
+			subtitle: "1 -> 1-2"
 			tasks: [{
 				id: "5EC097C40FE0A5DB"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.fortune.title}"
+			x: -5.0d
+			y: -3.0d
 		}
 		{
-			title: "{quest.metallurgy.pulverizing.title}"
-			icon: "thermal:machine_pulverizer"
-			x: -3.0d
-			y: -1.0d
-			subtitle: "1 -> 4"
 			dependencies: ["612100C7C6E0A7C9"]
+			icon: "thermal:machine_pulverizer"
 			id: "623EE1E0678E4F2A"
+			subtitle: "1 -> 4"
 			tasks: [{
 				id: "32C926B2269E8EA9"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.pulverizing.title}"
+			x: -3.0d
+			y: -1.0d
 		}
 		{
-			title: "{quest.metallurgy.dust.title}"
-			icon: "thermal:gold_dust"
-			x: -9.0d
-			y: 0.0d
-			shape: "circle"
 			dependencies: [
 				"3A81BC460AF1756D"
 				"623EE1E0678E4F2A"
 				"352F5F851045653A"
 			]
 			dependency_requirement: "one_completed"
+			icon: "thermal:gold_dust"
 			id: "07BE7128982202A7"
+			shape: "circle"
 			tasks: [{
 				id: "24827B93E6C39D1C"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.dust.title}"
+			x: -9.0d
+			y: 0.0d
 		}
 		{
-			title: "{quest.metallurgy.molten_metal.title}"
-			icon: "tconstruct:molten_gold_bucket"
-			x: -8.5d
-			y: 2.0d
-			shape: "circle"
-			subtitle: "{tip.kubejs.fluid_unit}"
 			dependencies: [
 				"18EDB4CD525CE110"
 				"715BBD0DF0136FF1"
 				"409A50CBCDBBA1F0"
 			]
 			dependency_requirement: "one_completed"
+			icon: "tconstruct:molten_gold_bucket"
 			id: "6509024553997AB0"
+			shape: "circle"
+			subtitle: "{tip.kubejs.fluid_unit}"
 			tasks: [{
 				id: "63C79158B9BD32FF"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.molten_metal.title}"
+			x: -8.5d
+			y: 2.0d
 		}
 		{
-			title: "{quest.metallurgy.nugget.title}"
-			icon: "minecraft:gold_nugget"
-			x: -9.5d
-			y: 2.0d
-			shape: "circle"
 			dependencies: [
 				"21E76761CD3761C2"
 				"2C2E304910D7F33D"
@@ -149,202 +143,208 @@
 				"180F76CFC9369566"
 			]
 			dependency_requirement: "one_completed"
+			icon: "minecraft:gold_nugget"
 			id: "29DABB5FDE6356E9"
+			shape: "circle"
 			tasks: [{
 				id: "076ACC98C6F22EF6"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.nugget.title}"
+			x: -9.5d
+			y: 2.0d
 		}
 		{
-			title: "{quest.metallurgy.smelting.title}"
-			icon: "minecraft:furnace"
-			x: -11.0d
-			y: -1.0d
-			subtitle: "1 -> 3"
 			dependencies: ["612100C7C6E0A7C9"]
+			icon: "minecraft:furnace"
 			id: "21E76761CD3761C2"
+			subtitle: "1 -> 3"
 			tasks: [{
 				id: "2B5E747AF5ADDD50"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.smelting.title}"
+			x: -11.0d
+			y: -1.0d
 		}
 		{
-			title: "{quest.metallurgy.crushing.title}"
-			icon: "create:crushing_wheel"
-			x: -5.0d
-			y: -1.0d
-			subtitle: "1 -> 2-4"
 			dependencies: ["612100C7C6E0A7C9"]
+			icon: "create:crushing_wheel"
 			id: "352F5F851045653A"
+			subtitle: "1 -> 2-4"
 			tasks: [{
 				id: "6F089C1EAF85CBC6"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.crushing.title}"
+			x: -5.0d
+			y: -1.0d
 		}
 		{
-			title: "{quest.metallurgy.milling.title}"
-			icon: "create:millstone"
-			x: -7.0d
-			y: -1.0d
-			subtitle: "1 -> 2"
 			dependencies: ["612100C7C6E0A7C9"]
+			icon: "create:millstone"
 			id: "3A81BC460AF1756D"
+			subtitle: "1 -> 2"
 			tasks: [{
 				id: "13538972B20A96BA"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.milling.title}"
+			x: -7.0d
+			y: -1.0d
 		}
 		{
-			title: "{quest.metallurgy.heated_mixing.title}"
-			icon: "create:mechanical_mixer"
-			x: -3.0d
-			y: 1.0d
-			subtitle: "1 -> 9"
 			dependencies: ["07BE7128982202A7"]
 			dependency_requirement: "one_completed"
+			icon: "create:mechanical_mixer"
 			id: "18EDB4CD525CE110"
+			subtitle: "1 -> 9"
 			tasks: [{
 				id: "6277979A0F5B984A"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.heated_mixing.title}"
+			x: -3.0d
+			y: 1.0d
 		}
 		{
-			title: "{quest.metallurgy.machine_compressing.title}"
-			icon: "create:mechanical_press"
-			x: -11.0d
-			y: 3.0d
-			subtitle: "9 -> 1"
 			dependencies: ["29DABB5FDE6356E9"]
+			icon: "create:mechanical_press"
 			id: "1250AE58911C27A9"
+			subtitle: "9 -> 1"
 			tasks: [{
 				id: "30EE40322822EE4A"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.machine_compressing.title}"
+			x: -11.0d
+			y: 3.0d
 		}
 		{
-			title: "{quest.metallurgy.machine_smelting.title}"
-			icon: "thermal:machine_smelter"
-			x: -13.0d
-			y: -1.0d
-			subtitle: "1 -> 9-27"
 			dependencies: ["612100C7C6E0A7C9"]
 			dependency_requirement: "one_completed"
+			icon: "thermal:machine_smelter"
 			id: "5FCCD2F720115D41"
+			subtitle: "1 -> 9-27"
 			tasks: [{
 				id: "17A210C163E791CA"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.machine_smelting.title}"
+			x: -13.0d
+			y: -1.0d
 		}
 		{
-			title: "{quest.metallurgy.melting.title}"
-			icon: "tconstruct:smeltery_controller"
-			x: -7.0d
-			y: 1.0d
-			subtitle: "1 -> 9"
 			dependencies: ["07BE7128982202A7"]
+			icon: "tconstruct:smeltery_controller"
 			id: "715BBD0DF0136FF1"
+			subtitle: "1 -> 9"
 			tasks: [{
 				id: "3B4F0668876D88E3"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.melting.title}"
+			x: -7.0d
+			y: 1.0d
 		}
 		{
-			title: "{quest.metallurgy.ingot.title}"
-			icon: "minecraft:gold_ingot"
-			x: -9.0d
-			y: 4.0d
-			shape: "circle"
 			dependencies: [
 				"1A5A81CA749DAB2A"
 				"1250AE58911C27A9"
 				"746F9F4F21D8400D"
 			]
 			dependency_requirement: "one_completed"
+			icon: "minecraft:gold_ingot"
 			id: "2BE033F631A778D9"
+			shape: "circle"
 			tasks: [{
 				id: "206B68B6B69CC7AD"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.ingot.title}"
+			x: -9.0d
+			y: 4.0d
 		}
 		{
-			title: "{quest.metallurgy.casting.title}"
-			icon: "tconstruct:seared_table"
-			x: -7.0d
-			y: 3.0d
-			subtitle: "9 -> 1"
 			dependencies: ["6509024553997AB0"]
+			icon: "tconstruct:seared_table"
 			id: "1A5A81CA749DAB2A"
+			subtitle: "9 -> 1"
 			tasks: [{
 				id: "7B5CAD7F1C63A9EC"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.casting.title}"
+			x: -7.0d
+			y: 3.0d
 		}
 		{
-			title: "{quest.metallurgy.drawer_compressing.title}"
-			icon: "storagedrawers:compacting_drawers_3"
-			x: -13.0d
-			y: 3.0d
-			subtitle: "9 -> 1"
 			dependencies: ["29DABB5FDE6356E9"]
+			icon: "storagedrawers:compacting_drawers_3"
 			id: "746F9F4F21D8400D"
+			subtitle: "9 -> 1"
 			tasks: [{
 				id: "39C5A94D5A8ECEE0"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.drawer_compressing.title}"
+			x: -13.0d
+			y: 3.0d
 		}
 		{
-			title: "{quest.metallurgy.smelting.title}"
-			icon: "minecraft:furnace"
-			x: -13.0d
-			y: 1.0d
-			subtitle: "1 -> 1"
 			dependencies: ["07BE7128982202A7"]
+			icon: "minecraft:furnace"
 			id: "171A0F26C6608E83"
+			subtitle: "1 -> 1"
 			tasks: [{
 				id: "559EC3ED3EF7A701"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.smelting.title}"
+			x: -13.0d
+			y: 1.0d
 		}
 		{
-			title: "{quest.metallurgy.splashing.title}"
-			icon: "create:encased_fan"
-			x: -15.0d
-			y: 1.0d
-			subtitle: "1 -> 2"
 			dependencies: ["07BE7128982202A7"]
+			icon: "create:encased_fan"
 			id: "2C2E304910D7F33D"
+			subtitle: "1 -> 2"
 			tasks: [{
 				id: "1798B173604752C1"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.splashing.title}"
+			x: -15.0d
+			y: 1.0d
 		}
 		{
-			title: "{quest.metallurgy.advanced_melting.title}"
-			icon: "tconstruct:foundry_controller"
-			x: -5.0d
-			y: 1.0d
-			subtitle: "1 -> 9"
 			dependencies: ["07BE7128982202A7"]
+			icon: "tconstruct:foundry_controller"
 			id: "409A50CBCDBBA1F0"
+			subtitle: "1 -> 9"
 			tasks: [{
 				id: "6EBC75DD42F7BB3E"
 				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.advanced_melting.title}"
+			x: -5.0d
+			y: 1.0d
 		}
 		{
-			title: "{quest.metallurgy.blasting.title}"
-			icon: "minecraft:blast_furnace"
-			x: -11.0d
-			y: 1.0d
-			subtitle: "1 -> 2"
 			dependencies: ["07BE7128982202A7"]
+			icon: "minecraft:blast_furnace"
 			id: "180F76CFC9369566"
+			subtitle: "1 -> 2"
 			tasks: [{
 				id: "1CBA399F8812D6CD"
-				type: "checkmark"
 				title: "高温熔炼"
+				type: "checkmark"
 			}]
+			title: "{quest.metallurgy.blasting.title}"
+			x: -11.0d
+			y: 1.0d
 		}
 	]
-	quest_links: [ ]
+	subtitle: ["适用于大部分矿物"]
+	title: "{quest.chapter.metallurgy.name}"
 }

@@ -1,295 +1,290 @@
 {
-	id: "1F9517DCFB1DB297"
-	group: "331B6409EF6A7840"
-	order_index: 0
-	filename: "overview"
-	title: "{quest.chapter.overview.name}"
-	icon: "minecraft:oak_sapling"
-	default_quest_shape: ""
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "overview"
+	group: "331B6409EF6A7840"
+	icon: "minecraft:oak_sapling"
+	id: "1F9517DCFB1DB297"
+	order_index: 0
+	quest_links: [ ]
 	quests: [
 		{
-			title: "{quest.overview.introduce.title}"
-			icon: "minecraft:grass_block"
-			x: -14.0d
-			y: 0.0d
-			shape: "hexagon"
-			subtitle: "{quest.overview.introduce.subtitle}"
 			description: ["{quest.overview.introduce.text1}"]
-			size: 2.0d
+			icon: "minecraft:grass_block"
 			id: "75FB28B253B14876"
-			tasks: [{
-				id: "7F88BABEC9889C76"
+			rewards: [{
+				id: "149668A9603D545F"
+				item: "farmersdelight:hot_cocoa"
 				type: "item"
-				title: "{tip.kubejs.any_log}"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "{quest.overview.introduce.subtitle}"
+			tasks: [{
+				consume_items: false
 				icon: "minecraft:oak_log"
+				id: "7F88BABEC9889C76"
 				item: {
+					Count: 1
 					id: "itemfilters:tag"
-					Count: 1b
 					tag: {
 						value: "minecraft:logs"
 					}
 				}
-				consume_items: false
-			}]
-			rewards: [{
-				id: "149668A9603D545F"
+				title: "{tip.kubejs.any_log}"
 				type: "item"
-				item: "farmersdelight:hot_cocoa"
 			}]
+			title: "{quest.overview.introduce.title}"
+			x: -14.0d
+			y: 0.0d
 		}
 		{
-			title: "{quest.overview.basic_machines.title}"
-			icon: "minecraft:cobblestone_stairs"
-			x: -13.0d
-			y: -2.0d
-			shape: "circle"
-			subtitle: "{quest.overview.basic_machines.subtitle}"
+			dependencies: ["75FB28B253B14876"]
 			description: [
 				"{quest.overview.basic_machines.text1}"
 				"{quest.overview.basic_machines.text2}"
 			]
-			dependencies: ["75FB28B253B14876"]
+			icon: "minecraft:cobblestone_stairs"
 			id: "7D6BC99CCCB29924"
+			rewards: [{
+				count: 3
+				id: "24DFC6E24F62D97A"
+				item: "create:crafting_blueprint"
+				type: "item"
+			}]
+			shape: "circle"
+			subtitle: "{quest.overview.basic_machines.subtitle}"
 			tasks: [
 				{
+					consume_items: false
 					id: "57A71A62204AE230"
-					type: "item"
 					item: "create:mechanical_press"
-					consume_items: false
+					type: "item"
 				}
 				{
+					consume_items: false
 					id: "0EEFF99A7BD064E4"
-					type: "item"
 					item: "create:mechanical_saw"
-					consume_items: false
+					type: "item"
 				}
 				{
+					consume_items: false
 					id: "4A5B209B42D89DFF"
-					type: "item"
 					item: "create:encased_fan"
-					consume_items: false
+					type: "item"
 				}
 				{
+					consume_items: false
 					id: "32214700E91A67D3"
-					type: "item"
 					item: "create:wrench"
-					consume_items: false
+					type: "item"
 				}
 				{
+					consume_items: false
 					id: "6530AB7AA277197D"
-					type: "item"
 					item: "create:mechanical_mixer"
-					consume_items: false
+					type: "item"
 				}
 				{
+					consume_items: false
 					id: "1900BA945C62D0CC"
-					type: "item"
 					item: "tconstruct:seared_melter"
-					consume_items: false
+					type: "item"
 				}
 				{
-					id: "534BB31978C1E95B"
-					type: "item"
-					item: "create:millstone"
 					consume_items: false
+					id: "534BB31978C1E95B"
+					item: "create:millstone"
+					type: "item"
 				}
 			]
-			rewards: [{
-				id: "24DFC6E24F62D97A"
-				type: "item"
-				item: "create:crafting_blueprint"
-				count: 3
-			}]
+			title: "{quest.overview.basic_machines.title}"
+			x: -13.0d
+			y: -2.0d
 		}
 		{
-			title: "{quest.overview.stage_1.title}"
-			icon: "create:andesite_alloy"
-			x: -11.5d
-			y: 0.0d
-			shape: "circle"
-			subtitle: "{quest.overview.stage_1.subtitle}"
+			dependencies: ["75FB28B253B14876"]
 			description: [
 				"{quest.overview.stage_1.text1}"
 				""
 				"{quest.overview.stage_1.text2}"
 				"{quest.overview.sidebar.title}"
 			]
-			dependencies: ["75FB28B253B14876"]
+			icon: "create:andesite_alloy"
 			id: "61147823CC87F711"
+			shape: "circle"
+			subtitle: "{quest.overview.stage_1.subtitle}"
 			tasks: [{
 				id: "5A8DF2D8553904BF"
-				type: "checkmark"
 				title: "{tip.kubejs.unlock_stage_1}"
+				type: "checkmark"
 			}]
+			title: "{quest.overview.stage_1.title}"
+			x: -11.5d
+			y: 0.0d
 		}
 		{
-			title: "{quest.overview.stage_1_finish.title}"
-			disable_toast: true
-			x: -10.0d
-			y: 0.0d
-			shape: "square"
-			subtitle: "{quest.overview.stage_1_finish.subtitle}"
+			dependencies: [
+				"61147823CC87F711"
+				"675C395B2074C24C"
+			]
 			description: [
 				"{quest.overview.stage_1_finish.text1}"
 				""
 				"{quest.overview.stage_1_finish.text2}"
 			]
-			dependencies: [
-				"61147823CC87F711"
-				"675C395B2074C24C"
-			]
+			disable_toast: true
 			id: "0E98B4D2BBF55308"
+			shape: "square"
+			subtitle: "{quest.overview.stage_1_finish.subtitle}"
 			tasks: [{
-				id: "1122F026DE28AF0F"
-				type: "item"
-				title: "{tip.kubejs.finish_stage_1}"
-				item: "kubejs:kinetic_mechanism"
-				count: 64L
 				consume_items: false
+				count: 64L
+				id: "1122F026DE28AF0F"
+				item: "kubejs:kinetic_mechanism"
+				title: "{tip.kubejs.finish_stage_1}"
+				type: "item"
 			}]
+			title: "{quest.overview.stage_1_finish.title}"
+			x: -10.0d
+			y: 0.0d
 		}
 		{
-			title: "{quest.overview.stage_1a.title}"
-			icon: "thermal:cured_rubber"
-			x: -9.5d
-			y: 1.5d
-			shape: "circle"
-			subtitle: "{quest.overview.stage_1a.subtitle}"
+			dependencies: ["0E98B4D2BBF55308"]
 			description: [
 				""
 				"{quest.overview.stage_1a.text1}"
 				"{quest.overview.stage_1a.text2}"
 			]
-			dependencies: ["0E98B4D2BBF55308"]
+			icon: "thermal:cured_rubber"
 			id: "7D872F933F45809B"
+			shape: "circle"
+			subtitle: "{quest.overview.stage_1a.subtitle}"
 			tasks: [{
 				id: "681DACF11F193771"
-				type: "checkmark"
 				title: "{tip.kubejs.unlock_stage_1a}"
+				type: "checkmark"
 			}]
+			title: "{quest.overview.stage_1a.title}"
+			x: -9.5d
+			y: 1.5d
 		}
 		{
-			title: "{quest.overview.stage_1a_finish.title}"
-			disable_toast: true
-			x: -8.0d
-			y: 2.5d
-			subtitle: "{quest.overview.stage_1a_finish.subtitle}"
-			description: [
-				"{quest.overview.stage_1a_finish.text1}"
-				"{quest.overview.stage_1a_finish.text2}"
-			]
 			dependencies: [
 				"7D872F933F45809B"
 				"6545C3F427B12106"
 			]
+			description: [
+				"{quest.overview.stage_1a_finish.text1}"
+				"{quest.overview.stage_1a_finish.text2}"
+			]
+			disable_toast: true
 			id: "342BB6EF80EBFDCA"
+			subtitle: "{quest.overview.stage_1a_finish.subtitle}"
 			tasks: [{
-				id: "334D8AFF8C50C12B"
-				type: "item"
-				title: "{tip.kubejs.finish_stage_1a}"
-				item: "kubejs:sealed_mechanism"
-				count: 64L
 				consume_items: false
+				count: 64L
+				id: "334D8AFF8C50C12B"
+				item: "kubejs:sealed_mechanism"
+				title: "{tip.kubejs.finish_stage_1a}"
+				type: "item"
 			}]
+			title: "{quest.overview.stage_1a_finish.title}"
+			x: -8.0d
+			y: 2.5d
 		}
 		{
-			title: "{quest.overview.stage_2.title}"
-			icon: "create:electron_tube"
-			x: -8.5d
-			y: 0.0d
-			shape: "circle"
-			subtitle: "{quest.overview.stage_2.subtitle}"
+			dependencies: ["0E98B4D2BBF55308"]
 			description: [
 				"{quest.overview.stage_2.text1}"
 				""
 				"{quest.overview.stage_2.text2}"
 				"{quest.overview.sidebar.title}"
 			]
-			dependencies: ["0E98B4D2BBF55308"]
+			icon: "create:electron_tube"
 			id: "1E263994D4883A08"
+			shape: "circle"
+			subtitle: "{quest.overview.stage_2.subtitle}"
 			tasks: [{
 				id: "28C41C062843C2CA"
-				type: "checkmark"
 				title: "{tip.kubejs.unlock_stage_2}"
+				type: "checkmark"
 			}]
+			title: "{quest.overview.stage_2.title}"
+			x: -8.5d
+			y: 0.0d
 		}
 		{
-			title: "{quest.overview.stage_2_finish.title}"
-			disable_toast: true
-			x: -7.0d
-			y: 0.0d
-			subtitle: "{quest.overview.stage_2_finish.subtitle}"
+			dependencies: [
+				"1E263994D4883A08"
+				"19715EBCBBA1B4AD"
+			]
 			description: [
 				"{quest.overview.stage_2_finish.text1}"
 				""
 				"{quest.overview.stage_2_finish.text2}"
 			]
-			dependencies: [
-				"1E263994D4883A08"
-				"19715EBCBBA1B4AD"
-			]
+			disable_toast: true
 			id: "69275ECFC147E15B"
+			subtitle: "{quest.overview.stage_2_finish.subtitle}"
 			tasks: [{
-				id: "5F9AFF953C18BCA1"
-				type: "item"
-				title: "{tip.kubejs.finish_stage_2}"
-				item: "create:precision_mechanism"
-				count: 64L
 				consume_items: false
+				count: 64L
+				id: "5F9AFF953C18BCA1"
+				item: "create:precision_mechanism"
+				title: "{tip.kubejs.finish_stage_2}"
+				type: "item"
 			}]
+			title: "{quest.overview.stage_2_finish.title}"
+			x: -7.0d
+			y: 0.0d
 		}
 		{
-			title: "{quest.overview.stage_2a.title}"
-			icon: "minecraft:lava_bucket"
-			x: -6.5d
-			y: -1.5d
-			shape: "circle"
-			subtitle: "{quest.overview.stage_2a.subtitle}"
+			dependencies: ["69275ECFC147E15B"]
 			description: [
 				"{quest.overview.stage_2a.text1}"
 				"{quest.overview.stage_2a.text2}"
 			]
-			dependencies: ["69275ECFC147E15B"]
+			icon: "minecraft:lava_bucket"
 			id: "7888F9129E9FE517"
+			shape: "circle"
+			subtitle: "{quest.overview.stage_2a.subtitle}"
 			tasks: [{
 				id: "21753CBB528EAADF"
-				type: "checkmark"
 				title: "{tip.kubejs.unlock_stage_2a}"
+				type: "checkmark"
 			}]
+			title: "{quest.overview.stage_2a.title}"
+			x: -6.5d
+			y: -1.5d
 		}
 		{
-			title: "{quest.overview.stage_2a_finish.title}"
-			disable_toast: true
-			x: -5.0d
-			y: -2.5d
-			subtitle: "{quest.overview.stage_2a_finish.subtitle}"
+			dependencies: [
+				"7888F9129E9FE517"
+				"3C50B4556375178E"
+			]
 			description: [
 				"{quest.overview.stage_2a_finish.text1}"
 				""
 				"{quest.overview.stage_2a_finish.text2}"
 			]
-			dependencies: [
-				"7888F9129E9FE517"
-				"3C50B4556375178E"
-			]
+			disable_toast: true
 			id: "2DC3AA8A89005C42"
+			subtitle: "{quest.overview.stage_2a_finish.subtitle}"
 			tasks: [{
-				id: "07155023816FE9A5"
-				type: "item"
-				title: "{tip.kubejs.finish_stage_2a}"
-				item: "kubejs:infernal_mechanism"
-				count: 64L
 				consume_items: false
+				count: 64L
+				id: "07155023816FE9A5"
+				item: "kubejs:infernal_mechanism"
+				title: "{tip.kubejs.finish_stage_2a}"
+				type: "item"
 			}]
+			title: "{quest.overview.stage_2a_finish.title}"
+			x: -5.0d
+			y: -2.5d
 		}
 		{
-			title: "{quest.overview.stage_3.title}"
-			icon: "kubejs:radiant_coil"
-			x: -5.5d
-			y: 0.0d
-			shape: "circle"
-			subtitle: "{quest.overview.stage_3.subtitle}"
+			dependencies: ["69275ECFC147E15B"]
 			description: [
 				"{quest.overview.stage_3.text1}"
 				""
@@ -298,81 +293,81 @@
 				"{quest.overview.stage_3.text3}"
 				"{quest.overview.sidebar.title}"
 			]
-			dependencies: ["69275ECFC147E15B"]
+			icon: "kubejs:radiant_coil"
 			id: "780E8AE86250C73D"
+			shape: "circle"
+			subtitle: "{quest.overview.stage_3.subtitle}"
 			tasks: [{
 				id: "2F6FEDBB1BDCB36C"
-				type: "checkmark"
 				title: "{tip.kubejs.unlock_stage_3}"
+				type: "checkmark"
 			}]
+			title: "{quest.overview.stage_3.title}"
+			x: -5.5d
+			y: 0.0d
 		}
 		{
-			title: "{quest.overview.stage_3_finish.title}"
-			disable_toast: true
-			x: -4.0d
-			y: 0.0d
-			subtitle: "{quest.overview.stage_3_finish.subtitle}"
+			dependencies: ["780E8AE86250C73D"]
 			description: [
 				"{quest.overview.stage_3_finish.text1}"
 				""
 				"{quest.overview.stage_3_finish.text2}"
 				"{quest.overview.stage_3_finish.text3}"
 			]
-			dependencies: ["780E8AE86250C73D"]
+			disable_toast: true
 			id: "400CDC316DCDFE88"
+			subtitle: "{quest.overview.stage_3_finish.subtitle}"
 			tasks: [{
-				id: "008542DDF1A41CE3"
-				type: "item"
-				title: "{tip.kubejs.finish_stage_3}"
-				item: "kubejs:inductive_mechanism"
-				count: 64L
 				consume_items: false
+				count: 64L
+				id: "008542DDF1A41CE3"
+				item: "kubejs:inductive_mechanism"
+				title: "{tip.kubejs.finish_stage_3}"
+				type: "item"
 			}]
+			title: "{quest.overview.stage_3_finish.title}"
+			x: -4.0d
+			y: 0.0d
 		}
 		{
-			title: "{quest.overview.stage_3a.title}"
-			icon: "thermal:enderium_ingot"
-			x: -3.5d
-			y: 1.5d
-			shape: "circle"
-			subtitle: "{quest.overview.stage_3a.subtitle}"
+			dependencies: ["400CDC316DCDFE88"]
 			description: [
 				"{quest.overview.stage_3a.text1}"
 				"{quest.overview.stage_3a.text2}"
 			]
-			dependencies: ["400CDC316DCDFE88"]
+			icon: "thermal:enderium_ingot"
 			id: "2BB2C7B95E3C89AE"
+			shape: "circle"
+			subtitle: "{quest.overview.stage_3a.subtitle}"
 			tasks: [{
 				id: "722CA19434E722FB"
-				type: "checkmark"
 				title: "{tip.kubejs.unlock_stage_3a}"
+				type: "checkmark"
 			}]
+			title: "{quest.overview.stage_3a.title}"
+			x: -3.5d
+			y: 1.5d
 		}
 		{
-			title: "{quest.overview.stage_3a_finish.title}"
+			dependencies: ["2BB2C7B95E3C89AE"]
+			description: ["{quest.overview.stage_3a_finish.text1}"]
 			disable_toast: true
+			id: "2F50046724A0DF9C"
+			subtitle: "{quest.overview.stage_3a_finish.subtitle}"
+			tasks: [{
+				consume_items: false
+				count: 64L
+				id: "6028CFF33AF50481"
+				item: "kubejs:abstruse_mechanism"
+				title: "{tip.kubejs.finish_stage_3a}"
+				type: "item"
+			}]
+			title: "{quest.overview.stage_3a_finish.title}"
 			x: -2.0d
 			y: 2.5d
-			subtitle: "{quest.overview.stage_3a_finish.subtitle}"
-			description: ["{quest.overview.stage_3a_finish.text1}"]
-			dependencies: ["2BB2C7B95E3C89AE"]
-			id: "2F50046724A0DF9C"
-			tasks: [{
-				id: "6028CFF33AF50481"
-				type: "item"
-				title: "{tip.kubejs.finish_stage_3a}"
-				item: "kubejs:abstruse_mechanism"
-				count: 64L
-				consume_items: false
-			}]
 		}
 		{
-			title: "{quest.overview.stage_4.title}"
-			icon: "kubejs:silicon_compound"
-			x: -2.5d
-			y: 0.0d
-			shape: "circle"
-			subtitle: "{quest.overview.stage_4.subtitle}"
+			dependencies: ["400CDC316DCDFE88"]
 			description: [
 				"{quest.overview.stage_4.text1}"
 				""
@@ -381,50 +376,50 @@
 				"{quest.overview.stage_4.text3}"
 				"{quest.overview.sidebar.title}"
 			]
-			dependencies: ["400CDC316DCDFE88"]
+			icon: "kubejs:silicon_compound"
 			id: "26173D4777F439B1"
+			shape: "circle"
+			subtitle: "{quest.overview.stage_4.subtitle}"
 			tasks: [{
 				id: "74CFD83C501C4952"
-				type: "checkmark"
 				title: "{tip.kubejs.unlock_stage_4}"
+				type: "checkmark"
 			}]
+			title: "{quest.overview.stage_4.title}"
+			x: -2.5d
+			y: 0.0d
 		}
 		{
-			title: "{quest.overview.stage_4_finish.title}"
-			disable_toast: true
-			x: -1.0d
-			y: 0.0d
-			subtitle: "{quest.overview.stage_4_finish.subtitle}"
+			dependencies: [
+				"26173D4777F439B1"
+				"6824055533465010"
+				"468150F504AE27D0"
+			]
 			description: [
 				"{quest.overview.stage_4_finish.text1}"
 				""
 				"{quest.overview.stage_4_finish.text2}"
 				"{quest.overview.stage_4_finish.text3}"
 			]
-			min_required_dependencies: 3
-			dependencies: [
-				"26173D4777F439B1"
-				"6824055533465010"
-				"468150F504AE27D0"
-			]
-			hide: false
+			disable_toast: true
+			hide_until_deps_visible: false
 			id: "08716DBF9C882623"
+			min_required_dependencies: 3
+			subtitle: "{quest.overview.stage_4_finish.subtitle}"
 			tasks: [{
-				id: "331691FDB0F1DCCB"
-				type: "item"
-				title: "{tip.kubejs.finish_stage_4}"
-				item: "kubejs:calculation_mechanism"
-				count: 64L
 				consume_items: false
+				count: 64L
+				id: "331691FDB0F1DCCB"
+				item: "kubejs:calculation_mechanism"
+				title: "{tip.kubejs.finish_stage_4}"
+				type: "item"
 			}]
+			title: "{quest.overview.stage_4_finish.title}"
+			x: -1.0d
+			y: 0.0d
 		}
 		{
-			title: "{quest.overview.stage_5.title}"
-			icon: "kubejs:divide"
-			x: 0.5d
-			y: 0.0d
-			shape: "circle"
-			subtitle: "{quest.overview.stage_5.subtitle}"
+			dependencies: ["08716DBF9C882623"]
 			description: [
 				"{quest.overview.stage_5.text1}"
 				""
@@ -433,55 +428,55 @@
 				"{quest.overview.stage_5.text3}"
 				"{quest.overview.sidebar.title}"
 			]
-			dependencies: ["08716DBF9C882623"]
+			icon: "kubejs:divide"
 			id: "5E62059675895213"
+			shape: "circle"
+			subtitle: "{quest.overview.stage_5.subtitle}"
 			tasks: [{
 				id: "251A91F6C21AEAFB"
-				type: "checkmark"
 				title: "{tip.kubejs.unlock_stage_5}"
+				type: "checkmark"
 			}]
+			title: "{quest.overview.stage_5.title}"
+			x: 0.5d
+			y: 0.0d
 		}
 		{
-			title: "{quest.overview.stage_5_finish.title}"
-			icon: "ad_astra:moon_stone"
-			x: 11.5d
-			y: 0.0d
-			shape: "hexagon"
-			subtitle: "{quest.overview.stage_5_finish.subtitle}"
+			dependencies: [
+				"571AE9A001459450"
+				"426417F4BA892000"
+			]
 			description: [
 				"{quest.overview.stage_5_finish.text1}"
 				"{quest.overview.stage_5_finish.text2}"
 				"{quest.overview.stage_5_finish.text3}"
 			]
-			dependencies: [
-				"571AE9A001459450"
-				"426417F4BA892000"
-			]
-			size: 2.0d
+			icon: "ad_astra:moon_stone"
 			id: "4F7A70041B67A348"
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "{quest.overview.stage_5_finish.subtitle}"
 			tasks: [
 				{
-					id: "75A8489F2288E77E"
-					type: "advancement"
-					title: "完成第八章 &7主线&r"
-					icon: "ad_astra:calorite_engine"
 					advancement: "ad_astra:tier_4_rocket"
 					criterion: ""
+					icon: "ad_astra:calorite_engine"
+					id: "75A8489F2288E77E"
+					title: "完成第八章 &7主线&r"
+					type: "advancement"
 				}
 				{
 					id: "7848E8E1D22BF643"
-					type: "checkmark"
 					title: "{tip.kubejs.unlock_challenage}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.overview.stage_5_finish.title}"
+			x: 11.5d
+			y: 0.0d
 		}
 		{
-			title: "{quest.overview.stage_4a.title}"
-			icon: "kubejs:substrate_chaos"
-			x: -2.5d
-			y: -1.0d
-			shape: "circle"
-			subtitle: "{quest.overview.stage_4a.subtitle}"
+			dependencies: ["400CDC316DCDFE88"]
 			description: [
 				"{quest.overview.stage_4a.text1}"
 				""
@@ -489,21 +484,21 @@
 				""
 				"{quest.overview.stage_4a.text3}"
 			]
-			dependencies: ["400CDC316DCDFE88"]
+			icon: "kubejs:substrate_chaos"
 			id: "468150F504AE27D0"
+			shape: "circle"
+			subtitle: "{quest.overview.stage_4a.subtitle}"
 			tasks: [{
 				id: "75F9C570E6B95343"
-				type: "checkmark"
 				title: "{tip.kubejs.unlock_stage_4a}"
+				type: "checkmark"
 			}]
+			title: "{quest.overview.stage_4a.title}"
+			x: -2.5d
+			y: -1.0d
 		}
 		{
-			title: "{quest.overview.supply.title}"
-			icon: "ae2:smooth_sky_stone_chest"
-			x: -16.0d
-			y: 0.0d
-			shape: "hexagon"
-			subtitle: "{quest.overview.supply.subtitle}"
+			dependencies: ["75FB28B253B14876"]
 			description: [
 				"{quest.overview.supply.text1}"
 				""
@@ -514,32 +509,31 @@
 				"{quest.overview.supply.text4}"
 				"{quest.overview.supply.text5}"
 			]
-			dependencies: ["75FB28B253B14876"]
-			optional: true
+			icon: "ae2:smooth_sky_stone_chest"
 			id: "6D427507B53F82D3"
-			tasks: [{
-				id: "11191EA376B0ED9B"
-				type: "checkmark"
-				title: "好的"
-			}]
+			optional: true
 			rewards: [{
-				id: "7B9C6E6B05FFAD22"
-				type: "command"
-				title: "{tip.kubejs.supply}"
-				icon: "kubejs:ae2_supply_card"
-				team_reward: true
 				auto: "disabled"
 				command: "/give @p kubejs:ae2_supply_card"
-				player_command: true
+				icon: "kubejs:ae2_supply_card"
+				id: "7B9C6E6B05FFAD22"
+				team_reward: true
+				title: "{tip.kubejs.supply}"
+				type: "command"
 			}]
+			shape: "hexagon"
+			subtitle: "{quest.overview.supply.subtitle}"
+			tasks: [{
+				id: "11191EA376B0ED9B"
+				title: "好的"
+				type: "checkmark"
+			}]
+			title: "{quest.overview.supply.title}"
+			x: -16.0d
+			y: 0.0d
 		}
 		{
-			title: "&6&l运算变速"
-			icon: "minecraft:netherite_ingot"
-			x: 3.5d
-			y: 0.0d
-			shape: "circle"
-			subtitle: "&6第六章"
+			dependencies: ["05BBDC84DA10AE5F"]
 			description: [
 				"你在地球上的工作已经做的足够多了，现在，让我们把目光投向广阔的太空吧。"
 				""
@@ -548,217 +542,217 @@
 				"点选上方复选项以解锁&6第六章：运算变速&r。"
 				"&7具体任务细节可以在左边侧栏选择查看。"
 			]
-			dependencies: ["05BBDC84DA10AE5F"]
+			icon: "minecraft:netherite_ingot"
 			id: "039CEB56AB660C20"
+			shape: "circle"
+			subtitle: "&6第六章"
 			tasks: [{
 				id: "191DCA62D97981E3"
-				type: "checkmark"
 				title: "&6解锁&5第六章\\"
+				type: "checkmark"
 			}]
+			title: "&6&l运算变速"
+			x: 3.5d
+			y: 0.0d
 		}
 		{
-			title: "航天时代"
-			icon: "kubejs:computation_matrix"
-			x: 2.0d
-			y: 0.0d
-			subtitle: "里程碑"
+			dependencies: [
+				"5E62059675895213"
+				"47965C310D9847DC"
+				"3CE551AFBF9FFA42"
+			]
 			description: [
 				"有了火箭，你将可以往返于多个星球。遥遥38万公里的航程是个挑战，也是个机遇。"
 				""
 				"现在，更远的深空已经向你走来，带好随身物品，带上回来的油料，准备点火吧。"
 				"&7休斯顿，我不记得今天预定有卫星发射任务。"
 			]
-			min_required_dependencies: 2
-			dependencies: [
-				"5E62059675895213"
-				"47965C310D9847DC"
-				"3CE551AFBF9FFA42"
-			]
+			icon: "kubejs:computation_matrix"
 			id: "05BBDC84DA10AE5F"
+			min_required_dependencies: 2
+			subtitle: "里程碑"
 			tasks: [{
-				id: "121B4A19BAEA38CD"
-				type: "advancement"
-				title: "完成第五章 &7主线&r"
-				icon: "ad_astra:steel_engine"
 				advancement: "ad_astra:tier_1_rocket"
 				criterion: ""
+				icon: "ad_astra:steel_engine"
+				id: "121B4A19BAEA38CD"
+				title: "完成第五章 &7主线&r"
+				type: "advancement"
 			}]
+			title: "航天时代"
+			x: 2.0d
+			y: 0.0d
 		}
 		{
-			title: "加速时代"
-			icon: "kubejs:overclocking_mechanism"
-			x: 5.0d
-			y: 0.0d
-			subtitle: "里程碑"
+			dependencies: [
+				"039CEB56AB660C20"
+				"635C2C3BDBBBF08F"
+			]
 			description: [
 				"对计算构件的研究使我们来到了这里，现在我们拥有了更快的速度，可以制作更复杂的结构了。"
 				""
 				"即使这离我们的目标依旧很远，但是你们的确走出了很多很多步了。"
 				"&7这就是你的征途。"
 			]
-			dependencies: [
-				"039CEB56AB660C20"
-				"635C2C3BDBBBF08F"
-			]
+			icon: "kubejs:overclocking_mechanism"
 			id: "3F28EBD4FC256D25"
+			subtitle: "里程碑"
 			tasks: [{
-				id: "2624337687947925"
-				type: "advancement"
-				title: "完成第六章 &7主线\\"
-				icon: "ad_astra:desh_engine"
 				advancement: "ad_astra:tier_2_rocket"
 				criterion: ""
+				icon: "ad_astra:desh_engine"
+				id: "2624337687947925"
+				title: "完成第六章 &7主线\\"
+				type: "advancement"
 			}]
+			title: "加速时代"
+			x: 5.0d
+			y: 0.0d
 		}
 		{
-			title: "&l电力革新"
-			icon: "ae2:charged_certus_quartz_crystal"
-			x: 5.5d
-			y: 1.5d
-			shape: "circle"
-			subtitle: "第六章 支线"
+			dependencies: ["3F28EBD4FC256D25"]
 			description: [
 				"你是否曾经因效率过低的机器而抓耳挠腮？那么输入过足够能量的能量构件能够解决这一问题。那么就让我们放手去做吧！"
 				"&7勾选上方复选框，揭幕第六章的额外支线内容。"
 			]
-			dependencies: ["3F28EBD4FC256D25"]
+			icon: "ae2:charged_certus_quartz_crystal"
 			id: "75D34F60255D2591"
+			shape: "circle"
+			subtitle: "第六章 支线"
 			tasks: [{
 				id: "180BB60FF3A23892"
-				type: "checkmark"
 				title: "&3解锁第六章&r 支线"
+				type: "checkmark"
 			}]
+			title: "&l电力革新"
+			x: 5.5d
+			y: 1.5d
 		}
 		{
+			dependencies: ["75D34F60255D2591"]
+			description: ["能量充沛！现在在拥有了这些构件以后，你是会升级你的机器，还是制作新的工具，还是摆起来收藏？无论如何，这些构件都是对效率的巨大提升。"]
+			id: "39AA4D5EC1C599F5"
+			subtitle: "挑战"
+			tasks: [{
+				consume_items: false
+				count: 64L
+				id: "2651D59C26AB0254"
+				item: "kubejs:energy_mechanism"
+				type: "item"
+			}]
 			title: "能量时代"
 			x: 7.0d
 			y: 2.5d
-			subtitle: "挑战"
-			description: ["能量充沛！现在在拥有了这些构件以后，你是会升级你的机器，还是制作新的工具，还是摆起来收藏？无论如何，这些构件都是对效率的巨大提升。"]
-			dependencies: ["75D34F60255D2591"]
-			id: "39AA4D5EC1C599F5"
-			tasks: [{
-				id: "2651D59C26AB0254"
-				type: "item"
-				item: "kubejs:energy_mechanism"
-				count: 64L
-				consume_items: false
-			}]
 		}
 		{
-			icon: "create:wrench"
-			disable_toast: true
-			x: 0.0d
-			y: -2.0d
-			shape: "circle"
+			dependencies: [
+				"4958836B3A14899C"
+				"0E88C673CC9972EE"
+			]
+			dependency_requirement: "one_completed"
 			description: [
 				"这个CE版本是与原存档兼容的，所以我们给你留了一条路，让你快速跟上进度。"
 				""
 				"点选复选框，以从新的第六章开始，同时重置第五章以后的进度。"
 				"&7路还很长，让我们慢慢走吧。"
 			]
+			disable_toast: true
 			hide_dependency_lines: true
-			dependencies: [
-				"4958836B3A14899C"
-				"0E88C673CC9972EE"
-			]
-			hide: true
-			dependency_requirement: "one_completed"
-			optional: true
-			invisible_until_tasks: 1
-			ignore_reward_blocking: true
-			progression_mode: "flexible"
+			hide_until_deps_visible: true
+			icon: "create:wrench"
 			id: "3CE551AFBF9FFA42"
-			tasks: [{
-				id: "4E278DD986077214"
-				type: "checkmark"
-				title: "原CABR玩家？"
-			}]
+			ignore_reward_blocking: true
+			invisible_until_tasks: 1
+			optional: true
+			progression_mode: "flexible"
 			rewards: [
 				{
-					id: "74607E06FFEDB5F2"
-					type: "command"
-					title: "这是你已经走过的路"
-					icon: "kubejs:kinetic_mechanism"
-					team_reward: true
 					auto: "no_toast"
-					ignore_reward_blocking: true
 					command: "/ftbquests change_progress @a reset 4F7A70041B67A348"
+					icon: "kubejs:kinetic_mechanism"
+					id: "74607E06FFEDB5F2"
+					ignore_reward_blocking: true
 					silent: true
+					team_reward: true
+					title: "这是你已经走过的路"
+					type: "command"
 				}
 				{
-					id: "44386BCCEBD08BD0"
-					type: "command"
-					title: "这是你已经走过的路"
-					icon: "kubejs:sealed_mechanism"
-					team_reward: true
 					auto: "no_toast"
-					ignore_reward_blocking: true
 					command: "/ftbquests change_progress @a reset 657693918A79B7A4"
+					icon: "kubejs:sealed_mechanism"
+					id: "44386BCCEBD08BD0"
+					ignore_reward_blocking: true
 					silent: true
+					team_reward: true
+					title: "这是你已经走过的路"
+					type: "command"
 				}
 				{
-					id: "38E4ACDDAC2E747A"
-					type: "command"
-					title: "这是你已经走过的路"
-					icon: "create:precision_mechanism"
 					auto: "no_toast"
-					ignore_reward_blocking: true
 					command: "/ftbquests change_progress @a reset 4A38517AC2118B36"
+					icon: "create:precision_mechanism"
+					id: "38E4ACDDAC2E747A"
+					ignore_reward_blocking: true
 					silent: true
+					title: "这是你已经走过的路"
+					type: "command"
 				}
 				{
-					id: "5EDFF3F9FF5CBB6E"
-					type: "command"
-					title: "这是你已经走过的路"
-					icon: "kubejs:inductive_mechanism"
-					team_reward: true
 					auto: "no_toast"
-					ignore_reward_blocking: true
 					command: "/ftbquests change_progress @a reset 65B9D982E9FB4AA9"
+					icon: "kubejs:inductive_mechanism"
+					id: "5EDFF3F9FF5CBB6E"
+					ignore_reward_blocking: true
 					silent: true
+					team_reward: true
+					title: "这是你已经走过的路"
+					type: "command"
 				}
 				{
-					id: "0289821187875E24"
-					type: "command"
-					title: "这是你已经走过的路"
-					icon: "kubejs:abstruse_mechanism"
-					team_reward: true
 					auto: "no_toast"
-					ignore_reward_blocking: true
 					command: "/ftbquests change_progress @a reset 4958836B3A14899C"
+					icon: "kubejs:abstruse_mechanism"
+					id: "0289821187875E24"
+					ignore_reward_blocking: true
 					silent: true
-				}
-				{
-					id: "2ADFC27395F9894A"
-					type: "command"
-					title: "这是你已经走过的路"
-					icon: "kubejs:calculation_mechanism"
 					team_reward: true
-					auto: "no_toast"
-					ignore_reward_blocking: true
-					command: "/ftbquests change_progress @a reset 09842CDC7A331BEE"
-					silent: true
+					title: "这是你已经走过的路"
+					type: "command"
 				}
 				{
-					id: "1BE1B13C1C80B864"
-					type: "command"
-					title: "这是你已经走过的路"
-					icon: "ad_astra:moon_globe"
 					auto: "no_toast"
+					command: "/ftbquests change_progress @a reset 09842CDC7A331BEE"
+					icon: "kubejs:calculation_mechanism"
+					id: "2ADFC27395F9894A"
 					ignore_reward_blocking: true
-					command: "/ftbquests change_progress @a reset 58E321BA4B90929F"
 					silent: true
+					team_reward: true
+					title: "这是你已经走过的路"
+					type: "command"
+				}
+				{
+					auto: "no_toast"
+					command: "/ftbquests change_progress @a reset 58E321BA4B90929F"
+					icon: "ad_astra:moon_globe"
+					id: "1BE1B13C1C80B864"
+					ignore_reward_blocking: true
+					silent: true
+					title: "这是你已经走过的路"
+					type: "command"
 				}
 			]
+			shape: "circle"
+			tasks: [{
+				id: "4E278DD986077214"
+				title: "原CABR玩家？"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -2.0d
 		}
 		{
-			title: "&6&l控制强化"
-			icon: "mekanism:elite_control_circuit"
-			x: 6.5d
-			y: 0.0d
-			shape: "circle"
-			subtitle: "&6第七章"
+			dependencies: ["3F28EBD4FC256D25"]
 			description: [
 				"在对超频构件的研究结束以后，我们仍然需要一种能更高效并且支持范围更广的控制方式。"
 				""
@@ -767,47 +761,47 @@
 				"点选上方复选项以解锁&6第七章：控制强化&r。"
 				"&7具体任务细节可以在左边侧栏选择查看。"
 			]
-			dependencies: ["3F28EBD4FC256D25"]
+			icon: "mekanism:elite_control_circuit"
 			id: "2D16E669377D3A0F"
+			shape: "circle"
+			subtitle: "&6第七章"
 			tasks: [{
 				id: "62FE53114A1C923C"
-				type: "checkmark"
 				title: "&6解锁&5第七章\\"
+				type: "checkmark"
 			}]
+			title: "&6&l控制强化"
+			x: 6.5d
+			y: 0.0d
 		}
 		{
-			title: "互联时代"
-			icon: "kubejs:smart_mechanism"
-			x: 8.0d
-			y: 0.0d
-			subtitle: "里程碑"
+			dependencies: [
+				"2D16E669377D3A0F"
+				"6F5DD8FE6931AEAB"
+			]
 			description: [
 				"藉由新的控制电路，我们获得了能让机器控制更加精细的可能。"
 				""
 				"看看你背后的路，很长很长，但是依旧清晰可见。"
 				"&7路不远了。"
 			]
-			dependencies: [
-				"2D16E669377D3A0F"
-				"6F5DD8FE6931AEAB"
-			]
+			icon: "kubejs:smart_mechanism"
 			id: "3CC196543AE64CCB"
+			subtitle: "里程碑"
 			tasks: [{
-				id: "64E36B0E11064B8A"
-				type: "advancement"
-				title: "完成第七章 &7主线&r"
-				icon: "ad_astra:ostrum_engine"
 				advancement: "ad_astra:tier_3_rocket"
 				criterion: ""
+				icon: "ad_astra:ostrum_engine"
+				id: "64E36B0E11064B8A"
+				title: "完成第七章 &7主线&r"
+				type: "advancement"
 			}]
+			title: "互联时代"
+			x: 8.0d
+			y: 0.0d
 		}
 		{
-			title: "&6&l星海征程"
-			icon: "mekanism:alloy_atomic"
-			x: 9.5d
-			y: 0.0d
-			shape: "circle"
-			subtitle: "&6最终章"
+			dependencies: ["3CC196543AE64CCB"]
 			description: [
 				"一步，还有一步，就到了。"
 				""
@@ -816,14 +810,19 @@
 				"点选上方复选项以解锁&6第八章：星海征程&r。"
 				"&7具体任务细节可以在左边侧栏选择查看。"
 			]
-			dependencies: ["3CC196543AE64CCB"]
+			icon: "mekanism:alloy_atomic"
 			id: "571AE9A001459450"
+			shape: "circle"
+			subtitle: "&6最终章"
 			tasks: [{
 				id: "37A0F636D0A70697"
-				type: "checkmark"
 				title: "解锁第八章"
+				type: "checkmark"
 			}]
+			title: "&6&l星海征程"
+			x: 9.5d
+			y: 0.0d
 		}
 	]
-	quest_links: [ ]
+	title: "{quest.chapter.overview.name}"
 }

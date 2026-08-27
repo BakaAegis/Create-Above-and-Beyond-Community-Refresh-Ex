@@ -1,20 +1,15 @@
 {
-	id: "75CF8B6BAC6A01EF"
-	group: "331B6409EF6A7840"
-	order_index: 7
-	filename: "stage_5"
-	title: "{quest.chapter.stage_5.name}"
-	icon: "kubejs:computation_matrix"
-	default_quest_shape: ""
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "stage_5"
+	group: "331B6409EF6A7840"
+	icon: "kubejs:computation_matrix"
+	id: "75CF8B6BAC6A01EF"
+	order_index: 7
+	quest_links: [ ]
 	quests: [
 		{
-			title: "{quest.stage_5.introduce.title}"
-			icon: "kubejs:calculation_mechanism"
-			x: 4.0d
-			y: 16.5d
-			shape: "hexagon"
-			subtitle: "{quest.stage_5.introduce.subtitle}"
+			dependencies: ["251A91F6C21AEAFB"]
 			description: [
 				"{quest.stage_5.introduce.text1}"
 				""
@@ -22,34 +17,27 @@
 				""
 				"{quest.stage_5.introduce.text3}"
 			]
-			dependencies: ["251A91F6C21AEAFB"]
-			hide: true
-			size: 2.0d
+			hide_until_deps_complete: true
+			icon: "kubejs:calculation_mechanism"
 			id: "5D0454F977C4F080"
-			tasks: [{
-				id: "1F6009A328AA0184"
-				type: "checkmark"
-				title: "{tip.kubejs.start}"
-			}]
 			rewards: [{
 				id: "0397D214E0A6CC89"
-				type: "item"
 				item: "create:builders_tea"
+				type: "item"
 			}]
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "{quest.stage_5.introduce.subtitle}"
+			tasks: [{
+				id: "1F6009A328AA0184"
+				title: "{tip.kubejs.start}"
+				type: "checkmark"
+			}]
+			title: "{quest.stage_5.introduce.title}"
+			x: 4.0d
+			y: 16.5d
 		}
 		{
-			title: "{quest.stage_5.finish.title}"
-			icon: "ad_astra:earth_globe"
-			x: 1.0d
-			y: 8.75d
-			shape: "hexagon"
-			description: [
-				"{quest.stage_5.finish.text1}"
-				""
-				"{quest.stage_5.finish.text2}"
-				""
-				"{quest.stage_5.finish.text3}"
-			]
 			dependencies: [
 				"6BA9A176EDA001A3"
 				"462CE0A4C80442FB"
@@ -61,152 +49,150 @@
 				"13E3B63C2D69BBC9"
 				"146AB3E314AA39B3"
 			]
-			size: 2.0d
+			description: [
+				"{quest.stage_5.finish.text1}"
+				""
+				"{quest.stage_5.finish.text2}"
+				""
+				"{quest.stage_5.finish.text3}"
+			]
+			icon: "ad_astra:earth_globe"
 			id: "47965C310D9847DC"
+			rewards: [{
+				id: "779E480D7099CCD9"
+				item: "supplementaries:globe"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
 			tasks: [
 				{
-					id: "4418C7A289B17158"
-					type: "item"
-					title: "{tip.kubejs.any_flag}"
+					consume_items: false
+					disable_toast: true
 					icon: {
+						Count: 1
 						id: "supplementaries:flag_gray"
-						Count: 1b
 						tag: {
 							BlockEntityTag: {
 								Patterns: [
 									{
-										Pattern: "gra"
 										Color: 0
+										Pattern: "gra"
 									}
 									{
+										Color: 15
 										Pattern: "bo"
-										Color: 15
 									}
 									{
+										Color: 15
 										Pattern: "bs"
-										Color: 15
 									}
 									{
+										Color: 15
 										Pattern: "ts"
-										Color: 15
 									}
 									{
+										Color: 15
 										Pattern: "rs"
-										Color: 15
 									}
 									{
-										Pattern: "ls"
 										Color: 11
+										Pattern: "ls"
 									}
 								]
 							}
 						}
 					}
-					disable_toast: true
+					id: "4418C7A289B17158"
 					item: {
+						Count: 1
 						id: "itemfilters:or"
-						Count: 1b
 						tag: {
 							items: [
 								{
+									Count: 1b
 									id: "supplementaries:flag_orange"
-									Count: 1b
 								}
 								{
+									Count: 1b
 									id: "supplementaries:flag_magenta"
-									Count: 1b
 								}
 								{
+									Count: 1b
 									id: "supplementaries:flag_light_blue"
-									Count: 1b
 								}
 								{
+									Count: 1b
 									id: "supplementaries:flag_lime"
-									Count: 1b
 								}
 								{
+									Count: 1b
 									id: "supplementaries:flag_gray"
-									Count: 1b
 								}
 								{
+									Count: 1b
 									id: "supplementaries:flag_cyan"
-									Count: 1b
 								}
 								{
+									Count: 1b
 									id: "supplementaries:flag_green"
-									Count: 1b
 								}
 								{
+									Count: 1b
 									id: "supplementaries:flag_red"
-									Count: 1b
 								}
 								{
+									Count: 1b
 									id: "supplementaries:flag_white"
-									Count: 1b
 								}
 								{
+									Count: 1b
 									id: "supplementaries:flag_light_gray"
-									Count: 1b
 								}
 								{
+									Count: 1b
 									id: "supplementaries:flag_yellow"
-									Count: 1b
 								}
 								{
+									Count: 1b
 									id: "supplementaries:flag_pink"
-									Count: 1b
 								}
 								{
+									Count: 1b
 									id: "supplementaries:flag_purple"
-									Count: 1b
 								}
 								{
+									Count: 1b
 									id: "supplementaries:flag_blue"
-									Count: 1b
 								}
 								{
+									Count: 1b
 									id: "supplementaries:flag_brown"
-									Count: 1b
 								}
 								{
-									id: "supplementaries:flag_black"
 									Count: 1b
+									id: "supplementaries:flag_black"
 								}
 							]
 						}
 					}
-					consume_items: false
+					title: "{tip.kubejs.any_flag}"
+					type: "item"
 				}
 				{
-					id: "651374A7A3486148"
-					type: "advancement"
-					title: "{tip.kubejs.rocket}"
-					icon: "ad_astra:steel_engine"
 					advancement: "ad_astra:tier_1_rocket"
 					criterion: ""
+					icon: "ad_astra:steel_engine"
+					id: "651374A7A3486148"
+					title: "{tip.kubejs.rocket}"
+					type: "advancement"
 				}
 			]
-			rewards: [{
-				id: "779E480D7099CCD9"
-				type: "item"
-				item: "supplementaries:globe"
-			}]
+			title: "{quest.stage_5.finish.title}"
+			x: 1.0d
+			y: 8.75d
 		}
 		{
-			title: "{quest.stage_5.matrix.title}"
-			x: 1.0d
-			y: 10.5d
-			shape: "circle"
-			subtitle: "{quest.stage_5.matrix.subtitle}"
-			description: [
-				"{quest.stage_5.matrix.text1}"
-				""
-				"{quest.stage_5.matrix.text2}"
-				""
-				"{quest.stage_5.matrix.text3}"
-				""
-				"{quest.stage_5.matrix.text4}"
-			]
 			dependencies: [
 				"42B5C0102B22F389"
 				"5358E5F7FB59DD60"
@@ -220,22 +206,36 @@
 				"2441491CB5D5E57D"
 			]
 			dependency_requirement: "one_completed"
+			description: [
+				"{quest.stage_5.matrix.text1}"
+				""
+				"{quest.stage_5.matrix.text2}"
+				""
+				"{quest.stage_5.matrix.text3}"
+				""
+				"{quest.stage_5.matrix.text4}"
+			]
 			id: "69311E02A8B3451D"
+			shape: "circle"
+			subtitle: "{quest.stage_5.matrix.subtitle}"
 			tasks: [{
-				id: "2C98415D43457049"
-				type: "item"
-				item: "kubejs:computation_matrix"
-				count: 2L
 				consume_items: false
+				count: 2L
+				id: "2C98415D43457049"
+				item: "kubejs:computation_matrix"
+				type: "item"
 			}]
+			title: "{quest.stage_5.matrix.title}"
+			x: 1.0d
+			y: 10.5d
 		}
 		{
-			title: "{quest.stage_5.raw_logic.title}"
+			dependencies: ["5D0454F977C4F080"]
+			description: ["{quest.stage_5.raw_logic.text1}"]
 			icon: {
+				Count: 1
 				id: "thermal:fluid_cell"
-				Count: 1b
 				tag: {
-					Properties: { }
 					BlockEntityTag: {
 						AmountIn: 1000
 						AmountOut: 1000
@@ -245,8 +245,8 @@
 						}
 						TankInv: [{
 							Amount: 32000
-							FluidName: "kubejs:matrix"
 							Capacity: 32000
+							FluidName: "kubejs:matrix"
 							Tank: 0b
 						}]
 						Xfer: {
@@ -254,630 +254,624 @@
 							XferOut: 1b
 						}
 					}
+					Properties: { }
 				}
 			}
-			x: 1.0d
-			y: 16.5d
-			shape: "square"
-			subtitle: "{quest.stage_5.raw_logic.subtitle}"
-			description: ["{quest.stage_5.raw_logic.text1}"]
-			dependencies: ["5D0454F977C4F080"]
-			size: 1.5d
 			id: "70D563EF30E9CB97"
+			shape: "square"
+			size: 1.5d
+			subtitle: "{quest.stage_5.raw_logic.subtitle}"
 			tasks: [
 				{
-					id: "2A4A54EBAFBEB39F"
-					type: "item"
-					item: "kubejs:raw_logic_bucket"
 					consume_items: false
+					id: "2A4A54EBAFBEB39F"
+					item: "kubejs:raw_logic_bucket"
+					type: "item"
 				}
 				{
 					id: "406AAC43EBD44F6A"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_5.raw_logic.title}"
+			x: 1.0d
+			y: 16.5d
 		}
 		{
-			icon: "kubejs:three"
-			x: -0.5d
-			y: 14.5d
-			subtitle: "{quest.stage_5.three.subtitle}"
+			dependencies: ["70D563EF30E9CB97"]
 			description: [
 				"{quest.stage_5.three.text1}"
 				""
 				"{quest.stage_5.three.text2}"
 			]
-			dependencies: ["70D563EF30E9CB97"]
+			icon: "kubejs:three"
 			id: "5550A3E383EFEC90"
+			subtitle: "{quest.stage_5.three.subtitle}"
 			tasks: [
 				{
-					id: "343E4ED28EA67219"
-					type: "item"
-					item: "kubejs:three"
 					consume_items: false
+					id: "343E4ED28EA67219"
+					item: "kubejs:three"
+					type: "item"
 				}
 				{
 					id: "61DEC75D20A61088"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			x: -0.5d
+			y: 14.5d
 		}
 		{
-			icon: "kubejs:eight"
-			x: 2.5d
-			y: 14.5d
-			subtitle: "{quest.stage_5.eight.subtitle}"
+			dependencies: ["70D563EF30E9CB97"]
 			description: [
 				"{quest.stage_5.eight.text1}"
 				""
 				"{quest.stage_5.eight.text2}"
 			]
-			dependencies: ["70D563EF30E9CB97"]
+			icon: "kubejs:eight"
 			id: "3126DE83A6741671"
+			subtitle: "{quest.stage_5.eight.subtitle}"
 			tasks: [
 				{
-					id: "18BB7C8E32701CB6"
-					type: "item"
-					item: "kubejs:eight"
 					consume_items: false
+					id: "18BB7C8E32701CB6"
+					item: "kubejs:eight"
+					type: "item"
 				}
 				{
 					id: "4DAD021C66AB2A27"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			x: 2.5d
+			y: 14.5d
 		}
 		{
-			icon: "kubejs:zero"
-			x: 4.5d
-			y: 12.5d
-			subtitle: "{quest.stage_5.zero.subtitle}"
-			description: ["{quest.stage_5.zero.text1}"]
 			dependencies: [
 				"5550A3E383EFEC90"
 				"3126DE83A6741671"
 				"4E85C8A2EEEB57C3"
 			]
+			description: ["{quest.stage_5.zero.text1}"]
+			icon: "kubejs:zero"
 			id: "2441491CB5D5E57D"
+			subtitle: "{quest.stage_5.zero.subtitle}"
 			tasks: [
 				{
-					id: "6FF94B3F20E69F43"
-					type: "item"
-					item: "kubejs:zero"
 					consume_items: false
+					id: "6FF94B3F20E69F43"
+					item: "kubejs:zero"
+					type: "item"
 				}
 				{
 					id: "3413FA802F33F4BF"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			x: 4.5d
+			y: 12.5d
 		}
 		{
-			icon: "kubejs:one"
-			x: -2.5d
-			y: 12.5d
-			subtitle: "{quest.stage_5.one.subtitle}"
-			description: ["{quest.stage_5.one.text1}"]
 			dependencies: [
 				"5550A3E383EFEC90"
 				"3126DE83A6741671"
 				"4E85C8A2EEEB57C3"
 			]
+			description: ["{quest.stage_5.one.text1}"]
+			icon: "kubejs:one"
 			id: "42B5C0102B22F389"
+			subtitle: "{quest.stage_5.one.subtitle}"
 			tasks: [
 				{
-					id: "61A3EF7882F2A31E"
-					type: "item"
-					item: "kubejs:one"
 					consume_items: false
+					id: "61A3EF7882F2A31E"
+					item: "kubejs:one"
+					type: "item"
 				}
 				{
 					id: "402FD7973EC66AEA"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			x: -2.5d
+			y: 12.5d
 		}
 		{
-			icon: "kubejs:two"
-			x: -1.5d
-			y: 12.5d
-			subtitle: "{quest.stage_5.two.subtitle}"
-			description: ["{quest.stage_5.two.text1}"]
 			dependencies: [
 				"5550A3E383EFEC90"
 				"3126DE83A6741671"
 				"4E85C8A2EEEB57C3"
 			]
+			description: ["{quest.stage_5.two.text1}"]
+			icon: "kubejs:two"
 			id: "5358E5F7FB59DD60"
+			subtitle: "{quest.stage_5.two.subtitle}"
 			tasks: [
 				{
-					id: "2AD655BD7E1A0EBF"
-					type: "item"
-					item: "kubejs:two"
 					consume_items: false
+					id: "2AD655BD7E1A0EBF"
+					item: "kubejs:two"
+					type: "item"
 				}
 				{
 					id: "14D9C52366D6AF27"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			x: -1.5d
+			y: 12.5d
 		}
 		{
-			icon: "kubejs:four"
-			x: -0.5d
-			y: 12.5d
-			subtitle: "{quest.stage_5.four.subtitle}"
-			description: ["{quest.stage_5.four.text1}"]
 			dependencies: [
 				"5550A3E383EFEC90"
 				"3126DE83A6741671"
 				"4E85C8A2EEEB57C3"
 			]
+			description: ["{quest.stage_5.four.text1}"]
+			icon: "kubejs:four"
 			id: "55F959A18E904D6C"
+			subtitle: "{quest.stage_5.four.subtitle}"
 			tasks: [
 				{
-					id: "54FEAD9C942788CF"
-					type: "item"
-					item: "kubejs:four"
 					consume_items: false
+					id: "54FEAD9C942788CF"
+					item: "kubejs:four"
+					type: "item"
 				}
 				{
 					id: "3662CA8BEE33E02D"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			x: -0.5d
+			y: 12.5d
 		}
 		{
-			icon: "kubejs:five"
-			x: 0.5d
-			y: 12.5d
-			subtitle: "{quest.stage_5.five.subtitle}"
-			description: ["{quest.stage_5.five.text1}"]
 			dependencies: [
 				"5550A3E383EFEC90"
 				"3126DE83A6741671"
 				"4E85C8A2EEEB57C3"
 			]
+			description: ["{quest.stage_5.five.text1}"]
+			icon: "kubejs:five"
 			id: "7927B6162577FA7B"
+			subtitle: "{quest.stage_5.five.subtitle}"
 			tasks: [
 				{
-					id: "0B94D4B1C2A131DA"
-					type: "item"
-					item: "kubejs:five"
 					consume_items: false
+					id: "0B94D4B1C2A131DA"
+					item: "kubejs:five"
+					type: "item"
 				}
 				{
 					id: "4963498277C8A578"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			x: 0.5d
+			y: 12.5d
 		}
 		{
-			icon: "kubejs:six"
-			x: 1.5d
-			y: 12.5d
-			subtitle: "{quest.stage_5.six.subtitle}"
-			description: ["{quest.stage_5.six.text1}"]
 			dependencies: [
 				"5550A3E383EFEC90"
 				"3126DE83A6741671"
 				"4E85C8A2EEEB57C3"
 			]
+			description: ["{quest.stage_5.six.text1}"]
+			icon: "kubejs:six"
 			id: "1C6657984648B0D4"
+			subtitle: "{quest.stage_5.six.subtitle}"
 			tasks: [
 				{
-					id: "0127797E6B5249A2"
-					type: "item"
-					item: "kubejs:six"
 					consume_items: false
+					id: "0127797E6B5249A2"
+					item: "kubejs:six"
+					type: "item"
 				}
 				{
 					id: "3E69BC01E47532D1"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			x: 1.5d
+			y: 12.5d
 		}
 		{
-			icon: "kubejs:seven"
-			x: 2.5d
-			y: 12.5d
-			subtitle: "{quest.stage_5.seven.subtitle}"
-			description: ["{quest.stage_5.seven.text1}"]
 			dependencies: [
 				"5550A3E383EFEC90"
 				"3126DE83A6741671"
 				"4E85C8A2EEEB57C3"
 			]
+			description: ["{quest.stage_5.seven.text1}"]
+			icon: "kubejs:seven"
 			id: "4A16CE3BC111280F"
+			subtitle: "{quest.stage_5.seven.subtitle}"
 			tasks: [
 				{
-					id: "7FA25AD87CBD6B62"
-					type: "item"
-					item: "kubejs:seven"
 					consume_items: false
+					id: "7FA25AD87CBD6B62"
+					item: "kubejs:seven"
+					type: "item"
 				}
 				{
 					id: "44A10C4B490D3C62"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			x: 2.5d
+			y: 12.5d
 		}
 		{
-			icon: "kubejs:nine"
-			x: 3.5d
-			y: 12.5d
-			subtitle: "{quest.stage_5.nine.subtitle}"
-			description: ["{quest.stage_5.nine.text1}"]
 			dependencies: [
 				"5550A3E383EFEC90"
 				"3126DE83A6741671"
 				"4E85C8A2EEEB57C3"
 			]
+			description: ["{quest.stage_5.nine.text1}"]
+			icon: "kubejs:nine"
 			id: "7D808F15BEDD7A7B"
+			subtitle: "{quest.stage_5.nine.subtitle}"
 			tasks: [
 				{
-					id: "2F81E83410906BB5"
-					type: "item"
-					item: "kubejs:nine"
 					consume_items: false
+					id: "2F81E83410906BB5"
+					item: "kubejs:nine"
+					type: "item"
 				}
 				{
 					id: "5521427D5BAF2771"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			x: 3.5d
+			y: 12.5d
 		}
 		{
-			title: "{quest.stage_5.matter_ball.title}"
-			icon: "ae2:matter_ball"
-			x: 1.0d
-			y: 4.0d
-			subtitle: "{quest.stage_5.matter_ball.subtitle}"
+			dependencies: ["5D0454F977C4F080"]
 			description: [
 				"{quest.stage_5.matter_ball.text1}"
 				""
 				"{quest.stage_5.matter_ball.text2}"
 			]
 			hide_dependency_lines: true
-			dependencies: ["5D0454F977C4F080"]
+			icon: "ae2:matter_ball"
 			id: "3CBED6B591BCEDEA"
+			subtitle: "{quest.stage_5.matter_ball.subtitle}"
 			tasks: [
 				{
-					id: "48216CB398BC25AF"
-					type: "item"
-					item: "ae2:matter_ball"
 					consume_items: false
+					id: "48216CB398BC25AF"
+					item: "ae2:matter_ball"
+					type: "item"
 				}
 				{
 					id: "1BB7AB0880074729"
-					type: "checkmark"
 					title: "已自动化"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_5.matter_ball.title}"
+			x: 1.0d
+			y: 4.0d
 		}
 		{
-			title: "{quest.stage_5.matter_plastics.title}"
-			x: 1.0d
-			y: 5.5d
-			shape: "circle"
-			subtitle: "{quest.stage_5.matter_plastics.subtitle}"
-			description: ["{quest.stage_5.matter_plastics.text1}"]
 			dependencies: [
 				"6F750A66D0A559DE"
 				"3CBED6B591BCEDEA"
 			]
+			description: ["{quest.stage_5.matter_plastics.text1}"]
 			id: "6A156D11D983661D"
+			shape: "circle"
+			subtitle: "{quest.stage_5.matter_plastics.subtitle}"
 			tasks: [{
-				id: "25532A2369192051"
-				type: "item"
-				item: "kubejs:matter_plastics"
 				consume_items: false
+				id: "25532A2369192051"
+				item: "kubejs:matter_plastics"
+				type: "item"
 			}]
+			title: "{quest.stage_5.matter_plastics.title}"
+			x: 1.0d
+			y: 5.5d
 		}
 		{
-			title: "{quest.stage_5.crude_oil.title}"
-			icon: "createdieselgenerators:crude_oil_bucket"
-			x: -4.0d
-			y: 9.0d
-			shape: "circle"
+			dependencies: ["5D0454F977C4F080"]
 			description: ["{quest.stage_5.crude_oil.text1}"]
 			hide_dependency_lines: true
-			dependencies: ["5D0454F977C4F080"]
+			icon: "createdieselgenerators:crude_oil_bucket"
 			id: "4761DAE59CDD93AF"
+			shape: "circle"
 			tasks: [{
+				consume_items: false
 				id: "69EE10F8CDFF7980"
-				type: "item"
-				title: "{tip.kubejs.any_crude_oil}"
 				item: {
+					Count: 1
 					id: "itemfilters:or"
-					Count: 1b
 					tag: {
 						items: [
 							{
+								Count: 1b
 								id: "createdieselgenerators:crude_oil_bucket"
-								Count: 1b
 							}
 							{
+								Count: 1b
 								id: "ad_astra:oil_bucket"
-								Count: 1b
 							}
 							{
-								id: "thermal:crude_oil_bucket"
 								Count: 1b
+								id: "thermal:crude_oil_bucket"
 							}
 						]
 					}
 				}
-				consume_items: false
+				title: "{tip.kubejs.any_crude_oil}"
+				type: "item"
 			}]
+			title: "{quest.stage_5.crude_oil.title}"
+			x: -4.0d
+			y: 9.0d
 		}
 		{
+			dependencies: ["4761DAE59CDD93AF"]
+			description: ["{quest.stage_5.heavy_oil.text1}"]
+			id: "2BD76CB3F8BC215E"
+			shape: "circle"
+			subtitle: "{quest.stage_5.heavy_oil.subtitle}"
+			tasks: [{
+				consume_items: false
+				id: "0F12D5A3157F61C4"
+				item: "thermal:heavy_oil_bucket"
+				type: "item"
+			}]
 			title: "{quest.stage_5.heavy_oil.title}"
 			x: -3.0d
 			y: 9.0d
-			shape: "circle"
-			subtitle: "{quest.stage_5.heavy_oil.subtitle}"
-			description: ["{quest.stage_5.heavy_oil.text1}"]
-			dependencies: ["4761DAE59CDD93AF"]
-			id: "2BD76CB3F8BC215E"
-			tasks: [{
-				id: "0F12D5A3157F61C4"
-				type: "item"
-				item: "thermal:heavy_oil_bucket"
-				consume_items: false
-			}]
 		}
 		{
+			dependencies: ["4761DAE59CDD93AF"]
+			description: ["{quest.stage_5.light_oil.text1}"]
+			id: "26DD1CA6A8D4E249"
+			shape: "circle"
+			subtitle: "{quest.stage_5.light_oil.subtitle}"
+			tasks: [{
+				consume_items: false
+				id: "2EA66D1B4EEBFA62"
+				item: "thermal:light_oil_bucket"
+				type: "item"
+			}]
 			title: "{quest.stage_5.light_oil.title}"
 			x: -3.0d
 			y: 10.0d
-			shape: "circle"
-			subtitle: "{quest.stage_5.light_oil.subtitle}"
-			description: ["{quest.stage_5.light_oil.text1}"]
-			dependencies: ["4761DAE59CDD93AF"]
-			id: "26DD1CA6A8D4E249"
-			tasks: [{
-				id: "2EA66D1B4EEBFA62"
-				type: "item"
-				item: "thermal:light_oil_bucket"
-				consume_items: false
-			}]
 		}
 		{
-			title: "{quest.stage_5.gasoline_and_diesel.title}"
-			x: -2.0d
-			y: 10.0d
-			shape: "circle"
-			subtitle: "{quest.stage_5.gasoline_and_diesel.subtitle}"
-			description: ["{quest.stage_5.gasoline_and_diesel.text1}"]
 			dependencies: [
 				"2BD76CB3F8BC215E"
 				"26DD1CA6A8D4E249"
 			]
 			dependency_requirement: "one_completed"
+			description: ["{quest.stage_5.gasoline_and_diesel.text1}"]
 			id: "25B76A897D97C9F1"
+			shape: "circle"
+			subtitle: "{quest.stage_5.gasoline_and_diesel.subtitle}"
 			tasks: [
 				{
-					id: "4B764F5639AD8054"
-					type: "item"
-					item: "createdieselgenerators:gasoline_bucket"
 					consume_items: false
+					id: "4B764F5639AD8054"
+					item: "createdieselgenerators:gasoline_bucket"
+					type: "item"
 				}
 				{
-					id: "6CAA19D8BF396ADD"
-					type: "item"
-					item: "createdieselgenerators:diesel_bucket"
 					consume_items: false
+					id: "6CAA19D8BF396ADD"
+					item: "createdieselgenerators:diesel_bucket"
+					type: "item"
 				}
 			]
+			title: "{quest.stage_5.gasoline_and_diesel.title}"
+			x: -2.0d
+			y: 10.0d
 		}
 		{
-			title: "{quest.stage_5.blaze_cake.title}"
-			x: 2.5d
-			y: 4.5d
-			shape: "circle"
-			subtitle: "{quest.stage_5.blaze_cake.subtitle}"
+			dependencies: ["5D0454F977C4F080"]
 			description: [
 				"{quest.stage_5.blaze_cake.text1}"
 				""
 				"{quest.stage_5.blaze_cake.text2}"
 			]
 			hide_dependency_lines: true
-			dependencies: ["5D0454F977C4F080"]
 			id: "6F750A66D0A559DE"
+			shape: "circle"
+			subtitle: "{quest.stage_5.blaze_cake.subtitle}"
 			tasks: [{
-				id: "588732AF86BA6A8D"
-				type: "item"
-				item: "create:blaze_cake"
 				consume_items: false
+				id: "588732AF86BA6A8D"
+				item: "create:blaze_cake"
+				type: "item"
 			}]
+			title: "{quest.stage_5.blaze_cake.title}"
+			x: 2.5d
+			y: 4.5d
 		}
 		{
-			title: "{quest.stage_5.space_suit.title}"
+			dependencies: ["6A156D11D983661D"]
+			description: ["{quest.stage_5.space_suit.text1}"]
 			icon: {
+				Count: 1
 				id: "ad_astra:space_helmet"
-				Count: 1b
 				tag: {
 					Damage: 0
 				}
 			}
-			x: -2.0d
-			y: 7.0d
+			id: "6BA9A176EDA001A3"
 			shape: "circle"
 			subtitle: "{quest.stage_5.space_suit.subtitle}"
-			description: ["{quest.stage_5.space_suit.text1}"]
-			dependencies: ["6A156D11D983661D"]
-			id: "6BA9A176EDA001A3"
 			tasks: [
 				{
+					consume_items: false
 					id: "56A2E1E0A96EACBA"
-					type: "item"
 					item: {
+						Count: 1
 						id: "ad_astra:space_suit"
-						Count: 1b
 						tag: {
 							Damage: 0
 						}
 					}
-					consume_items: false
+					type: "item"
 				}
 				{
+					consume_items: false
 					id: "598FED4FD472DB12"
-					type: "item"
 					item: {
+						Count: 1
 						id: "ad_astra:space_pants"
-						Count: 1b
 						tag: {
 							Damage: 0
 						}
 					}
-					consume_items: false
+					type: "item"
 				}
 				{
+					consume_items: false
 					id: "589FEF2FC0E28BB2"
-					type: "item"
 					item: {
+						Count: 1
 						id: "ad_astra:space_boots"
-						Count: 1b
 						tag: {
 							Damage: 0
 						}
 					}
-					consume_items: false
+					type: "item"
 				}
 				{
+					consume_items: false
 					id: "3AE9047B212D4AE9"
-					type: "item"
 					item: {
+						Count: 1
 						id: "ad_astra:space_helmet"
-						Count: 1b
 						tag: {
 							Damage: 0
 						}
 					}
-					consume_items: false
+					type: "item"
 				}
 			]
+			title: "{quest.stage_5.space_suit.title}"
+			x: -2.0d
+			y: 7.0d
 		}
 		{
+			dependencies: ["5D0454F977C4F080"]
+			description: ["{quest.stage_5.oxygen_distributor.text1}"]
+			hide_dependency_lines: true
+			id: "462CE0A4C80442FB"
+			shape: "circle"
+			subtitle: "{quest.stage_5.oxygen_distributor.subtitle}"
+			tasks: [{
+				consume_items: false
+				id: "38E9BC3E7DB087E2"
+				item: "ad_astra:oxygen_distributor"
+				type: "item"
+			}]
 			title: "{quest.stage_5.oxygen_distributor.title}"
 			x: 2.4261904761904702d
 			y: 9.590476190476195d
-			shape: "circle"
-			subtitle: "{quest.stage_5.oxygen_distributor.subtitle}"
-			description: ["{quest.stage_5.oxygen_distributor.text1}"]
-			hide_dependency_lines: true
-			dependencies: ["5D0454F977C4F080"]
-			id: "462CE0A4C80442FB"
-			tasks: [{
-				id: "38E9BC3E7DB087E2"
-				type: "item"
-				item: "ad_astra:oxygen_distributor"
-				consume_items: false
-			}]
 		}
 		{
-			title: "{quest.stage_5.oxygen_loader.title}"
+			dependencies: ["6A156D11D983661D"]
+			description: ["{quest.stage_5.oxygen_loader.text1}"]
 			icon: "ad_astra:oxygen_loader"
-			x: -0.5d
-			y: 7.0d
+			id: "3AD7553F3C8593F9"
 			shape: "circle"
 			subtitle: "{quest.stage_5.oxygen_loader.subtitle}"
-			description: ["{quest.stage_5.oxygen_loader.text1}"]
-			dependencies: ["6A156D11D983661D"]
-			id: "3AD7553F3C8593F9"
 			tasks: [{
-				id: "68DF42669BD15D28"
-				type: "item"
-				item: "ad_astra:oxygen_loader"
 				consume_items: false
+				id: "68DF42669BD15D28"
+				item: "ad_astra:oxygen_loader"
+				type: "item"
 			}]
+			title: "{quest.stage_5.oxygen_loader.title}"
+			x: -0.5d
+			y: 7.0d
 		}
 		{
-			title: "{quest.stage_5.launch_pad.title}"
-			icon: "ad_astra:launch_pad"
-			x: 1.0d
-			y: 7.0d
-			shape: "circle"
-			subtitle: "{quest.stage_5.launch_pad.subtitle}"
+			dependencies: ["6A156D11D983661D"]
 			description: [
 				"{quest.stage_5.launch_pad.text1}"
 				""
 				"{quest.stage_5.launch_pad.text2}"
 			]
-			dependencies: ["6A156D11D983661D"]
+			icon: "ad_astra:launch_pad"
 			id: "4800892E1E70648D"
+			shape: "circle"
+			subtitle: "{quest.stage_5.launch_pad.subtitle}"
 			tasks: [{
-				id: "08BC34B95D7F8F34"
-				type: "item"
-				item: "ad_astra:launch_pad"
-				count: 9L
 				consume_items: false
+				count: 9L
+				id: "08BC34B95D7F8F34"
+				item: "ad_astra:launch_pad"
+				type: "item"
 			}]
+			title: "{quest.stage_5.launch_pad.title}"
+			x: 1.0d
+			y: 7.0d
 		}
 		{
-			title: "{quest.stage_5.characters.title}"
-			icon: "kubejs:plus"
-			x: 1.0d
-			y: 15.0d
-			subtitle: "{quest.stage_5.characters.subtitle}"
-			description: ["{quest.stage_5.characters.text1}"]
 			dependencies: ["70D563EF30E9CB97"]
+			description: ["{quest.stage_5.characters.text1}"]
+			icon: "kubejs:plus"
 			id: "4E85C8A2EEEB57C3"
+			subtitle: "{quest.stage_5.characters.subtitle}"
 			tasks: [
 				{
+					consume_items: false
 					id: "69462AA912169E3B"
-					type: "item"
 					item: "kubejs:plus"
-					consume_items: false
+					type: "item"
 				}
 				{
+					consume_items: false
 					id: "56E1C75AD6DF3119"
-					type: "item"
 					item: "kubejs:minus"
-					consume_items: false
+					type: "item"
 				}
 				{
+					consume_items: false
 					id: "3BF3D9E9B3782EA3"
-					type: "item"
 					item: "kubejs:multiply"
-					consume_items: false
+					type: "item"
 				}
 				{
-					id: "5914CB0D1D6E839E"
-					type: "item"
-					item: "kubejs:divide"
 					consume_items: false
+					id: "5914CB0D1D6E839E"
+					item: "kubejs:divide"
+					type: "item"
 				}
 				{
 					id: "26517C9D1C3D8269"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_5.characters.title}"
+			x: 1.0d
+			y: 15.0d
 		}
 		{
-			title: "{quest.stage_5.rocket.title}"
-			icon: {
-				id: "ad_astra:tier_1_rocket"
-				Count: 1b
-				tag: { }
-			}
-			x: 2.5d
-			y: 7.0d
-			shape: "circle"
-			subtitle: "{quest.stage_5.rocket.subtitle}"
+			dependencies: [
+				"6A156D11D983661D"
+				"4800892E1E70648D"
+			]
 			description: [
 				"{quest.stage_5.rocket.text1}"
 				""
@@ -886,120 +880,126 @@
 				"{quest.stage_5.rocket.text3}"
 				"{quest.stage_5.rocket.text4}"
 			]
-			dependencies: [
-				"6A156D11D983661D"
-				"4800892E1E70648D"
-			]
+			icon: {
+				Count: 1
+				id: "ad_astra:tier_1_rocket"
+				tag: { }
+			}
 			id: "73473DC7269EC5B0"
+			rewards: [{
+				id: "3545A2F4AD994980"
+				item: "ad_astra:fuel_bucket"
+				type: "item"
+			}]
+			shape: "circle"
+			subtitle: "{quest.stage_5.rocket.subtitle}"
 			tasks: [
 				{
+					consume_items: false
 					id: "4F5AC76FDE591398"
-					type: "item"
 					item: "kubejs:guide_computer_tier1"
-					consume_items: false
+					type: "item"
 				}
 				{
-					id: "0CCAE2CC1C3DFB5E"
-					type: "item"
-					item: "kubejs:encased_steel_engine"
+					consume_items: false
 					count: 4L
-					consume_items: false
+					id: "0CCAE2CC1C3DFB5E"
+					item: "kubejs:encased_steel_engine"
+					type: "item"
 				}
 				{
-					id: "70B43D040019842B"
-					type: "item"
-					item: "kubejs:encased_steel_fuel_tank"
+					consume_items: false
 					count: 5L
-					consume_items: false
+					id: "70B43D040019842B"
+					item: "kubejs:encased_steel_fuel_tank"
+					type: "item"
 				}
 				{
-					id: "2D45FA91EC566E4F"
-					type: "item"
-					item: "kubejs:matter_casing"
+					consume_items: false
 					count: 12L
-					consume_items: false
+					id: "2D45FA91EC566E4F"
+					item: "kubejs:matter_casing"
+					type: "item"
 				}
 				{
+					consume_items: false
 					id: "36ECAED65F123F30"
-					type: "item"
 					item: "thermal:obsidian_glass"
-					consume_items: false
+					type: "item"
 				}
 				{
+					consume_items: false
 					id: "140CC27CF777D174"
-					type: "item"
 					item: "kubejs:signal_transmission_antenna"
-					consume_items: false
+					type: "item"
 				}
 				{
+					count: 20L
 					id: "1BDB76306D84C5C8"
-					type: "item"
-					title: "任意 脚手架"
 					item: {
+						Count: 1
 						id: "itemfilters:tag"
-						Count: 1b
 						tag: {
 							value: "minecraft:climbable"
 						}
 					}
-					count: 20L
 					match_nbt: false
+					title: "任意 脚手架"
+					type: "item"
 				}
 			]
-			rewards: [{
-				id: "3545A2F4AD994980"
-				type: "item"
-				item: "ad_astra:fuel_bucket"
-			}]
+			title: "{quest.stage_5.rocket.title}"
+			x: 2.5d
+			y: 7.0d
 		}
 		{
+			dependencies: ["6A156D11D983661D"]
+			description: ["{quest.stage_5.rover.text1}"]
 			icon: {
+				Count: 1
 				id: "ad_astra:tier_1_rover"
-				Count: 1b
 				tag: { }
 			}
-			x: 4.0d
-			y: 7.0d
+			id: "13E3B63C2D69BBC9"
+			optional: true
 			shape: "circle"
 			subtitle: "{quest.stage_5.rover.subtitle}"
-			description: ["{quest.stage_5.rover.text1}"]
-			dependencies: ["6A156D11D983661D"]
-			optional: true
-			id: "13E3B63C2D69BBC9"
 			tasks: [
 				{
+					consume_items: false
 					id: "06D1C5D22D18E554"
-					type: "item"
 					item: {
+						Count: 1
 						id: "ad_astra:tier_1_rover"
-						Count: 1b
 						tag: { }
 					}
-					consume_items: false
+					type: "item"
 				}
 				{
 					id: "0C395B7D50CDFD7F"
-					type: "checkmark"
 					title: "{tip.kubejs.sure}"
+					type: "checkmark"
 				}
 			]
+			x: 4.0d
+			y: 7.0d
 		}
 		{
+			dependencies: ["25B76A897D97C9F1"]
+			description: ["{quest.stage_5.fuel.text1}"]
+			id: "146AB3E314AA39B3"
+			shape: "circle"
+			subtitle: "{quest.stage_5.fuel.subtitle}"
+			tasks: [{
+				consume_items: false
+				id: "589110962F215DA7"
+				item: "ad_astra:fuel_bucket"
+				type: "item"
+			}]
 			title: "{quest.stage_5.fuel.title}"
 			x: -1.0d
 			y: 10.0d
-			shape: "circle"
-			subtitle: "{quest.stage_5.fuel.subtitle}"
-			description: ["{quest.stage_5.fuel.text1}"]
-			dependencies: ["25B76A897D97C9F1"]
-			id: "146AB3E314AA39B3"
-			tasks: [{
-				id: "589110962F215DA7"
-				type: "item"
-				item: "ad_astra:fuel_bucket"
-				consume_items: false
-			}]
 		}
 	]
-	quest_links: [ ]
+	title: "{quest.chapter.stage_5.name}"
 }

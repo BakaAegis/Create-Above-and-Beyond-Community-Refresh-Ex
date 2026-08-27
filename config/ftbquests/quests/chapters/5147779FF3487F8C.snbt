@@ -1,20 +1,15 @@
 {
-	id: "5147779FF3487F8C"
-	group: "331B6409EF6A7840"
-	order_index: 9
-	filename: "5147779FF3487F8C"
-	title: "&f&l7&r 控制强化"
-	icon: "kubejs:smart_machine"
-	default_quest_shape: ""
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "5147779FF3487F8C"
+	group: "331B6409EF6A7840"
+	icon: "kubejs:smart_machine"
+	id: "5147779FF3487F8C"
+	order_index: 9
+	quest_links: [ ]
 	quests: [
 		{
-			title: "控制强化"
-			icon: "kubejs:overclocking_mechanism"
-			x: -2.0d
-			y: 0.0d
-			shape: "hexagon"
-			subtitle: "&6第七章"
+			dependencies: ["2D16E669377D3A0F"]
 			description: [
 				"抵达了火星之后，接下来的目标很明确了：我们需要更快，更快，更快的机器。"
 				""
@@ -22,932 +17,937 @@
 				""
 				"这一章是不会很轻松的，向前走，别回头。"
 			]
-			dependencies: ["2D16E669377D3A0F"]
-			hide: true
-			size: 2.0d
+			hide_until_deps_complete: true
+			icon: "kubejs:overclocking_mechanism"
 			id: "3A528E4045DBB2A6"
-			tasks: [{
-				id: "37FA4FEF55381830"
-				type: "checkmark"
-				title: "开始！"
-			}]
 			rewards: [{
 				id: "4D437349C26060D6"
-				type: "item"
 				item: "create:builders_tea"
+				type: "item"
 			}]
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "&6第七章"
+			tasks: [{
+				id: "37FA4FEF55381830"
+				title: "开始！"
+				type: "checkmark"
+			}]
+			title: "控制强化"
+			x: -2.0d
+			y: 0.0d
 		}
 		{
-			title: "集成电路"
-			icon: "create_dd:integrated_circuit"
-			x: 2.5d
-			y: 3.5d
-			description: ["虽然这是极度简单的初级版本，但是已经不难看出集成电路的样子了。"]
 			dependencies: [
 				"0A28DF54E5C08AEF"
 				"56882583FB1F2381"
 				"4FDB5E9D9394942B"
 			]
+			description: ["虽然这是极度简单的初级版本，但是已经不难看出集成电路的样子了。"]
+			icon: "create_dd:integrated_circuit"
 			id: "0CA906CABADE932A"
 			tasks: [
 				{
-					id: "640A59B3058F5600"
-					type: "item"
-					item: "create_dd:integrated_circuit"
 					consume_items: false
+					id: "640A59B3058F5600"
+					item: "create_dd:integrated_circuit"
+					type: "item"
 				}
 				{
 					id: "783F1C897F61D638"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "集成电路"
+			x: 2.5d
+			y: 3.5d
 		}
 		{
-			title: "控制入门"
-			icon: "mekanism:basic_control_circuit"
-			x: 2.5d
-			y: 5.0d
-			description: ["增强！用锇灌注过的电路能够承担更多的功能，控制更加精细化。"]
 			dependencies: [
 				"0CA906CABADE932A"
 				"4357D575EBCA73F1"
 			]
+			description: ["增强！用锇灌注过的电路能够承担更多的功能，控制更加精细化。"]
+			icon: "mekanism:basic_control_circuit"
 			id: "7BA304CBB405360F"
 			tasks: [
 				{
-					id: "41926B688836EEEB"
-					type: "item"
-					item: "mekanism:basic_control_circuit"
 					consume_items: false
+					id: "41926B688836EEEB"
+					item: "mekanism:basic_control_circuit"
+					type: "item"
 				}
 				{
 					id: "16B18BE00F579A9C"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "控制入门"
+			x: 2.5d
+			y: 5.0d
 		}
 		{
-			title: "红得发亮"
-			icon: "mekanism:advanced_control_circuit"
-			x: 2.5d
-			y: 6.5d
-			description: ["再次进化的控制电路散发着红石的光泽，试着用它升级一下机器。"]
 			dependencies: [
 				"7BA304CBB405360F"
 				"26A152036B60E3C5"
 				"48D67F4DE7CCC788"
 			]
+			description: ["再次进化的控制电路散发着红石的光泽，试着用它升级一下机器。"]
+			icon: "mekanism:advanced_control_circuit"
 			id: "26F28AB707D16D37"
 			tasks: [
 				{
-					id: "014B65AE1DD6B6A6"
-					type: "item"
-					item: "mekanism:advanced_control_circuit"
 					consume_items: false
+					id: "014B65AE1DD6B6A6"
+					item: "mekanism:advanced_control_circuit"
+					type: "item"
 				}
 				{
 					id: "45B06A38589FCE84"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "红得发亮"
+			x: 2.5d
+			y: 6.5d
 		}
 		{
-			title: "精密电子"
-			icon: "mekanism:elite_control_circuit"
-			x: 2.5d
-			y: 8.0d
-			description: ["在氢氟酸的刻蚀下，梦兰浆果可以让控制电路再次提升，虽然这不是一个很长的过程，但是显然你做了不少准备工作。"]
 			dependencies: [
 				"26F28AB707D16D37"
 				"2C963F11D4C1286F"
 				"581AFAD2978E1569"
 			]
+			description: ["在氢氟酸的刻蚀下，梦兰浆果可以让控制电路再次提升，虽然这不是一个很长的过程，但是显然你做了不少准备工作。"]
+			icon: "mekanism:elite_control_circuit"
 			id: "615E2855C4D40445"
 			tasks: [
 				{
-					id: "3502BE567D9F9299"
-					type: "item"
-					item: "mekanism:elite_control_circuit"
 					consume_items: false
+					id: "3502BE567D9F9299"
+					item: "mekanism:elite_control_circuit"
+					type: "item"
 				}
 				{
 					id: "73B82C3FB9A63EFD"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "精密电子"
+			x: 2.5d
+			y: 8.0d
 		}
 		{
-			title: "一点都不凉"
-			icon: "mekanism:alloy_infused"
-			x: -2.0d
-			y: 4.0d
-			description: [
-				"注入一些烈焰血，安山合金就会获得更佳的性能。"
-				""
-				"&7似乎有点要化了？"
-			]
 			dependencies: [
 				"6E2C70863C4B50BA"
 				"53A1DD522EF8E0FE"
 				"78EC00C0328BD135"
 			]
+			description: [
+				"注入一些烈焰血，安山合金就会获得更佳的性能。"
+				""
+				"&7似乎有点要化了？"
+			]
+			icon: "mekanism:alloy_infused"
 			id: "246888779645B891"
 			tasks: [
 				{
-					id: "5E2212A49D88D856"
-					type: "item"
-					item: "mekanism:alloy_infused"
 					consume_items: false
+					id: "5E2212A49D88D856"
+					item: "mekanism:alloy_infused"
+					type: "item"
 				}
 				{
 					id: "7CA272805EF15EDE"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "一点都不凉"
+			x: -2.0d
+			y: 4.0d
 		}
 		{
-			title: "有点…粘手？"
-			icon: "mekanism:alloy_reinforced"
-			x: -2.0d
-			y: 6.0d
-			description: ["就像工具上的“黏液”这一属性，碧空黏液为合金带来了更优秀的属性。"]
 			dependencies: [
 				"246888779645B891"
 				"53A1DD522EF8E0FE"
 				"71D5A844359B7F01"
 			]
+			description: ["就像工具上的“黏液”这一属性，碧空黏液为合金带来了更优秀的属性。"]
+			icon: "mekanism:alloy_reinforced"
 			id: "7DFB264169290B70"
 			tasks: [
 				{
-					id: "267620CF6159C1A5"
-					type: "item"
-					item: "mekanism:alloy_reinforced"
 					consume_items: false
+					id: "267620CF6159C1A5"
+					item: "mekanism:alloy_reinforced"
+					type: "item"
 				}
 				{
 					id: "3B33276B48E97868"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "有点…粘手？"
+			x: -2.0d
+			y: 6.0d
 		}
 		{
-			title: "高压气瓶"
-			icon: "createdieselgenerators:gasoline_bucket"
-			x: -5.0d
-			y: 2.0d
-			shape: "circle"
-			description: ["石油化工会很繁琐，不过别担心，流体精炼机会帮你的。"]
 			dependencies: ["3A528E4045DBB2A6"]
+			description: ["石油化工会很繁琐，不过别担心，流体精炼机会帮你的。"]
+			icon: "createdieselgenerators:gasoline_bucket"
 			id: "63DC381FF64DDD91"
+			shape: "circle"
 			tasks: [{
 				id: "19A5D33B4449B6A2"
-				type: "checkmark"
 				title: "自动生产"
+				type: "checkmark"
 			}]
+			title: "高压气瓶"
+			x: -5.0d
+			y: 2.0d
 		}
 		{
-			title: "不是燃料"
-			icon: "mekanism:ethene_bucket"
-			x: -5.0d
-			y: 4.0d
-			shape: "circle"
-			description: ["乙烯是很有用的，你大可以拿来直接烧掉——不过这似乎太浪费这宝贵的短链烃了……？"]
 			dependencies: ["63DC381FF64DDD91"]
+			description: ["乙烯是很有用的，你大可以拿来直接烧掉——不过这似乎太浪费这宝贵的短链烃了……？"]
+			icon: "mekanism:ethene_bucket"
 			id: "0241BDD6117A02F5"
+			shape: "circle"
 			tasks: [{
 				id: "523B8E752F2074A3"
-				type: "checkmark"
 				title: "自动生产"
+				type: "checkmark"
 			}]
+			title: "不是燃料"
+			x: -5.0d
+			y: 4.0d
 		}
 		{
-			title: "高中化学"
-			icon: "mekanism:hdpe_pellet"
-			x: -5.0d
-			y: 6.0d
+			dependencies: [
+				"0241BDD6117A02F5"
+				"0C80B661CE52B85F"
+			]
 			description: [
 				"乙烯的加聚反应可以生成聚乙烯，不过这需要高压的条件，也就是加压反应室。"
 				""
 				"哦，这一反应需要以基片作为基底，你会需要一些的。"
 			]
-			dependencies: [
-				"0241BDD6117A02F5"
-				"0C80B661CE52B85F"
-			]
+			icon: "mekanism:hdpe_pellet"
 			id: "6340C2A2C99BAACA"
 			tasks: [
 				{
-					id: "2A6A8B40A55C7142"
-					type: "item"
-					item: "mekanism:hdpe_pellet"
 					consume_items: false
+					id: "2A6A8B40A55C7142"
+					item: "mekanism:hdpe_pellet"
+					type: "item"
 				}
 				{
 					id: "7696BA3065BC2C55"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "高中化学"
+			x: -5.0d
+			y: 6.0d
 		}
 		{
-			title: "藻上好！"
-			icon: "create:andesite_alloy"
-			x: -2.0d
-			y: 2.0d
-			description: ["我想，你\"藻\"就做好了这个的，对吗~"]
 			dependencies: [
 				"3A528E4045DBB2A6"
 				"53A1DD522EF8E0FE"
 			]
+			description: ["我想，你\"藻\"就做好了这个的，对吗~"]
+			icon: "create:andesite_alloy"
 			id: "6E2C70863C4B50BA"
 			tasks: [
 				{
-					id: "4AA055B662D626DB"
-					type: "item"
-					item: "create:andesite_alloy"
 					consume_items: false
+					id: "4AA055B662D626DB"
+					item: "create:andesite_alloy"
+					type: "item"
 				}
 				{
 					id: "1F01903F8AA05EAF"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "藻上好！"
+			x: -2.0d
+			y: 2.0d
 		}
 		{
-			title: "原始能量"
-			icon: "minecraft:redstone"
-			x: 1.0d
-			y: 3.5d
+			dependencies: ["3A528E4045DBB2A6"]
 			description: ["是来自陨石呢，还是来自土地呢？"]
 			hide_dependency_lines: true
-			dependencies: ["3A528E4045DBB2A6"]
+			icon: "minecraft:redstone"
 			id: "0A28DF54E5C08AEF"
 			tasks: [
 				{
-					id: "296AFEF9FFCBDB2B"
-					type: "item"
-					item: "minecraft:redstone"
 					consume_items: false
+					id: "296AFEF9FFCBDB2B"
+					item: "minecraft:redstone"
+					type: "item"
 				}
 				{
 					id: "0D780AD03C310E86"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "原始能量"
+			x: 1.0d
+			y: 3.5d
 		}
 		{
-			title: "纯净之沙"
-			icon: "minecraft:quartz"
-			x: 1.0d
-			y: 2.0d
+			dependencies: ["3A528E4045DBB2A6"]
 			description: ["你应该已经拥有一些了。"]
 			hide_dependency_lines: true
-			dependencies: ["3A528E4045DBB2A6"]
+			icon: "minecraft:quartz"
 			id: "56882583FB1F2381"
 			tasks: [
 				{
+					consume_items: false
 					id: "783A0E811D09CE60"
-					type: "item"
 					item: {
+						Count: 1
 						id: "minecraft:quartz"
-						Count: 1b
 						tag: {
 							CustomModelData: 1
 						}
 					}
-					consume_items: false
+					type: "item"
 				}
 				{
 					id: "14B49317BA8570AD"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "纯净之沙"
+			x: 1.0d
+			y: 2.0d
 		}
 		{
-			title: "假黄金"
-			icon: "create:brass_nugget"
-			x: 2.5d
-			y: 2.0d
-			description: ["加热，混合，搅拌！"]
 			dependencies: [
 				"25519E990402E403"
 				"6D6F67969C0B5935"
 			]
+			description: ["加热，混合，搅拌！"]
+			icon: "create:brass_nugget"
 			id: "4FDB5E9D9394942B"
 			tasks: [
 				{
-					id: "1A9FF5766042BBCD"
-					type: "item"
-					item: "create:brass_nugget"
 					consume_items: false
+					id: "1A9FF5766042BBCD"
+					item: "create:brass_nugget"
+					type: "item"
 				}
 				{
 					id: "54853F82AA4EA250"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "假黄金"
+			x: 2.5d
+			y: 2.0d
 		}
 		{
-			icon: "create:zinc_nugget"
-			x: 3.0d
-			y: 1.0d
-			description: ["粉碎凝灰岩，内部的金属资源就会暴露出来。"]
 			dependencies: ["2F35222A0946C696"]
+			description: ["粉碎凝灰岩，内部的金属资源就会暴露出来。"]
+			icon: "create:zinc_nugget"
 			id: "6D6F67969C0B5935"
 			tasks: [
 				{
-					id: "5C6DF706E95EB9AF"
-					type: "item"
-					item: "create:zinc_nugget"
 					consume_items: false
+					id: "5C6DF706E95EB9AF"
+					item: "create:zinc_nugget"
+					type: "item"
 				}
 				{
 					id: "57981EB80956FA83"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			x: 3.0d
+			y: 1.0d
 		}
 		{
-			icon: "create:copper_nugget"
-			x: 2.0d
-			y: 1.0d
-			description: ["粉碎凝灰岩，内部的金属资源就会暴露出来。"]
 			dependencies: ["2F35222A0946C696"]
+			description: ["粉碎凝灰岩，内部的金属资源就会暴露出来。"]
+			icon: "create:copper_nugget"
 			id: "25519E990402E403"
 			tasks: [
 				{
-					id: "68BACA0A886A5958"
-					type: "item"
-					item: "create:copper_nugget"
 					consume_items: false
+					id: "68BACA0A886A5958"
+					item: "create:copper_nugget"
+					type: "item"
 				}
 				{
 					id: "407535DC39BF2C55"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			x: 2.0d
+			y: 1.0d
 		}
 		{
-			icon: "minecraft:tuff"
-			x: 2.5d
-			y: 0.0d
+			dependencies: ["3A528E4045DBB2A6"]
 			description: ["在超频机器的作用下，造石机可以达到反应的必要条件，这允许我们生成凝灰岩。"]
 			hide_dependency_lines: true
-			dependencies: ["3A528E4045DBB2A6"]
+			icon: "minecraft:tuff"
 			id: "2F35222A0946C696"
 			tasks: [
 				{
-					id: "422726FF755B733A"
-					type: "item"
-					item: "minecraft:tuff"
 					consume_items: false
+					id: "422726FF755B733A"
+					item: "minecraft:tuff"
+					type: "item"
 				}
 				{
 					id: "23A26CAAAB396292"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			x: 2.5d
+			y: 0.0d
 		}
 		{
-			title: "唱片机专用"
-			icon: "mekanism:ingot_osmium"
-			x: 4.0d
-			y: 5.0d
+			dependencies: ["68AE587862E9CA87"]
 			description: [
 				"离心远古残骸，就能得到这种极度耐磨的淡蓝色金属。"
 				""
 				"&7氧化物有毒！"
 			]
-			dependencies: ["68AE587862E9CA87"]
+			icon: "mekanism:ingot_osmium"
 			id: "4357D575EBCA73F1"
 			tasks: [
 				{
-					id: "06A2872C044000AE"
-					type: "item"
-					item: "mekanism:ingot_osmium"
 					consume_items: false
+					id: "06A2872C044000AE"
+					item: "mekanism:ingot_osmium"
+					type: "item"
 				}
 				{
 					id: "73D20B3738C41539"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "唱片机专用"
+			x: 4.0d
+			y: 5.0d
 		}
 		{
-			title: "黄粱一梦"
-			icon: "phantasm:pream_berry"
-			x: 4.0d
-			y: 8.5d
+			dependencies: ["26F28AB707D16D37"]
 			description: ["蓝色浆果，不知道能不能吃，但是对电子设备的增强是显著的。"]
 			hide_dependency_lines: true
-			dependencies: ["26F28AB707D16D37"]
+			icon: "phantasm:pream_berry"
 			id: "2C963F11D4C1286F"
 			tasks: [
 				{
-					id: "579B371810A228E7"
-					type: "item"
-					item: "phantasm:pream_berry"
 					consume_items: false
+					id: "579B371810A228E7"
+					item: "phantasm:pream_berry"
+					type: "item"
 				}
 				{
 					id: "5278723E860F2B36"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "黄粱一梦"
+			x: 4.0d
+			y: 8.5d
 		}
 		{
-			title: "烫手！"
-			icon: "tconstruct:blazing_blood_bucket"
-			x: -2.75d
-			y: 3.0d
-			shape: "circle"
+			dependencies: ["6ECF80B0BDC3CC12"]
 			description: [
 				"把烈焰人用热量融化，就能得到这种温度极高的液体，这需要超级加热才能达到。"
 				""
 				"&7本是同根生，香煎……还挺香…？"
 			]
-			dependencies: ["6ECF80B0BDC3CC12"]
+			icon: "tconstruct:blazing_blood_bucket"
 			id: "78EC00C0328BD135"
+			shape: "circle"
 			tasks: [
 				{
-					id: "56E492503A078B3B"
-					type: "item"
-					item: "tconstruct:blazing_blood_bucket"
 					consume_items: false
+					id: "56E492503A078B3B"
+					item: "tconstruct:blazing_blood_bucket"
+					type: "item"
 				}
 				{
 					id: "3241AA0438F8CF03"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "烫手！"
+			x: -2.75d
+			y: 3.0d
 		}
 		{
-			title: "越古越强"
-			icon: "minecraft:ancient_debris"
-			x: 5.5d
-			y: 5.0d
+			dependencies: ["0CA906CABADE932A"]
 			description: ["把残骸压成块，就得到了这种似乎炸不坏的方块。"]
 			hide_dependency_lines: true
-			dependencies: ["0CA906CABADE932A"]
+			icon: "minecraft:ancient_debris"
 			id: "68AE587862E9CA87"
 			tasks: [
 				{
-					id: "4FA6AD8E481634C8"
-					type: "item"
-					item: "minecraft:ancient_debris"
 					consume_items: false
+					id: "4FA6AD8E481634C8"
+					item: "minecraft:ancient_debris"
+					type: "item"
 				}
 				{
 					id: "49A54997663ADDF8"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "越古越强"
+			x: 5.5d
+			y: 5.0d
 		}
 		{
+			dependencies: ["5DE065B95A74950C"]
+			description: ["黏糊糊，工具上似乎可以做些什么。"]
+			id: "418677BC020F79CA"
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "24B0F47C2771D773"
+				item: "tconstruct:sky_slime_bucket"
+				type: "item"
+			}]
 			x: -3.5d
 			y: 5.0d
-			shape: "circle"
-			description: ["黏糊糊，工具上似乎可以做些什么。"]
-			dependencies: ["5DE065B95A74950C"]
-			id: "418677BC020F79CA"
-			tasks: [{
-				id: "24B0F47C2771D773"
-				type: "item"
-				item: "tconstruct:sky_slime_bucket"
-				consume_items: false
-			}]
 		}
 		{
+			dependencies: ["3A528E4045DBB2A6"]
+			description: ["利用这个，你可以把烈焰人刷怪笼装起来，然后用空的烈焰人炉交互。"]
+			hide_dependency_lines: true
+			id: "6ECF80B0BDC3CC12"
+			tasks: [{
+				consume_items: false
+				id: "6A8274C08C2493DB"
+				item: "mekanism:cardboard_box"
+				type: "item"
+			}]
 			title: "万能箱子"
 			x: -3.5d
 			y: 2.0d
-			description: ["利用这个，你可以把烈焰人刷怪笼装起来，然后用空的烈焰人炉交互。"]
-			hide_dependency_lines: true
-			dependencies: ["3A528E4045DBB2A6"]
-			id: "6ECF80B0BDC3CC12"
-			tasks: [{
-				id: "6A8274C08C2493DB"
-				type: "item"
-				item: "mekanism:cardboard_box"
-				consume_items: false
-			}]
 		}
 		{
-			title: "非牛顿流体"
-			icon: "kubejs:alloy_hardener_item"
-			x: -1.0d
-			y: 4.0d
-			description: ["凉一点有助于合金的硬化，似乎也可以吃……但是我相信没人会愿意的。"]
 			dependencies: [
 				"75369AE0BA316A53"
 				"638498994D378ED5"
 			]
+			description: ["凉一点有助于合金的硬化，似乎也可以吃……但是我相信没人会愿意的。"]
+			icon: "kubejs:alloy_hardener_item"
 			id: "53A1DD522EF8E0FE"
 			tasks: [
 				{
-					id: "39CCB186BEC24FC9"
-					type: "item"
-					item: "kubejs:alloy_hardener_item"
 					consume_items: false
+					id: "39CCB186BEC24FC9"
+					item: "kubejs:alloy_hardener_item"
+					type: "item"
 				}
 				{
 					id: "21DAEAEFA025F590"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "非牛顿流体"
+			x: -1.0d
+			y: 4.0d
 		}
 		{
-			x: -4.0d
-			y: 4.0d
+			dependencies: ["3A528E4045DBB2A6"]
 			description: ["不仅可以提取树脂，更可以提取黏液！"]
 			hide_dependency_lines: true
-			dependencies: ["3A528E4045DBB2A6"]
 			id: "5DE065B95A74950C"
 			tasks: [{
-				id: "57AF0733494BD4DF"
-				type: "item"
-				item: "thermal:device_tree_extractor"
 				consume_items: false
+				id: "57AF0733494BD4DF"
+				item: "thermal:device_tree_extractor"
+				type: "item"
 			}]
+			x: -4.0d
+			y: 4.0d
 		}
 		{
+			dependencies: ["418677BC020F79CA"]
+			description: ["加热浓缩！经过浓缩以后，我们就得到了一种优良的增强剂。"]
+			id: "71D5A844359B7F01"
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "3568BC024BFD67DB"
+				item: "kubejs:condensed_skyslime_bucket"
+				type: "item"
+			}]
 			x: -3.0d
 			y: 6.0d
-			shape: "circle"
-			description: ["加热浓缩！经过浓缩以后，我们就得到了一种优良的增强剂。"]
-			dependencies: ["418677BC020F79CA"]
-			id: "71D5A844359B7F01"
-			tasks: [{
-				id: "3568BC024BFD67DB"
-				type: "item"
-				item: "kubejs:condensed_skyslime_bucket"
-				consume_items: false
-			}]
 		}
 		{
-			title: "扔着玩"
-			icon: "minecraft:snowball"
-			x: -1.0d
-			y: 2.0d
+			dependencies: ["3A528E4045DBB2A6"]
 			description: ["砸人不会很痛的。"]
 			hide_dependency_lines: true
-			dependencies: ["3A528E4045DBB2A6"]
+			icon: "minecraft:snowball"
 			id: "638498994D378ED5"
 			tasks: [
 				{
-					id: "0BDBCF9EF4789F74"
-					type: "item"
-					item: "minecraft:snowball"
 					consume_items: false
+					id: "0BDBCF9EF4789F74"
+					item: "minecraft:snowball"
+					type: "item"
 				}
 				{
 					id: "5B899BF92097597D"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "扔着玩"
+			x: -1.0d
+			y: 2.0d
 		}
 		{
-			title: "吃点面好了"
-			icon: "create:wheat_flour"
-			x: -0.5d
-			y: 3.0d
+			dependencies: ["3A528E4045DBB2A6"]
 			description: ["粉碎小麦获得，除了面包还能做别的好东西。"]
 			hide_dependency_lines: true
-			dependencies: ["3A528E4045DBB2A6"]
+			icon: "create:wheat_flour"
 			id: "75369AE0BA316A53"
 			tasks: [
 				{
-					id: "5A16C89F06C2CD4B"
-					type: "item"
-					item: "create:wheat_flour"
 					consume_items: false
+					id: "5A16C89F06C2CD4B"
+					item: "create:wheat_flour"
+					type: "item"
 				}
 				{
 					id: "468FDE83D5B5E974"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "吃点面好了"
+			x: -0.5d
+			y: 3.0d
 		}
 		{
-			title: "高端原料"
-			icon: "mekanism:hydrofluoric_acid_bucket"
-			x: 4.0d
-			y: 7.5d
-			shape: "circle"
-			description: ["不管制的弱酸，但是如果你洒到了脚上，致命性是显著的。"]
 			dependencies: [
 				"41A6EFBD719B4D7E"
 				"75563D1909A158C5"
 			]
+			description: ["不管制的弱酸，但是如果你洒到了脚上，致命性是显著的。"]
+			icon: "mekanism:hydrofluoric_acid_bucket"
 			id: "581AFAD2978E1569"
+			shape: "circle"
 			tasks: [
 				{
-					id: "5507F4042178C721"
-					type: "item"
-					item: "mekanism:hydrofluoric_acid_bucket"
 					consume_items: false
+					id: "5507F4042178C721"
+					item: "mekanism:hydrofluoric_acid_bucket"
+					type: "item"
 				}
 				{
 					id: "41A334FD81B41BCB"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "高端原料"
+			x: 4.0d
+			y: 7.5d
 		}
 		{
-			title: "一大废石"
-			icon: "minecraft:diorite"
-			x: 6.0d
-			y: 6.5d
+			dependencies: ["26F28AB707D16D37"]
 			description: ["终于有用了的白色石头。"]
 			hide_dependency_lines: true
-			dependencies: ["26F28AB707D16D37"]
+			icon: "minecraft:diorite"
 			id: "25D1BE9EE966BBB1"
 			tasks: [
 				{
-					id: "4337B6B39D2B8677"
-					type: "item"
-					item: "minecraft:diorite"
 					consume_items: false
+					id: "4337B6B39D2B8677"
+					item: "minecraft:diorite"
+					type: "item"
 				}
 				{
 					id: "1A1CC3DF274E4E68"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "一大废石"
+			x: 6.0d
+			y: 6.5d
 		}
 		{
-			title: "来点牙膏"
-			icon: "mekanism:fluorite_gem"
-			x: 5.0d
-			y: 7.0d
-			description: ["和萤石的成分很相近，只是并不会发光。"]
 			dependencies: ["25D1BE9EE966BBB1"]
+			description: ["和萤石的成分很相近，只是并不会发光。"]
+			icon: "mekanism:fluorite_gem"
 			id: "41A6EFBD719B4D7E"
 			tasks: [
 				{
-					id: "2D9AF43C85DB0C7F"
-					type: "item"
-					item: "mekanism:fluorite_gem"
 					consume_items: false
+					id: "2D9AF43C85DB0C7F"
+					item: "mekanism:fluorite_gem"
+					type: "item"
 				}
 				{
 					id: "4DD2B1E81F0F3983"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "来点牙膏"
+			x: 5.0d
+			y: 7.0d
 		}
 		{
-			icon: "mekanism:enriched_redstone"
-			x: 1.0d
-			y: 5.0d
+			dependencies: ["7BA304CBB405360F"]
 			description: ["红石的富集版本，似乎利用率更高。"]
 			hide_dependency_lines: true
-			dependencies: ["7BA304CBB405360F"]
+			icon: "mekanism:enriched_redstone"
 			id: "48D67F4DE7CCC788"
 			tasks: [
 				{
-					id: "600E4D4F598F2D1F"
-					type: "item"
-					item: "mekanism:enriched_redstone"
 					consume_items: false
+					id: "600E4D4F598F2D1F"
+					item: "mekanism:enriched_redstone"
+					type: "item"
 				}
 				{
 					id: "4FB583523D9F88DF"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			x: 1.0d
+			y: 5.0d
 		}
 		{
-			icon: "mekanism:enriched_gold"
-			x: 1.0d
-			y: 6.0d
+			dependencies: ["7BA304CBB405360F"]
 			description: ["金的富集版本，似乎利用率更高。"]
 			hide_dependency_lines: true
-			dependencies: ["7BA304CBB405360F"]
+			icon: "mekanism:enriched_gold"
 			id: "26A152036B60E3C5"
 			tasks: [
 				{
-					id: "1E1851812679ECBA"
-					type: "item"
-					item: "mekanism:enriched_gold"
 					consume_items: false
+					id: "1E1851812679ECBA"
+					item: "mekanism:enriched_gold"
+					type: "item"
 				}
 				{
 					id: "65252A877543FFEF"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			x: 1.0d
+			y: 6.0d
 		}
 		{
-			icon: "vintageimprovements:sulfuric_acid_bucket"
-			x: 5.0d
-			y: 8.0d
-			shape: "circle"
-			description: ["浓硫酸是可以用铁制品承装的，但是这不意味着你就可以去碰浓硫酸了。"]
 			dependencies: ["3C50C59C3E07EF1D"]
+			description: ["浓硫酸是可以用铁制品承装的，但是这不意味着你就可以去碰浓硫酸了。"]
+			icon: "vintageimprovements:sulfuric_acid_bucket"
 			id: "75563D1909A158C5"
+			shape: "circle"
 			tasks: [
 				{
-					id: "48654F33CE356AFB"
-					type: "item"
-					item: "vintageimprovements:sulfuric_acid_bucket"
 					consume_items: false
+					id: "48654F33CE356AFB"
+					item: "vintageimprovements:sulfuric_acid_bucket"
+					type: "item"
 				}
 				{
 					id: "58D80B7A1DE6FC3D"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			x: 5.0d
+			y: 8.0d
 		}
 		{
-			title: "地狱的元素"
-			icon: "thermal:sulfur_dust"
-			x: 6.0d
-			y: 8.5d
+			dependencies: ["26F28AB707D16D37"]
 			description: [
 				"来自地狱的元素，不过现在你要氧化这种元素，以生成硫酸。"
 				""
 				"&7似乎闻起来……更地狱了？"
 			]
 			hide_dependency_lines: true
-			dependencies: ["26F28AB707D16D37"]
+			icon: "thermal:sulfur_dust"
 			id: "3C50C59C3E07EF1D"
 			tasks: [
 				{
-					id: "0A253751DAD9D8F5"
-					type: "item"
-					item: "thermal:sulfur_dust"
 					consume_items: false
+					id: "0A253751DAD9D8F5"
+					item: "thermal:sulfur_dust"
+					type: "item"
 				}
 				{
 					id: "6AE6518A997105A8"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "地狱的元素"
+			x: 6.0d
+			y: 8.5d
 		}
 		{
-			title: "工业4.0+"
-			icon: "kubejs:smart_mechanism"
-			x: -2.0d
-			y: 8.0d
-			description: ["用强化合金和控制电路为超频构件升级，就能得到这种蓝色构件了。"]
 			dependencies: [
 				"7DFB264169290B70"
 				"615E2855C4D40445"
 				"0EB30565CDE0B3E9"
 			]
+			description: ["用强化合金和控制电路为超频构件升级，就能得到这种蓝色构件了。"]
+			icon: "kubejs:smart_mechanism"
 			id: "4FAE96D559C4238D"
 			tasks: [
 				{
-					id: "234F7DA859C2B265"
-					type: "item"
-					item: "kubejs:smart_mechanism"
 					consume_items: false
+					id: "234F7DA859C2B265"
+					item: "kubejs:smart_mechanism"
+					type: "item"
 				}
 				{
 					id: "19F40B8593006E69"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "工业4.0+"
+			x: -2.0d
+			y: 8.0d
 		}
 		{
+			dependencies: ["4FAE96D559C4238D"]
+			description: [" 即便这不是你的目标，你也会需要一些的。"]
+			id: "001B0E507EC2694A"
+			shape: "hexagon"
+			tasks: [{
+				consume_items: false
+				id: "1CF4698D2336DAF2"
+				item: "kubejs:smart_machine"
+				type: "item"
+			}]
 			x: -4.0d
 			y: 8.0d
-			shape: "hexagon"
-			description: [" 即便这不是你的目标，你也会需要一些的。"]
-			dependencies: ["4FAE96D559C4238D"]
-			id: "001B0E507EC2694A"
-			tasks: [{
-				id: "1CF4698D2336DAF2"
-				type: "item"
-				item: "kubejs:smart_machine"
-				consume_items: false
-			}]
 		}
 		{
-			title: "第七章完成！"
-			icon: "ad_astra:venus_globe"
-			x: 0.0d
-			y: 10.0d
-			shape: "hexagon"
+			dependencies: [
+				"4FAE96D559C4238D"
+				"299F4D621535C138"
+			]
 			description: [
 				"金星很热，但是这依旧是你漫漫长路中的关键一站。"
 				" 这一章确实很辛苦，对你来说可能也是比较大的考验，不过抬头看看，等你回来以后，只剩下最后的一小段路要走了。"
 				"好了，准备发射吧，祝你好运。"
 			]
-			dependencies: [
-				"4FAE96D559C4238D"
-				"299F4D621535C138"
-			]
-			size: 2.0d
+			icon: "ad_astra:venus_globe"
 			id: "6F5DD8FE6931AEAB"
-			tasks: [{
-				id: "5D6324845CE84A5F"
-				type: "advancement"
-				title: "制作 三阶火箭"
-				icon: "ad_astra:ostrum_engine"
-				advancement: "ad_astra:tier_3_rocket"
-				criterion: ""
-			}]
 			rewards: [{
 				id: "33E351C87B2DE7EA"
-				type: "item"
 				item: "ad_astra:venus_globe"
+				type: "item"
 			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				advancement: "ad_astra:tier_3_rocket"
+				criterion: ""
+				icon: "ad_astra:ostrum_engine"
+				id: "5D6324845CE84A5F"
+				title: "制作 三阶火箭"
+				type: "advancement"
+			}]
+			title: "第七章完成！"
+			x: 0.0d
+			y: 10.0d
 		}
 		{
-			x: 0.0d
-			y: 7.0d
+			dependencies: ["3A528E4045DBB2A6"]
 			description: ["不需要太多，只需要够造出火箭的就可以了。"]
 			hide_dependency_lines: true
-			dependencies: ["3A528E4045DBB2A6"]
 			id: "299F4D621535C138"
 			tasks: [{
-				id: "14243E3289B1501C"
-				type: "item"
-				item: "ad_astra:ostrum_ingot"
 				consume_items: false
+				id: "14243E3289B1501C"
+				item: "ad_astra:ostrum_ingot"
+				type: "item"
 			}]
+			x: 0.0d
+			y: 7.0d
 		}
 		{
-			x: -2.0d
-			y: 10.0d
-			shape: "circle"
+			dependencies: [
+				"7DFB264169290B70"
+				"615E2855C4D40445"
+			]
 			description: [
 				"智能构件需要一些数据才能完成激活，所以你需要这个。"
 				"&7别弄丢了，很贵的！"
 			]
 			hide_dependency_lines: true
-			dependencies: [
-				"7DFB264169290B70"
-				"615E2855C4D40445"
-			]
-			optional: true
 			id: "0EB30565CDE0B3E9"
+			optional: true
+			shape: "circle"
 			tasks: [{
+				consume_items: false
 				id: "0E51B36609371C80"
-				type: "item"
 				item: {
+					Count: 1
 					id: "kubejs:data_module"
-					Count: 1b
 					tag: {
 						Damage: 0
 					}
 				}
-				consume_items: false
+				type: "item"
 			}]
+			x: -2.0d
+			y: 10.0d
 		}
 		{
-			title: "昂贵而可再生"
-			icon: "mekanism:substrate"
-			x: -6.0d
-			y: 5.0d
+			dependencies: ["0241BDD6117A02F5"]
 			description: ["昂贵又有效的基质，似乎可以再生？"]
 			hide_dependency_lines: true
-			dependencies: ["0241BDD6117A02F5"]
+			icon: "mekanism:substrate"
 			id: "0C80B661CE52B85F"
 			tasks: [
 				{
-					id: "6B519E5FAE8B3D3F"
-					type: "item"
-					item: "mekanism:substrate"
 					consume_items: false
+					id: "6B519E5FAE8B3D3F"
+					item: "mekanism:substrate"
+					type: "item"
 				}
 				{
 					id: "7291C2BEC0547636"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "昂贵而可再生"
+			x: -6.0d
+			y: 5.0d
 		}
 	]
-	quest_links: [ ]
+	title: "&f&l7&r 控制强化"
 }

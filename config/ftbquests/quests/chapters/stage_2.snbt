@@ -1,47 +1,42 @@
 {
-	id: "3CEC7BECE6B40994"
-	group: "331B6409EF6A7840"
-	order_index: 3
-	filename: "stage_2"
-	title: "{quest.chapter.stage_2.name}"
-	icon: "kubejs:brass_machine"
-	default_quest_shape: ""
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "stage_2"
+	group: "331B6409EF6A7840"
+	icon: "kubejs:brass_machine"
+	id: "3CEC7BECE6B40994"
+	order_index: 3
+	quest_links: [ ]
 	quests: [
 		{
-			title: "{quest.stage_2.introduce.title}"
-			icon: "kubejs:kinetic_mechanism"
-			x: -1.0d
-			y: 2.0d
-			shape: "hexagon"
-			subtitle: "{quest.stage_2.introduce.subtitle}"
+			dependencies: ["28C41C062843C2CA"]
 			description: [
 				"{quest.stage_2.introduce.text1}"
 				""
 				"{quest.stage_2.introduce.text2}"
 			]
-			dependencies: ["28C41C062843C2CA"]
-			hide: true
-			size: 2.0d
+			hide_until_deps_complete: true
+			icon: "kubejs:kinetic_mechanism"
 			id: "727B43FD95C4A512"
-			tasks: [{
-				id: "2B249158FB9D453B"
-				type: "checkmark"
-				title: "{tip.kubejs.start}"
-			}]
 			rewards: [{
 				id: "05FBDFB7D5A9B322"
-				type: "item"
 				item: "create:builders_tea"
+				type: "item"
 			}]
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "{quest.stage_2.introduce.subtitle}"
+			tasks: [{
+				id: "2B249158FB9D453B"
+				title: "{tip.kubejs.start}"
+				type: "checkmark"
+			}]
+			title: "{quest.stage_2.introduce.title}"
+			x: -1.0d
+			y: 2.0d
 		}
 		{
-			title: "{quest.stage_2.brass.title}"
-			icon: "create:brass_ingot"
-			x: 1.0d
-			y: 2.0d
-			shape: "circle"
-			subtitle: "{quest.stage_2.brass.subtitle}"
+			dependencies: ["727B43FD95C4A512"]
 			description: [
 				"{quest.stage_2.brass.text1}"
 				""
@@ -52,59 +47,60 @@
 				"{quest.stage_2.brass.text4}"
 			]
 			hide_dependency_lines: false
-			dependencies: ["727B43FD95C4A512"]
+			icon: "create:brass_ingot"
 			id: "174E3A810535CAAC"
+			shape: "circle"
+			subtitle: "{quest.stage_2.brass.subtitle}"
 			tasks: [{
 				id: "4418A795B9FB076D"
-				type: "checkmark"
 				title: "{tip.kubejs.completed}"
+				type: "checkmark"
 			}]
+			title: "{quest.stage_2.brass.title}"
+			x: 1.0d
+			y: 2.0d
 		}
 		{
+			dependencies: ["727B43FD95C4A512"]
+			description: ["{quest.stage_2.sand.text1}"]
+			hide_dependency_lines: true
+			id: "0AF5F19F5D9FB5C9"
+			shape: "circle"
+			tasks: [{
+				consume_items: false
+				id: "4F4219EDA9C5F9F7"
+				item: "minecraft:sand"
+				type: "item"
+			}]
 			title: "{quest.stage_2.sand.title}"
 			x: -5.0d
 			y: 5.0d
-			shape: "circle"
-			description: ["{quest.stage_2.sand.text1}"]
-			hide_dependency_lines: true
-			dependencies: ["727B43FD95C4A512"]
-			id: "0AF5F19F5D9FB5C9"
-			tasks: [{
-				id: "4F4219EDA9C5F9F7"
-				type: "item"
-				item: "minecraft:sand"
-				consume_items: false
-			}]
 		}
 		{
-			title: "{quest.stage_2.water.title}"
-			icon: "minecraft:water_bucket"
-			x: -3.0d
-			y: 4.5d
+			dependencies: ["727B43FD95C4A512"]
 			description: ["{quest.stage_2.water.text1}"]
 			hide_dependency_lines: true
-			dependencies: ["727B43FD95C4A512"]
+			icon: "minecraft:water_bucket"
 			id: "2FFFE1C5366930BB"
 			tasks: [
 				{
-					id: "1A9DB3A538856229"
-					type: "item"
-					item: "minecraft:water_bucket"
 					consume_items: false
+					id: "1A9DB3A538856229"
+					item: "minecraft:water_bucket"
+					type: "item"
 				}
 				{
 					id: "2DC358D8174FC867"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_2.water.title}"
+			x: -3.0d
+			y: 4.5d
 		}
 		{
-			title: "{quest.stage_2.sky_dust.title}"
-			icon: "ae2:sky_dust"
-			x: -1.0d
-			y: 4.0d
-			subtitle: "{quest.stage_2.sky_dust.subtitle}"
+			dependencies: ["727B43FD95C4A512"]
 			description: [
 				"{quest.stage_2.sky_dust.text1}"
 				""
@@ -112,639 +108,643 @@
 				"{quest.stage_2.sky_dust.text3}"
 			]
 			hide_dependency_lines: true
-			dependencies: ["727B43FD95C4A512"]
+			icon: "ae2:sky_dust"
 			id: "4F95D5136E944ADB"
+			subtitle: "{quest.stage_2.sky_dust.subtitle}"
 			tasks: [
 				{
-					id: "69C6513B25BB6ABA"
-					type: "item"
-					item: "ae2:sky_dust"
 					consume_items: false
+					id: "69C6513B25BB6ABA"
+					item: "ae2:sky_dust"
+					type: "item"
 				}
 				{
 					id: "3C8D449468C6DD27"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_2.sky_dust.title}"
+			x: -1.0d
+			y: 4.0d
 		}
 		{
-			title: "{quest.stage_2.certus_seed.title}"
-			x: -4.0d
-			y: 7.0d
-			shape: "circle"
-			subtitle: "{quest.stage_2.certus_seed.subtitle}"
-			description: [
-				"{quest.stage_2.certus_seed.text1}"
-				""
-				"{quest.stage_2.certus_seed.text2}"
-			]
 			dependencies: [
 				"0AF5F19F5D9FB5C9"
 				"2FFFE1C5366930BB"
 			]
 			dependency_requirement: "one_completed"
+			description: [
+				"{quest.stage_2.certus_seed.text1}"
+				""
+				"{quest.stage_2.certus_seed.text2}"
+			]
 			id: "345B94F6D17605CD"
+			shape: "circle"
+			subtitle: "{quest.stage_2.certus_seed.subtitle}"
 			tasks: [{
-				id: "4D592B701A2AE0BC"
-				type: "item"
-				item: "kubejs:certus_seed"
 				consume_items: false
+				id: "4D592B701A2AE0BC"
+				item: "kubejs:certus_seed"
+				type: "item"
 			}]
+			title: "{quest.stage_2.certus_seed.title}"
+			x: -4.0d
+			y: 7.0d
 		}
 		{
-			title: "{quest.stage_2.certus_crystal.title}"
-			icon: "ae2:certus_quartz_crystal"
-			x: -2.5d
-			y: 8.0d
-			subtitle: "{quest.stage_2.certus_crystal.subtitle}"
-			description: ["{quest.stage_2.certus_crystal.text1}"]
 			dependencies: ["345B94F6D17605CD"]
+			description: ["{quest.stage_2.certus_crystal.text1}"]
+			icon: "ae2:certus_quartz_crystal"
 			id: "1861E583C9DAA0BA"
+			subtitle: "{quest.stage_2.certus_crystal.subtitle}"
 			tasks: [
 				{
-					id: "68D808533C34AB5C"
-					type: "item"
-					item: "ae2:certus_quartz_crystal"
 					consume_items: false
+					id: "68D808533C34AB5C"
+					item: "ae2:certus_quartz_crystal"
+					type: "item"
 				}
 				{
 					id: "5143762A67B81B7E"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_2.certus_crystal.title}"
+			x: -2.5d
+			y: 8.0d
 		}
 		{
-			title: "{quest.stage_2.charged_certus.title}"
-			icon: "ae2:charged_certus_quartz_crystal"
-			x: 1.0d
-			y: 6.0d
-			subtitle: "{quest.stage_2.charged_certus.subtitle}"
+			dependencies: ["1256352748B93449"]
 			description: [
 				"{quest.stage_2.charged_certus.text1}"
 				""
 				"{quest.stage_2.charged_certus.text2}"
 			]
 			hide_dependency_lines: true
-			dependencies: ["1256352748B93449"]
+			icon: "ae2:charged_certus_quartz_crystal"
 			id: "24FFFE0FC9EAEF8D"
+			subtitle: "{quest.stage_2.charged_certus.subtitle}"
 			tasks: [
 				{
-					id: "23DAE14596F025DF"
-					type: "item"
-					item: "ae2:charged_certus_quartz_crystal"
 					consume_items: false
+					id: "23DAE14596F025DF"
+					item: "ae2:charged_certus_quartz_crystal"
+					type: "item"
 				}
 				{
 					id: "56F78EAD35D1046E"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_2.charged_certus.title}"
+			x: 1.0d
+			y: 6.0d
 		}
 		{
-			title: "{quest.stage_2.sky_stone_flowing.title}"
-			icon: "kubejs:sky_stone_bucket"
-			x: -1.0d
-			y: 5.5d
-			subtitle: "{quest.stage_2.sky_stone_flowing.subtitle}"
-			description: ["{quest.stage_2.sky_stone_flowing.text1}"]
 			dependencies: [
 				"2FFFE1C5366930BB"
 				"4F95D5136E944ADB"
 			]
+			description: ["{quest.stage_2.sky_stone_flowing.text1}"]
+			icon: "kubejs:sky_stone_bucket"
 			id: "1256352748B93449"
+			subtitle: "{quest.stage_2.sky_stone_flowing.subtitle}"
 			tasks: [
 				{
-					id: "36E36D584FCBC358"
-					type: "item"
-					item: "kubejs:sky_stone_bucket"
 					consume_items: false
+					id: "36E36D584FCBC358"
+					item: "kubejs:sky_stone_bucket"
+					type: "item"
 				}
 				{
 					id: "1CB43671DBA7EBB6"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_2.sky_stone_flowing.title}"
+			x: -1.0d
+			y: 5.5d
 		}
 		{
-			title: "{quest.stage_2.redstone_flowing.title}"
-			icon: "thermal:redstone_bucket"
-			x: -0.5d
-			y: 7.0d
-			subtitle: "{quest.stage_2.redstone_flowing.subtitle}"
-			description: [
-				"{quest.stage_2.redstone_flowing.text1}"
-				"{quest.stage_2.redstone_flowing.text2}"
-			]
 			dependencies: [
 				"1256352748B93449"
 				"24FFFE0FC9EAEF8D"
 			]
 			dependency_requirement: "one_completed"
+			description: [
+				"{quest.stage_2.redstone_flowing.text1}"
+				"{quest.stage_2.redstone_flowing.text2}"
+			]
+			icon: "thermal:redstone_bucket"
 			id: "619E34A7DE48B991"
+			subtitle: "{quest.stage_2.redstone_flowing.subtitle}"
 			tasks: [
 				{
-					id: "5F47790124641B2D"
-					type: "item"
-					item: "thermal:redstone_bucket"
 					consume_items: false
+					id: "5F47790124641B2D"
+					item: "thermal:redstone_bucket"
+					type: "item"
 				}
 				{
 					id: "4B98217B670ECA57"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_2.redstone_flowing.title}"
+			x: -0.5d
+			y: 7.0d
 		}
 		{
-			title: "{quest.stage_2.rose_quartz.title}"
-			icon: "create:polished_rose_quartz"
-			x: -1.0d
-			y: 8.5d
-			subtitle: "{quest.stage_2.rose_quartz.subtitle}"
-			description: [
-				"{quest.stage_2.rose_quartz.text1}"
-				"{quest.stage_2.rose_quartz.text2}"
-			]
 			dependencies: [
 				"1861E583C9DAA0BA"
 				"619E34A7DE48B991"
 			]
+			description: [
+				"{quest.stage_2.rose_quartz.text1}"
+				"{quest.stage_2.rose_quartz.text2}"
+			]
+			icon: "create:polished_rose_quartz"
 			id: "06B061C0EE94BC90"
+			subtitle: "{quest.stage_2.rose_quartz.subtitle}"
 			tasks: [
 				{
-					id: "0AD0021818A0BB33"
-					type: "item"
-					item: "create:polished_rose_quartz"
 					consume_items: false
+					id: "0AD0021818A0BB33"
+					item: "create:polished_rose_quartz"
+					type: "item"
 				}
 				{
 					id: "0F6DB8FCC5C16A94"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_2.rose_quartz.title}"
+			x: -1.0d
+			y: 8.5d
 		}
 		{
-			title: "{quest.stage_2.cobblestone.title}"
-			icon: "minecraft:cobblestone"
-			x: 3.5d
-			y: 7.0d
-			subtitle: "{quest.stage_2.cobblestone.subtitle}"
+			dependencies: ["727B43FD95C4A512"]
 			description: [
 				"{quest.stage_2.cobblestone.text1}"
 				""
 				"{quest.stage_2.cobblestone.text2}"
 			]
 			hide_dependency_lines: true
-			dependencies: ["727B43FD95C4A512"]
+			icon: "minecraft:cobblestone"
 			id: "0E46C1FCE5AEB1DF"
+			subtitle: "{quest.stage_2.cobblestone.subtitle}"
 			tasks: [
 				{
-					id: "7E68B8C4958FB0B5"
-					type: "item"
-					item: "minecraft:cobblestone"
 					consume_items: false
+					id: "7E68B8C4958FB0B5"
+					item: "minecraft:cobblestone"
+					type: "item"
 				}
 				{
 					id: "5E676D2CC5975AEA"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_2.cobblestone.title}"
+			x: 3.5d
+			y: 7.0d
 		}
 		{
-			title: "{quest.stage_2.gravel.title}"
-			icon: "minecraft:gravel"
-			x: 4.0d
-			y: 9.0d
-			subtitle: "{quest.stage_2.gravel.subtitle}"
-			description: ["{quest.stage_2.gravel.text1}"]
 			dependencies: ["0E46C1FCE5AEB1DF"]
+			description: ["{quest.stage_2.gravel.text1}"]
+			icon: "minecraft:gravel"
 			id: "1139F2E4E6FCFE29"
+			subtitle: "{quest.stage_2.gravel.subtitle}"
 			tasks: [
 				{
-					id: "517441AE19EF30E2"
-					type: "item"
-					item: "minecraft:gravel"
 					consume_items: false
+					id: "517441AE19EF30E2"
+					item: "minecraft:gravel"
+					type: "item"
 				}
 				{
 					id: "63F3877902E01590"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_2.gravel.title}"
+			x: 4.0d
+			y: 9.0d
 		}
 		{
-			title: "{quest.stage_2.iron_nugget.title}"
-			icon: "minecraft:iron_nugget"
-			x: 2.5d
-			y: 10.0d
-			subtitle: "{quest.stage_2.iron_nugget.subtitle}"
-			description: ["{quest.stage_2.iron_nugget.text1}"]
 			dependencies: ["1139F2E4E6FCFE29"]
+			description: ["{quest.stage_2.iron_nugget.text1}"]
+			icon: "minecraft:iron_nugget"
 			id: "53735DC4231AB566"
+			subtitle: "{quest.stage_2.iron_nugget.subtitle}"
 			tasks: [
 				{
-					id: "591D709D1E4EE97A"
-					type: "item"
-					item: "minecraft:iron_nugget"
 					consume_items: false
+					id: "591D709D1E4EE97A"
+					item: "minecraft:iron_nugget"
+					type: "item"
 				}
 				{
 					id: "64B405696E96FFCD"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_2.iron_nugget.title}"
+			x: 2.5d
+			y: 10.0d
 		}
 		{
-			title: "{quest.stage_2.molten_iron.title}"
-			icon: "tconstruct:molten_iron_bucket"
-			x: 1.0d
-			y: 9.5d
-			subtitle: "{quest.stage_2.molten_iron.subtitle}"
-			description: ["{quest.stage_2.molten_iron.text1}"]
 			dependencies: ["53735DC4231AB566"]
+			description: ["{quest.stage_2.molten_iron.text1}"]
+			icon: "tconstruct:molten_iron_bucket"
 			id: "2167272204B6627B"
+			subtitle: "{quest.stage_2.molten_iron.subtitle}"
 			tasks: [
 				{
-					id: "611F921F94FAE142"
-					type: "item"
-					title: "熔融铁"
-					item: "tconstruct:molten_iron_bucket"
 					consume_items: false
+					id: "611F921F94FAE142"
+					item: "tconstruct:molten_iron_bucket"
+					title: "熔融铁"
+					type: "item"
 				}
 				{
 					id: "75C982848F2CEA85"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_2.molten_iron.title}"
+			x: 1.0d
+			y: 9.5d
 		}
 		{
-			title: "{quest.stage_2.electron_tube.title}"
-			icon: "create:electron_tube"
-			x: -0.5d
-			y: 10.0d
-			subtitle: "{quest.stage_2.electron_tube.subtitle}"
-			description: ["{quest.stage_2.electron_tube.text1}"]
 			dependencies: [
 				"2167272204B6627B"
 				"06B061C0EE94BC90"
 			]
+			description: ["{quest.stage_2.electron_tube.text1}"]
+			icon: "create:electron_tube"
 			id: "5351AF6CA73CB8E0"
+			subtitle: "{quest.stage_2.electron_tube.subtitle}"
 			tasks: [
 				{
-					id: "163B1579092E6BD3"
-					type: "item"
-					item: "create:electron_tube"
 					consume_items: false
+					id: "163B1579092E6BD3"
+					item: "create:electron_tube"
+					type: "item"
 				}
 				{
 					id: "1D7C84803766FD04"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_2.electron_tube.title}"
+			x: -0.5d
+			y: 10.0d
 		}
 		{
-			title: "{quest.stage_2.precision_mechanism.title}"
-			icon: "create:precision_mechanism"
-			x: -1.0d
-			y: 11.5d
-			subtitle: "{quest.stage_2.precision_mechanism.subtitle}"
-			description: ["{quest.stage_2.precision_mechanism.text1}"]
 			dependencies: [
 				"5351AF6CA73CB8E0"
 				"6D8BB2D6A75ABB16"
 			]
+			description: ["{quest.stage_2.precision_mechanism.text1}"]
+			icon: "create:precision_mechanism"
 			id: "19715EBCBBA1B4AD"
+			rewards: [{
+				count: 16
+				icon: { Count: 16, id: "thermal:silver_coin" }
+				id: "40E9EC344E255B6D"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			subtitle: "{quest.stage_2.precision_mechanism.subtitle}"
 			tasks: [
 				{
-					id: "4DF52040884AB28D"
-					type: "item"
-					item: "create:precision_mechanism"
 					consume_items: false
+					id: "4DF52040884AB28D"
+					item: "create:precision_mechanism"
+					type: "item"
 				}
 				{
 					id: "002032AE65148DBD"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
-			rewards: [{
-				id: "40E9EC344E255B6D"
-				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 16b }
-				item: "thermal:silver_coin"
-				count: 16
-			}]
+			title: "{quest.stage_2.precision_mechanism.title}"
+			x: -1.0d
+			y: 11.5d
 		}
 		{
-			title: "{quest.stage_2.screwdriver.title}"
-			x: -2.5d
-			y: 11.5d
-			shape: "circle"
+			dependencies: ["5351AF6CA73CB8E0"]
 			description: [
 				"{quest.stage_2.screwdriver.text1}"
 				"{quest.stage_2.screwdriver.text2}"
 			]
 			hide_dependency_lines: true
-			dependencies: ["5351AF6CA73CB8E0"]
 			id: "6D8BB2D6A75ABB16"
+			shape: "circle"
 			tasks: [{
+				consume_items: false
 				id: "020E45143133555A"
-				type: "item"
 				item: {
+					Count: 1
 					id: "projectred_core:screwdriver"
-					Count: 1b
 					tag: {
 						Damage: 0
 					}
 				}
-				consume_items: false
+				type: "item"
 			}]
+			title: "{quest.stage_2.screwdriver.title}"
+			x: -2.5d
+			y: 11.5d
 		}
 		{
-			title: "{quest.stage_2.brass_machine.title}"
-			x: -1.0d
-			y: 13.5d
-			shape: "hexagon"
+			dependencies: ["19715EBCBBA1B4AD"]
 			description: [
 				"{quest.stage_2.brass_machine.subtitle}"
 				"{quest.stage_2.brass_machine.text1}"
 			]
-			dependencies: ["19715EBCBBA1B4AD"]
-			size: 2.0d
 			id: "7FC4D1E69377271D"
-			tasks: [{
-				id: "4C32A887DA89A75C"
-				type: "item"
-				item: "kubejs:brass_machine"
-				consume_items: false
-			}]
 			rewards: [
 				{
-					id: "54E81DC78E539FDD"
-					type: "item"
-					item: "create:precision_mechanism"
 					count: 16
+					id: "54E81DC78E539FDD"
+					item: "create:precision_mechanism"
+					type: "item"
 				}
 				{
 					id: "7A797A069B28AE89"
-					type: "item"
 					item: "ae2:certus_quartz_crystal"
 					random_bonus: 4
+					type: "item"
 				}
 				{
 					id: "11BF1DF6EF76569B"
-					type: "item"
 					item: "create:brass_ingot"
 					random_bonus: 4
+					type: "item"
 				}
 				{
-					id: "58FD91E5AF10BE0A"
-					type: "item"
-					item: "buddycards:buddycard_pack_base"
 					count: 2
+					id: "58FD91E5AF10BE0A"
+					item: "buddycards:buddycard_pack_base"
+					type: "item"
 				}
 			]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				consume_items: false
+				id: "4C32A887DA89A75C"
+				item: "kubejs:brass_machine"
+				type: "item"
+			}]
+			title: "{quest.stage_2.brass_machine.title}"
+			x: -1.0d
+			y: 13.5d
 		}
 		{
-			title: "{quest.stage_2.blaze_burner.title}"
-			x: 0.5d
-			y: 17.0d
-			shape: "square"
-			description: ["{quest.stage_2.blaze_burner.text1}"]
-			hide_dependency_lines: true
 			dependencies: [
 				"19715EBCBBA1B4AD"
 				"21753CBB528EAADF"
 			]
-			hide: true
+			description: ["{quest.stage_2.blaze_burner.text1}"]
+			hide_dependency_lines: true
+			hide_until_deps_visible: true
 			id: "5DCF9C8212AA3BE3"
-			tasks: [{
-				id: "3BBAFB33D9E2BB24"
-				type: "item"
-				item: "create:blaze_burner"
-				consume_items: false
-			}]
 			rewards: [{
 				id: "62C1B201E1C1DA8C"
-				type: "item"
 				item: "createaddition:straw"
+				type: "item"
 			}]
+			shape: "square"
+			tasks: [{
+				consume_items: false
+				id: "3BBAFB33D9E2BB24"
+				item: "create:blaze_burner"
+				type: "item"
+			}]
+			title: "{quest.stage_2.blaze_burner.title}"
+			x: 0.5d
+			y: 17.0d
 		}
 		{
-			title: "{quest.stage_2.twisting_vines.title}"
-			icon: "minecraft:twisting_vines"
-			x: -3.0d
-			y: 15.5d
-			subtitle: "{quest.stage_2.twisting_vines.subtitle}"
+			dependencies: [
+				"19715EBCBBA1B4AD"
+				"21753CBB528EAADF"
+			]
 			description: [
 				"{quest.stage_2.twisting_vines.text1}"
 				""
 				"{quest.stage_2.twisting_vines.text2}"
 			]
 			hide_dependency_lines: true
+			hide_until_deps_visible: true
+			icon: "minecraft:twisting_vines"
+			id: "223BB57AD0239511"
+			subtitle: "{quest.stage_2.twisting_vines.subtitle}"
+			tasks: [
+				{
+					consume_items: false
+					id: "70EA8B8349BC13D1"
+					item: "minecraft:twisting_vines"
+					type: "item"
+				}
+				{
+					id: "6F7A49C7C377ABF1"
+					title: "自动生产"
+					type: "checkmark"
+				}
+			]
+			title: "{quest.stage_2.twisting_vines.title}"
+			x: -3.0d
+			y: 15.5d
+		}
+		{
 			dependencies: [
 				"19715EBCBBA1B4AD"
 				"21753CBB528EAADF"
 			]
-			hide: true
-			id: "223BB57AD0239511"
-			tasks: [
-				{
-					id: "70EA8B8349BC13D1"
-					type: "item"
-					item: "minecraft:twisting_vines"
-					consume_items: false
-				}
-				{
-					id: "6F7A49C7C377ABF1"
-					type: "checkmark"
-					title: "自动生产"
-				}
-			]
-		}
-		{
-			title: "{quest.stage_2.weeping_vines.title}"
-			icon: "minecraft:weeping_vines"
-			x: 1.0d
-			y: 15.5d
-			subtitle: "{quest.stage_2.weeping_vines.subtitle}"
 			description: [
 				"{quest.stage_2.weeping_vines.text1}"
 				"{quest.stage_2.weeping_vines.text2}"
 			]
 			hide_dependency_lines: true
-			dependencies: [
-				"19715EBCBBA1B4AD"
-				"21753CBB528EAADF"
-			]
-			hide: true
+			hide_until_deps_visible: true
+			icon: "minecraft:weeping_vines"
 			id: "7E59B7DC239E621E"
+			subtitle: "{quest.stage_2.weeping_vines.subtitle}"
 			tasks: [
 				{
-					id: "57EC8E4703FADF5E"
-					type: "item"
-					item: "minecraft:weeping_vines"
 					consume_items: false
+					id: "57EC8E4703FADF5E"
+					item: "minecraft:weeping_vines"
+					type: "item"
 				}
 				{
 					id: "6149AB838FC42C17"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_2.weeping_vines.title}"
+			x: 1.0d
+			y: 15.5d
 		}
 		{
-			title: "{quest.stage_2.liquid_soul.title}"
-			icon: "tconstruct:liquid_soul_bucket"
-			x: -1.0d
-			y: 16.0d
-			subtitle: "{quest.stage_2.liquid_soul.subtitle}"
-			description: ["{quest.stage_2.liquid_soul.text1}"]
 			dependencies: [
 				"223BB57AD0239511"
 				"7E59B7DC239E621E"
 				"5DCF9C8212AA3BE3"
 			]
+			description: ["{quest.stage_2.liquid_soul.text1}"]
+			icon: "tconstruct:liquid_soul_bucket"
 			id: "239C64263B91350D"
+			subtitle: "{quest.stage_2.liquid_soul.subtitle}"
 			tasks: [
 				{
-					id: "7BBC2AAED0A77FDC"
-					type: "item"
-					item: "tconstruct:liquid_soul_bucket"
 					consume_items: false
+					id: "7BBC2AAED0A77FDC"
+					item: "tconstruct:liquid_soul_bucket"
+					type: "item"
 				}
 				{
 					id: "21C241D2335C67E4"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_2.liquid_soul.title}"
+			x: -1.0d
+			y: 16.0d
 		}
 		{
-			title: "{quest.stage_2.lava.title}"
-			icon: "minecraft:lava_bucket"
-			x: -2.5d
-			y: 17.0d
-			subtitle: "{quest.stage_2.lava.subtitle}"
-			description: ["{quest.stage_2.lava.text1}"]
-			hide_dependency_lines: true
 			dependencies: [
 				"19715EBCBBA1B4AD"
 				"21753CBB528EAADF"
 			]
-			hide: true
+			description: ["{quest.stage_2.lava.text1}"]
+			hide_dependency_lines: true
+			hide_until_deps_visible: true
+			icon: "minecraft:lava_bucket"
 			id: "1D9D65FBD06DD481"
+			subtitle: "{quest.stage_2.lava.subtitle}"
 			tasks: [
 				{
-					id: "4A9BF979E823D4CB"
-					type: "item"
-					item: "minecraft:lava_bucket"
 					consume_items: false
+					id: "4A9BF979E823D4CB"
+					item: "minecraft:lava_bucket"
+					type: "item"
 				}
 				{
 					id: "73BF4F3B488FBC83"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_2.lava.title}"
+			x: -2.5d
+			y: 17.0d
 		}
 		{
-			title: "{quest.stage_2.infernal_mechanism.title}"
-			x: -1.0d
-			y: 17.5d
-			shape: "circle"
-			subtitle: "{quest.stage_2.infernal_mechanism.subtitle}"
+			dependencies: [
+				"239C64263B91350D"
+				"1D9D65FBD06DD481"
+			]
 			description: [
 				"{quest.stage_2.infernal_mechanism.text1}"
 				""
 				"{quest.stage_2.infernal_mechanism.text2}"
 				"{quest.stage_2.infernal_mechanism.text3}"
 			]
-			dependencies: [
-				"239C64263B91350D"
-				"1D9D65FBD06DD481"
-			]
 			id: "3C50B4556375178E"
+			shape: "circle"
+			subtitle: "{quest.stage_2.infernal_mechanism.subtitle}"
 			tasks: [{
-				id: "24070D354D67A3DF"
-				type: "item"
-				item: "kubejs:infernal_mechanism"
 				consume_items: false
+				id: "24070D354D67A3DF"
+				item: "kubejs:infernal_mechanism"
+				type: "item"
 			}]
+			title: "{quest.stage_2.infernal_mechanism.title}"
+			x: -1.0d
+			y: 17.5d
 		}
 		{
-			title: "{quest.stage_2.zinc_machine.title}"
-			x: -1.0d
-			y: 19.5d
-			shape: "hexagon"
-			description: ["{quest.stage_2.zinc_machine.text1}"]
 			dependencies: ["3C50B4556375178E"]
-			size: 2.0d
+			description: ["{quest.stage_2.zinc_machine.text1}"]
 			id: "047FD4E54147D8F7"
-			tasks: [{
-				id: "5D828A5601F86224"
-				type: "item"
-				item: "kubejs:zinc_machine"
-				consume_items: false
-			}]
 			rewards: [
 				{
-					id: "5868F4AF0FBE0295"
-					type: "item"
-					item: "kubejs:infernal_mechanism"
 					count: 16
+					id: "5868F4AF0FBE0295"
+					item: "kubejs:infernal_mechanism"
+					type: "item"
 				}
 				{
 					id: "02A669ED33AA71DC"
-					type: "item"
 					item: "minecraft:blaze_powder"
 					random_bonus: 4
+					type: "item"
 				}
 				{
 					id: "2BAEB1D62B8D3701"
-					type: "item"
 					item: "minecraft:gold_ingot"
 					random_bonus: 4
+					type: "item"
 				}
 			]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				consume_items: false
+				id: "5D828A5601F86224"
+				item: "kubejs:zinc_machine"
+				type: "item"
+			}]
+			title: "{quest.stage_2.zinc_machine.title}"
+			x: -1.0d
+			y: 19.5d
 		}
 		{
-			title: "{quest.stage_2.centrifuge.title}"
-			icon: "vintageimprovements:centrifuge"
-			x: 2.5d
-			y: 5.5d
-			subtitle: "{quest.stage_2.centrifuge.subtitle}"
+			dependencies: ["24FFFE0FC9EAEF8D"]
 			description: [
 				"{quest.stage_2.centrifuge.text1}"
 				"{quest.stage_2.centrifuge.text2}"
 			]
-			dependencies: ["24FFFE0FC9EAEF8D"]
-			optional: true
+			icon: "vintageimprovements:centrifuge"
 			id: "2785797D2AD2C22D"
+			optional: true
+			subtitle: "{quest.stage_2.centrifuge.subtitle}"
 			tasks: [
 				{
-					id: "3782AE8BCA83DEF2"
-					type: "item"
-					item: "vintageimprovements:centrifuge"
 					consume_items: false
+					id: "3782AE8BCA83DEF2"
+					item: "vintageimprovements:centrifuge"
+					type: "item"
 				}
 				{
 					id: "463A5CE1F415C0F2"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_2.centrifuge.title}"
+			x: 2.5d
+			y: 5.5d
 		}
 	]
-	quest_links: [ ]
+	title: "{quest.chapter.stage_2.name}"
 }

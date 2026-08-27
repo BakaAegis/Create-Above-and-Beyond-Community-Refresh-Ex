@@ -1,23 +1,27 @@
 {
-	version: 13
-	title: "&d Above \\& Beyond : Refresh"
-	icon: "kubejs:abstruse_mechanism"
-	disable_toast: true
-	default_reward_team: true
-	default_consume_items: true
 	default_autoclaim_rewards: "disabled"
-	default_quest_shape: "square"
+	default_consume_items: true
 	default_quest_disable_jei: false
-	emergency_items_cooldown: 300
-	drop_loot_crates: false
-	loot_crate_no_drop: {
-		passive: 4000
-		monster: 600
-		boss: 0
-	}
+	default_quest_shape: "square"
+	default_reward_team: true
+	detection_delay: 20
 	disable_gui: false
+	disable_toast: true
+	drop_book_on_death: false
+	drop_loot_crates: false
+	emergency_items_cooldown: 300
 	grid_scale: 1.0d
-	pause_game: false
+	hide_excluded_quests: false
+	icon: "kubejs:abstruse_mechanism"
 	lock_message: ""
+	loot_crate_no_drop: {
+		boss: 0
+		monster: 600
+		passive: 4000
+	}
+	pause_game: false
 	progression_mode: "linear"
+	show_lock_icons: true
+	title: "&d Above \\& Beyond : Refresh"
+	version: 13
 }

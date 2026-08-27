@@ -1,20 +1,15 @@
 {
-	id: "07AC103CB4C5128F"
-	group: "331B6409EF6A7840"
-	order_index: 8
-	filename: "6"
-	title: "&f&l6&r 运算变速"
-	icon: "kubejs:overclocking_machine"
-	default_quest_shape: ""
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "6"
+	group: "331B6409EF6A7840"
+	icon: "kubejs:overclocking_machine"
+	id: "07AC103CB4C5128F"
+	order_index: 8
+	quest_links: [ ]
 	quests: [
 		{
-			title: "运算变速"
-			icon: "ad_astra:moon_globe"
-			x: -7.0d
-			y: -10.0d
-			shape: "hexagon"
-			subtitle: "&6第六章"
+			dependencies: ["191DCA62D97981E3"]
 			description: [
 				"欢迎来到月球！这是你走向地球之外的第一步，也是你走向星海的第一步。"
 				""
@@ -22,169 +17,170 @@
 				""
 				"你的经验会帮助你完成很多事情，所以，相信你的积累，向前走吧。"
 			]
-			dependencies: ["191DCA62D97981E3"]
-			hide: true
-			size: 2.0d
+			hide_until_deps_complete: true
+			icon: "ad_astra:moon_globe"
 			id: "664977BCC01D3E3C"
+			rewards: [{
+				id: "37F2D959B352BFA7"
+				item: "create:builders_tea"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "&6第六章"
 			tasks: [
 				{
 					id: "2F6CEA6E9F841C2D"
-					type: "checkmark"
 					title: "月球！"
+					type: "checkmark"
 				}
 				{
+					dimension: "ad_astra:moon"
 					id: "6FEEF69E235EA076"
 					type: "dimension"
-					dimension: "ad_astra:moon"
 				}
 			]
-			rewards: [{
-				id: "37F2D959B352BFA7"
-				type: "item"
-				item: "create:builders_tea"
-			}]
+			title: "运算变速"
+			x: -7.0d
+			y: -10.0d
 		}
 		{
-			title: "一出一，一出二"
-			icon: "ad_astra:moon_stone"
-			x: -7.0d
-			y: -8.0d
-			description: ["这是一块月石，但是…很显然这种石头在一种特定的氛围里可以把普普通通的石头变成更多的月石，大概会有点用处……"]
 			dependencies: ["664977BCC01D3E3C"]
+			description: ["这是一块月石，但是…很显然这种石头在一种特定的氛围里可以把普普通通的石头变成更多的月石，大概会有点用处……"]
+			icon: "ad_astra:moon_stone"
 			id: "5FB1CC6AE54D9FF9"
 			tasks: [
 				{
 					id: "7D803E76C0AD8777"
-					type: "checkmark"
 					title: "自动化"
+					type: "checkmark"
 				}
 				{
-					id: "245C1A2727D5A7FD"
-					type: "item"
-					item: "ad_astra:moon_stone"
 					consume_items: false
+					id: "245C1A2727D5A7FD"
+					item: "ad_astra:moon_stone"
+					type: "item"
 				}
 			]
+			title: "一出一，一出二"
+			x: -7.0d
+			y: -8.0d
 		}
 		{
-			title: "萃取，反应，再反应！"
-			icon: "upgrade_aquatic:elder_prismarine_coral_block"
-			x: -7.0d
-			y: -4.0d
-			description: ["月沙疏松多孔的结构是良好的催化剂基质，你所要做的只是把液态经验注入进去，然后加入两次熔岩，来洗脱出里面可能存在的微量远古残骸。"]
 			dependencies: [
 				"5F7B204944BE7A29"
 				"10C621AF6C8A304A"
 				"442737F71EE9063A"
 			]
+			description: ["月沙疏松多孔的结构是良好的催化剂基质，你所要做的只是把液态经验注入进去，然后加入两次熔岩，来洗脱出里面可能存在的微量远古残骸。"]
+			icon: "upgrade_aquatic:elder_prismarine_coral_block"
 			id: "31A48E11EFE92F09"
 			tasks: [{
 				id: "41C2B5978E41F80D"
-				type: "checkmark"
 				title: "自动化"
+				type: "checkmark"
 			}]
+			title: "萃取，反应，再反应！"
+			x: -7.0d
+			y: -4.0d
 		}
 		{
-			title: "经验丰富"
-			icon: "create_dd:experience_mass"
-			x: -8.5d
-			y: -3.5d
-			description: ["来一刀！利用&6机械手&r把这些虫子细细地切成臊子，就会得到这些细小的经验颗粒。"]
 			dependencies: [
 				"64D8629FEF3B62E2"
 				"47B00A2AAB2753BF"
 			]
+			description: ["来一刀！利用&6机械手&r把这些虫子细细地切成臊子，就会得到这些细小的经验颗粒。"]
+			icon: "create_dd:experience_mass"
 			id: "10C621AF6C8A304A"
 			tasks: [
 				{
 					id: "3FBC8525D071D4BE"
-					type: "checkmark"
 					title: "自动化"
+					type: "checkmark"
 				}
 				{
-					id: "238DF24950251361"
-					type: "item"
-					item: "create:experience_nugget"
 					consume_items: false
+					id: "238DF24950251361"
+					item: "create:experience_nugget"
+					type: "item"
 				}
 			]
+			title: "经验丰富"
+			x: -8.5d
+			y: -3.5d
 		}
 		{
-			title: "聚爆压缩机"
-			icon: "tconstruct:debris_nugget"
-			x: -5.0d
-			y: -4.0d
-			description: [
-				"在这种微重力环境下，富集过的远古残骸母岩会更容易被分离，虽然这还是难了一些——你需要一场爆炸！"
-				""
-				"&7在空间站都能吃曲奇了，大概不用担心扬尘…？"
-			]
 			dependencies: [
 				"573D8FEC3F3EB507"
 				"31A48E11EFE92F09"
 				"16A5E56A4ED2F4CC"
 			]
+			description: [
+				"在这种微重力环境下，富集过的远古残骸母岩会更容易被分离，虽然这还是难了一些——你需要一场爆炸！"
+				""
+				"&7在空间站都能吃曲奇了，大概不用担心扬尘…？"
+			]
+			icon: "tconstruct:debris_nugget"
 			id: "0104E4610EF5BEB8"
 			tasks: [
 				{
-					id: "64922E2910006F2B"
-					type: "item"
-					item: "tconstruct:debris_nugget"
 					consume_items: false
+					id: "64922E2910006F2B"
+					item: "tconstruct:debris_nugget"
+					type: "item"
 				}
 				{
 					id: "5309FCA6F51C42C7"
-					type: "checkmark"
 					title: "自动 生产"
+					type: "checkmark"
 				}
 			]
+			title: "聚爆压缩机"
+			x: -5.0d
+			y: -4.0d
 		}
 		{
-			title: "神秘合金"
-			icon: "minecraft:netherite_ingot"
-			x: -4.0d
-			y: -2.0d
+			dependencies: ["0104E4610EF5BEB8"]
 			description: [
 				"下界的产物，可以做一把更加锋利的剑"
 				"那为什么……做出来量比原材料......还变少了"
 			]
-			dependencies: ["0104E4610EF5BEB8"]
+			icon: "minecraft:netherite_ingot"
 			id: "4C2D9FA38649590C"
 			tasks: [
 				{
-					id: "42B7AD9DD9C4C274"
-					type: "item"
-					item: "minecraft:netherite_ingot"
 					consume_items: false
+					id: "42B7AD9DD9C4C274"
+					item: "minecraft:netherite_ingot"
+					type: "item"
 				}
 				{
 					id: "46D5D0D3A73F4D38"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "神秘合金"
+			x: -4.0d
+			y: -2.0d
 		}
 		{
-			title: "熔融下界合金"
-			icon: "tconstruct:molten_netherite_bucket"
-			x: -5.0d
-			y: 0.0d
-			shape: "circle"
-			description: ["接下来是融化。"]
 			dependencies: ["4C2D9FA38649590C"]
+			description: ["接下来是融化。"]
+			icon: "tconstruct:molten_netherite_bucket"
 			id: "63070B37156C47EF"
+			shape: "circle"
 			tasks: [{
 				id: "0205B12CB76E098A"
-				type: "checkmark"
 				title: "自动化"
+				type: "checkmark"
 			}]
+			title: "熔融下界合金"
+			x: -5.0d
+			y: 0.0d
 		}
 		{
-			title: "更快！更快！"
-			icon: "kubejs:overclocking_mechanism"
-			x: -7.0d
-			y: 1.0d
-			shape: "square"
+			dependencies: ["63070B37156C47EF"]
 			description: [
 				"最后是注入和激光切割……"
 				""
@@ -192,435 +188,439 @@
 				""
 				"&7超频丢保修！"
 			]
-			dependencies: ["63070B37156C47EF"]
+			icon: "kubejs:overclocking_mechanism"
 			id: "71D09587FF037DEC"
+			shape: "square"
 			tasks: [
 				{
-					id: "0B986F2F6C789158"
-					type: "item"
-					item: "kubejs:overclocking_mechanism"
 					consume_items: false
+					id: "0B986F2F6C789158"
+					item: "kubejs:overclocking_mechanism"
+					type: "item"
 				}
 				{
 					id: "271F3354FBB943C0"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "更快！更快！"
+			x: -7.0d
+			y: 1.0d
 		}
 		{
-			title: "建个新家"
-			icon: {
-				id: "ad_astra:tier_1_rocket"
-				Count: 1b
-				tag: { }
-			}
-			x: -3.0d
-			y: -6.0d
+			dependencies: ["4305B699A66DF199"]
 			description: [
 				"在你踏上更远的征程前，先在地球轨道扎稳脚跟。"
 				""
 				"希望你的新家住的舒服。"
 			]
-			dependencies: ["4305B699A66DF199"]
+			icon: {
+				Count: 1
+				id: "ad_astra:tier_1_rocket"
+				tag: { }
+			}
 			id: "573D8FEC3F3EB507"
 			tasks: [{
+				dimension: "ad_astra:moon_orbit"
 				id: "059BBC81AD054C57"
 				type: "dimension"
-				dimension: "ad_astra:moon_orbit"
 			}]
+			title: "建个新家"
+			x: -3.0d
+			y: -6.0d
 		}
 		{
-			title: "让石头闹鬼"
-			icon: "minecraft:infested_stone"
-			x: -9.0d
-			y: -5.0d
+			dependencies: ["59A0C776CB3D40ED"]
 			description: [
 				"不知为什么，在这种蓝色的火焰下，石头里就会冒出来一种很小的虫子，也许巴斯德是错的？"
 				""
 				"小心你自己，虽然这些虫子看着很小，但是当它们不受控制的四处散开，你会为此头痛的。"
 			]
 			hide_dependency_lines: false
-			dependencies: ["59A0C776CB3D40ED"]
+			icon: "minecraft:infested_stone"
 			id: "64D8629FEF3B62E2"
 			tasks: [{
 				id: "1D21E7DA6B95F295"
-				type: "checkmark"
 				title: "自动化"
+				type: "checkmark"
 			}]
+			title: "让石头闹鬼"
+			x: -9.0d
+			y: -5.0d
 		}
 		{
-			icon: "minecraft:stone"
-			x: -9.0d
-			y: -6.5d
-			description: ["烧一烧，炼一炼，吹一吹！"]
 			dependencies: ["6A487DF9EAF819F4"]
+			description: ["烧一烧，炼一炼，吹一吹！"]
+			icon: "minecraft:stone"
 			id: "59A0C776CB3D40ED"
 			tasks: [
 				{
-					id: "2CD5892A541C438B"
-					type: "item"
-					item: "minecraft:stone"
 					consume_items: false
+					id: "2CD5892A541C438B"
+					item: "minecraft:stone"
+					type: "item"
 				}
 				{
 					id: "0BB7696624AF32D5"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			x: -9.0d
+			y: -6.5d
 		}
 		{
-			title: "原始动力"
-			icon: "minecraft:cobblestone"
-			x: -9.0d
-			y: -8.0d
+			dependencies: ["664977BCC01D3E3C"]
 			description: ["来点圆石，你最基础的资源。"]
 			hide_dependency_lines: true
-			dependencies: ["664977BCC01D3E3C"]
+			icon: "minecraft:cobblestone"
 			id: "6A487DF9EAF819F4"
 			tasks: [
 				{
-					id: "7BEE9196B389C3A3"
-					type: "item"
-					item: "minecraft:cobblestone"
 					consume_items: false
+					id: "7BEE9196B389C3A3"
+					item: "minecraft:cobblestone"
+					type: "item"
 				}
 				{
 					id: "30EDFD9724F9F61D"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "原始动力"
+			x: -9.0d
+			y: -8.0d
 		}
 		{
-			icon: "ad_astra:moon_sand"
-			x: -7.0d
-			y: -6.0d
-			description: ["粉碎一下，真是松软！"]
 			dependencies: ["5FB1CC6AE54D9FF9"]
+			description: ["粉碎一下，真是松软！"]
+			icon: "ad_astra:moon_sand"
 			id: "5F7B204944BE7A29"
 			tasks: [
 				{
-					id: "329C65A464CB9DAD"
-					type: "item"
-					item: "ad_astra:moon_sand"
 					consume_items: false
+					id: "329C65A464CB9DAD"
+					item: "ad_astra:moon_sand"
+					type: "item"
 				}
 				{
 					id: "329BDAF35A908DE5"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			x: -7.0d
+			y: -6.0d
 		}
 		{
+			dependencies: ["664977BCC01D3E3C"]
+			description: ["来自月球的新客人，似乎是造火箭的良好材料。"]
+			hide_dependency_lines: true
+			id: "4305B699A66DF199"
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "14CC79AFBFB70B1E"
+				item: "ad_astra:desh_ingot"
+				type: "item"
+			}]
 			title: "橙色金属"
 			x: -3.0d
 			y: -8.0d
-			description: ["来自月球的新客人，似乎是造火箭的良好材料。"]
-			hide_dependency_lines: true
-			dependencies: ["664977BCC01D3E3C"]
-			id: "4305B699A66DF199"
-			tasks: [{
-				id: "14CC79AFBFB70B1E"
-				type: "item"
-				item: "ad_astra:desh_ingot"
-				count: 4L
-				consume_items: false
-			}]
 		}
 		{
-			title: "BOOM!"
-			icon: "minecraft:tnt"
-			x: -5.0d
-			y: -6.0d
-			description: ["好孩子不玩炸弹，更不要把自己家拆掉了。"]
 			dependencies: [
 				"0C76CE81ADD7C434"
 				"5E8EF1C72EC7AAA9"
 			]
+			description: ["好孩子不玩炸弹，更不要把自己家拆掉了。"]
+			icon: "minecraft:tnt"
 			id: "16A5E56A4ED2F4CC"
 			tasks: [
 				{
-					id: "21AA652437DA8F48"
-					type: "item"
-					item: "minecraft:tnt"
 					consume_items: false
+					id: "21AA652437DA8F48"
+					item: "minecraft:tnt"
+					type: "item"
 				}
 				{
 					id: "763A2A78FDB5D1E8"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "BOOM!"
+			x: -5.0d
+			y: -6.0d
 		}
 		{
-			x: -5.5d
-			y: -8.0d
+			dependencies: ["664977BCC01D3E3C"]
 			description: ["可以试试拿去做块牛排，听说味道很奇特。"]
 			hide_dependency_lines: true
-			dependencies: ["664977BCC01D3E3C"]
 			id: "0C76CE81ADD7C434"
 			tasks: [{
 				id: "5EE9C95F2FB0B778"
-				type: "item"
 				item: "minecraft:gunpowder"
+				type: "item"
 			}]
+			x: -5.5d
+			y: -8.0d
 		}
 		{
-			x: -4.5d
-			y: -8.0d
+			dependencies: ["664977BCC01D3E3C"]
 			description: ["把沙子和火药混在一起就是炸弹了吗，我在做什么梦。"]
 			hide_dependency_lines: true
-			dependencies: ["664977BCC01D3E3C"]
 			id: "5E8EF1C72EC7AAA9"
 			tasks: [{
-				id: "769088029FF2C60B"
-				type: "item"
-				item: "minecraft:sand"
 				consume_items: false
+				id: "769088029FF2C60B"
+				item: "minecraft:sand"
+				type: "item"
 			}]
+			x: -4.5d
+			y: -8.0d
 		}
 		{
-			title: "造把好剑！"
-			x: -11.0d
-			y: -4.0d
+			dependencies: ["64D8629FEF3B62E2"]
 			description: [
 				"你会需要一些剑对着这些“鱼”来两下的。"
 				""
 				"不需要很多，但是你仍然需要一些，所以自动化看你心情。"
 			]
 			hide_dependency_lines: true
-			dependencies: ["64D8629FEF3B62E2"]
 			id: "47B00A2AAB2753BF"
 			tasks: [{
+				consume_items: false
 				id: "0B518A1618E1F398"
-				type: "item"
-				title: "任意剑"
 				item: {
+					Count: 1
 					id: "itemfilters:tag"
-					Count: 1b
 					tag: {
 						value: "forge:tools/swords"
 					}
 				}
-				consume_items: false
+				title: "任意剑"
+				type: "item"
 			}]
+			title: "造把好剑！"
+			x: -11.0d
+			y: -4.0d
 		}
 		{
-			x: -7.0d
-			y: -2.0d
-			shape: "circle"
+			dependencies: [
+				"5F7B204944BE7A29"
+				"10C621AF6C8A304A"
+			]
+			dependency_requirement: "one_completed"
 			description: [
 				"根据最新的研究，每桶熔岩里溶解了超过五克的远古残骸！哦，哦，好像也没那么多。"
 				""
 				"尝试利用一下这些熔岩，看看能不能做点什么。"
 			]
 			hide_dependency_lines: true
-			dependencies: [
-				"5F7B204944BE7A29"
-				"10C621AF6C8A304A"
-			]
-			dependency_requirement: "one_completed"
 			id: "442737F71EE9063A"
+			shape: "circle"
 			tasks: [{
-				id: "1039211FCC9163DF"
-				type: "item"
-				item: "minecraft:lava_bucket"
 				consume_items: false
+				id: "1039211FCC9163DF"
+				item: "minecraft:lava_bucket"
+				type: "item"
 			}]
+			x: -7.0d
+			y: -2.0d
 		}
 		{
-			title: "第六章完成！"
-			icon: "ad_astra:mars_globe"
-			x: -10.0d
-			y: -1.0d
-			shape: "hexagon"
+			dependencies: ["71D09587FF037DEC"]
 			description: [
 				"该去火星了，这个遥远的红色星球。这将会是一段长达几个月的路程，记得带好你的装备，不要在路上无聊死。"
 				"这是你的第三次发射任务，你大概已经轻车熟路了，对吗～"
 				""
 				"&7记得带点火星特产巧克力！"
 			]
-			dependencies: ["71D09587FF037DEC"]
-			size: 2.0d
+			icon: "ad_astra:mars_globe"
 			id: "635C2C3BDBBBF08F"
-			tasks: [{
-				id: "408970467E1C1C7F"
-				type: "advancement"
-				title: "制作 二阶火箭"
-				icon: "ad_astra:desh_engine"
-				advancement: "ad_astra:tier_2_rocket"
-				criterion: ""
-			}]
 			rewards: [
 				{
 					id: "296FBA0C5AC2ACEC"
-					type: "item"
 					item: {
+						Count: 1
 						id: "create_confectionery:full_black_chocolate_bar"
-						Count: 1b
 						tag: {
 							Damage: 0
+							RepairCost: 0
 							display: {
 								Name: "{\"text\":\"玛氏巧克力\"}"
 							}
-							RepairCost: 0
 						}
 					}
+					type: "item"
 				}
 				{
 					id: "54F90DD8797A2DE5"
-					type: "item"
 					item: "ad_astra:mars_globe"
+					type: "item"
 				}
 			]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				advancement: "ad_astra:tier_2_rocket"
+				criterion: ""
+				icon: "ad_astra:desh_engine"
+				id: "408970467E1C1C7F"
+				title: "制作 二阶火箭"
+				type: "advancement"
+			}]
+			title: "第六章完成！"
+			x: -10.0d
+			y: -1.0d
 		}
 		{
-			title: "今天也是充满能量的一天呢！"
-			icon: "ae2:charged_certus_quartz_crystal"
-			x: -8.0d
-			y: 5.0d
-			description: ["你可以用不同的方式让其充能。"]
 			dependencies: ["123A693D6B1A5821"]
+			description: ["你可以用不同的方式让其充能。"]
+			icon: "ae2:charged_certus_quartz_crystal"
 			id: "4F29C22D60C8A829"
 			tasks: [
 				{
-					id: "7B701F42CE3A6B84"
-					type: "item"
-					item: "ae2:charged_certus_quartz_crystal"
 					consume_items: false
+					id: "7B701F42CE3A6B84"
+					item: "ae2:charged_certus_quartz_crystal"
+					type: "item"
 				}
 				{
 					id: "0848E55CDAF55564"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "今天也是充满能量的一天呢！"
+			x: -8.0d
+			y: 5.0d
 		}
 		{
-			title: "火花带闪电"
-			icon: "kubejs:energy_mechanism"
-			x: -6.0d
-			y: 5.0d
-			description: ["用这些充满能量的石英，把超频构件再加工，就可以获得能量构件了。"]
 			dependencies: ["4F29C22D60C8A829"]
+			description: ["用这些充满能量的石英，把超频构件再加工，就可以获得能量构件了。"]
+			icon: "kubejs:energy_mechanism"
 			id: "670D778AD8106A5C"
 			tasks: [
 				{
-					id: "18D56A1C4E0F4B98"
-					type: "item"
-					item: "kubejs:energy_mechanism"
 					consume_items: false
+					id: "18D56A1C4E0F4B98"
+					item: "kubejs:energy_mechanism"
+					type: "item"
 				}
 				{
 					id: "5CFF7430A6CE6E18"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "火花带闪电"
+			x: -6.0d
+			y: 5.0d
 		}
 		{
-			title: "加水混合"
-			icon: "ae2:certus_quartz_crystal"
-			x: -7.0d
-			y: 4.0d
+			dependencies: ["02768E775C13D973"]
 			description: [
 				"接下来是注入一些水……"
 				"在反复处理之后，它们最终会变成一大块晶体。"
 			]
-			dependencies: ["02768E775C13D973"]
+			icon: "ae2:certus_quartz_crystal"
 			id: "123A693D6B1A5821"
 			tasks: [
 				{
-					id: "7DE2DC830B654126"
-					type: "item"
-					item: "ae2:certus_quartz_crystal"
 					consume_items: false
+					id: "7DE2DC830B654126"
+					item: "ae2:certus_quartz_crystal"
+					type: "item"
 				}
 				{
 					id: "00D3860DC7106248"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "加水混合"
+			x: -7.0d
+			y: 4.0d
 		}
 		{
-			title: "在水中结晶"
-			icon: "kubejs:certus_seed"
-			x: -7.0d
-			y: 3.0d
+			dependencies: ["71D09587FF037DEC"]
 			description: ["做一些赛特斯石英种子吧，它们在水中就能生长。"]
 			hide_dependency_lines: true
-			dependencies: ["71D09587FF037DEC"]
-			hide: true
+			hide_until_deps_visible: true
+			icon: "kubejs:certus_seed"
 			id: "02768E775C13D973"
 			tasks: [
 				{
-					id: "19D6AB52D4FF0ACC"
-					type: "item"
-					item: "kubejs:certus_seed"
 					consume_items: false
+					id: "19D6AB52D4FF0ACC"
+					item: "kubejs:certus_seed"
+					type: "item"
 				}
 				{
 					id: "00CE5B239BC26283"
-					type: "checkmark"
 					title: "自动生产 "
+					type: "checkmark"
 				}
 			]
+			title: "在水中结晶"
+			x: -7.0d
+			y: 3.0d
 		}
 		{
-			title: "第六章支线完成！"
-			icon: "kubejs:energy_machine"
-			x: -7.0d
-			y: 7.0d
-			shape: "hexagon"
+			dependencies: ["670D778AD8106A5C"]
 			description: [
 				"通过这些能量极高的机器，你的机器将会进一步的加速，效率的提高是显而易见的。"
 				""
 				"&7时间就是金钱！"
 			]
-			dependencies: ["670D778AD8106A5C"]
-			size: 2.0d
+			icon: "kubejs:energy_machine"
 			id: "6F50B5D6930EDC27"
+			shape: "hexagon"
+			size: 2.0d
 			tasks: [
 				{
-					id: "1659CF2688E95EAB"
-					type: "item"
-					item: "kubejs:energy_machine"
 					consume_items: false
+					id: "1659CF2688E95EAB"
+					item: "kubejs:energy_machine"
+					type: "item"
 				}
 				{
 					id: "400F635E3CA92EE3"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			title: "第六章支线完成！"
+			x: -7.0d
+			y: 7.0d
 		}
 		{
-			icon: "kubejs:overclocking_machine"
-			x: -10.0d
-			y: 1.0d
-			shape: "hexagon"
+			dependencies: ["71D09587FF037DEC"]
 			description: [" 即便这不是你的目标，你也会需要一些的。"]
 			hide_dependency_lines: false
-			dependencies: ["71D09587FF037DEC"]
+			icon: "kubejs:overclocking_machine"
 			id: "7461E1DAB35B49CB"
+			shape: "hexagon"
 			tasks: [
 				{
-					id: "3EB36A72E708F192"
-					type: "item"
-					item: "kubejs:overclocking_machine"
 					consume_items: false
+					id: "3EB36A72E708F192"
+					item: "kubejs:overclocking_machine"
+					type: "item"
 				}
 				{
 					id: "6E873EB6BB5A9DA6"
-					type: "checkmark"
 					title: "自动生产"
+					type: "checkmark"
 				}
 			]
+			x: -10.0d
+			y: 1.0d
 		}
 	]
-	quest_links: [ ]
+	title: "&f&l6&r 运算变速"
 }

@@ -1,821 +1,817 @@
 {
-	id: "2FDA7DFC0C684E58"
-	group: "331B6409EF6A7840"
-	order_index: 5
-	filename: "stage_4"
-	title: "{quest.chapter.stage_4.name}"
-	icon: "ae2:controller"
-	default_quest_shape: ""
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "stage_4"
+	group: "331B6409EF6A7840"
+	icon: "ae2:controller"
+	id: "2FDA7DFC0C684E58"
+	order_index: 5
+	quest_links: [ ]
 	quests: [
 		{
-			title: "{quest.stage_4.introduce.title}"
-			icon: "kubejs:inductive_mechanism"
-			x: 1.0d
-			y: -2.5d
-			shape: "hexagon"
-			subtitle: "{quest.stage_4.introduce.subtitle}"
+			dependencies: ["74CFD83C501C4952"]
 			description: [
 				"{quest.stage_4.introduce.text1}"
 				""
 				"{quest.stage_4.introduce.text2}"
 			]
-			dependencies: ["74CFD83C501C4952"]
-			hide: true
-			size: 2.0d
+			hide_until_deps_complete: true
+			icon: "kubejs:inductive_mechanism"
 			id: "4B80A801A5BE4A01"
-			tasks: [{
-				id: "0C162B64EE377FC8"
-				type: "checkmark"
-				title: "{tip.kubejs.start}"
-			}]
 			rewards: [{
 				id: "01697377D270DD3C"
-				type: "item"
 				item: "create:builders_tea"
+				type: "item"
 			}]
+			shape: "hexagon"
+			size: 2.0d
+			subtitle: "{quest.stage_4.introduce.subtitle}"
+			tasks: [{
+				id: "0C162B64EE377FC8"
+				title: "{tip.kubejs.start}"
+				type: "checkmark"
+			}]
+			title: "{quest.stage_4.introduce.title}"
+			x: 1.0d
+			y: -2.5d
 		}
 		{
-			title: "{quest.stage_4.calculation_mechanism.title}"
-			icon: "kubejs:calculation_mechanism"
-			x: 1.0d
-			y: 7.5d
-			subtitle: "{quest.stage_4.calculation_mechanism.subtitle}"
-			description: ["{quest.stage_4.calculation_mechanism.text1}"]
 			dependencies: [
 				"1BF8F3CC8BEBB620"
 				"71D90A1E5D53FC0A"
 			]
+			description: ["{quest.stage_4.calculation_mechanism.text1}"]
+			icon: "kubejs:calculation_mechanism"
 			id: "6824055533465010"
+			subtitle: "{quest.stage_4.calculation_mechanism.subtitle}"
 			tasks: [
 				{
-					id: "34B7E632F7FD83DB"
-					type: "item"
-					item: "kubejs:calculation_mechanism"
 					consume_items: false
+					id: "34B7E632F7FD83DB"
+					item: "kubejs:calculation_mechanism"
+					type: "item"
 				}
 				{
 					id: "48B114D2C0F51F6D"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.calculation_mechanism.title}"
+			x: 1.0d
+			y: 7.5d
 		}
 		{
-			title: "{quest.stage_4.calculation_machine.title}"
-			x: 1.0d
-			y: 9.5d
-			shape: "hexagon"
+			dependencies: ["6824055533465010"]
 			description: [
 				"{quest.stage_4.calculation_machine.text1}"
 				""
 				"{quest.stage_4.calculation_machine.text2}"
 			]
-			dependencies: ["6824055533465010"]
-			size: 2.0d
 			id: "28DAED70768C6A50"
-			tasks: [{
-				id: "271B61FB0DCE6BC9"
-				type: "item"
-				item: "ae2:controller"
-				count: 4L
-				consume_items: false
-			}]
 			rewards: [
 				{
-					id: "40B14407CE6BAB56"
-					type: "item"
-					item: "kubejs:calculation_mechanism"
 					count: 16
+					id: "40B14407CE6BAB56"
+					item: "kubejs:calculation_mechanism"
+					type: "item"
 				}
 				{
 					id: "3FD881040347300A"
-					type: "item"
 					item: "thermal:lead_plate"
 					random_bonus: 4
+					type: "item"
 				}
 				{
-					id: "251617D5C69F93F2"
-					type: "item"
-					item: "ae2:fluix_crystal"
 					count: 6
+					id: "251617D5C69F93F2"
+					item: "ae2:fluix_crystal"
 					random_bonus: 12
+					type: "item"
 				}
 				{
-					id: "6865BCC1D30BBFC2"
-					type: "item"
-					item: "buddycards:buddycard_pack_base"
 					count: 2
+					id: "6865BCC1D30BBFC2"
+					item: "buddycards:buddycard_pack_base"
+					type: "item"
 				}
 			]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "271B61FB0DCE6BC9"
+				item: "ae2:controller"
+				type: "item"
+			}]
+			title: "{quest.stage_4.calculation_machine.title}"
+			x: 1.0d
+			y: 9.5d
 		}
 		{
-			title: "{quest.stage_4.sand.title}"
-			icon: "minecraft:sand"
-			x: -1.0d
-			y: -0.5d
-			subtitle: "{quest.stage_4.sand.subtitle}"
+			dependencies: ["4B80A801A5BE4A01"]
 			description: ["{quest.stage_4.sand.text1}"]
 			hide_dependency_lines: true
-			dependencies: ["4B80A801A5BE4A01"]
+			icon: "minecraft:sand"
 			id: "22202C87352242D6"
+			subtitle: "{quest.stage_4.sand.subtitle}"
 			tasks: [
 				{
-					id: "54D2F2F87424AB45"
-					type: "item"
-					item: "minecraft:sand"
 					consume_items: false
+					id: "54D2F2F87424AB45"
+					item: "minecraft:sand"
+					type: "item"
 				}
 				{
 					id: "58353DEAB0670141"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.sand.title}"
+			x: -1.0d
+			y: -0.5d
 		}
 		{
-			title: "{quest.stage_4.sand_ball.title}"
-			icon: "kubejs:sand_ball"
-			x: -1.0d
-			y: 0.5d
-			subtitle: "{quest.stage_4.sand_ball.subtitle}"
+			dependencies: ["22202C87352242D6"]
 			description: [
 				"{quest.stage_4.sand_ball.text1}"
 				""
 				"{quest.stage_4.sand_ball.text2}"
 			]
-			dependencies: ["22202C87352242D6"]
+			icon: "kubejs:sand_ball"
 			id: "42F1A649D86DB86D"
+			subtitle: "{quest.stage_4.sand_ball.subtitle}"
 			tasks: [
 				{
-					id: "05FFE255DDB4E66F"
-					type: "item"
-					item: "kubejs:sand_ball"
 					consume_items: false
+					id: "05FFE255DDB4E66F"
+					item: "kubejs:sand_ball"
+					type: "item"
 				}
 				{
 					id: "36183F0BBDAA8DB8"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.sand_ball.title}"
+			x: -1.0d
+			y: 0.5d
 		}
 		{
-			title: "{quest.stage_4.fine_sand.title}"
-			icon: "kubejs:fine_sand_bucket"
-			x: 1.0d
-			y: 1.5d
-			shape: "circle"
-			description: ["{quest.stage_4.fine_sand.text1}"]
 			dependencies: ["42F1A649D86DB86D"]
+			description: ["{quest.stage_4.fine_sand.text1}"]
+			icon: "kubejs:fine_sand_bucket"
 			id: "4412F3B2827606E4"
+			shape: "circle"
 			tasks: [{
 				id: "5C23F9DBF4F2F484"
-				type: "checkmark"
 				title: "{tip.kubejs.automated}"
+				type: "checkmark"
 			}]
+			title: "{quest.stage_4.fine_sand.title}"
+			x: 1.0d
+			y: 1.5d
 		}
 		{
-			title: "{quest.stage_4.rough_sand.title}"
-			icon: "kubejs:rough_sand"
-			x: -1.0d
-			y: 1.5d
-			subtitle: "{quest.stage_4.rough_sand.subtitle}"
-			description: ["{quest.stage_4.rough_sand.text1}"]
 			dependencies: ["42F1A649D86DB86D"]
+			description: ["{quest.stage_4.rough_sand.text1}"]
+			icon: "kubejs:rough_sand"
 			id: "0F5AA5DF001DCDF5"
+			subtitle: "{quest.stage_4.rough_sand.subtitle}"
 			tasks: [
 				{
-					id: "006110328A2D022F"
-					type: "item"
-					item: "kubejs:rough_sand"
 					consume_items: false
+					id: "006110328A2D022F"
+					item: "kubejs:rough_sand"
+					type: "item"
 				}
 				{
 					id: "589AB5A61CD95E2F"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.rough_sand.title}"
+			x: -1.0d
+			y: 1.5d
 		}
 		{
-			title: "{quest.stage_4.purified_sand.title}"
-			icon: "kubejs:purified_sand"
-			x: -1.0d
-			y: 3.0d
-			subtitle: "{quest.stage_4.purified_sand.subtitle}"
-			description: ["{quest.stage_4.purified_sand.text1}"]
 			dependencies: [
 				"60A8B4C736CE3226"
 				"0F5AA5DF001DCDF5"
 			]
+			description: ["{quest.stage_4.purified_sand.text1}"]
+			icon: "kubejs:purified_sand"
 			id: "343050A40A3AB1F0"
+			subtitle: "{quest.stage_4.purified_sand.subtitle}"
 			tasks: [
 				{
-					id: "76715E399222E329"
-					type: "item"
-					item: "kubejs:purified_sand"
 					consume_items: false
+					id: "76715E399222E329"
+					item: "kubejs:purified_sand"
+					type: "item"
 				}
 				{
 					id: "2BE9DD7F346679E2"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.purified_sand.title}"
+			x: -1.0d
+			y: 3.0d
 		}
 		{
-			title: "{quest.stage_4.charcoal.title}"
-			icon: "minecraft:charcoal"
-			x: 3.0d
-			y: 0.5d
-			subtitle: "{quest.stage_4.charcoal.subtitle}"
-			description: ["{quest.stage_4.charcoal.text1}"]
 			dependencies: ["46820FBDDDEE491E"]
+			description: ["{quest.stage_4.charcoal.text1}"]
+			icon: "minecraft:charcoal"
 			id: "3249CD08992F2BCD"
+			subtitle: "{quest.stage_4.charcoal.subtitle}"
 			tasks: [
 				{
-					id: "700F644CCBEBCA5A"
-					type: "item"
-					item: "minecraft:charcoal"
 					consume_items: false
+					id: "700F644CCBEBCA5A"
+					item: "minecraft:charcoal"
+					type: "item"
 				}
 				{
 					id: "760709B05A0FEF11"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.charcoal.title}"
+			x: 3.0d
+			y: 0.5d
 		}
 		{
-			title: "{quest.stage_4.coal_coke.title}"
-			icon: "thermal:coal_coke"
-			x: 3.0d
-			y: 1.5d
-			subtitle: "{quest.stage_4.coal_coke.subtitle}"
-			description: ["{quest.stage_4.coal_coke.text1}"]
 			dependencies: ["3249CD08992F2BCD"]
+			description: ["{quest.stage_4.coal_coke.text1}"]
+			icon: "thermal:coal_coke"
 			id: "1A383F96B312D1B8"
+			subtitle: "{quest.stage_4.coal_coke.subtitle}"
 			tasks: [
 				{
-					id: "7AFFEF4014CE671C"
-					type: "item"
-					item: "thermal:coal_coke"
 					consume_items: false
+					id: "7AFFEF4014CE671C"
+					item: "thermal:coal_coke"
+					type: "item"
 				}
 				{
 					id: "4960B920CCF3C186"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.coal_coke.title}"
+			x: 3.0d
+			y: 1.5d
 		}
 		{
-			title: "{quest.stage_4.coke_chunk.title}"
-			icon: "kubejs:coke_chunk"
-			x: 3.0d
-			y: 3.0d
-			subtitle: "{quest.stage_4.coke_chunk.subtitle}"
-			description: ["{quest.stage_4.coke_chunk.text1}"]
 			dependencies: ["1A383F96B312D1B8"]
+			description: ["{quest.stage_4.coke_chunk.text1}"]
+			icon: "kubejs:coke_chunk"
 			id: "16F920C2AF2FA2E0"
+			subtitle: "{quest.stage_4.coke_chunk.subtitle}"
 			tasks: [
 				{
-					id: "36A367A143AD6175"
-					type: "item"
-					item: "kubejs:coke_chunk"
 					consume_items: false
+					id: "36A367A143AD6175"
+					item: "kubejs:coke_chunk"
+					type: "item"
 				}
 				{
 					id: "44D36B403AA26E97"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.coke_chunk.title}"
+			x: 3.0d
+			y: 3.0d
 		}
 		{
-			title: "{quest.stage_4.silicon_compound.title}"
-			icon: "kubejs:silicon_compound"
-			x: 1.0d
-			y: 4.0d
-			subtitle: "{quest.stage_4.silicon_compound.subtitle}"
-			description: ["{quest.stage_4.silicon_compound.text1}"]
 			dependencies: [
 				"343050A40A3AB1F0"
 				"4412F3B2827606E4"
 				"16F920C2AF2FA2E0"
 			]
+			description: ["{quest.stage_4.silicon_compound.text1}"]
+			icon: "kubejs:silicon_compound"
 			id: "2268AFAF6E9AB5E2"
+			subtitle: "{quest.stage_4.silicon_compound.subtitle}"
 			tasks: [
 				{
-					id: "7824435744C12C18"
-					type: "item"
-					item: "kubejs:silicon_compound"
 					consume_items: false
+					id: "7824435744C12C18"
+					item: "kubejs:silicon_compound"
+					type: "item"
 				}
 				{
 					id: "2F239D4D9BB9B47A"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.silicon_compound.title}"
+			x: 1.0d
+			y: 4.0d
 		}
 		{
-			title: "{quest.stage_4.earth_charge.title}"
-			icon: "thermal:earth_charge"
-			x: -3.0d
-			y: 3.0d
-			subtitle: "{quest.stage_4.earth_charge.subtitle}"
-			description: ["{quest.stage_4.earth_charge.text1}"]
 			dependencies: ["5799B4124EE20DB1"]
+			description: ["{quest.stage_4.earth_charge.text1}"]
+			icon: "thermal:earth_charge"
 			id: "60A8B4C736CE3226"
+			subtitle: "{quest.stage_4.earth_charge.subtitle}"
 			tasks: [
 				{
-					id: "2C3C495C9B18005A"
-					type: "item"
-					item: "thermal:earth_charge"
 					consume_items: false
+					id: "2C3C495C9B18005A"
+					item: "thermal:earth_charge"
+					type: "item"
 				}
 				{
 					id: "21545C0F55D9D8C8"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.earth_charge.title}"
+			x: -3.0d
+			y: 3.0d
 		}
 		{
-			title: "{quest.stage_4.basalz_powder.title}"
-			icon: "thermal:basalz_powder"
-			x: -3.0d
-			y: 2.0d
-			subtitle: "{quest.stage_4.basalz_powder.subtitle}"
-			description: ["{quest.stage_4.basalz_powder.text1}"]
 			dependencies: ["6C4CB8F616A9C3DF"]
+			description: ["{quest.stage_4.basalz_powder.text1}"]
+			icon: "thermal:basalz_powder"
 			id: "5799B4124EE20DB1"
+			subtitle: "{quest.stage_4.basalz_powder.subtitle}"
 			tasks: [
 				{
-					id: "54F29099D9D81837"
-					type: "item"
-					item: "thermal:basalz_powder"
 					consume_items: false
+					id: "54F29099D9D81837"
+					item: "thermal:basalz_powder"
+					type: "item"
 				}
 				{
 					id: "05969082F437FCA9"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.basalz_powder.title}"
+			x: -3.0d
+			y: 2.0d
 		}
 		{
-			title: "{quest.stage_4.basalz_rod.title}"
-			icon: "thermal:basalz_rod"
-			x: -3.0d
-			y: 0.5d
-			subtitle: "{quest.stage_4.basalz_rod.subtitle}"
-			description: ["{quest.stage_4.basalz_rod.text1}"]
 			dependencies: ["0B602ED47A0195A4"]
+			description: ["{quest.stage_4.basalz_rod.text1}"]
+			icon: "thermal:basalz_rod"
 			id: "6C4CB8F616A9C3DF"
+			subtitle: "{quest.stage_4.basalz_rod.subtitle}"
 			tasks: [
 				{
-					id: "712E7C4EEB4BCF55"
-					type: "item"
-					item: "thermal:basalz_rod"
 					consume_items: false
+					id: "712E7C4EEB4BCF55"
+					item: "thermal:basalz_rod"
+					type: "item"
 				}
 				{
 					id: "7DF47F688E5C795C"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.basalz_rod.title}"
+			x: -3.0d
+			y: 0.5d
 		}
 		{
-			title: "{quest.stage_4.basalt.title}"
-			icon: "minecraft:basalt"
-			x: -3.0d
-			y: -1.0d
-			subtitle: "{quest.stage_4.basalt.subtitle}"
+			dependencies: ["4B80A801A5BE4A01"]
 			description: ["{quest.stage_4.basalt.text1}"]
 			hide_dependency_lines: true
-			dependencies: ["4B80A801A5BE4A01"]
+			icon: "minecraft:basalt"
 			id: "0B602ED47A0195A4"
+			subtitle: "{quest.stage_4.basalt.subtitle}"
 			tasks: [
 				{
-					id: "4649973A51C977D9"
-					type: "item"
-					item: "minecraft:basalt"
 					consume_items: false
+					id: "4649973A51C977D9"
+					item: "minecraft:basalt"
+					type: "item"
 				}
 				{
 					id: "738E569981496B56"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.basalt.title}"
+			x: -3.0d
+			y: -1.0d
 		}
 		{
-			title: "{quest.stage_4.flux_magnet.title}"
-			icon: {
-				id: "thermal:flux_magnet"
-				Count: 1b
-				tag: { }
-			}
-			x: -4.0d
-			y: 1.0d
-			subtitle: "{quest.stage_4.flux_magnet.subtitle}"
+			dependencies: ["0B602ED47A0195A4"]
 			description: [
 				"{quest.stage_4.flux_magnet.text1}"
 				""
 				"{quest.stage_4.flux_magnet.text2}"
 			]
-			dependencies: ["0B602ED47A0195A4"]
+			icon: {
+				Count: 1
+				id: "thermal:flux_magnet"
+				tag: { }
+			}
 			id: "58B534C4AEB4139D"
+			subtitle: "{quest.stage_4.flux_magnet.subtitle}"
 			tasks: [
 				{
+					consume_items: false
 					id: "7538F2E8CFAF69F6"
-					type: "item"
 					item: {
+						Count: 1
 						id: "thermal:flux_magnet"
-						Count: 1b
 						tag: { }
 					}
-					consume_items: false
+					type: "item"
 				}
 				{
 					id: "11A074DF1CA99AD3"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.flux_magnet.title}"
+			x: -4.0d
+			y: 1.0d
 		}
 		{
-			title: "{quest.stage_4.snowball.title}"
-			icon: "minecraft:snowball"
-			x: 5.0d
-			y: -1.0d
-			subtitle: "{quest.stage_4.snowball.subtitle}"
+			dependencies: ["4B80A801A5BE4A01"]
 			description: ["{quest.stage_4.snowball.text1}"]
 			hide_dependency_lines: true
-			dependencies: ["4B80A801A5BE4A01"]
+			icon: "minecraft:snowball"
 			id: "4B34B52092BA32BE"
+			subtitle: "{quest.stage_4.snowball.subtitle}"
 			tasks: [
 				{
-					id: "56F4F1F21FE5FB17"
-					type: "item"
-					item: "minecraft:snowball"
 					consume_items: false
+					id: "56F4F1F21FE5FB17"
+					item: "minecraft:snowball"
+					type: "item"
 				}
 				{
 					id: "193D8F8FEC7F864B"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.snowball.title}"
+			x: 5.0d
+			y: -1.0d
 		}
 		{
-			title: "{quest.stage_4.entropy_manipulator.title}"
-			icon: "ae2:entropy_manipulator"
-			x: 6.0d
-			y: 3.0d
-			subtitle: "{quest.stage_4.entropy_manipulator.subtitle}"
+			dependencies: ["4B34B52092BA32BE"]
 			description: [
 				"{quest.stage_4.entropy_manipulator.text1}"
 				""
 				"{quest.stage_4.entropy_manipulator.text2}"
 			]
-			dependencies: ["4B34B52092BA32BE"]
+			icon: "ae2:entropy_manipulator"
 			id: "6D1519B746E032FB"
+			subtitle: "{quest.stage_4.entropy_manipulator.subtitle}"
 			tasks: [
 				{
-					id: "641183133CA49CCA"
-					type: "item"
-					item: "ae2:entropy_manipulator"
 					consume_items: false
+					id: "641183133CA49CCA"
+					item: "ae2:entropy_manipulator"
+					type: "item"
 				}
 				{
 					id: "49EAB67814570219"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.entropy_manipulator.title}"
+			x: 6.0d
+			y: 3.0d
 		}
 		{
-			title: "{quest.stage_4.blizz_rod.title}"
-			icon: "thermal:blizz_rod"
-			x: 5.0d
-			y: 2.5d
-			subtitle: "{quest.stage_4.blizz_rod.subtitle}"
-			description: ["{quest.stage_4.blizz_rod.text1}"]
 			dependencies: ["4B34B52092BA32BE"]
+			description: ["{quest.stage_4.blizz_rod.text1}"]
+			icon: "thermal:blizz_rod"
 			id: "0AE7FAEBD5F86D9C"
+			subtitle: "{quest.stage_4.blizz_rod.subtitle}"
 			tasks: [
 				{
-					id: "11B1248ECFCD2F26"
-					type: "item"
-					item: "thermal:blizz_rod"
 					consume_items: false
+					id: "11B1248ECFCD2F26"
+					item: "thermal:blizz_rod"
+					type: "item"
 				}
 				{
 					id: "518D5675C9D1757D"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.blizz_rod.title}"
+			x: 5.0d
+			y: 2.5d
 		}
 		{
-			title: "{quest.stage_4.blizz_powder.title}"
-			icon: "thermal:blizz_powder"
-			x: 5.0d
-			y: 4.0d
-			subtitle: "{quest.stage_4.blizz_powder.subtitle}"
-			description: ["{quest.stage_4.blizz_powder.text1}"]
 			dependencies: ["0AE7FAEBD5F86D9C"]
+			description: ["{quest.stage_4.blizz_powder.text1}"]
+			icon: "thermal:blizz_powder"
 			id: "01B0A6236A5073D1"
+			subtitle: "{quest.stage_4.blizz_powder.subtitle}"
 			tasks: [
 				{
-					id: "7EA6D73F7A49EBAF"
-					type: "item"
-					item: "thermal:blizz_powder"
 					consume_items: false
+					id: "7EA6D73F7A49EBAF"
+					item: "thermal:blizz_powder"
+					type: "item"
 				}
 				{
 					id: "5CA556BB4614DD06"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.blizz_powder.title}"
+			x: 5.0d
+			y: 4.0d
 		}
 		{
-			title: "{quest.stage_4.ice_charge.title}"
-			icon: "thermal:ice_charge"
-			x: 5.0d
-			y: 5.0d
-			subtitle: "{quest.stage_4.ice_charge.subtitle}"
-			description: ["{quest.stage_4.ice_charge.text1}"]
 			dependencies: ["01B0A6236A5073D1"]
+			description: ["{quest.stage_4.ice_charge.text1}"]
+			icon: "thermal:ice_charge"
 			id: "4732465116D723EE"
+			subtitle: "{quest.stage_4.ice_charge.subtitle}"
 			tasks: [
 				{
-					id: "3DFF735C19CE82A5"
-					type: "item"
-					item: "thermal:ice_charge"
 					consume_items: false
+					id: "3DFF735C19CE82A5"
+					item: "thermal:ice_charge"
+					type: "item"
 				}
 				{
 					id: "220B89A9B897FA67"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.ice_charge.title}"
+			x: 5.0d
+			y: 5.0d
 		}
 		{
-			title: "{quest.stage_4.silicon.title}"
-			icon: "ae2:silicon"
-			x: 3.0d
-			y: 5.0d
-			subtitle: "{quest.stage_4.silicon.subtitle}"
-			description: ["{quest.stage_4.silicon.text1}"]
 			dependencies: [
 				"2268AFAF6E9AB5E2"
 				"4732465116D723EE"
 			]
+			description: ["{quest.stage_4.silicon.text1}"]
+			icon: "ae2:silicon"
 			id: "067C5FDA4709F195"
+			subtitle: "{quest.stage_4.silicon.subtitle}"
 			tasks: [
 				{
-					id: "055CAB379397C603"
-					type: "item"
-					item: "ae2:silicon"
 					consume_items: false
+					id: "055CAB379397C603"
+					item: "ae2:silicon"
+					type: "item"
 				}
 				{
 					id: "097EDCB9CFF9F686"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.silicon.title}"
+			x: 3.0d
+			y: 5.0d
 		}
 		{
-			title: "{quest.stage_4.printed_silicon.title}"
-			icon: "ae2:printed_silicon"
-			x: 1.0d
-			y: 6.0d
-			subtitle: "{quest.stage_4.printed_silicon.subtitle}"
-			description: ["{quest.stage_4.printed_silicon.text1}"]
 			dependencies: [
 				"067C5FDA4709F195"
 				"354DB8B136C6B310"
 			]
 			dependency_requirement: "one_completed"
+			description: ["{quest.stage_4.printed_silicon.text1}"]
+			icon: "ae2:printed_silicon"
 			id: "71D90A1E5D53FC0A"
+			subtitle: "{quest.stage_4.printed_silicon.subtitle}"
 			tasks: [
 				{
-					id: "0616F7E4DC4C388A"
-					type: "item"
-					item: "ae2:printed_silicon"
 					consume_items: false
+					id: "0616F7E4DC4C388A"
+					item: "ae2:printed_silicon"
+					type: "item"
 				}
 				{
 					id: "29B41D9EDCFC60DE"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.printed_silicon.title}"
+			x: 1.0d
+			y: 6.0d
 		}
 		{
-			title: "{quest.stage_4.logs.title}"
-			icon: "minecraft:oak_log"
-			x: 3.0d
-			y: -0.5d
-			shape: "square"
-			subtitle: "{quest.stage_4.logs.subtitle}"
+			dependencies: ["4B80A801A5BE4A01"]
 			description: ["{quest.stage_4.logs.text1}"]
 			hide_dependency_lines: true
-			dependencies: ["4B80A801A5BE4A01"]
+			icon: "minecraft:oak_log"
 			id: "46820FBDDDEE491E"
+			shape: "square"
+			subtitle: "{quest.stage_4.logs.subtitle}"
 			tasks: [
 				{
-					id: "0AA0DEB1A87DA675"
-					type: "item"
-					title: "{tip.kubejs.any_log}"
+					consume_items: false
 					icon: "minecraft:oak_log"
+					id: "0AA0DEB1A87DA675"
 					item: {
+						Count: 1
 						id: "itemfilters:tag"
-						Count: 1b
 						tag: {
 							value: "minecraft:logs"
 						}
 					}
-					consume_items: false
+					title: "{tip.kubejs.any_log}"
+					type: "item"
 				}
 				{
 					id: "72BA1D3BD545CBE6"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.logs.title}"
+			x: 3.0d
+			y: -0.5d
 		}
 		{
-			title: "{quest.stage_4.flash_drive.title}"
-			x: -0.5d
-			y: 7.5d
-			shape: "circle"
+			dependencies: ["71D90A1E5D53FC0A"]
 			description: [
 				"{quest.stage_4.flash_drive.text1}"
 				"{quest.stage_4.flash_drive.text2}"
 				"{quest.stage_4.flash_drive.text3}"
 			]
 			hide_dependency_lines: true
-			dependencies: ["71D90A1E5D53FC0A"]
 			id: "1BF8F3CC8BEBB620"
+			shape: "circle"
 			tasks: [{
+				consume_items: false
 				id: "1CC8A01100CE4AE3"
-				type: "item"
 				item: {
+					Count: 1
 					id: "kubejs:flash_drive"
-					Count: 1b
 					tag: {
 						Damage: 0
 					}
 				}
-				consume_items: false
+				type: "item"
 			}]
+			title: "{quest.stage_4.flash_drive.title}"
+			x: -0.5d
+			y: 7.5d
 		}
 		{
-			title: "{quest.stage_4.creosote.title}"
-			icon: "thermal:creosote_bucket"
-			x: 4.0d
-			y: 1.0d
-			shape: "circle"
-			description: ["{quest.stage_4.creosote.text1}"]
 			dependencies: ["3249CD08992F2BCD"]
+			description: ["{quest.stage_4.creosote.text1}"]
+			icon: "thermal:creosote_bucket"
 			id: "33674138F4866C18"
+			shape: "circle"
 			tasks: [{
 				id: "224ACB0727C6F84E"
-				type: "checkmark"
 				title: "{tip.kubejs.sure}"
+				type: "checkmark"
 			}]
+			title: "{quest.stage_4.creosote.title}"
+			x: 4.0d
+			y: 1.0d
 		}
 		{
+			dependencies: ["28DAED70768C6A50"]
+			description: ["{quest.stage_4.printed_processor.text1}"]
+			id: "24C48CFAAD71B230"
+			subtitle: "{quest.stage_4.printed_processor.subtitle}"
+			tasks: [
+				{
+					consume_items: false
+					id: "169FB95D6E0D595C"
+					item: "ae2:printed_calculation_processor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "5700F4754B3BF60A"
+					item: "ae2:printed_engineering_processor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "00BE77CA9C483AF9"
+					item: "ae2:printed_logic_processor"
+					type: "item"
+				}
+			]
 			title: "{quest.stage_4.printed_processor.title}"
 			x: 3.0d
 			y: 9.5d
-			subtitle: "{quest.stage_4.printed_processor.subtitle}"
-			description: ["{quest.stage_4.printed_processor.text1}"]
-			dependencies: ["28DAED70768C6A50"]
-			id: "24C48CFAAD71B230"
-			tasks: [
-				{
-					id: "169FB95D6E0D595C"
-					type: "item"
-					item: "ae2:printed_calculation_processor"
-					consume_items: false
-				}
-				{
-					id: "5700F4754B3BF60A"
-					type: "item"
-					item: "ae2:printed_engineering_processor"
-					consume_items: false
-				}
-				{
-					id: "00BE77CA9C483AF9"
-					type: "item"
-					item: "ae2:printed_logic_processor"
-					consume_items: false
-				}
-			]
 		}
 		{
+			dependencies: ["24C48CFAAD71B230"]
+			description: ["{quest.stage_4.processor.text1}"]
+			id: "2B8F1D804107EB8C"
+			subtitle: "{quest.stage_4.processor.subtitle}"
+			tasks: [
+				{
+					consume_items: false
+					id: "55175B2CE3C98E17"
+					item: "ae2:logic_processor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "58287DB7D30C7422"
+					item: "ae2:calculation_processor"
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "57389D4F0BF91E93"
+					item: "ae2:engineering_processor"
+					type: "item"
+				}
+			]
 			title: "{quest.stage_4.processor.title}"
 			x: 4.0d
 			y: 9.5d
-			subtitle: "{quest.stage_4.processor.subtitle}"
-			description: ["{quest.stage_4.processor.text1}"]
-			dependencies: ["24C48CFAAD71B230"]
-			id: "2B8F1D804107EB8C"
-			tasks: [
-				{
-					id: "55175B2CE3C98E17"
-					type: "item"
-					item: "ae2:logic_processor"
-					consume_items: false
-				}
-				{
-					id: "58287DB7D30C7422"
-					type: "item"
-					item: "ae2:calculation_processor"
-					consume_items: false
-				}
-				{
-					id: "57389D4F0BF91E93"
-					type: "item"
-					item: "ae2:engineering_processor"
-					consume_items: false
-				}
-			]
 		}
 		{
-			title: "{quest.stage_4.redstone_flux.title}"
-			icon: "thermal:dynamo_magmatic"
-			x: -1.0d
-			y: -2.5d
-			shape: "circle"
-			description: ["{quest.stage_4.redstone_flux.text1}"]
 			dependencies: ["4B80A801A5BE4A01"]
+			description: ["{quest.stage_4.redstone_flux.text1}"]
+			icon: "thermal:dynamo_magmatic"
 			id: "13B197C90F9812C8"
+			shape: "circle"
 			tasks: [{
 				id: "4C687EF00A44ED1E"
-				type: "checkmark"
 				title: "{tip.kubejs.sure}"
+				type: "checkmark"
 			}]
+			title: "{quest.stage_4.redstone_flux.title}"
+			x: -1.0d
+			y: -2.5d
 		}
 		{
-			title: "{quest.stage_4.finish_4a.title}"
+			dependencies: ["3B431AAADE8845FA"]
+			description: ["{quest.stage_4.finish_4a.text1}"]
+			hide_until_deps_visible: true
 			icon: "kubejs:failed_alchemy_0"
+			id: "4921355FCFE7DF2A"
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				icon: "kubejs:substrate_chaos"
+				id: "3E71EB06044BC368"
+				title: "{quest.stage_4.finish_4a.target1}"
+				type: "custom"
+			}]
+			title: "{quest.stage_4.finish_4a.title}"
 			x: -3.0d
 			y: 5.0d
-			shape: "hexagon"
-			description: ["{quest.stage_4.finish_4a.text1}"]
-			dependencies: ["3B431AAADE8845FA"]
-			hide: true
-			size: 1.5d
-			id: "4921355FCFE7DF2A"
-			tasks: [{
-				id: "3E71EB06044BC368"
-				type: "custom"
-				title: "{quest.stage_4.finish_4a.target1}"
-				icon: "kubejs:substrate_chaos"
-			}]
 		}
 		{
-			title: "{quest.stage_4.silicon_4a.title}"
-			icon: "ae2:silicon"
-			x: -1.0d
-			y: 5.0d
-			subtitle: "{quest.stage_4.silicon_4a.subtitle}"
-			description: ["{quest.stage_4.silicon_4a.text1}"]
 			dependencies: ["4921355FCFE7DF2A"]
-			hide: true
+			description: ["{quest.stage_4.silicon_4a.text1}"]
+			hide_until_deps_visible: true
+			icon: "ae2:silicon"
 			id: "354DB8B136C6B310"
+			subtitle: "{quest.stage_4.silicon_4a.subtitle}"
 			tasks: [
 				{
-					id: "2C8D8E0ABACCC38C"
-					type: "item"
-					item: "ae2:silicon"
 					consume_items: false
+					id: "2C8D8E0ABACCC38C"
+					item: "ae2:silicon"
+					type: "item"
 				}
 				{
 					id: "130EB1E9E50BF8A9"
-					type: "checkmark"
 					title: "{tip.kubejs.automated}"
+					type: "checkmark"
 				}
 			]
+			title: "{quest.stage_4.silicon_4a.title}"
+			x: -1.0d
+			y: 5.0d
 		}
 		{
-			title: "{quest.stage_4.laser_lamp.title}"
-			icon: "kubejs:ponder_laser_lamp_on"
-			x: 3.0d
-			y: -2.5d
-			shape: "circle"
+			dependencies: ["4B80A801A5BE4A01"]
 			description: [
 				"{quest.stage_4.laser_lamp.text1}"
 				""
@@ -825,23 +821,26 @@
 				""
 				"{quest.stage_4.laser_lamp.text4}"
 			]
-			dependencies: ["4B80A801A5BE4A01"]
+			icon: "kubejs:ponder_laser_lamp_on"
 			id: "21D063D2676E498F"
+			rewards: [{
+				command: "/c ponder kubejs:ponder_laser_lamp"
+				icon: "minecraft:writable_book"
+				id: "6B9CEF7FDB1276C4"
+				team_reward: false
+				title: "思索 炼金镭射"
+				type: "command"
+			}]
+			shape: "circle"
 			tasks: [{
 				id: "31946A8474A2EA26"
-				type: "checkmark"
 				title: "{tip.kubejs.sure}"
+				type: "checkmark"
 			}]
-			rewards: [{
-				id: "6B9CEF7FDB1276C4"
-				type: "command"
-				title: "思索 炼金镭射"
-				icon: "minecraft:writable_book"
-				team_reward: false
-				command: "/c ponder kubejs:ponder_laser_lamp"
-				player_command: true
-			}]
+			title: "{quest.stage_4.laser_lamp.title}"
+			x: 3.0d
+			y: -2.5d
 		}
 	]
-	quest_links: [ ]
+	title: "{quest.chapter.stage_4.name}"
 }

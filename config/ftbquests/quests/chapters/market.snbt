@@ -1,176 +1,177 @@
 {
-	id: "44F68408CAD025B8"
-	group: "0810E42B2DD79973"
-	order_index: 1
-	filename: "market"
-	title: "{quest.chapter.market.name}"
-	icon: "minecraft:chest"
-	default_quest_shape: ""
 	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "market"
+	group: "0810E42B2DD79973"
+	icon: "minecraft:chest"
+	id: "44F68408CAD025B8"
+	order_index: 1
+	quest_links: [ ]
 	quests: [
 		{
-			title: "{quest.market.bed.title}"
-			icon: "minecraft:cyan_bed"
-			x: -9.5d
-			y: -1.5d
-			subtitle: "10 {item.thermal.silver_coin}"
 			description: ["{quest.market.bed.text1}"]
+			icon: "minecraft:cyan_bed"
 			id: "5D17CB247942013A"
-			tasks: [{
-				id: "0783860FB502A201"
-				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
-				item: "thermal:silver_coin"
-				count: 10L
-			}]
 			rewards: [{
 				id: "55EF0FE847AE3353"
-				type: "item"
 				item: "minecraft:cyan_bed"
+				type: "item"
 			}]
+			subtitle: "10 {item.thermal.silver_coin}"
+			tasks: [{
+				count: 10L
+				icon: { Count: 10, id: "thermal:silver_coin" }
+				id: "0783860FB502A201"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.bed.title}"
+			x: -9.5d
+			y: -1.5d
 		}
 		{
-			title: "{quest.market.enchanted_saw.title}"
+			can_repeat: true
+			description: ["{quest.market.enchanted_saw.text1}"]
+			hide_dependency_lines: true
 			icon: {
+				Count: 1
 				id: "kubejs:netherite_saw"
-				Count: 1b
 				tag: {
-					Modifier: "forbidden_arcanus:eternal"
-					display: {
-						Name: "[\"附魔手锯\"]"
-						Lore: ["[\"千万不要在物品栏中合成\"]"]
-					}
+					Damage: 0
 					Enchantments: [{
 						id: "minecraft:mending"
 						lvl: 3s
 					}]
-					Unbreakable: 1b
-					Damage: 0
 					HideFlags: 1b
+					Modifier: "forbidden_arcanus:eternal"
+					Unbreakable: 1b
+					display: {
+						Lore: ["[\"千万不要在物品栏中合成\"]"]
+						Name: "[\"附魔手锯\"]"
+					}
 				}
 			}
-			x: -8.5d
-			y: -6.5d
-			subtitle: "2 {item.thermal.gold_coin}"
-			description: ["{quest.market.enchanted_saw.text1}"]
-			hide_dependency_lines: true
-			can_repeat: true
 			id: "4F953BACF4D1C151"
+			rewards: [{
+				id: "3B47922B4BDB034F"
+				item: {
+					Count: 1
+					id: "kubejs:netherite_saw"
+					tag: {
+						Damage: 0
+						Enchantments: [{
+							id: "minecraft:mending"
+							lvl: 3s
+						}]
+						HideFlags: 1b
+						Modifier: "forbidden_arcanus:eternal"
+						Unbreakable: 1b
+						display: {
+							Lore: ["{\"translate\":\"tip.enchanted_saw.description\",\"italic\":false}"]
+							Name: "{\"translate\":\"tip.enchanted_saw.name\",\"italic\":false}"
+						}
+					}
+				}
+				type: "item"
+			}]
+			subtitle: "2 {item.thermal.gold_coin}"
 			tasks: [
 				{
 					id: "4C77B71D0EC3B2EA"
-					type: "item"
 					item: {
+						Count: 1
 						id: "kubejs:netherite_saw"
-						Count: 1b
 						tag: {
 							Damage: 0
 						}
 					}
+					type: "item"
 				}
 				{
-					id: "3EE8736C08EF80F4"
-					type: "item"
-					icon: { id: "thermal:gold_coin", Count: 2b }
-					item: "thermal:gold_coin"
 					count: 2L
+					icon: { Count: 2, id: "thermal:gold_coin" }
+					id: "3EE8736C08EF80F4"
+					item: "thermal:gold_coin"
+					type: "item"
 				}
 			]
-			rewards: [{
-				id: "3B47922B4BDB034F"
-				type: "item"
-				item: {
-					id: "kubejs:netherite_saw"
-					Count: 1b
-					tag: {
-						Modifier: "forbidden_arcanus:eternal"
-						display: {
-							Name: "{\"translate\":\"tip.enchanted_saw.name\",\"italic\":false}"
-							Lore: ["{\"translate\":\"tip.enchanted_saw.description\",\"italic\":false}"]
-						}
-						Enchantments: [{
-							id: "minecraft:mending"
-							lvl: 3s
-						}]
-						Unbreakable: 1b
-						Damage: 0
-						HideFlags: 1b
-					}
-				}
-			}]
+			title: "{quest.market.enchanted_saw.title}"
+			x: -8.5d
+			y: -6.5d
 		}
 		{
-			title: "{quest.market.enchanted_screwdriver.title}"
+			can_repeat: true
+			description: ["{quest.market.enchanted_screwdriver.text1}"]
 			icon: {
+				Count: 1
 				id: "projectred_core:screwdriver"
-				Count: 1b
 				tag: {
-					Modifier: "forbidden_arcanus:eternal"
-					display: {
-						Name: "[\"附魔螺丝刀\"]"
-					}
+					Damage: 0
 					Enchantments: [{
 						id: "minecraft:mending"
 						lvl: 3s
 					}]
-					Unbreakable: 1b
-					Damage: 0
 					HideFlags: 1b
-				}
-			}
-			x: -7.0d
-			y: -6.5d
-			subtitle: "2 {item.thermal.gold_coin}"
-			description: ["{quest.market.enchanted_screwdriver.text1}"]
-			can_repeat: true
-			id: "72CACE8F0E4701B1"
-			tasks: [
-				{
-					id: "1E25EB2883C9A960"
-					type: "item"
-					item: {
-						id: "projectred_core:screwdriver"
-						Count: 1b
-						tag: {
-							Damage: 0
-						}
+					Modifier: "forbidden_arcanus:eternal"
+					Unbreakable: 1b
+					display: {
+						Name: "[\"附魔螺丝刀\"]"
 					}
 				}
-				{
-					id: "74585BB7E80CF010"
-					type: "item"
-					icon: { id: "thermal:gold_coin", Count: 2b }
-					item: "thermal:gold_coin"
-					count: 2L
-				}
-			]
+			}
+			id: "72CACE8F0E4701B1"
 			rewards: [{
 				id: "3272863B6DC13FCC"
-				type: "item"
 				item: {
+					Count: 1
 					id: "projectred_core:screwdriver"
-					Count: 1b
 					tag: {
-						Modifier: "forbidden_arcanus:eternal"
-						display: {
-							Name: "{\"translate\":\"tip.enchanted_screwdriver.name\",\"italic\":false}"
-						}
+						Damage: 0
 						Enchantments: [{
 							id: "minecraft:mending"
 							lvl: 3s
 						}]
-						Unbreakable: 1b
-						Damage: 0
 						HideFlags: 1b
+						Modifier: "forbidden_arcanus:eternal"
+						Unbreakable: 1b
+						display: {
+							Name: "{\"translate\":\"tip.enchanted_screwdriver.name\",\"italic\":false}"
+						}
 					}
 				}
+				type: "item"
 			}]
+			subtitle: "2 {item.thermal.gold_coin}"
+			tasks: [
+				{
+					id: "1E25EB2883C9A960"
+					item: {
+						Count: 1
+						id: "projectred_core:screwdriver"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					icon: { Count: 2, id: "thermal:gold_coin" }
+					id: "74585BB7E80CF010"
+					item: "thermal:gold_coin"
+					type: "item"
+				}
+			]
+			title: "{quest.market.enchanted_screwdriver.title}"
+			x: -7.0d
+			y: -6.5d
 		}
 		{
-			title: "{quest.market.enchanted_resonator.title}"
+			can_repeat: true
+			description: ["{quest.market.enchanted_resonator.text1}"]
 			icon: {
+				Count: 1
 				id: "kubejs:chromatic_resonator"
-				Count: 1b
 				tag: {
 					Damage: 0
 					Enchantments: [{
@@ -179,213 +180,212 @@
 					}]
 				}
 			}
-			x: -5.0d
-			y: -6.5d
-			subtitle: "3 {item.thermal.gold_coin}"
-			description: ["{quest.market.enchanted_resonator.text1}"]
-			can_repeat: true
 			id: "43FC566E833BE834"
-			tasks: [
-				{
-					id: "36CBD54BCB068EB1"
-					type: "item"
-					item: {
-						id: "kubejs:chromatic_resonator"
-						Count: 1b
-						tag: {
-							Damage: 0
-						}
-					}
-				}
-				{
-					id: "5B31A98B9EFCCFAB"
-					type: "item"
-					icon: { id: "thermal:gold_coin", Count: 3b }
-					item: "thermal:gold_coin"
-					count: 3L
-				}
-			]
 			rewards: [{
 				id: "267F51D0A50B8298"
-				type: "item"
 				item: {
+					Count: 1
 					id: "kubejs:chromatic_resonator"
-					Count: 1b
 					tag: {
-						Modifier: "forbidden_arcanus:eternal"
-						display: {
-							Name: "{\"translate\":\"tip.enchanted_resonator.name\",\"italic\":false}"
-						}
+						Damage: 0
 						Enchantments: [{
 							id: "minecraft:mending"
 							lvl: 3s
 						}]
-						Unbreakable: 1b
-						Damage: 0
 						HideFlags: 1b
+						Modifier: "forbidden_arcanus:eternal"
+						Unbreakable: 1b
+						display: {
+							Name: "{\"translate\":\"tip.enchanted_resonator.name\",\"italic\":false}"
+						}
 					}
 				}
+				type: "item"
 			}]
+			subtitle: "3 {item.thermal.gold_coin}"
+			tasks: [
+				{
+					id: "36CBD54BCB068EB1"
+					item: {
+						Count: 1
+						id: "kubejs:chromatic_resonator"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 3L
+					icon: { Count: 3, id: "thermal:gold_coin" }
+					id: "5B31A98B9EFCCFAB"
+					item: "thermal:gold_coin"
+					type: "item"
+				}
+			]
+			title: "{quest.market.enchanted_resonator.title}"
+			x: -5.0d
+			y: -6.5d
 		}
 		{
-			title: "{quest.market.introduce.title}"
-			icon: "minecraft:chest"
-			x: -6.0d
-			y: -4.0d
-			shape: "hexagon"
 			description: [
 				"{quest.market.introduce.text1}"
 				""
 				"{quest.market.introduce.text2}"
 			]
-			size: 2.0d
+			icon: "minecraft:chest"
 			id: "0F870BEA235D662D"
+			shape: "hexagon"
+			size: 2.0d
 			tasks: [{
 				id: "3929233A89B34A71"
 				type: "checkmark"
 			}]
+			title: "{quest.market.introduce.title}"
+			x: -6.0d
+			y: -4.0d
 		}
 		{
-			title: "{quest.market.silver_coin.title}"
-			icon: { id: "thermal:silver_coin", Count: 64b }
-			x: -4.0d
-			y: -4.0d
+			can_repeat: true
+			dependencies: ["0F870BEA235D662D"]
+			description: ["{quest.market.silver_coin.text1}"]
+			icon: { Count: 64, id: "thermal:silver_coin" }
+			id: "5326F6482C45D22A"
+			rewards: [{
+				count: 64
+				icon: { Count: 64, id: "thermal:silver_coin" }
+				id: "660F46969E3F00EF"
+				item: "thermal:silver_coin"
+				team_reward: false
+				type: "item"
+			}]
 			shape: "circle"
 			subtitle: "{item.thermal.gold_coin} -> {item.thermal.silver_coin}"
-			description: ["{quest.market.silver_coin.text1}"]
-			dependencies: ["0F870BEA235D662D"]
-			can_repeat: true
-			id: "5326F6482C45D22A"
 			tasks: [{
-				id: "772821832EE93341"
-				type: "item"
-				item: "thermal:gold_coin"
 				consume_items: true
-			}]
-			rewards: [{
-				id: "660F46969E3F00EF"
+				id: "772821832EE93341"
+				item: "thermal:gold_coin"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 64b }
-				team_reward: false
-				item: "thermal:silver_coin"
-				count: 64
 			}]
+			title: "{quest.market.silver_coin.title}"
+			x: -4.0d
+			y: -4.0d
 		}
 		{
-			title: "{quest.market.gold_coin.title}"
-			icon: "thermal:gold_coin"
-			x: -8.0d
-			y: -4.0d
-			shape: "circle"
-			subtitle: "{item.thermal.silver_coin} -> {item.thermal.gold_coin}"
-			description: ["{quest.market.gold_coin.text1}"]
-			dependencies: ["0F870BEA235D662D"]
 			can_repeat: true
+			dependencies: ["0F870BEA235D662D"]
+			description: ["{quest.market.gold_coin.text1}"]
+			icon: "thermal:gold_coin"
 			id: "1A566C74B1F7F050"
-			tasks: [{
-				id: "2387D852CA97AD1A"
-				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 64b }
-				item: "thermal:silver_coin"
-				count: 64L
-			}]
 			rewards: [{
 				id: "3EBAEA5F9183651B"
-				type: "item"
-				team_reward: false
 				item: "thermal:gold_coin"
+				team_reward: false
+				type: "item"
 			}]
+			shape: "circle"
+			subtitle: "{item.thermal.silver_coin} -> {item.thermal.gold_coin}"
+			tasks: [{
+				count: 64L
+				icon: { Count: 64, id: "thermal:silver_coin" }
+				id: "2387D852CA97AD1A"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.gold_coin.title}"
+			x: -8.0d
+			y: -4.0d
 		}
 		{
-			title: "{quest.market.feast.title}"
+			description: ["{quest.market.feast.text1}"]
 			icon: "farmersdelight:steak_and_potatoes"
+			id: "09DC2E2BE2BE32F4"
+			rewards: [
+				{
+					count: 4
+					id: "05B553B614119E4A"
+					item: "farmersdelight:steak_and_potatoes"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "607D48921297C475"
+					item: "create:builders_tea"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "37DB33F821AD0AFE"
+					item: "minecraft:bread"
+					random_bonus: 32
+					type: "item"
+				}
+				{
+					count: 4
+					id: "51A8014ACD2153F6"
+					item: "farmersdelight:mixed_salad"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "5CD27D9058DAFAAB"
+					item: "farmersdelight:sweet_berry_cookie"
+					type: "item"
+				}
+			]
+			subtitle: "10 {item.thermal.silver_coin}"
+			tasks: [{
+				count: 10L
+				icon: { Count: 10, id: "thermal:silver_coin" }
+				id: "6235F365D702DF2B"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.feast.title}"
 			x: -8.0d
 			y: -2.0d
-			subtitle: "10 {item.thermal.silver_coin}"
-			description: ["{quest.market.feast.text1}"]
-			id: "09DC2E2BE2BE32F4"
-			tasks: [{
-				id: "6235F365D702DF2B"
-				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 10b }
-				item: "thermal:silver_coin"
-				count: 10L
-			}]
-			rewards: [
-				{
-					id: "05B553B614119E4A"
-					type: "item"
-					item: "farmersdelight:steak_and_potatoes"
-					count: 4
-				}
-				{
-					id: "607D48921297C475"
-					type: "item"
-					item: "create:builders_tea"
-					count: 4
-				}
-				{
-					id: "37DB33F821AD0AFE"
-					type: "item"
-					item: "minecraft:bread"
-					count: 2
-					random_bonus: 32
-				}
-				{
-					id: "51A8014ACD2153F6"
-					type: "item"
-					item: "farmersdelight:mixed_salad"
-					count: 4
-				}
-				{
-					id: "5CD27D9058DAFAAB"
-					type: "item"
-					item: "farmersdelight:sweet_berry_cookie"
-					count: 4
-				}
-			]
 		}
 		{
-			title: "{quest.market.dirt.title}"
+			description: ["{quest.market.dirt.text1}"]
 			icon: "minecraft:dirt"
+			id: "4B01606CE7AF3121"
+			rewards: [
+				{
+					count: 64
+					id: "65597F84B69546EF"
+					item: "minecraft:dirt"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "5ED9F3AFC25DD60E"
+					item: "minecraft:dirt"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "1A8CE751232C7235"
+					item: "minecraft:dirt"
+					type: "item"
+				}
+			]
+			subtitle: "15 {item.thermal.silver_coin}"
+			tasks: [{
+				count: 15L
+				icon: { Count: 15, id: "thermal:silver_coin" }
+				id: "188BEC2BA245DB13"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.dirt.title}"
 			x: -6.0d
 			y: 0.0d
-			subtitle: "15 {item.thermal.silver_coin}"
-			description: ["{quest.market.dirt.text1}"]
-			id: "4B01606CE7AF3121"
-			tasks: [{
-				id: "188BEC2BA245DB13"
-				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 15b }
-				item: "thermal:silver_coin"
-				count: 15L
-			}]
-			rewards: [
-				{
-					id: "65597F84B69546EF"
-					type: "item"
-					item: "minecraft:dirt"
-					count: 64
-				}
-				{
-					id: "5ED9F3AFC25DD60E"
-					type: "item"
-					item: "minecraft:dirt"
-					count: 64
-				}
-				{
-					id: "1A8CE751232C7235"
-					type: "item"
-					item: "minecraft:dirt"
-					count: 64
-				}
-			]
 		}
 		{
-			title: "{quest.market.patience_test.title}"
+			description: ["{quest.market.patience_test.text1}"]
 			icon: {
+				Count: 1
 				id: "minecraft:barrel"
-				Count: 1b
 				tag: {
 					Enchantments: [{
 						id: "minecraft:unbreaking"
@@ -393,34 +393,19 @@
 					}]
 				}
 			}
-			x: -9.0d
-			y: 0.0d
-			subtitle: "50 {item.thermal.silver_coin}"
-			description: ["{quest.market.patience_test.text1}"]
 			id: "09EA580B3D32FEEB"
-			tasks: [{
-				id: "3EA558277444F605"
-				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 50b }
-				item: "thermal:silver_coin"
-				count: 50L
-			}]
 			rewards: [{
 				id: "1E10CE8D433DD70E"
-				type: "item"
 				item: {
+					Count: 1
 					id: "minecraft:barrel"
-					Count: 1b
 					tag: {
-						Enchantments: [{
-							id: "minecraft:unbreaking"
-							lvl: 1s
-						}]
 						BlockEntityTag: {
-							id: "minecraft:barrel"
 							Items: [
 								{
+									Count: 1b
 									Slot: 11b
+									id: "minecraft:paper"
 									tag: {
 										RepairCost: 0
 										display: {
@@ -428,748 +413,740 @@
 											bold: 0b
 										}
 									}
-									Count: 1b
-									id: "minecraft:paper"
 								}
 								{
+									Count: 1b
 									Slot: 15b
+									id: "minecraft:barrel"
 									tag: {
-										display: {
-											Lore: ["{\"translate\": \"tip.kubejs.patience_test_description\",\"italic\": true,\"color\": \"gray\"}"]
-										}
 										BlockEntityTag: {
-											id: "minecraft:barrel"
 											Items: [
 												{
+													Count: 1b
 													Slot: 3b
+													id: "minecraft:paper"
 													tag: {
 														RepairCost: 0
 														display: {
 															Name: "{\"italic\": false, \"translate\":\"tip.kubejs.patience_test_text2\"}"
 														}
 													}
-													Count: 1b
-													id: "minecraft:paper"
 												}
 												{
+													Count: 1b
 													Slot: 23b
+													id: "minecraft:barrel"
 													tag: {
-														display: {
-															Lore: ["{\"translate\": \"tip.kubejs.patience_test_description\",\"italic\": true,\"color\": \"gray\"}"]
-														}
 														BlockEntityTag: {
-															id: "minecraft:barrel"
 															Items: [
 																{
+																	Count: 1b
 																	Slot: 11b
+																	id: "minecraft:barrel"
 																	tag: {
-																		display: {
-																			Lore: ["{\"italic\":true,\"color\":\"gray\",\"translate\": \"tip.kubejs.patience_test_description\"}"]
-																		}
 																		BlockEntityTag: {
 																			LootTable: "custom:chests/patience_1"
 																		}
+																		display: {
+																			Lore: ["{\"italic\":true,\"color\":\"gray\",\"translate\": \"tip.kubejs.patience_test_description\"}"]
+																		}
 																	}
-																	Count: 1b
-																	id: "minecraft:barrel"
 																}
 																{
+																	Count: 1b
 																	Slot: 13b
+																	id: "minecraft:paper"
 																	tag: {
 																		RepairCost: 0
 																		display: {
 																			Name: "{\"italic\": false, \"translate\":\"tip.kubejs.patience_test_text3\"}"
 																		}
 																	}
-																	Count: 1b
-																	id: "minecraft:paper"
 																}
 																{
+																	Count: 1b
 																	Slot: 14b
+																	id: "minecraft:apple"
 																	tag: {
 																		display: {
 																			Name: "{\"italic\": false, \"translate\": \"tip.kubejs.patience_test_apple\"}"
 																		}
 																	}
-																	Count: 1b
-																	id: "minecraft:apple"
 																}
 															]
+															id: "minecraft:barrel"
+														}
+														display: {
+															Lore: ["{\"translate\": \"tip.kubejs.patience_test_description\",\"italic\": true,\"color\": \"gray\"}"]
 														}
 													}
-													Count: 1b
-													id: "minecraft:barrel"
 												}
 											]
+											id: "minecraft:barrel"
+										}
+										display: {
+											Lore: ["{\"translate\": \"tip.kubejs.patience_test_description\",\"italic\": true,\"color\": \"gray\"}"]
 										}
 									}
-									Count: 1b
-									id: "minecraft:barrel"
 								}
 							]
+							id: "minecraft:barrel"
 						}
-						display: {
-							Name: "{\"italic\":false,\"translate\":\"tip.kubejs.patience_test_name\",\"color\":\"dark_purple\"}"
-							Lore: ["{\"italic\":true,\"color\":\"gray\",\"translate\": \"tip.kubejs.patience_test_description\"}"]
-						}
+						Enchantments: [{
+							id: "minecraft:unbreaking"
+							lvl: 1s
+						}]
 						HideFlags: 1
+						display: {
+							Lore: ["{\"italic\":true,\"color\":\"gray\",\"translate\": \"tip.kubejs.patience_test_description\"}"]
+							Name: "{\"italic\":false,\"translate\":\"tip.kubejs.patience_test_name\",\"color\":\"dark_purple\"}"
+						}
 					}
 				}
+				type: "item"
 			}]
+			subtitle: "50 {item.thermal.silver_coin}"
+			tasks: [{
+				count: 50L
+				icon: { Count: 50, id: "thermal:silver_coin" }
+				id: "3EA558277444F605"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.patience_test.title}"
+			x: -9.0d
+			y: 0.0d
 		}
 		{
-			title: "{quest.market.shulker_box.title}"
-			icon: "minecraft:shulker_box"
-			x: -4.5d
-			y: -0.5d
-			subtitle: "55 {item.thermal.silver_coin}"
 			description: ["{quest.market.shulker_box.text1}"]
+			icon: "minecraft:shulker_box"
 			id: "4FD46F841CCD59F8"
-			tasks: [{
-				id: "709557A517B0143F"
-				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 55b }
-				item: "thermal:silver_coin"
-				count: 55L
-			}]
 			rewards: [
 				{
 					id: "7B8F11CCEDEBEBD6"
-					type: "item"
 					item: "minecraft:shulker_shell"
+					type: "item"
 				}
 				{
 					id: "364AA663BD7C519F"
-					type: "item"
 					item: "minecraft:chest"
+					type: "item"
 				}
 				{
 					id: "440DF47BEF341626"
-					type: "item"
 					item: "minecraft:shulker_shell"
+					type: "item"
 				}
 			]
+			subtitle: "55 {item.thermal.silver_coin}"
+			tasks: [{
+				count: 55L
+				icon: { Count: 55, id: "thermal:silver_coin" }
+				id: "709557A517B0143F"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.shulker_box.title}"
+			x: -4.5d
+			y: -0.5d
 		}
 		{
-			title: "{quest.market.tinker_box.title}"
+			description: ["{quest.market.tinker_box.text1}"]
 			icon: {
+				Count: 1
 				id: "tconstruct:creative_slot"
-				Count: 1b
 				tag: {
 					slot: "upgrades"
 				}
 			}
-			x: -2.5d
-			y: 1.5d
-			subtitle: "25 {item.thermal.silver_coin}"
-			description: ["{quest.market.tinker_box.text1}"]
 			id: "0CCF34BF1C5829AE"
-			tasks: [{
-				id: "32ACF7B1C0BD9D97"
-				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 25b }
-				item: "thermal:silver_coin"
-				count: 25L
-			}]
 			rewards: [{
 				id: "37DBD1EF724A42D9"
-				type: "item"
 				item: {
+					Count: 1
 					id: "minecraft:chest"
-					Count: 1b
 					tag: {
-						display: {
-							Name: "{\"translate\":\"tip.kubejs.toolbox\",\"italic\":false}"
-							Lore: ["{\"translate\":\"tip.kubejs.has_item\",\"color\":\"gray\",\"italic\":\"false\"}"]
-						}
 						BlockEntityTag: {
-							id: "minecraft:chest"
 							LootTable: "custom:chests/tinker"
+							id: "minecraft:chest"
+						}
+						display: {
+							Lore: ["{\"translate\":\"tip.kubejs.has_item\",\"color\":\"gray\",\"italic\":\"false\"}"]
+							Name: "{\"translate\":\"tip.kubejs.toolbox\",\"italic\":false}"
 						}
 					}
 				}
+				type: "item"
 			}]
+			subtitle: "25 {item.thermal.silver_coin}"
+			tasks: [{
+				count: 25L
+				icon: { Count: 25, id: "thermal:silver_coin" }
+				id: "32ACF7B1C0BD9D97"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.tinker_box.title}"
+			x: -2.5d
+			y: 1.5d
 		}
 		{
-			title: "{quest.market.totem_of_undying.title}"
 			icon: "minecraft:totem_of_undying"
-			x: -3.0d
-			y: 0.0d
-			subtitle: "60 {item.thermal.silver_coin}"
 			id: "6D9F2FBEB7CC5195"
-			tasks: [{
-				id: "165B9A886A26BCC8"
-				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 60b }
-				item: "thermal:silver_coin"
-				count: 60L
-			}]
 			rewards: [{
 				id: "6BCBFB22A82A5698"
-				type: "item"
 				item: "minecraft:totem_of_undying"
+				type: "item"
 			}]
+			subtitle: "60 {item.thermal.silver_coin}"
+			tasks: [{
+				count: 60L
+				icon: { Count: 60, id: "thermal:silver_coin" }
+				id: "165B9A886A26BCC8"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.totem_of_undying.title}"
+			x: -3.0d
+			y: 0.0d
 		}
 		{
-			title: "{quest.market.haunted_bell.title}"
-			icon: "create:haunted_bell"
-			x: -4.0d
-			y: 2.0d
-			subtitle: "45银币"
 			description: ["{quest.market.haunted_bell.text1}"]
+			icon: "create:haunted_bell"
 			id: "4B52A04818075900"
-			tasks: [{
-				id: "4FB1B4787D648565"
-				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 45b }
-				item: "thermal:silver_coin"
-				count: 45L
-			}]
 			rewards: [
 				{
 					id: "0257303302DADA1B"
-					type: "item"
 					item: "create:peculiar_bell"
+					type: "item"
 				}
 				{
 					id: "30D4605E06FF45B6"
-					type: "item"
 					item: "minecraft:soul_campfire"
+					type: "item"
 				}
 			]
+			subtitle: "45银币"
+			tasks: [{
+				count: 45L
+				icon: { Count: 45, id: "thermal:silver_coin" }
+				id: "4FB1B4787D648565"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.haunted_bell.title}"
+			x: -4.0d
+			y: 2.0d
 		}
 		{
-			title: "{quest.market.enchanted_flash_drive.title}"
+			can_repeat: true
+			description: ["{quest.market.enchanted_flash_drive.text1}"]
 			icon: {
+				Count: 1
 				id: "kubejs:flash_drive"
-				Count: 1b
 				tag: {
 					Damage: 0
-					display: {
-						Name: "{\"text\":\"附魔闪存盘\",\"color\":\"gold\",\"italic\":false}"
-					}
 					Enchantments: [{
 						id: "minecraft:unbreaking"
 						lvl: 10s
 					}]
-				}
-			}
-			x: -3.5d
-			y: -6.5d
-			subtitle: "4 {item.thermal.gold_coin}"
-			description: ["{quest.market.enchanted_flash_drive.text1}"]
-			can_repeat: true
-			id: "00D6DD6AE8E3C014"
-			tasks: [
-				{
-					id: "561DF7A17B804B1F"
-					type: "item"
-					item: {
-						id: "kubejs:flash_drive"
-						Count: 1b
-						tag: {
-							Damage: 0
-						}
+					display: {
+						Name: "{\"text\":\"附魔闪存盘\",\"color\":\"gold\",\"italic\":false}"
 					}
 				}
-				{
-					id: "04FA9389D991556D"
-					type: "item"
-					icon: { id: "thermal:gold_coin", Count: 4b }
-					item: "thermal:gold_coin"
-					count: 4L
-				}
-			]
+			}
+			id: "00D6DD6AE8E3C014"
 			rewards: [{
 				id: "7C8BC551D72438AD"
-				type: "item"
 				item: {
+					Count: 1
 					id: "kubejs:flash_drive"
-					Count: 1b
 					tag: {
-						Modifier: "forbidden_arcanus:eternal"
-						display: {
-							Name: "{\"translate\":\"tip.enchanted_flash_drive.name\",\"italic\":false}"
-						}
+						Damage: 0
 						Enchantments: [{
 							id: "minecraft:mending"
 							lvl: 3s
 						}]
-						Unbreakable: 1b
-						Damage: 0
 						HideFlags: 1b
-					}
-				}
-			}]
-		}
-		{
-			title: "{quest.market.circuit_scrap.title}"
-			icon: "ae2:silicon_press"
-			x: -1.0d
-			y: 2.0d
-			subtitle: "2 {item.thermal.gold_coin}"
-			description: ["{quest.market.circuit_scrap.text1}"]
-			id: "4BAC95CCC72369AD"
-			tasks: [{
-				id: "3D328A6D69E64EDA"
-				type: "item"
-				icon: { id: "thermal:gold_coin", Count: 2b }
-				item: "thermal:gold_coin"
-				count: 2L
-			}]
-			rewards: [{
-				id: "51ABA96DE3477D3B"
-				type: "item"
-				item: "kubejs:circuit_scrap"
-				count: 4
-			}]
-		}
-		{
-			title: "{quest.market.buddycard.title}"
-			icon: "buddycards:buddycard_pack_mystery"
-			x: 0.5d
-			y: 1.5d
-			subtitle: "2 {item.thermal.gold_coin}"
-			description: ["{quest.market.buddycard.text1}"]
-			can_repeat: true
-			id: "093FB7B7FEC6B886"
-			tasks: [{
-				id: "30B16CC21946FE8E"
-				type: "item"
-				icon: { id: "thermal:gold_coin", Count: 2b }
-				item: "thermal:gold_coin"
-				count: 2L
-			}]
-			rewards: [{
-				id: "31C613A1894AAB66"
-				type: "item"
-				item: "buddycards:buddycard_pack_mystery"
-				count: 4
-			}]
-		}
-		{
-			title: "{quest.market.grenades.title}"
-			icon: "thermal:explosive_grenade"
-			x: -12.5d
-			y: -1.5d
-			subtitle: "32 {item.thermal.silver_coin}"
-			description: ["{quest.market.grenades.text1}"]
-			id: "1CC29991D5F248CA"
-			tasks: [{
-				id: "2BF8F9E5070C6122"
-				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 32b }
-				item: "thermal:silver_coin"
-				count: 32L
-			}]
-			rewards: [
-				{
-					id: "1C6218230C6D71A0"
-					type: "item"
-					item: "thermal:explosive_grenade"
-					count: 8
-				}
-				{
-					id: "2D1A3F35DF8894FF"
-					type: "item"
-					item: "thermal:glowstone_grenade"
-					count: 8
-				}
-				{
-					id: "093F58649A1E0DD6"
-					type: "item"
-					item: "thermal:ice_grenade"
-					count: 8
-				}
-				{
-					id: "71BB0C93A4A7BC04"
-					type: "item"
-					item: "thermal:earth_grenade"
-					count: 8
-				}
-			]
-		}
-		{
-			title: "{quest.market.gardening.title}"
-			icon: "biomesoplenty:glowflower"
-			x: -2.5d
-			y: -1.5d
-			subtitle: "24 {item.thermal.silver_coin}"
-			description: ["{quest.market.gardening.text1}"]
-			id: "42384DE39AA48976"
-			tasks: [{
-				id: "05BB5DFA82280C0C"
-				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 24b }
-				item: "thermal:silver_coin"
-				count: 24L
-			}]
-			rewards: [
-				{
-					id: "26A16DC998FEF595"
-					type: "item"
-					item: "farmersdelight:organic_compost"
-					count: 8
-				}
-				{
-					id: "68B1199F9AE6B8FE"
-					type: "item"
-					item: "supplementaries:planter_rich"
-					count: 16
-				}
-				{
-					id: "5DEDD7BBA8A712AA"
-					type: "item"
-					item: "minecraft:flower_pot"
-					count: 8
-				}
-				{
-					id: "01196A417139EA21"
-					type: "item"
-					item: "supplementaries:flower_box"
-					count: 4
-				}
-				{
-					id: "648B819C1B484A3F"
-					type: "item"
-					item: "minecraft:grass_block"
-					count: 4
-				}
-			]
-		}
-		{
-			title: "{quest.market.painting.title}"
-			icon: "minecraft:painting"
-			x: -9.5d
-			y: 1.5d
-			subtitle: "24 {item.thermal.silver_coin}"
-			id: "61B040CD0832EFC0"
-			tasks: [{
-				id: "6404722100F1DEF7"
-				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 24b }
-				item: "thermal:silver_coin"
-				count: 24L
-			}]
-			rewards: [
-				{
-					id: "6375AD9CBA9276E0"
-					type: "item"
-					item: "minecraft:white_wool"
-					count: 16
-				}
-				{
-					id: "72F57D408AD5C84A"
-					type: "item"
-					item: "minecraft:white_dye"
-					count: 12
-				}
-				{
-					id: "3477DB4BB2003475"
-					type: "item"
-					item: "minecraft:yellow_dye"
-					count: 12
-				}
-				{
-					id: "14FE738419E8578F"
-					type: "item"
-					item: "minecraft:black_dye"
-					count: 12
-				}
-				{
-					id: "4D37425F17A9D45F"
-					type: "item"
-					item: "minecraft:blue_dye"
-					count: 12
-				}
-				{
-					id: "4A3F1D820F9F1D26"
-					type: "item"
-					item: "minecraft:green_dye"
-					count: 12
-				}
-				{
-					id: "4FFD3D4728DFBB16"
-					type: "item"
-					item: "minecraft:red_dye"
-					count: 12
-				}
-				{
-					id: "0F0A7101131FFC08"
-					type: "item"
-					item: "minecraft:brown_dye"
-					count: 12
-				}
-			]
-		}
-		{
-			title: "{quest.market.minecart.title}"
-			icon: "minecraft:minecart"
-			x: -11.0d
-			y: 2.0d
-			subtitle: "24 {item.thermal.silver_coin}"
-			id: "117587D824D23D69"
-			tasks: [{
-				id: "06C835DB602D6F9F"
-				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 24b }
-				item: "thermal:silver_coin"
-				count: 24L
-			}]
-			rewards: [
-				{
-					id: "4D33B3525FF09C68"
-					type: "item"
-					item: "minecraft:powered_rail"
-					count: 8
-				}
-				{
-					id: "0A214A7B25C331F6"
-					type: "item"
-					item: "minecraft:lever"
-					count: 8
-				}
-				{
-					id: "3F0919FBED64778C"
-					type: "item"
-					item: "minecraft:rail"
-					count: 64
-				}
-				{
-					id: "6D3CCD1BF0BFD7D6"
-					type: "item"
-					item: "minecraft:rail"
-					count: 64
-				}
-			]
-		}
-		{
-			title: "{quest.market.pet_taming.title}"
-			icon: "minecraft:tropical_fish"
-			x: -13.0d
-			y: 0.0d
-			subtitle: "24 {item.thermal.silver_coin}"
-			id: "2D75D1864FB1EF75"
-			tasks: [{
-				id: "3AA788B63B6A73EF"
-				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 24b }
-				item: "thermal:silver_coin"
-				count: 24L
-			}]
-			rewards: [
-				{
-					id: "4961B49D79004571"
-					type: "item"
-					item: "minecraft:name_tag"
-					count: 4
-				}
-				{
-					id: "054AEE030B3B81F6"
-					type: "item"
-					item: "minecraft:bone"
-					count: 8
-				}
-				{
-					id: "29F276B6CDE4D6B5"
-					type: "item"
-					item: "minecraft:tropical_fish"
-					count: 8
-				}
-				{
-					id: "53AA2AF7CA1EF02C"
-					type: "item"
-					item: "minecraft:saddle"
-				}
-				{
-					id: "762BB57B2AFDB21F"
-					type: "item"
-					item: "minecraft:lead"
-					count: 2
-				}
-			]
-		}
-		{
-			title: "{quest.market.leaves.title}"
-			icon: "minecraft:oak_leaves"
-			x: 1.0d
-			y: 0.0d
-			subtitle: "24 {item.thermal.silver_coin}"
-			description: ["{quest.market.leaves.text1}"]
-			id: "7D93DAB3E8ACF953"
-			tasks: [{
-				id: "06028A67C6DCCD00"
-				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 24b }
-				item: "thermal:silver_coin"
-				count: 24L
-			}]
-			rewards: [
-				{
-					id: "1BA12452E9A090EC"
-					type: "item"
-					item: "biomesoplenty:flowering_oak_leaves"
-					count: 32
-				}
-				{
-					id: "17FCE9D6C12A7822"
-					type: "item"
-					item: "minecraft:oak_leaves"
-					count: 64
-				}
-				{
-					id: "51C2FE4F4F5057CC"
-					type: "item"
-					item: "minecraft:oak_leaves"
-					count: 64
-				}
-				{
-					id: "5B801D097C1C538F"
-					type: "item"
-					item: "minecraft:spruce_leaves"
-					count: 64
-				}
-				{
-					id: "5A23AFB90F20641B"
-					type: "item"
-					item: "minecraft:spruce_leaves"
-					count: 64
-				}
-				{
-					id: "1EC1E1486084AE66"
-					type: "item"
-					item: "minecraft:spruce_fence"
-					count: 16
-				}
-			]
-		}
-		{
-			title: "{quest.market.bee.title}"
-			icon: "minecraft:bee_nest"
-			x: -1.0d
-			y: -2.0d
-			subtitle: "48 {item.thermal.silver_coin}"
-			description: ["{quest.market.bee.text1}"]
-			id: "003E0D1CE60B166A"
-			tasks: [
-				{
-					id: "6837BEE1075CC785"
-					type: "item"
-					icon: { id: "thermal:silver_coin", Count: 48b }
-					item: "thermal:silver_coin"
-					count: 48L
-				}
-				{
-					id: "3CCE09D1715B54C7"
-					type: "item"
-					title: "{tip.kubejs.any_flower}"
-					item: {
-						id: "itemfilters:tag"
-						Count: 1b
-						tag: {
-							value: "minecraft:flowers"
+						Modifier: "forbidden_arcanus:eternal"
+						Unbreakable: 1b
+						display: {
+							Name: "{\"translate\":\"tip.enchanted_flash_drive.name\",\"italic\":false}"
 						}
 					}
-					count: 10L
 				}
-			]
-			rewards: [
-				{
-					id: "32B19A18FA3444EE"
-					type: "item"
-					item: "minecraft:bee_nest"
-					count: 2
-				}
-				{
-					id: "7090B017444F28FB"
-					type: "item"
-					item: "minecraft:bee_spawn_egg"
-					count: 4
-				}
-			]
-		}
-		{
-			title: "{quest.market.saplings.title}"
-			icon: "minecraft:oak_sapling"
-			x: -11.0d
-			y: -2.0d
-			subtitle: "4 {item.thermal.silver_coin}"
-			description: ["{quest.market.saplings.text1}"]
-			id: "7760D0FCCFCE2C6B"
-			tasks: [{
-				id: "6AEDD26D0FFF8963"
 				type: "item"
-				icon: { id: "thermal:silver_coin", Count: 4b }
-				item: "thermal:silver_coin"
-				count: 4L
 			}]
-			rewards: [{
-				id: "0DFA30B6D63CAEB4"
-				type: "loot"
-				exclude_from_claim_all: true
-			}]
-		}
-		{
-			title: "{quest.market.structures_compass.title}"
-			icon: "create:blaze_burner"
-			x: -7.5d
-			y: 1.0d
-			subtitle: "24 {item.thermal.silver_coin}"
-			description: ["{quest.market.structures_compass.text1}"]
-			id: "3B408BE68E229FD2"
-			tasks: [{
-				id: "2D0391D0E7E9C6AB"
-				type: "item"
-				item: "thermal:silver_coin"
-				count: 24L
-			}]
-			rewards: [{
-				id: "5030C2BE38C8EC30"
-				type: "item"
-				item: "structurecompass:structure_compass"
-			}]
-		}
-		{
-			title: "绝妙发明：坚不可摧"
-			icon: {
-				id: "minecraft:netherite_sword"
-				Count: 1b
-				tag: {
-					Damage: 0
-				}
-			}
-			x: -2.0d
-			y: -7.0d
-			subtitle: "4金币"
-			description: ["购买这个小工具来让获取&6经验颗粒&r的工具消耗降到最低。"]
-			can_repeat: true
-			id: "0E97644276DCD0E0"
+			subtitle: "4 {item.thermal.gold_coin}"
 			tasks: [
 				{
-					id: "5FC94FD85BFB3A31"
-					type: "item"
+					id: "561DF7A17B804B1F"
 					item: {
-						id: "minecraft:netherite_sword"
-						Count: 1b
+						Count: 1
+						id: "kubejs:flash_drive"
 						tag: {
 							Damage: 0
 						}
 					}
+					type: "item"
 				}
 				{
-					id: "19385D39C0528473"
-					type: "item"
-					item: "thermal:gold_coin"
 					count: 4L
+					icon: { Count: 4, id: "thermal:gold_coin" }
+					id: "04FA9389D991556D"
+					item: "thermal:gold_coin"
+					type: "item"
 				}
 			]
+			title: "{quest.market.enchanted_flash_drive.title}"
+			x: -3.5d
+			y: -6.5d
+		}
+		{
+			description: ["{quest.market.circuit_scrap.text1}"]
+			icon: "ae2:silicon_press"
+			id: "4BAC95CCC72369AD"
+			rewards: [{
+				count: 4
+				id: "51ABA96DE3477D3B"
+				item: "kubejs:circuit_scrap"
+				type: "item"
+			}]
+			subtitle: "2 {item.thermal.gold_coin}"
+			tasks: [{
+				count: 2L
+				icon: { Count: 2, id: "thermal:gold_coin" }
+				id: "3D328A6D69E64EDA"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "{quest.market.circuit_scrap.title}"
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			can_repeat: true
+			description: ["{quest.market.buddycard.text1}"]
+			icon: "buddycards:buddycard_pack_mystery"
+			id: "093FB7B7FEC6B886"
+			rewards: [{
+				count: 4
+				id: "31C613A1894AAB66"
+				item: "buddycards:buddycard_pack_mystery"
+				type: "item"
+			}]
+			subtitle: "2 {item.thermal.gold_coin}"
+			tasks: [{
+				count: 2L
+				icon: { Count: 2, id: "thermal:gold_coin" }
+				id: "30B16CC21946FE8E"
+				item: "thermal:gold_coin"
+				type: "item"
+			}]
+			title: "{quest.market.buddycard.title}"
+			x: 0.5d
+			y: 1.5d
+		}
+		{
+			description: ["{quest.market.grenades.text1}"]
+			icon: "thermal:explosive_grenade"
+			id: "1CC29991D5F248CA"
+			rewards: [
+				{
+					count: 8
+					id: "1C6218230C6D71A0"
+					item: "thermal:explosive_grenade"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "2D1A3F35DF8894FF"
+					item: "thermal:glowstone_grenade"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "093F58649A1E0DD6"
+					item: "thermal:ice_grenade"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "71BB0C93A4A7BC04"
+					item: "thermal:earth_grenade"
+					type: "item"
+				}
+			]
+			subtitle: "32 {item.thermal.silver_coin}"
+			tasks: [{
+				count: 32L
+				icon: { Count: 32, id: "thermal:silver_coin" }
+				id: "2BF8F9E5070C6122"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.grenades.title}"
+			x: -12.5d
+			y: -1.5d
+		}
+		{
+			description: ["{quest.market.gardening.text1}"]
+			icon: "biomesoplenty:glowflower"
+			id: "42384DE39AA48976"
+			rewards: [
+				{
+					count: 8
+					id: "26A16DC998FEF595"
+					item: "farmersdelight:organic_compost"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "68B1199F9AE6B8FE"
+					item: "supplementaries:planter_rich"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "5DEDD7BBA8A712AA"
+					item: "minecraft:flower_pot"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "01196A417139EA21"
+					item: "supplementaries:flower_box"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "648B819C1B484A3F"
+					item: "minecraft:grass_block"
+					type: "item"
+				}
+			]
+			subtitle: "24 {item.thermal.silver_coin}"
+			tasks: [{
+				count: 24L
+				icon: { Count: 24, id: "thermal:silver_coin" }
+				id: "05BB5DFA82280C0C"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.gardening.title}"
+			x: -2.5d
+			y: -1.5d
+		}
+		{
+			icon: "minecraft:painting"
+			id: "61B040CD0832EFC0"
+			rewards: [
+				{
+					count: 16
+					id: "6375AD9CBA9276E0"
+					item: "minecraft:white_wool"
+					type: "item"
+				}
+				{
+					count: 12
+					id: "72F57D408AD5C84A"
+					item: "minecraft:white_dye"
+					type: "item"
+				}
+				{
+					count: 12
+					id: "3477DB4BB2003475"
+					item: "minecraft:yellow_dye"
+					type: "item"
+				}
+				{
+					count: 12
+					id: "14FE738419E8578F"
+					item: "minecraft:black_dye"
+					type: "item"
+				}
+				{
+					count: 12
+					id: "4D37425F17A9D45F"
+					item: "minecraft:blue_dye"
+					type: "item"
+				}
+				{
+					count: 12
+					id: "4A3F1D820F9F1D26"
+					item: "minecraft:green_dye"
+					type: "item"
+				}
+				{
+					count: 12
+					id: "4FFD3D4728DFBB16"
+					item: "minecraft:red_dye"
+					type: "item"
+				}
+				{
+					count: 12
+					id: "0F0A7101131FFC08"
+					item: "minecraft:brown_dye"
+					type: "item"
+				}
+			]
+			subtitle: "24 {item.thermal.silver_coin}"
+			tasks: [{
+				count: 24L
+				icon: { Count: 24, id: "thermal:silver_coin" }
+				id: "6404722100F1DEF7"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.painting.title}"
+			x: -9.5d
+			y: 1.5d
+		}
+		{
+			icon: "minecraft:minecart"
+			id: "117587D824D23D69"
+			rewards: [
+				{
+					count: 8
+					id: "4D33B3525FF09C68"
+					item: "minecraft:powered_rail"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "0A214A7B25C331F6"
+					item: "minecraft:lever"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "3F0919FBED64778C"
+					item: "minecraft:rail"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "6D3CCD1BF0BFD7D6"
+					item: "minecraft:rail"
+					type: "item"
+				}
+			]
+			subtitle: "24 {item.thermal.silver_coin}"
+			tasks: [{
+				count: 24L
+				icon: { Count: 24, id: "thermal:silver_coin" }
+				id: "06C835DB602D6F9F"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.minecart.title}"
+			x: -11.0d
+			y: 2.0d
+		}
+		{
+			icon: "minecraft:tropical_fish"
+			id: "2D75D1864FB1EF75"
+			rewards: [
+				{
+					count: 4
+					id: "4961B49D79004571"
+					item: "minecraft:name_tag"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "054AEE030B3B81F6"
+					item: "minecraft:bone"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "29F276B6CDE4D6B5"
+					item: "minecraft:tropical_fish"
+					type: "item"
+				}
+				{
+					id: "53AA2AF7CA1EF02C"
+					item: "minecraft:saddle"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "762BB57B2AFDB21F"
+					item: "minecraft:lead"
+					type: "item"
+				}
+			]
+			subtitle: "24 {item.thermal.silver_coin}"
+			tasks: [{
+				count: 24L
+				icon: { Count: 24, id: "thermal:silver_coin" }
+				id: "3AA788B63B6A73EF"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.pet_taming.title}"
+			x: -13.0d
+			y: 0.0d
+		}
+		{
+			description: ["{quest.market.leaves.text1}"]
+			icon: "minecraft:oak_leaves"
+			id: "7D93DAB3E8ACF953"
+			rewards: [
+				{
+					count: 32
+					id: "1BA12452E9A090EC"
+					item: "biomesoplenty:flowering_oak_leaves"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "17FCE9D6C12A7822"
+					item: "minecraft:oak_leaves"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "51C2FE4F4F5057CC"
+					item: "minecraft:oak_leaves"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "5B801D097C1C538F"
+					item: "minecraft:spruce_leaves"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "5A23AFB90F20641B"
+					item: "minecraft:spruce_leaves"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "1EC1E1486084AE66"
+					item: "minecraft:spruce_fence"
+					type: "item"
+				}
+			]
+			subtitle: "24 {item.thermal.silver_coin}"
+			tasks: [{
+				count: 24L
+				icon: { Count: 24, id: "thermal:silver_coin" }
+				id: "06028A67C6DCCD00"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.leaves.title}"
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			description: ["{quest.market.bee.text1}"]
+			icon: "minecraft:bee_nest"
+			id: "003E0D1CE60B166A"
+			rewards: [
+				{
+					count: 2
+					id: "32B19A18FA3444EE"
+					item: "minecraft:bee_nest"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "7090B017444F28FB"
+					item: "minecraft:bee_spawn_egg"
+					type: "item"
+				}
+			]
+			subtitle: "48 {item.thermal.silver_coin}"
+			tasks: [
+				{
+					count: 48L
+					icon: { Count: 48, id: "thermal:silver_coin" }
+					id: "6837BEE1075CC785"
+					item: "thermal:silver_coin"
+					type: "item"
+				}
+				{
+					count: 10L
+					id: "3CCE09D1715B54C7"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "minecraft:flowers"
+						}
+					}
+					title: "{tip.kubejs.any_flower}"
+					type: "item"
+				}
+			]
+			title: "{quest.market.bee.title}"
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			description: ["{quest.market.saplings.text1}"]
+			icon: "minecraft:oak_sapling"
+			id: "7760D0FCCFCE2C6B"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "0DFA30B6D63CAEB4"
+				type: "loot"
+			}]
+			subtitle: "4 {item.thermal.silver_coin}"
+			tasks: [{
+				count: 4L
+				icon: { Count: 4, id: "thermal:silver_coin" }
+				id: "6AEDD26D0FFF8963"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.saplings.title}"
+			x: -11.0d
+			y: -2.0d
+		}
+		{
+			description: ["{quest.market.structures_compass.text1}"]
+			icon: "create:blaze_burner"
+			id: "3B408BE68E229FD2"
+			rewards: [{
+				id: "5030C2BE38C8EC30"
+				item: "structurecompass:structure_compass"
+				type: "item"
+			}]
+			subtitle: "24 {item.thermal.silver_coin}"
+			tasks: [{
+				count: 24L
+				id: "2D0391D0E7E9C6AB"
+				item: "thermal:silver_coin"
+				type: "item"
+			}]
+			title: "{quest.market.structures_compass.title}"
+			x: -7.5d
+			y: 1.0d
+		}
+		{
+			can_repeat: true
+			description: ["购买这个小工具来让获取&6经验颗粒&r的工具消耗降到最低。"]
+			icon: {
+				Count: 1
+				id: "minecraft:netherite_sword"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "0E97644276DCD0E0"
 			rewards: [{
 				id: "3439865241810EAA"
-				type: "item"
 				item: {
+					Count: 1
 					id: "minecraft:netherite_sword"
-					Count: 1b
 					tag: {
+						Damage: 1048576
 						Enchantments: [
 							{
 								id: "minecraft:bane_of_arthropods"
@@ -1185,64 +1162,87 @@
 							}
 						]
 						Unbreakable: 1b
-						Damage: 1048576
 						display: {
 							Name: "[{\"text\":\"附魔下界合金剑\",\"color\":\"aqua\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]"
 						}
 					}
 				}
+				type: "item"
 			}]
-		}
-		{
-			title: "绝妙发明：非易失性存储"
-			icon: {
-				id: "kubejs:data_module"
-				Count: 1b
-				tag: {
-					Damage: 0
-				}
-			}
-			x: -10.0d
-			y: -7.0d
 			subtitle: "4金币"
-			description: ["购买这个小工具来让制作&6智能构件&r的工具消耗降到最低。"]
-			can_repeat: true
-			id: "34FD20DB463ABBF6"
 			tasks: [
 				{
-					id: "7BA18F793CE34AC7"
-					type: "item"
+					id: "5FC94FD85BFB3A31"
 					item: {
-						id: "kubejs:data_module"
-						Count: 1b
+						Count: 1
+						id: "minecraft:netherite_sword"
 						tag: {
 							Damage: 0
 						}
 					}
+					type: "item"
 				}
 				{
-					id: "76AC745EF210B3D4"
-					type: "item"
-					item: "thermal:gold_coin"
 					count: 4L
+					id: "19385D39C0528473"
+					item: "thermal:gold_coin"
+					type: "item"
 				}
 			]
+			title: "绝妙发明：坚不可摧"
+			x: -2.0d
+			y: -7.0d
+		}
+		{
+			can_repeat: true
+			description: ["购买这个小工具来让制作&6智能构件&r的工具消耗降到最低。"]
+			icon: {
+				Count: 1
+				id: "kubejs:data_module"
+				tag: {
+					Damage: 0
+				}
+			}
+			id: "34FD20DB463ABBF6"
 			rewards: [{
 				id: "1DD43453ED5CA025"
-				type: "item"
 				item: {
+					Count: 1
 					id: "kubejs:data_module"
-					Count: 1b
 					tag: {
 						Damage: 1048576
+						Unbreakable: 1b
 						display: {
 							Name: "[{\"text\":\"附魔数据模块\",\"color\":\"aqua\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]"
 						}
-						Unbreakable: 1b
 					}
 				}
+				type: "item"
 			}]
+			subtitle: "4金币"
+			tasks: [
+				{
+					id: "7BA18F793CE34AC7"
+					item: {
+						Count: 1
+						id: "kubejs:data_module"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "76AC745EF210B3D4"
+					item: "thermal:gold_coin"
+					type: "item"
+				}
+			]
+			title: "绝妙发明：非易失性存储"
+			x: -10.0d
+			y: -7.0d
 		}
 	]
-	quest_links: [ ]
+	title: "{quest.chapter.market.name}"
 }
