@@ -1,0 +1,6 @@
+[
+  {"version":1},
+  {"type":"recipe","value":"create:mechanical_crafting#create:kjs/create_dd_smoking_sail#item_stack\u0026create_dd:smoking_sail"},
+  {"type":"item_stack","value":"{Count:1b,id:\"minecraft:campfire\"}"},
+  {"type":"item_stack","value":"{Count:1b,id:\"create:white_sail\"}"}
+]

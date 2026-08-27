@@ -1,0 +1,21 @@
+{
+  "type": "thermal:tree_extractor",
+  "trunk": {
+    "Name": "tconstruct:skyroot_log",
+    "Properties": {
+      "axis": "y"
+    }
+  },
+  "leaves": {
+    "Name": "tconstruct:sky_slime_leaves"
+  },
+  "sapling": "tconstruct:sky_slime_sapling",
+  "min_height": 4,
+  "max_height": 16,
+  "min_leaves": 16,
+  "max_leaves": 24,
+  "result": {
+    "fluid": "tconstruct:sky_slime",
+    "amount": 50
+  }
+}

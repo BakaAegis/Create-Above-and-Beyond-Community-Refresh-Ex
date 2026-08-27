@@ -467,7 +467,7 @@
 				{
 					id: "62087A9A8ECD34A2"
 					type: "item"
-					item: "buddycardsexp:buddycard_pack_create"
+					item: "buddycards:buddycard_pack_base"
 					count: 4
 				}
 				{
@@ -477,6 +477,9 @@
 						id: "metalbarrels:copper_barrel"
 						Count: 1b
 						tag: {
+							display: {
+								Lore: ["\"(+NBT)\""]
+							}
 							BlockEntityTag: {
 								inv: {
 									Size: 45
@@ -553,11 +556,8 @@
 										}
 									]
 								}
+								id: "metalbarrels:copper_barrel"
 								ForgeCaps: { }
-								id: "metalbarrels:copper_tile"
-							}
-							display: {
-								Lore: ["\"(+NBT)\""]
 							}
 						}
 					}

@@ -42,7 +42,7 @@ function attackNearby(world, x, y, z) {
     world.getEntitiesWithin(AABB.of(x-3.5,y-2.5,z-3.5,x+3,y+3.5,z+3)).forEach(entity => {
     if (!entity.isLiving())
             return
-        entity.attack("magic", 6)
+        entity.attack(6)
         }
     )}
     //let aabb = AABB.CUBE.contract(x - .5, y + .5, z - .5).func_72321_a(-3, -3, -3).func_72321_a(3, 3, 3)
@@ -52,7 +52,7 @@ function attackNearby(world, x, y, z) {
         let entity = world.getEntity(e)
         if (!entity.isLiving())
             return
-        entity.attack("magic", 6)
+        entity.attack(6)
     })*/
 
 /*
@@ -76,7 +76,7 @@ function process(world, block, entity, face) {
 
     if (global.cachedSeed != world.getSeed()) {
         global.cachedSeed = world.getSeed()
-        let random = new java("java.util.Random")(world.getSeed())
+        let random = new (Java.loadClass("java.util.Random"))(world.getSeed())
         let next = () => random.nextInt(6)
         let generateCode = () => [next(), next(), next(), next()]
         for (cat = 0; cat < 7; cat++) {
@@ -112,7 +112,7 @@ function process(world, block, entity, face) {
         }
     }
 
-    let nbt = entity.getFullNBT()
+    let nbt = entity.nbt
     let items = nbt.Items
 
     // Laser Recipe
@@ -212,7 +212,7 @@ function process(world, block, entity, face) {
             resultCount = resultCount - 64
         }
 
-        entity.setFullNBT(nbt)
+        entity.setNbt(nbt)
         return
     }
 
@@ -290,7 +290,7 @@ function process(world, block, entity, face) {
         world.server.runCommandSilent(`/playsound minecraft:block.enchantment_table.use block @a ${entity.x} ${entity.y} ${entity.z} 0.95 1.5`)
         attackNearby(world, entity.x, entity.y, entity.z)
 
-        let random = new java("java.util.Random")()
+        let random = new (Java.loadClass("java.util.Random"))()
         let resultCounts = [0]//, 0]
 
         for (i = 0; i < transmuteAmount; i++) {
@@ -329,7 +329,7 @@ function process(world, block, entity, face) {
             resultCounts[itemIndex] = resultCounts[itemIndex] - 64
         }
 
-        entity.setFullNBT(nbt)
+        entity.setNbt(nbt)
         return
     }
 
@@ -414,7 +414,7 @@ function process(world, block, entity, face) {
     })
 
     if (glowstoneAccellerator || redstoneAccellerator) {
-        let random = new java("java.util.Random")()
+        let random = new (Java.loadClass("java.util.Random"))()
         let shuffled = shuffle(Array(0, 1, 2, 3), random)
         for (i = 0; i < 4; i++) {
             let j = shuffled[i]
@@ -515,11 +515,11 @@ function process(world, block, entity, face) {
         nbt.Items.add(1, resultItemNBT.toNBT())
     }
 
-    entity.setFullNBT(nbt)
+    entity.setNbt(nbt)
 
 }
 
-onEvent('block.left_click', event => {
+BlockEvents.leftClicked(event => {
 
     let block = event.getBlock()
     let tags = block.getTags()
@@ -539,7 +539,7 @@ onEvent('block.left_click', event => {
 
     let sound = false
 
-    Direction.ALL.values().forEach(face => {
+    [Direction.NORTH, Direction.SOUTH, Direction.EAST, Direction.WEST, Direction.UP, Direction.DOWN].forEach(face => {
         if (clickedFace == face)
             return
         let laser = block.offset(face)
@@ -568,22 +568,22 @@ onEvent('block.left_click', event => {
         world.getEntitiesWithin(aabb).forEach(entity => {
             if (!entity.type.equals("minecraft:hopper_minecart")) {
                 if (!["minecraft:item","minecraft:experience_orb"].includes(entity.type))
-                    entity.attack("magic", 6)
+                    entity.attack(6)
                 return
             }
             process(world, block, entity, face)
-            entity.attack("magic", 1)
+            entity.attack(1)
         })
 
         /*list.forEach(e => {
             let entity = world.getEntity(e)
             if (!entity.type.equals("minecraft:hopper_minecart")) {
                 if (!entity.type.equals("minecraft:item"))
-                    entity.attack("magic", 6)
+                    entity.attack(6)
                 return
             }
             process(world, block, entity, face)
-            entity.attack("magic", 1)
+            entity.attack(1)
         })*/
 
         sound = true
@@ -603,7 +603,7 @@ onEvent('block.left_click', event => {
 
 })
 
-onEvent('player.chat', event => {
+PlayerEvents.chat(event => {
     if (event.message.startsWith('icantmakeit!')) {
         if (global.chaosCorrectSet === undefined) {
             event.player.tell('You should try at least once!')

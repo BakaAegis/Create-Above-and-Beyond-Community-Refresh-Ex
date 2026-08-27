@@ -18,13 +18,25 @@
 		ignoreLeaves = true
 		#If true, projectiles will cause knockback when an entity is hit. By default this is set to true to match the behaviour of Minecraft.
 		enableKnockback = true
-		#Sets the strengthof knockback when shot by a bullet projectile. Knockback must be enabled for this to take effect. If value is equal to zero, knockback will use default minecraft value
+		#Sets the strength of knockback when shot by a bullet projectile. Knockback must be enabled for this to take effect. If value is equal to zero, knockback will use default minecraft value
 		#Range: 0.0 ~ 1.0
 		knockbackStrength = 0.15
 		#If true, improves the accuracy of weapons by considering the ping of the player. This has no affect on singleplayer. This will add a little overhead if enabled.
 		improvedHitboxes = false
-		#If enable, allows guns to shoot out glass and remove blocks on explosions
-		enableGunGriefing = false
+		#If true, the projectiles will slow down in the fluids.
+		projectileSlowDownInFluids = true
+
+		#Properties related to gun griefing
+		[common.gameplay.griefing]
+			#If enabled, allows guns to shoot out glass and other fragile objects
+			enableGlassBreaking = true
+			#If enabled, fragile blocks will drop their loot when broken
+			fragileBlockDrops = true
+			#The base chance that a fragile block is broken when impacted by a bullet. The hardness of a block will scale this value; the harder the block, the lower the final calculated chance will be.
+			#Range: 0.0 ~ 1.0
+			fragileBlockBreakChance = 1.0
+			#If true, allows guns enchanted with Fire Starter to light and spread fires on blocks
+			setFireToBlocks = true
 
 	#Properties relating to network
 	[common.network]
@@ -49,12 +61,16 @@
 		#The max distance which the explosion is effective to
 		#Range: 0.0 ~ 1.7976931348623157E308
 		explosionRadius = 5.0
+		#If enabled, allows block removal on explosions
+		enableBlockRemoval = false
 
 	#Properties relating to grenades
 	[common.grenades]
 		#The max distance which the explosion is effective to
 		#Range: 0.0 ~ 1.7976931348623157E308
 		explosionRadius = 5.0
+		#If enabled, allows block removal on explosions
+		enableBlockRemoval = false
 
 	#Properties relating to stun grenades
 	[common.stun_grenades]
@@ -115,4 +131,9 @@
 		#The amount of times a player has to shoot within the spread threshold before the maximum amount of spread is applied. Setting the value higher means it will take longer for the spread to be applied.
 		#Range: > 1
 		maxCount = 10
+
+	#Properties relating to cross-mod compatibilities
+	[common.compatibilities]
+		#When enabled, a backpack from the Backpacked mod needs the "Quiverlink" augment installed to directly reload from the backpack.
+		backpackedNeedsQuiverLink2ReloadFromBackpack = false
 

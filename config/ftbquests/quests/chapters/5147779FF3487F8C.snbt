@@ -14,7 +14,7 @@
 			x: -2.0d
 			y: 0.0d
 			shape: "hexagon"
-			subtitle: "&6第六章"
+			subtitle: "&6第七章"
 			description: [
 				"抵达了火星之后，接下来的目标很明确了：我们需要更快，更快，更快的机器。"
 				""
@@ -449,7 +449,7 @@
 		}
 		{
 			title: "黄粱一梦"
-			icon: "phantasm:hanging_pream_berry"
+			icon: "phantasm:pream_berry"
 			x: 4.0d
 			y: 8.5d
 			description: ["蓝色浆果，不知道能不能吃，但是对电子设备的增强是显著的。"]
@@ -460,7 +460,7 @@
 				{
 					id: "579B371810A228E7"
 					type: "item"
-					item: "phantasm:hanging_pream_berry"
+					item: "phantasm:pream_berry"
 					consume_items: false
 				}
 				{
@@ -854,7 +854,7 @@
 		}
 		{
 			title: "第七章完成！"
-			icon: "beyond_earth:venus_globe"
+			icon: "ad_astra:venus_globe"
 			x: 0.0d
 			y: 10.0d
 			shape: "hexagon"
@@ -873,14 +873,14 @@
 				id: "5D6324845CE84A5F"
 				type: "advancement"
 				title: "制作 三阶火箭"
-				icon: "beyond_earth:ostrum_engine"
-				advancement: "beyond_earth:rocket_tier_3_advancement"
+				icon: "ad_astra:ostrum_engine"
+				advancement: "ad_astra:tier_3_rocket"
 				criterion: ""
 			}]
 			rewards: [{
 				id: "33E351C87B2DE7EA"
 				type: "item"
-				item: "beyond_earth:venus_globe"
+				item: "ad_astra:venus_globe"
 			}]
 		}
 		{
@@ -893,7 +893,7 @@
 			tasks: [{
 				id: "14243E3289B1501C"
 				type: "item"
-				item: "beyond_earth:ostrum_ingot"
+				item: "ad_astra:ostrum_ingot"
 				consume_items: false
 			}]
 		}

@@ -8,7 +8,7 @@
       "item": "minecraft:charcoal"
     },
     {
-      "fluid": "immersiveengineering:creosote",
+      "fluid": "thermal:creosote",
       "amount": 275
     }
   ],

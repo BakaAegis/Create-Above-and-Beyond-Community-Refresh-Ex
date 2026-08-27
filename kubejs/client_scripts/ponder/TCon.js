@@ -1,4 +1,4 @@
-onEvent("ponder.registry", (event) => {
+Ponder.registry((event) => {
 	event.create("tconstruct:smeltery_controller")
 		.tag("kubejs:ponder")
 		.scene("kubejs:smeltery", "{kubejs.ponder.smeltery.header}", "kubejs:smeltery", (scene) => {

@@ -1,10 +1,10 @@
-onEvent('block.registry', event => {
+StartupEvents.registry('block', event => {
 	// 混沌炼金注册
 	// 原味CAB配方，熟悉的味道
 	var mad = 0;
 	for (mad = 0; mad < 15; mad++)
 		event.create(`failed_alchemy_${mad}`)
-			.material('glass')
+			.soundType(SoundType.GLASS)
 			.color(0, 0x394867)
 			.color(1, 0x14274E)
 			.hardness(0.1)
@@ -40,7 +40,7 @@ onEvent('block.registry', event => {
 			outputItem: outputItem
 		})
 		event.create(`substrate_${id}`)
-			.material('glass')
+			.soundType(SoundType.GLASS)
 			.color(0, c1)
 			.color(1, c2)
 			.hardness(0.1)
@@ -48,7 +48,7 @@ onEvent('block.registry', event => {
 			.box(.3125, .75, .3125, .6875, .875, .6875, false)
 			.model("kubejs:block/" + model)
 			.renderType("cutout")
-			.item(e => e.rarity(model == "catalyst" ? RARITY_UNCOMMON : RARITY_COMMON).color(0, c1).color(1, c2))
+			.item(e => e.rarity(model == "catalyst" ? 'UNCOMMON' : 'COMMON').color(0, c1).color(1, c2))
 			.tagBlock("minecraft:mineable/pickaxe")
 		substrate_index++
 	}
@@ -107,7 +107,7 @@ onEvent('block.registry', event => {
 	category()
 
 	event.create(`substrate_chaos`)
-		.material('glass')
+		.soundType(SoundType.GLASS)
 		.color(0, 0xb200ed)
 		.color(1, 0xff66cc)
 		.hardness(0.1)
@@ -115,12 +115,12 @@ onEvent('block.registry', event => {
 		.box(.3125, .75, .3125, .6875, .875, .6875, false)
 		.model("kubejs:block/chaos_catalyst")
 		.renderType("cutout")
-		.item(e => e.rarity(RARITY_RARE).color(0, 0xb200ed).color(1, 0xff66cc))
+		.item(e => e.rarity('RARE').color(0, 0xb200ed).color(1, 0xff66cc))
 		.tagBlock("minecraft:mineable/pickaxe")
 	
 
 	event.create(`substrate_silicon`)
-		.material('glass')
+		.soundType(SoundType.GLASS)
 		.color(0, 0x474449)
 		.color(1, 0x967DA0)
 		.hardness(0.1)
@@ -128,12 +128,12 @@ onEvent('block.registry', event => {
 		.box(.3125, .75, .3125, .6875, .875, .6875, false)
 		.model("kubejs:block/substrate")
 		.renderType("cutout")
-		.item(e => e.rarity(RARITY_EPIC).color(0, 0x474449).color(1, 0x967DA0))
+		.item(e => e.rarity('EPIC').color(0, 0x474449).color(1, 0x967DA0))
 		.tagBlock("minecraft:mineable/pickaxe")
 
 
 	event.create(`substrate_silver`)
-		.material('glass')
+		.soundType(SoundType.GLASS)
 		.color(0, 0x9FADB4)
 		.color(1, 0xBECCD2)
 		.hardness(0.1)
@@ -145,7 +145,7 @@ onEvent('block.registry', event => {
 		.tagBlock("minecraft:mineable/pickaxe")
 
 	event.create(`accellerator_glowstone`)
-		.material('glass')
+		.soundType(SoundType.GLASS)
 		.color(0, 0xFFBC5E)
 		.hardness(0.1)
 		.box(.125, 0, .125, .875, .5, .875, false)
@@ -156,7 +156,7 @@ onEvent('block.registry', event => {
 		.tagBlock("minecraft:mineable/pickaxe")
 
 	event.create(`accellerator_redstone`)
-		.material('glass')
+		.soundType(SoundType.GLASS)
 		.color(0, 0xAA0F01)
 		.hardness(0.1)
 		.box(.125, 0, .125, .875, .5, .875, false)

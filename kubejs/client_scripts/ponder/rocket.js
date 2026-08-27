@@ -1,4 +1,4 @@
-onEvent("ponder.registry", (event) => {
+Ponder.registry((event) => {
     let tier = ["kubejs:guide_computer_tier1",
 		"kubejs:guide_computer_tier2",
 		"kubejs:guide_computer_tier3",
@@ -146,12 +146,11 @@ onEvent("ponder.registry", (event) => {
             //右键提示
             scene.showControls(30, [2, 3.5, 1], "left") // 在右方创建一个向左指的框, 时长为 30 Tick
 	                .rightClick() // 在框内显示 鼠标右键 的图示
-	                .withWrench() // 在框内显示 机械动力的扳手 的图示
             scene.text(50, "{kubejs.ponder.rocket_1-3.text_5}").attachKeyFrame()
             scene.idleSeconds(2)
             scene.world.setBlocks([0, 9, 0, 4, 1, 4], "minecraft:air")// 坐标, Item飞出去的方向(下面的代码是朝下, 也就是掉落)以及Item Id
             scene.idle(10)
-            scene.world.createItemEntity([2.5, 1.5, 2.5], Direction.DOWN, "beyond_earth:rocket_t3")
+            scene.world.createItemEntity([2.5, 1.5, 2.5], Direction.DOWN, "ad_astra:tier_3_rocket")
             scene.text(80, "{kubejs.ponder.rocket_1-3.text_6}").attachKeyFrame()
             
 
@@ -243,12 +242,11 @@ onEvent("ponder.registry", (event) => {
             //右键提示
             scene.showControls(30, [2, 4.5, 1], "left") // 在右方创建一个向左指的框, 时长为 30 Tick
 	                .rightClick() // 在框内显示 鼠标右键 的图示
-	                .withWrench() // 在框内显示 机械动力的扳手 的图示
             scene.text(50, "{kubejs.ponder.guide_computer_4.text_3}").attachKeyFrame()
             scene.idleSeconds(2)
             scene.world.setBlocks([0, 9, 0, 4, 1, 4], "minecraft:air")// 坐标, Item飞出去的方向(下面的代码是朝下, 也就是掉落)以及Item Id
             scene.idle(10)
-            scene.world.createItemEntity([2.5, 1.5, 2.5], Direction.DOWN, "beyond_earth:rocket_t4")
+            scene.world.createItemEntity([2.5, 1.5, 2.5], Direction.DOWN, "ad_astra:tier_4_rocket")
             scene.text(80, "{kubejs.ponder.guide_computer_4.text_4}").attachKeyFrame()
         })}
 

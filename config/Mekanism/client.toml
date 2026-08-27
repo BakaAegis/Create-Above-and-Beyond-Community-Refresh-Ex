@@ -8,14 +8,12 @@
 	#Should holiday greetings and easter eggs play for holidays (ex: Christmas and New Years).
 	holidays = true
 	#Adjust Mekanism sounds' base volume. < 1 is softer, higher is louder.
-	#Range: 0.0 ~ 3.4028234663852886E38
+	#Range: 0.0 ~ 10.0
 	baseSoundVolume = 1.0
 	#If true, don't render Cables/Pipes/Tubes as transparent and don't render their contents.
 	opaqueTransmitters = false
 	#Allow sneak + scroll to change item modes.
 	allowModeScroll = true
-	#Align HUD (text) with left (if true) or right (if false)
-	alignHUDLeft = true
 	#Scale of the text displayed on the HUD.
 	#Range: 0.25 ~ 1.0
 	hudScale = 0.6
@@ -26,6 +24,10 @@
 	#Range at which Tile Entity Renderer's added by Mekanism can render at, for example the contents of multiblocks. Vanilla defaults the rendering range for TERs to 64 for most blocks, but uses a range of 256 for beacons and end gateways.
 	#Range: 1 ~ 1024
 	terRange = 256
+	#If enabled tries to force all radial menu text to be white.
+	whiteRadialText = false
+	#If true will move HUD text alignment and compass rendering to the right side of the screen, and move the MekaSuit module rendering to the left side.
+	reverseHUD = false
 
 	#Particle Config
 	[client.particle]
@@ -34,8 +36,10 @@
 		#Show particles when machines active.
 		machineEffects = true
 		#How far (in blocks) from the player radiation particles can spawn.
+		#Range: 2 ~ 64
 		radiationParticleRadius = 30
 		#How many particles spawn when rendering radiation effects (scaled by radiation level).
+		#Range: 0 ~ 1000
 		radiationParticleCount = 100
 		#Show bolts when the Magnetic Attraction Unit is pulling items.
 		magneticAttraction = true
@@ -47,11 +51,14 @@
 		#Opacity of HUD used by MekaSuit.
 		#Range: 0.0 ~ 1.0
 		hudOpacity = 0.4000000059604645
-		#Color of HUD used by MekaSuit.
+		#Color (RGB) of HUD used by MekaSuit.
+		#Range: 0 ~ 16777215
 		hudColor = 4257264
-		#Color of warning HUD elements used by MekaSuit.
+		#Color (RGB) of warning HUD elements used by MekaSuit.
+		#Range: 0 ~ 16777215
 		hudWarningColor = 16768335
-		#Color of danger HUD elements used by MekaSuit.
+		#Color (RGB) of danger HUD elements used by MekaSuit.
+		#Range: 0 ~ 16777215
 		hudDangerColor = 16726076
 		#Visual jitter of MekaSuit HUD, seen when moving the player's head. Bigger value = more jitter.
 		#Range: 1.0 ~ 100.0

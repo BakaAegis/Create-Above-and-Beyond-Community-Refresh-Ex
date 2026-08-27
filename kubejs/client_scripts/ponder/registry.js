@@ -1,7 +1,11 @@
-onEvent("ponder.registry", (event) => {
+Ponder.registry((event) => {
     event.create("kubejs:ponder_laser_lamp")
         .tag("kubejs:ponder")
         .scene("alchemy_setup", "{kubejs.ponder.alchemy_setup.header}", "kubejs:laser_alchemy", (scene, util) => {
+            let CreateSceneBuilder = Java.loadClass("com.simibubi.create.foundation.ponder.CreateSceneBuilder")
+            scene = new CreateSceneBuilder(scene)
+            let world = scene.world()
+
             scene.showBasePlate()
             scene.idle(20)
 
@@ -13,7 +17,7 @@ onEvent("ponder.registry", (event) => {
             let machine = util.select.position(2, 1, 3)
             let light = util.select.position(2, 1, 2)
 
-            scene.world.showSection(machine, Facing.down)
+            world.showSection(machine, Facing.down)
             scene.idle(15)
 
             scene.overlay.showText(50)
@@ -23,7 +27,7 @@ onEvent("ponder.registry", (event) => {
                 .placeNearTarget()
             scene.idle(60)
 
-            scene.world.showSection(light, Facing.south)
+            world.showSection(light, Facing.south)
             scene.overlay.showText(50)
                 .text("{kubejs.ponder.alchemy_setup.text_2}")
                 .pointAt(util.vector.centerOf(2, 1, 2))
@@ -31,12 +35,12 @@ onEvent("ponder.registry", (event) => {
                 .placeNearTarget()
             scene.idle(30)
 
-            scene.world.showSection(util.select.position(1, 1, 2), Facing.north)
+            world.showSection(util.select.position(1, 1, 2), Facing.north)
             scene.idle(25)
 
-            scene.world.toggleRedstonePower(util.select.position(1, 1, 2))
+            world.toggleRedstonePower(util.select.position(1, 1, 2))
             scene.effects.indicateRedstone(util.grid.at(1, 1, 2))
-            scene.world.setBlock(util.grid.at(2, 1, 2), util.getDefaultState("kubejs:ponder_laser_lamp_on"), false)
+            world.setBlock(util.grid.at(2, 1, 2), util.getDefaultState("kubejs:ponder_laser_lamp_on"), false)
             scene.idle(15)
 
             scene.overlay.showText(40)
@@ -46,8 +50,7 @@ onEvent("ponder.registry", (event) => {
                 .placeNearTarget()
             scene.idle(50)
 
-            scene.world.setKineticSpeed(deployer, 0)
-            scene.world.showSection(deployerSingle, Facing.down)
+            world.showSection(deployerSingle, Facing.down)
             scene.idle(15)
 
             scene.overlay.showText(60)
@@ -56,11 +59,13 @@ onEvent("ponder.registry", (event) => {
                 .colored(PonderPalette.WHITE)
                 .placeNearTarget()
             scene.idle(70)
-            scene.overlay.showControls(new PonderInput(util.vector.blockSurface(util.grid.at(4, 1, 3), Facing.west), PonderPointing.RIGHT)
-                .rightClick().withWrench(),
-                50)
+            scene.overlay.showControls(
+                util.vector.blockSurface(util.grid.at(4, 1, 3), Facing.west),
+                PonderPointing.RIGHT,
+                50
+            ).rightClick()
             scene.idle(8)
-            scene.world.modifyTileNBT(deployerSingle, (nbt) => {
+            world.modifyBlockEntityNBT(deployerSingle, (nbt) => {
                 nbt.Patterns = [
                     {
                         Mode: "PUNCH"
@@ -73,12 +78,11 @@ onEvent("ponder.registry", (event) => {
                 .pointAt(util.vector.topOf(4, 1, 3))
                 .placeNearTarget()
             scene.idle(20)
-            scene.world.showSection(largeCog, Facing.up)
-            scene.world.showSection(smallCog, Facing.down)
+            world.showSection(largeCog, Facing.up)
+            world.showSection(smallCog, Facing.down)
             scene.idle(5)
-            scene.world.showSection(lamp, Facing.down)
+            world.showSection(lamp, Facing.down)
             scene.idle(5)
-            scene.world.setKineticSpeed(deployer, 64)
             scene.idle(60)
             scene.overlay.showText(50)
                 .attachKeyFrame()
@@ -88,9 +92,9 @@ onEvent("ponder.registry", (event) => {
                 .placeNearTarget()
 
             scene.idle(30)
-            scene.world.toggleRedstonePower(lamp)
+            world.toggleRedstonePower(lamp)
             scene.idle(3)
-            scene.world.moveDeployer(util.grid.at(4, 1, 3), 1, 25)
+            world.moveDeployer(util.grid.at(4, 1, 3), 1, 25)
             scene.idle(15)
             scene.idle(10)
 
@@ -100,9 +104,9 @@ onEvent("ponder.registry", (event) => {
             scene.effects.indicateSuccess(util.grid.at(2, 1, -1))
 
             scene.idle(3)
-            scene.world.moveDeployer(util.grid.at(4, 1, 3), -1, 25)
+            world.moveDeployer(util.grid.at(4, 1, 3), -1, 25)
             scene.idle(10)
-            scene.world.toggleRedstonePower(lamp)
+            world.toggleRedstonePower(lamp)
             // scene.effects.indicateRedstone(util.grid.at(4, 2, 4))
 
             scene.overlay.showText(50)
@@ -112,9 +116,9 @@ onEvent("ponder.registry", (event) => {
                 .placeNearTarget()
             scene.idle(60)
 
-            scene.world.showSection(util.select.fromTo(1, 1, 0, 3, 1, 0), Facing.west)
+            world.showSection(util.select.fromTo(1, 1, 0, 3, 1, 0), Facing.west)
             scene.idle(5)
-            let HopperMinecart = java("net.minecraft.world.entity.vehicle.MinecartHopper")
+            let HopperMinecart = Java.loadClass("net.minecraft.world.entity.vehicle.MinecartHopper")
             let cartHandle = scene.special.createCart(util.vector.topOf(2, 0, 0), 0, (w, x, y, z) => new HopperMinecart(w, x, y, z))
             scene.idle(20)
             scene.overlay.showText(80)
@@ -125,18 +129,22 @@ onEvent("ponder.registry", (event) => {
                 .placeNearTarget()
             scene.idle(70)
 
-            scene.overlay.showControls(new PonderInput(util.vector.centerOf(2, 1, 0), PonderPointing.DOWN)
-                .withItem("thermal:flux_magnet"),
-                40)
+            scene.overlay.showControls(
+                util.vector.centerOf(2, 1, 0),
+                PonderPointing.DOWN,
+                40
+            ).withItem("thermal:flux_magnet")
             scene.idle(5)
-            scene.overlay.showControls(new PonderInput(util.vector.centerOf(2, 1, 0), PonderPointing.UP)
-                .withItem("minecraft:basalt"),
-                35)
+            scene.overlay.showControls(
+                util.vector.centerOf(2, 1, 0),
+                PonderPointing.UP,
+                35
+            ).withItem("minecraft:basalt")
             scene.idle(30)
 
-            scene.world.toggleRedstonePower(lamp)
+            world.toggleRedstonePower(lamp)
             scene.idle(3)
-            scene.world.moveDeployer(util.grid.at(4, 1, 3), 1, 25)
+            world.moveDeployer(util.grid.at(4, 1, 3), 1, 25)
             scene.idle(15)
             scene.idle(10)
 
@@ -146,18 +154,22 @@ onEvent("ponder.registry", (event) => {
             scene.effects.indicateSuccess(util.grid.at(2, 1, -1))
 
             scene.idle(3)
-            scene.world.moveDeployer(util.grid.at(4, 1, 3), -1, 25)
+            world.moveDeployer(util.grid.at(4, 1, 3), -1, 25)
             scene.idle(10)
 
-            scene.overlay.showControls(new PonderInput(util.vector.centerOf(2, 1, 0), PonderPointing.DOWN)
-                .withItem("thermal:flux_magnet"),
-                40)
+            scene.overlay.showControls(
+                util.vector.centerOf(2, 1, 0),
+                PonderPointing.DOWN,
+                40
+            ).withItem("thermal:flux_magnet")
             scene.idle(5)
-            scene.overlay.showControls(new PonderInput(util.vector.centerOf(2, 1, 0), PonderPointing.UP)
-                .withItem("thermal:basalz_rod"),
-                35)
+            scene.overlay.showControls(
+                util.vector.centerOf(2, 1, 0),
+                PonderPointing.UP,
+                35
+            ).withItem("thermal:basalz_rod")
 
             // scene.effects.indicateRedstone(util.grid.at(4, 2, 4))
-            scene.world.toggleRedstonePower(lamp)
+            world.toggleRedstonePower(lamp)
         })
 })

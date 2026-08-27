@@ -2,7 +2,7 @@
   "type": "thermal:seeds_from_grass",
   "conditions": [
     {
-      "condition": "minecraft:alternative",
+      "condition": "minecraft:any_of",
       "terms": [
         {
           "condition": "block_state_property",

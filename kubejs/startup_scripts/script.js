@@ -2,7 +2,7 @@
 
 console.info('KubeJS Startup Script...')
 
-onEvent('item.registry', event => {
+StartupEvents.registry('item', event => {
 	// Register new items here
 	// event.create('example_item').displayName('Example Item')
 
@@ -15,13 +15,13 @@ onEvent('item.registry', event => {
 	event.create('minus_cast').texture("kubejs:item/minus_cast").unstackable()
 	event.create('multiply_cast').texture("kubejs:item/multiply_cast").unstackable()
 	event.create('divide_cast').texture("kubejs:item/divide_cast").unstackable()
-	event.create('computation_matrix').parentModel("kubejs:item/computation_matrix").unstackable().rarity(RARITY_EPIC)
-	event.create('advanced_computation_matrix').parentModel("kubejs:item/advanced_computation_matrix").unstackable().rarity(RARITY_EPIC)
+	event.create('computation_matrix').parentModel("kubejs:item/computation_matrix").unstackable().rarity('EPIC')
+	event.create('advanced_computation_matrix').parentModel("kubejs:item/advanced_computation_matrix").unstackable().rarity('EPIC')
 
 	// 数字
 	let number = (id, name) => {
 		let e = id.toLowerCase()
-		event.create(e).texture("kubejs:item/math/" + e).glow(true).rarity(RARITY_UNCOMMON)
+		event.create(e).texture("kubejs:item/math/" + e).glow(true).rarity('UNCOMMON')
 	}
 	number('Zero', '0')
 	number('One', '1')
@@ -44,11 +44,12 @@ onEvent('item.registry', event => {
 	let types = ["certus", "fluix"]
 	types.forEach(e => {
 		let id = e.toLowerCase()
-		event.create('growing_' + id + '_seed', 'create:sequenced_assembly').texture("ae2:item/crystal_seed_" + id)
-		event.create('tiny_' + id + '_crystal').texture("ae2:item/crystal_seed_" + id + "2")
-		event.create('growing_tiny_' + id + '_crystal', 'create:sequenced_assembly').texture("ae2:item/crystal_seed_" + id + "2")
-		event.create('small_' + id + '_crystal').texture("ae2:item/crystal_seed_" + id + "3")
-		event.create('growing_small_' + id + '_crystal', 'create:sequenced_assembly').texture("ae2:item/crystal_seed_" + id + "3")
+		event.create(id + '_seed').texture("kubejs:item/quartz/crystal_seed_" + id)
+		event.create('growing_' + id + '_seed', 'create:sequenced_assembly').texture("kubejs:item/quartz/crystal_seed_" + id)
+		event.create('tiny_' + id + '_crystal').texture("kubejs:item/quartz/crystal_seed_" + id + "2")
+		event.create('growing_tiny_' + id + '_crystal', 'create:sequenced_assembly').texture("kubejs:item/quartz/crystal_seed_" + id + "2")
+		event.create('small_' + id + '_crystal').texture("kubejs:item/quartz/crystal_seed_" + id + "3")
+		event.create('growing_small_' + id + '_crystal', 'create:sequenced_assembly').texture("kubejs:item/quartz/crystal_seed_" + id + "3")
 	})
 	event.create('nether_seed').texture("kubejs:item/quartz/crystal_seed_nether")
 	event.create('growing_nether_seed', 'create:sequenced_assembly').texture("kubejs:item/quartz/crystal_seed_nether")
@@ -60,30 +61,30 @@ onEvent('item.registry', event => {
 	// 构件
 	let mechanism = (id, rarity) => {
 		let e = id.toLowerCase()
-		event.create(e + '_mechanism').texture("kubejs:item/mechanism/" + e + "_mechanism").rarity(rarity ? rarity : RARITY_COMMON)
+		event.create(e + '_mechanism').texture("kubejs:item/mechanism/" + e + "_mechanism").rarity(rarity ? rarity : 'COMMON')
 		event.create('incomplete_' + e + '_mechanism', 'create:sequenced_assembly').texture("kubejs:item/mechanism/incomplete_" + e + "_mechanism")
 	}
 	mechanism('Kinetic')
 	mechanism('Sealed')
-	mechanism('Sturdy', RARITY_UNCOMMON)
-	mechanism('Infernal', RARITY_UNCOMMON)
-	mechanism('Inductive', RARITY_UNCOMMON)
-	mechanism('Abstruse', RARITY_RARE)
-	mechanism('Calculation', RARITY_RARE)
-	mechanism('Overclocking', RARITY_EPIC)
-	mechanism('Energy', RARITY_EPIC)
-	mechanism('Smart', RARITY_EPIC)
-	mechanism('Ultimate', RARITY_EPIC)
+	mechanism('Sturdy', 'UNCOMMON')
+	mechanism('Infernal', 'UNCOMMON')
+	mechanism('Inductive', 'UNCOMMON')
+	mechanism('Abstruse', 'RARE')
+	mechanism('Calculation', 'RARE')
+	mechanism('Overclocking', 'EPIC')
+	mechanism('Energy', 'EPIC')
+	mechanism('Smart', 'EPIC')
+	mechanism('Ultimate', 'EPIC')
 	event.create('broken_precision_mechanism').texture("kubejs:item/mechanism/broken_precision_mechanism")
-	event.create('bzero').texture("kubejs:item/math/bzero").glow(true).rarity(RARITY_EPIC)
-	event.create('bone').texture("kubejs:item/math/bone").glow(true).rarity(RARITY_EPIC)
+	event.create('bzero').texture("kubejs:item/math/bzero").glow(true).rarity('EPIC')
+	event.create('bone').texture("kubejs:item/math/bone").glow(true).rarity('EPIC')
 
 	// 工具
 	event.create('netherite_saw').parentModel("kubejs:item/tool/netherite_saw").maxDamage(2653)
-	event.create('chromatic_resonator').texture("kubejs:item/tool/chromatic_resonator").maxDamage(512).rarity(RARITY_UNCOMMON)
-	event.create('calculator').texture("kubejs:item/tool/calculator").maxDamage(256).rarity(RARITY_UNCOMMON)
-	event.create('flash_drive').texture("kubejs:item/tool/boot_medium").maxDamage(256).rarity(RARITY_UNCOMMON)
-	event.create('data_module').texture("kubejs:item/tool/data_module").maxDamage(256).rarity(RARITY_UNCOMMON)
+	event.create('chromatic_resonator').texture("kubejs:item/tool/chromatic_resonator").maxDamage(512).rarity('UNCOMMON')
+	event.create('calculator').texture("kubejs:item/tool/calculator").maxDamage(256).rarity('UNCOMMON')
+	event.create('flash_drive').texture("kubejs:item/tool/boot_medium").maxDamage(256).rarity('UNCOMMON')
+	event.create('data_module').texture("kubejs:item/tool/data_module").maxDamage(256).rarity('UNCOMMON')
 
 	// 粉末
 	event.create('brass_dust').texture("kubejs:item/dust/brass_dust")
@@ -115,7 +116,7 @@ onEvent('item.registry', event => {
 	event.create('pipe_module_tier_3').texture("kubejs:item/pipe_module_tier_3")
 
 	// 杂物
-	event.create('radiant_coil').glow(true).texture("kubejs:item/radiant_coil").rarity(RARITY_UNCOMMON)
+	event.create('radiant_coil').glow(true).texture("kubejs:item/radiant_coil").rarity('UNCOMMON')
 	event.create('circuit_scrap').texture("kubejs:item/circuit_scrap")
 	event.create('incomplete_coke_chunk', 'create:sequenced_assembly').texture("kubejs:item/incomplete_coke_chunk")
 	event.create('coke_chunk').texture("kubejs:item/coke_chunk")
@@ -124,19 +125,19 @@ onEvent('item.registry', event => {
 	event.create('rough_sand').texture("kubejs:item/rough_sand")
 	event.create('purified_sand').texture("kubejs:item/purified_sand")
 	event.create('press_rod_die').texture("kubejs:item/press_rod_die").unstackable()
-	event.create('dye_entangled_singularity').texture("kubejs:item/dye_entangled_singularity").rarity(RARITY_UNCOMMON)
+	event.create('dye_entangled_singularity').texture("kubejs:item/dye_entangled_singularity").rarity('UNCOMMON')
 	event.create('arcane_golden_sheet').texture("kubejs:item/arcane_golden_sheet")
 	event.create('andesite_alloy_gear').texture("kubejs:item/andesite_alloy_gear")
 	event.create('andesite_alloy_ingot').texture("kubejs:item/andesite_alloy_classic")
 	event.create('arcane_gold_gear').texture("kubejs:item/arcane_gold_gear")
-	event.create('matter_plastics').texture("kubejs:item/matter_plastics").rarity(RARITY_UNCOMMON)
+	event.create('matter_plastics').texture("kubejs:item/matter_plastics").rarity('UNCOMMON')
 	event.create('gloden_hand').texture("kubejs:item/gloden_hand")
 	event.create('bronze_hand').texture("kubejs:item/bronze_hand")
 	event.create('aethersite_alloy').texture("kubejs:item/aethersite_alloy")
 	event.create('polar_algal_blend').texture("kubejs:item/polar_algal_blend")
-	event.create('ae2_supply_card').texture("kubejs:item/ae2_supply_card").unstackable().rarity(RARITY_EPIC)
-	event.create('creative_card').texture("kubejs:item/creative_card").unstackable().rarity(RARITY_EPIC)
-	event.create('quantum_entangled_singularity_stackable').texture("kubejs:item/quantum_entangled_singularity_stackable").rarity(RARITY_EPIC)
+	event.create('ae2_supply_card').texture("kubejs:item/ae2_supply_card").unstackable().rarity('EPIC')
+	event.create('creative_card').texture("kubejs:item/creative_card").unstackable().rarity('EPIC')
+	event.create('quantum_entangled_singularity_stackable').texture("kubejs:item/quantum_entangled_singularity_stackable").rarity('EPIC')
 
 	// 粉碎矿石
 	event.create('crushed_raw_cobalt').texture("kubejs:item/ore/crushed_raw_cobalt")
@@ -187,7 +188,7 @@ onEvent('item.registry', event => {
 	event.create('alloy_hardener_item').texture("kubejs:item/alloy_hardener_item")
 })
 
-onEvent('block.registry', event => {
+StartupEvents.registry('block', event => {
 	// Register new blocks here
 	// event.create('example_block').material('wood').hardness(1.0).displayName('Example Block')
 
@@ -196,12 +197,12 @@ onEvent('block.registry', event => {
 	event.create('ponder_laser_lamp_on').model('kubejs:block/ponder_laser_lamp_on').material("lantern").notSolid().renderType("translucent")
 
 	// 机壳
-	event.create('enderium_casing').model('kubejs:block/enderium_casing').material('metal').hardness(4.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
-	event.create('zinc_casing').material('metal').hardness(3.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
-	event.create('invar_casing').material('metal').hardness(3.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
-	event.create('fluix_casing').material('metal').hardness(3.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
-	event.create('matter_casing').material('stone').hardness(8.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
-	event.create('creative_casing').material('stone').hardness(-1.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	event.create('enderium_casing').model('kubejs:block/enderium_casing').soundType(SoundType.METAL).hardness(4.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	event.create('zinc_casing').soundType(SoundType.METAL).hardness(3.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	event.create('invar_casing').soundType(SoundType.METAL).hardness(3.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	event.create('fluix_casing').soundType(SoundType.METAL).hardness(3.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	event.create('matter_casing').soundType(SoundType.STONE).hardness(8.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	event.create('creative_casing').soundType(SoundType.STONE).hardness(-1.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 
 	// 机器
 	let machine = (name, layer, material) => {
@@ -235,33 +236,33 @@ onEvent('block.registry', event => {
 	// event.create("calorite_support").material("stone").hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").renderType("cutout").suffocating(false)
 
 	
-	event.create("encased_steel_fuel_tank").model('kubejs:block/encased_steel_fuel_tank').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
-	event.create("encased_desh_fuel_tank").model('kubejs:block/encased_desh_fuel_tank').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
-	event.create("encased_ostrum_fuel_tank").model('kubejs:block/encased_ostrum_fuel_tank').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
-	event.create("encased_calorite_fuel_tank").model('kubejs:block/encased_calorite_fuel_tank').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	event.create("encased_steel_fuel_tank").model('kubejs:block/encased_steel_fuel_tank').soundType(SoundType.STONE).hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	event.create("encased_desh_fuel_tank").model('kubejs:block/encased_desh_fuel_tank').soundType(SoundType.STONE).hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	event.create("encased_ostrum_fuel_tank").model('kubejs:block/encased_ostrum_fuel_tank').soundType(SoundType.STONE).hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	event.create("encased_calorite_fuel_tank").model('kubejs:block/encased_calorite_fuel_tank').soundType(SoundType.STONE).hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 
-	event.create("signal_transmission_antenna").model('kubejs:block/signal_transmission_antenna').material('stone').hardness(8.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").notSolid().box(0, 0, 0, 16, 16, 16, true)
+	event.create("signal_transmission_antenna").model('kubejs:block/signal_transmission_antenna').soundType(SoundType.STONE).hardness(8.0).tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").notSolid().box(0, 0, 0, 16, 16, 16, true)
 
-	event.create("encased_steel_engine").model('kubejs:block/encased_steel_engine').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").notSolid().box(1, 0, 1, 15, 16, 15, true)
-	event.create("encased_desh_engine").model('kubejs:block/encased_desh_engine').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").notSolid().box(1, 0, 1, 15, 16, 15, true)
-	event.create("encased_ostrum_engine").model('kubejs:block/encased_ostrum_engine').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").notSolid().box(1, 0, 1, 15, 16, 15, true)
-	event.create("encased_calorite_engine").model('kubejs:block/encased_calorite_engine').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").notSolid().box(1, 0, 1, 15, 16, 15, true)
+	event.create("encased_steel_engine").model('kubejs:block/encased_steel_engine').soundType(SoundType.STONE).hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").notSolid().box(1, 0, 1, 15, 16, 15, true)
+	event.create("encased_desh_engine").model('kubejs:block/encased_desh_engine').soundType(SoundType.STONE).hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").notSolid().box(1, 0, 1, 15, 16, 15, true)
+	event.create("encased_ostrum_engine").model('kubejs:block/encased_ostrum_engine').soundType(SoundType.STONE).hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").notSolid().box(1, 0, 1, 15, 16, 15, true)
+	event.create("encased_calorite_engine").model('kubejs:block/encased_calorite_engine').soundType(SoundType.STONE).hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe").notSolid().box(1, 0, 1, 15, 16, 15, true)
 
-	// event.create("rocket_loading_computer").model('kubejs:block/rocket_loading_computer').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	// event.create("rocket_loading_computer").model('kubejs:block/rocket_loading_computer').soundType(SoundType.STONE).hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 	// .property(BlockProperties.HORIZONTAL_FACING).placementState(callblock => { let yaw = callblock.player.yaw; let facing; if (yaw >= -45 && yaw < 45) { facing = "north" } else if (yaw >= 45 && yaw < 135) { facing = "east" } else if (yaw >= -135 && yaw < -45) { facing = "west" } else { facing = "south" }; callblock.set(BlockProperties.HORIZONTAL_FACING, facing) })
-	event.create("guide_computer_tier1").model('kubejs:block/guide_computer_tier1').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	event.create("guide_computer_tier1").model('kubejs:block/guide_computer_tier1').soundType(SoundType.STONE).hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 	.property(BlockProperties.HORIZONTAL_FACING).placementState(callblock => { let yaw = callblock.player.yaw; let facing; if (yaw >= -45 && yaw < 45) { facing = "north" } else if (yaw >= 45 && yaw < 135) { facing = "east" } else if (yaw >= -135 && yaw < -45) { facing = "west" } else { facing = "south" }; callblock.set(BlockProperties.HORIZONTAL_FACING, facing) })
-	event.create("guide_computer_tier2").model('kubejs:block/guide_computer_tier2').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	event.create("guide_computer_tier2").model('kubejs:block/guide_computer_tier2').soundType(SoundType.STONE).hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 	.property(BlockProperties.HORIZONTAL_FACING).placementState(callblock => { let yaw = callblock.player.yaw; let facing; if (yaw >= -45 && yaw < 45) { facing = "north" } else if (yaw >= 45 && yaw < 135) { facing = "east" } else if (yaw >= -135 && yaw < -45) { facing = "west" } else { facing = "south" }; callblock.set(BlockProperties.HORIZONTAL_FACING, facing) })
-	event.create("guide_computer_tier3").model('kubejs:block/guide_computer_tier3').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	event.create("guide_computer_tier3").model('kubejs:block/guide_computer_tier3').soundType(SoundType.STONE).hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 	.property(BlockProperties.HORIZONTAL_FACING).placementState(callblock => { let yaw = callblock.player.yaw; let facing; if (yaw >= -45 && yaw < 45) { facing = "north" } else if (yaw >= 45 && yaw < 135) { facing = "east" } else if (yaw >= -135 && yaw < -45) { facing = "west" } else { facing = "south" }; callblock.set(BlockProperties.HORIZONTAL_FACING, facing) })
-	event.create("guide_computer_tier4").model('kubejs:block/guide_computer_tier4').material('stone').hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
+	event.create("guide_computer_tier4").model('kubejs:block/guide_computer_tier4').soundType(SoundType.STONE).hardness(8.0).tagBlock("create:copycat_deny").tagBlock("create:wrench_pickup").tagBlock("minecraft:mineable/pickaxe")
 	.property(BlockProperties.HORIZONTAL_FACING).placementState(callblock => { let yaw = callblock.player.yaw; let facing; if (yaw >= -45 && yaw < 45) { facing = "north" } else if (yaw >= 45 && yaw < 135) { facing = "east" } else if (yaw >= -135 && yaw < -45) { facing = "west" } else { facing = "south" }; callblock.set(BlockProperties.HORIZONTAL_FACING, facing) })
 
 
 })
 
-onEvent('fluid.registry', event => {
+StartupEvents.registry('fluid', event => {
 
 	event.create("fine_sand").bucketColor(0xE3DBB0).stillTexture('kubejs:fluid/fine_sand_still').flowingTexture('kubejs:fluid/fine_sand_flow').noBlock()
 
@@ -279,15 +280,11 @@ onEvent('fluid.registry', event => {
 	event.create('pelletium').stillTexture('kubejs:fluid/pelletium_still').flowingTexture('kubejs:fluid/pelletium_flow').bucketColor(0x22767E).noBlock()
 })
 
-onEvent("mekanism.gas.registry", event => {
-	event.create('oil_gas').color(0xFFF180).displayName('石油气').fuel(30, 120000)
-})
+// mekanism:gas 注册已移除（kubejs-mekanism 无 1.20.1 官方版，oil_gas 仅用于 rotary 中间转换，无实际消耗方）
 
-onEvent('mekanism.infuse_type.registry', event => {
-	event.create('alloy_hardener').color(0xDFDEDA)
-})
+// mekanism:infuse_type 注册已移除（改用标准 mekanism:redstone 灌注类型，见 server_scripts 合金链）
 
-onEvent('item.modification', event => {
+ItemEvents.modification(event => {
 	let colors = ["red", "yellow", "green", "blue", "magenta", "black"]
 	colors.forEach(element => {
 		event.modify('ae2:' + element + '_paint_ball', item => {

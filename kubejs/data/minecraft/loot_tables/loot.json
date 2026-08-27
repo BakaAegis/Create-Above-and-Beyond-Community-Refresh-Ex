@@ -157,7 +157,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "beyond_earth:moon_sand",
+          "name": "ad_astra:moon_sand",
           "weight": 20,
           "functions": [
             {

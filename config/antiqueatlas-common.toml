@@ -1,0 +1,204 @@
+["User Interface"]
+	#
+	############################################
+	#If false (by default), then mousewheel up is zoom in, mousewheel down is zoom out.
+	#If true, then the direction is reversed.
+	#-------------------------------------------
+	#Default: false
+	#-------------------------------------------
+	"Boolean: doReverseWheelZoom" = false
+	#
+	############################################
+	#
+	#Default: false
+	#-------------------------------------------
+	"Boolean: doScaleMarkers" = false
+	#
+	############################################
+	#Default zoom level. The number corresponds to the size of a block on the map relative to the size of a GUI pixel. Preferrably a power of 2.
+	#-------------------------------------------
+	#Default: 0.5
+	#-------------------------------------------
+	#Range: 0.001953125 ~ 16.0
+	"Double: defaultScale" = 0.5
+[performance]
+	#
+	############################################
+	#Whether to perform additional scanning to locate ravines.
+	#Disable for better performance.
+	#-------------------------------------------
+	#Default: true
+	#-------------------------------------------
+	"Boolean: doScanRavines" = true
+	#
+	############################################
+	#Time in seconds between two scans of the area.
+	#Higher value gives better performance.
+	#-------------------------------------------
+	#Default: 1.0
+	#-------------------------------------------
+	#Range: 1.4E-45 ~ 3.4028235E38
+	"Float: newScanInterval" = 1.0
+	#
+	############################################
+	#The number of area scans between full rescans.
+	#Higher value gives better performance.
+	#-------------------------------------------
+	#Default: 4
+	#-------------------------------------------
+	#Range: -2147483648 ~ 2147483647
+	"Integer: rescanRate" = 4
+	#
+	############################################
+	#The maximum number of markers a particular atlas can hold.
+	#-------------------------------------------
+	#Default: 1024
+	#-------------------------------------------
+	#Range: -2147483648 ~ 2147483647
+	"Integer: markerLimit" = 1024
+	#
+	############################################
+	#Whether to perform additional scanning to locate small ponds of water or lava.
+	#Disable for better performance.
+	#-------------------------------------------
+	#Default: true
+	#-------------------------------------------
+	"Boolean: doScanPonds" = true
+	#
+	############################################
+	#If true, map render time will be output.
+	#-------------------------------------------
+	#Default: false
+	#-------------------------------------------
+	"Boolean: debugRender" = false
+	#
+	############################################
+	#If true, all resource pack loading information will be logged during start and reload.
+	#-------------------------------------------
+	#Default: true
+	#-------------------------------------------
+	"Boolean: resourcePackLogging" = true
+	#
+	############################################
+	#Whether to rescan chunks in the area that have been previously mapped. This is useful in case of changes in coastline (including small ponds of water and lava), or if land disappears completely (for sky worlds).
+	#Disable for better performance.
+	#-------------------------------------------
+	#Default: true
+	#-------------------------------------------
+	"Boolean: doRescan" = true
+	#
+	############################################
+	#The radius of the area around the player which is scanned by the Atlas at regular intervals.
+	#Note that this will not force faraway chunks to load, unless force_chunk_loading is enabled.
+	#Lower value gives better performance.
+	#-------------------------------------------
+	#Default: 11
+	#-------------------------------------------
+	#Range: -2147483648 ~ 2147483647
+	"Integer: scanRadius" = 11
+	#
+	############################################
+	#Force loading of chunks within scan radius even if it exceeds regular chunk loading distance.
+	#Enabling this may SEVERELY decrease performance!
+	#-------------------------------------------
+	#Default: false
+	#-------------------------------------------
+	"Boolean: forceChunkLoading" = false
+[appearance]
+	#
+	############################################
+	#The height (in GUI pixels) of the player's icon.
+	#-------------------------------------------
+	#Default: 16
+	#-------------------------------------------
+	#Range: -2147483648 ~ 2147483647
+	"Integer: playerIconHeight" = 16
+	#
+	############################################
+	#The width (in GUI pixels) of the player's icon.
+	#-------------------------------------------
+	#Default: 14
+	#-------------------------------------------
+	#Range: -2147483648 ~ 2147483647
+	"Integer: playerIconWidth" = 14
+	#
+	############################################
+	#The size (in GUI pixels) of a marker on the map.
+	#Note that this will change with Minecraft's GUI scale configuration.
+	#-------------------------------------------
+	#Default: 16
+	#-------------------------------------------
+	#Range: -2147483648 ~ 2147483647
+	"Integer: markerSize" = 16
+	#
+	############################################
+	#The size (in GUI pixels) of a map's tile.
+	#Note that this will change with Minecraft's GUI scale configuration.
+	#When using a small gui scale, the map may look better with a TILE_SIZE of 16 or more.
+	#-------------------------------------------
+	#Default: 8
+	#-------------------------------------------
+	#Range: 1 ~ 10
+	"Integer: tileSize" = 8
+[Gameplay]
+	#
+	############################################
+	#Whether to add global markers for NPC villages.
+	#-------------------------------------------
+	#Default: false
+	#-------------------------------------------
+	"Boolean: autoVillageMarkers" = false
+	#
+	############################################
+	#Player will need to craft atlas item to use atlas.
+	#-------------------------------------------
+	#Default: true
+	#-------------------------------------------
+	"Boolean: itemNeeded" = true
+	#
+	############################################
+	#Whether to remember last open browsing position and zoom level for each dimension in every atlas.
+	#If disabled, all dimensions and all atlases will be "synchronized" at the same coordinates and zoom level, and map will "follow" player by default.
+	#-------------------------------------------
+	#Default: true
+	#-------------------------------------------
+	"Boolean: doSaveBrowsingPos" = true
+	#
+	############################################
+	#Whether to add global markers for Nether Portals.
+	#-------------------------------------------
+	#Default: true
+	#-------------------------------------------
+	"Boolean: autoNetherPortalMarkers" = true
+	#
+	############################################
+	#Show a minimap if held in the mainhand
+	#-------------------------------------------
+	#Default: false
+	#-------------------------------------------
+	"Boolean: minimap" = false
+	#
+	############################################
+	#Whether to add local marker for the spot where the player died.
+	#-------------------------------------------
+	#Default: true
+	#-------------------------------------------
+	"Boolean: autoDeathMarker" = true
+[userInterface]
+	#
+	############################################
+	#Maximum zoom level. The number corresponds to the size of a block on the map relative to the size of a GUI pixel. Preferrably a power of 2.
+	#-------------------------------------------
+	#Default: 4.0
+	#-------------------------------------------
+	#Range: 9.765625E-4 ~ 1024.0
+	"Double: maxScale" = 4.0
+	#
+	############################################
+	#Minimum zoom level. The number corresponds to the size of a block on the map relative to the size of a GUI pixel. Preferrably a power of 2. Smaller values may decrease performance!
+	#-------------------------------------------
+	#Default: 0.03125
+	#-------------------------------------------
+	#Range: 9.765625E-4 ~ 1024.0
+	"Double: minScale" = 0.03125
+

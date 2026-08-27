@@ -1,0 +1,182 @@
+
+
+
+
+profile Saved activate HOT3
+	HOT1
+		"tconstruct:pickaxe"
+	HOT2
+		"storagedrawers:drawer_key"
+	HOT4
+		"minecraft:dirt"
+	HOT5
+		"create:mechanical_crafter"
+	HOT6
+		"minecraft:iron_shovel"
+	HOT7
+		"tconstruct:sword"
+	HOT8
+		"ae2:fluix_glass_cable"
+	HOT9
+		"minecraft:apple"
+	OFFHAND
+		"minecraft:torch"
+	HEAD
+		"minecraft:iron_helmet"
+	CHEST
+		"minecraft:iron_chestplate"
+	LEGS
+		"minecraft:iron_leggings"
+	FEET
+		"minecraft:iron_boots"
+
+profile Saved activate HOT1
+	HOT1
+		"tconstruct:pickaxe"
+	HOT3
+		"create:large_cogwheel"
+	HOT4
+		"storagedrawers:drawer_key"
+	HOT5
+		"ae2:fluix_glass_cable"
+	HOT6
+		"minecraft:scaffolding"
+	HOT7
+		"culinaryconstruct:sandwich"
+	HOT8
+		"create:belt_connector"
+	HOT9
+		"create:wrench"
+	OFFHAND
+		"minecraft:torch"
+	HEAD
+		"minecraft:iron_helmet"
+	CHEST
+		"minecraft:iron_chestplate"
+	LEGS
+		"minecraft:iron_leggings"
+	FEET
+		"minecraft:iron_boots"
+
+profile Saved activate HOT1
+	HOT2
+		"minecraft:cobblestone"
+	HOT3
+		"tconstruct:pickaxe"
+	HOT4
+		"create:wrench"
+	HOT5
+		"minecraft:bucket"
+	HOT6
+		"create_dd:rubber_sapling"
+	HOT7
+		"minecraft:iron_shovel"
+	HOT8
+		"culinaryconstruct:sandwich"
+	HOT9
+		"minecraft:iron_axe"
+	HEAD
+		"minecraft:iron_helmet"
+	CHEST
+		"minecraft:iron_chestplate"
+	LEGS
+		"minecraft:iron_leggings"
+	FEET
+		"minecraft:iron_boots"
+
+profile Saved activate HOT2
+	HOT9
+		"ae2:annihilation_plane"
+	HEAD
+		"minecraft:iron_helmet"
+	CHEST
+		"minecraft:iron_chestplate"
+	LEGS
+		"minecraft:iron_leggings"
+	FEET
+		"minecraft:iron_boots"
+
+profile Saved activate HOT4
+	HOT1
+		"create:wrench"
+	HOT2
+		"tconstruct:pickaxe"
+	HOT3
+		"ae2:fluix_glass_cable"
+	HOT5
+		"ae2:annihilation_plane"
+	HOT6
+		"minecraft:bread"
+	HOT7
+		"kubejs:crushed_raw_cobalt"
+	HOT9
+		"storagedrawers:gold_storage_upgrade"
+	HEAD
+		"minecraft:iron_helmet"
+	CHEST
+		"minecraft:iron_chestplate"
+	LEGS
+		"minecraft:iron_leggings"
+	FEET
+		"minecraft:iron_boots"
+
+profile Saved activate HOT8
+	HOT1
+		"tconstruct:pickaxe"
+	HEAD
+		"minecraft:iron_helmet"
+	CHEST
+		"minecraft:iron_chestplate"
+	LEGS
+		"minecraft:iron_leggings"
+	FEET
+		"minecraft:iron_boots"
+
+profile Saved activate HOT6
+	HOT1
+		"tconstruct:excavator"
+	HOT2
+		"tconstruct:pickaxe"
+	HOT3
+		"minecraft:netherrack"
+	HOT4
+		"minecraft:twisting_vines"
+	HOT5
+		"culinaryconstruct:sandwich"
+	HOT7
+		"minecraft:dirt"
+	HOT8
+		"minecraft:bucket"
+	HOT9
+		"create:super_glue"
+	LEGS
+		"minecraft:iron_leggings"
+	FEET
+		"minecraft:iron_boots"
+
+profile Saved activate HOT9
+	HOT1
+		"culinaryconstruct:sandwich"
+	HOT2
+		"create:cogwheel"
+	HOT3
+		"create:wrench"
+	HOT4
+		"create:mechanical_press"
+	HOT5
+		"create:shaft"
+	HOT6
+		"create:belt_connector"
+	HOT7
+		"create:chute"
+	HOT8
+		"create:brass_funnel"
+	HEAD
+		"minecraft:iron_helmet"
+	CHEST
+		"minecraft:iron_chestplate"
+	LEGS
+		"minecraft:iron_leggings"
+	FEET
+		"minecraft:iron_boots"
+

@@ -26,6 +26,7 @@
 			x: -2.0d
 			y: -3.0d
 			shape: "hexagon"
+			subtitle: "&6最终章"
 			description: [
 				"这是最后一步了。"
 				""
@@ -45,7 +46,7 @@
 		}
 		{
 			title: "橙色岩石"
-			icon: "beyond_earth:venus_stone"
+			icon: "ad_astra:venus_stone"
 			x: -5.0d
 			y: -1.0d
 			description: ["依旧是熟悉的再生……"]
@@ -55,7 +56,7 @@
 				{
 					id: "0AE2A22CC034AA0A"
 					type: "item"
-					item: "beyond_earth:venus_stone"
+					item: "ad_astra:venus_stone"
 					consume_items: false
 				}
 				{
@@ -347,7 +348,7 @@
 		}
 		{
 			title: "最终章完成！"
-			icon: "beyond_earth:glacio_globe"
+			icon: "ad_astra:glacio_globe"
 			x: -2.0d
 			y: 0.0d
 			shape: "hexagon"
@@ -371,8 +372,8 @@
 				id: "651F9CB628F124DB"
 				type: "advancement"
 				title: "制作 四阶火箭"
-				icon: "beyond_earth:calorite_engine"
-				advancement: "beyond_earth:rocket_tier_4_advancement"
+				icon: "ad_astra:calorite_engine"
+				advancement: "ad_astra:tier_4_rocket"
 				criterion: ""
 			}]
 			rewards: [{

@@ -42,7 +42,7 @@ let BR = (id, x) => MOD("drinkbeer", id, x)
 //
 
 
-onEvent('item.registry', event => {
+StartupEvents.registry('item', event => {
 
 	global.trades = []
 	global.professions = []
@@ -130,7 +130,7 @@ onEvent('item.registry', event => {
 		{ in: BOP('dead_log', 64), out: S(1) },
 		{ in: MC('acacia_log', 64), out: S(2) },
 		{ in: MC('birch_log', 64), out: S(2) },
-		{ in: BOP('cherry_log', 64), out: S(2) },
+		{ in: MC('cherry_log', 64), out: S(2) },
 		{ in: BOP('willow_log', 64), out: S(3) },
 		{ in: BOP('palm_log', 64), out: S(3) },
 		{ in: BOP('mahogany_log', 64), out: S(3) },
@@ -140,7 +140,7 @@ onEvent('item.registry', event => {
 		{ in: BOP('hellbark_log', 64), out: S(8) },
 		{ in: BOP('fir_log', 64), out: S(8) },
 		{ in: BOP('redwood_log', 64), out: S(8) },
-		{ in: BOP('cherry_log', 64), out: S(8) },
+		{ in: MC('cherry_log', 64), out: S(8) },
 		{ in: BOP('umbran_log', 64), out: S(8) },
 		{ in: BOP('mahogany_log', 64), out: S(8) },
 		{ in: BOP('palm_log', 64), out: S(8) },
@@ -189,7 +189,6 @@ onEvent('item.registry', event => {
 		{ in: AP('olivestone_bricks', 64), out: S(4) },
 		{ in: MC('quartz_bricks', 64), out: S(18) },
 		{ in: AP('algal_bricks', 64), out: S(6) },
-		{ in: TC('lavawood', 64), out: S(6) },
 		{ in: CR('ornate_iron_window', 64), out: S(10) },
 		{ in: MC('mossy_cobblestone', 64), out: S(6) },
 		{ in: F('#glazed_terracotta', 64), out: S(6) },
@@ -498,7 +497,7 @@ onEvent('item.registry', event => {
 		simple("Tin Ingot", CRD('tin_ingot', 8), 48, S, 0xa6bdc6, 0xdcf3f7)
 		
 		simple("Andesite Alloy", CR('andesite_alloy', 16), 8, S, 0x505050, 0x878787)
-		simple("Silica Steel", "8x moreminecarts:silica_steel", 16, S, 0x3E4644, 0xB8DAC8)
+		simple("Silica Steel", CRD('steel_ingot', 8), 16, S, 0x3E4644, 0xB8DAC8)
 		simple("Brass Ingot", CR('brass_ingot', 8), 48, S, 0x6F3C2D, 0xFCF085)
 		simple("Invar Ingot", TE('invar_ingot', 4), 64, S, 0x406D6C, 0xC3CAC1)
 		
@@ -562,9 +561,9 @@ onEvent('item.registry', event => {
 		simple("Scorched Stone", TC('scorched_stone', 16), 32, S, 0x382C25, 0x4C3F37)
 		
 		simple("Lantern", MC('lantern', 1), 1, S, 0x484F64, 0xF6C765)
-		simple("Copper Lantern", SP('copper_lantern', 1), 1, S, 0xB36535, 0xF3B154)
-		simple("Brass Lantern", SP('brass_lantern', 1), 1, S, 0xA47C37, 0xFAEACF)
-		simple("Crimson Lantern", SP('crimson_lantern', 1), 1, S, 0x9C0E2C, 0xE7EB56)
+		simple("Copper Lantern", TC('seared_lantern', 1), 1, S, 0xB36535, 0xF3B154)
+		simple("Brass Lantern", AP('nether_brass_lantern', 1), 1, S, 0xA47C37, 0xFAEACF)
+		simple("Crimson Lantern", TC('scorched_lantern', 1), 1, S, 0x9C0E2C, 0xE7EB56)
 		
 		next_group()
 		entry_cost = 10

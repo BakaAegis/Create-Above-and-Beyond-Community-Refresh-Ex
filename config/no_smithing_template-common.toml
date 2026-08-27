@@ -1,0 +1,8 @@
+
+["General Settings"]
+	#Which items [FORCE REQUIRE] a smithing template for upgrading?
+	#Supported formats: 'modid' (entire mod) or 'modid:itemid' (specific item)
+	#哪些物品升级时【强制需要】锻造模板？
+	#支持格式: 'modid' (禁用整个模组) 或 'modid:itemid' (禁用特定物品)
+	forcedTemplateItems = []
+

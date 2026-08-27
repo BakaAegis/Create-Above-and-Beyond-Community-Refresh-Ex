@@ -1,0 +1,13 @@
+{
+  "biome.ad_astra.mars_desert": "火星沙漠",
+  "biome.ad_astra.mars_rocky_plains": "火星岩石平原",
+  "biome.ad_astra.moon_desert": "月球沙漠",
+  "biome.ad_astra.venus_desert": "金星沙漠",
+
+  "structure.beyond_earth.alien_village": "外星村庄",
+  "structure.beyond_earth.meteor": "陨石",
+  "structure.beyond_earth.oil_well": "油井",
+  "structure.beyond_earth.pygro_tower": "外星猪灵塔",
+  "structure.beyond_earth.pygro_village": "外星猪灵村庄",
+  "structure.beyond_earth.venus_bullet": "金星生态弹"
+}

@@ -37,8 +37,14 @@ let CRC = (id, x) => MOD("create_connected", id, x)
 
 console.info('Starting to load KubeJS tags...')
 
+let MOREMINECARTS_REMOVED_RAILS = [
+	'moreminecarts:hologram_rail',
+	'moreminecarts:wooden_hologram_rail',
+	'moreminecarts:maglev_hologram_rail'
+]
 
-onEvent('item.tags', event => {
+ServerEvents.tags('item', event => {
+	MOREMINECARTS_REMOVED_RAILS.forEach(id => event.get('minecraft:rails').remove(id))
 
 	let colours = ['white', 'orange', 'magenta', 'light_blue', 'lime', 'pink', 'purple', 'light_gray', 'gray', 'cyan', 'brown', 'green', 'blue', 'red', 'black', 'yellow']
 
@@ -58,19 +64,12 @@ onEvent('item.tags', event => {
 	event.get('kubejs:certus_quartz_crystal').add('ae2:certus_quartz_crystal')
 
 	event.get("farmersdelight:offhand_equipment").add("forbidden_arcanus:obsidian_skull_shield")
+	event.get('forge:sandstone/venus_sandstone').add('ad_astra:venus_sandstone')
+
 
 	//event.get("forge:raw_chicken").add("exoticbirds:raw_birdmeat")
 	event.get("forge:tools/axes").add(TC("hand_axe"))
 	event.get("forge:vines").add(MC("vine")).add(BOP("willow_vine")).add(BOP("spanish_moss"))
-	event.get("forge:recycling")
-		.add("expcaves:rusty_pickaxe")
-		.add("expcaves:rusty_sword")
-		.add("expcaves:iron_dagger")
-		.add("expcaves:gourmet_spoon")
-		.add("expcaves:gourmet_fork")
-		.add("expcaves:chef_knife")
-		.add("expcaves:butcher_knife")
-
 	event.get("forge:circuit_press")
 		.add(AE2("name_press"))
 		.add(AE2("silicon_press"))
@@ -86,9 +85,6 @@ onEvent('item.tags', event => {
 		.add(PR_C("draw_plate"))
 		.add(PR_C("multimeter"))
 
-	event.get("minecraft:planks").add("forbidden_arcanus:mysterywood_planks").add("forbidden_arcanus:cherrywood_planks")
-	event.get("minecraft:logs_that_burn").add("#forbidden_arcanus:mysterywood_logs").add("#forbidden_arcanus:cherrywood_logs")
-
 	event.get('forge:saws').add('cb_microblock:stone_saw').add('cb_microblock:iron_saw').add('cb_microblock:diamond_saw').add(KJ('netherite_saw'))
 	event.get('forge:screwdrivers').add(PR_C('screwdriver'))
 	event.get('forge:chromatic_resonators').add(KJ('chromatic_resonator'))
@@ -100,9 +96,9 @@ onEvent('item.tags', event => {
 	event.get('forge:wrenches').add(CR('wrench'))
 	event.get('forge:tools/wrench').add(CR('wrench'))
 	event.get('forge:sewing_spool').add(KJ('sewing_spool'))
+	event.get('forge:tools/knives').add(CR('millstone'))
 
-	//为高贵的石磨献上手磨的美
-	event.get('forge:tools/knives').add('#design_decor:millstones')
+	// design_decor 已移除（无 Create 6 兼容版）；改用 Create 石磨作为刀具标签成员
 
 	event.get('thermal:crafting/dies')
 		.add('#forge:trade_cards')
@@ -158,9 +154,6 @@ onEvent('item.tags', event => {
 		.add(CR("handheld_worldshaper"))
 		.add("computercraft:computer_command")
 
-	event.get('chisel:basalt').add('expcaves:lavastone').add('expcaves:polished_lavastone')
-	event.get('chisel:limestone').add('darkerdepths:limestone').add('darkerdepths:aridrock')
-
 	event.get('forge:dusts/brass').add(KJ('brass_dust'))
 	event.get('forge:dusts/zinc').add(KJ('zinc_dust'))
 	event.get('forge:dusts/cobalt').add(KJ('cobalt_dust'))
@@ -196,14 +189,13 @@ onEvent('item.tags', event => {
 	event.get('forge:gears/arcane_gold').add('kubejs:arcane_gold_gear')
 	event.get('forge:gears').add('kubejs:arcane_gold_gear')
 
-	event.get('forge:raw_materials/silver').add('darkerdepths:raw_silver')
 
 	event.get('kubejs:alien_stone')
-		.add('beyond_earth:moon_stone')
-		.add('beyond_earth:mars_stone')
-		.add('beyond_earth:mercury_stone')
-		.add('beyond_earth:venus_stone')
-		.add('beyond_earth:glacio_stone')
+		.add('ad_astra:moon_stone')
+		.add('ad_astra:mars_stone')
+		.add('ad_astra:mercury_stone')
+		.add('ad_astra:venus_stone')
+		.add('ad_astra:glacio_stone')
 
 	event.get('minecraft:music_discs')
 		.add('create_confectionery:the_bright_side')
@@ -235,10 +227,10 @@ onEvent('item.tags', event => {
 	event.get('randomium:blacklist').add('create:minecart_contraption')
 
 	event.get('kubejs:rocket')
-		.add('beyond_earth:rocket_t1')
-		.add('beyond_earth:rocket_t2')
-		.add('beyond_earth:rocket_t3')
-		.add('beyond_earth:rocket_t4')
+		.add('ad_astra:tier_1_rocket')
+		.add('ad_astra:tier_2_rocket')
+		.add('ad_astra:tier_3_rocket')
+		.add('ad_astra:tier_4_rocket')
 		.add('kubejs:encased_steel_engine')
 		.add('kubejs:encased_desh_engine')
 		.add('kubejs:encased_ostrum_engine')
@@ -256,13 +248,16 @@ onEvent('item.tags', event => {
 		.add('#minecraft:climbable')
 })
 
-onEvent('block.tags', event => {
+ServerEvents.tags('block', event => {
+	MOREMINECARTS_REMOVED_RAILS.forEach(id => event.get('minecraft:rails').remove(id))
+	// Create Utilities 0.3.2 points at the old Create namespace for this block.
+	event.get('minecraft:fan_transparent').remove('create:void_steel_bars')
 	event.get("create:windmill_sails").add("#thermal:rockwool")
 })
 
-onEvent('fluid.tags', event => {
+ServerEvents.tags('fluid', event => {
 
-	event.get('forge:crude_oil').add('beyond_earth:oil')
+	event.get('forge:crude_oil').add('ad_astra:oil')
 
 })
 

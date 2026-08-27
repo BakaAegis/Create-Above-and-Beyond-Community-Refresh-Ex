@@ -810,8 +810,8 @@
 			}]
 		}
 		{
-			title: "8x {item.moreminecarts.silica_steel}"
-			icon: "moreminecarts:silica_steel"
+			title: "8x {item.create_dd.steel_ingot}"
+			icon: "create_dd:steel_ingot"
 			disable_toast: true
 			x: 3.0d
 			y: 6.0d
@@ -1970,8 +1970,8 @@
 			}]
 		}
 		{
-			title: "1x {block.supplementaries.copper_lantern}"
-			icon: "supplementaries:copper_lantern"
+			title: "1x {block.tconstruct.seared_lantern}"
+			icon: "tconstruct:seared_lantern"
 			disable_toast: true
 			x: 0.0d
 			y: 21.0d
@@ -1993,8 +1993,8 @@
 			}]
 		}
 		{
-			title: "1x {block.supplementaries.brass_lantern}"
-			icon: "supplementaries:brass_lantern"
+			title: "1x {block.architects_palette.nether_brass_lantern}"
+			icon: "architects_palette:nether_brass_lantern"
 			disable_toast: true
 			x: 1.0d
 			y: 21.0d
@@ -2016,8 +2016,8 @@
 			}]
 		}
 		{
-			title: "1x {block.supplementaries.crimson_lantern}"
-			icon: "supplementaries:crimson_lantern"
+			title: "1x {block.tconstruct.scorched_lantern}"
+			icon: "tconstruct:scorched_lantern"
 			disable_toast: true
 			x: 2.0d
 			y: 21.0d

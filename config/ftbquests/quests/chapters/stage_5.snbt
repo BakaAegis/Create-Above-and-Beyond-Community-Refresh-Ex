@@ -39,7 +39,7 @@
 		}
 		{
 			title: "{quest.stage_5.finish.title}"
-			icon: "beyond_earth:earth_globe"
+			icon: "ad_astra:earth_globe"
 			x: 1.0d
 			y: 8.75d
 			shape: "hexagon"
@@ -181,8 +181,8 @@
 					id: "651374A7A3486148"
 					type: "advancement"
 					title: "{tip.kubejs.rocket}"
-					icon: "beyond_earth:steel_engine"
-					advancement: "beyond_earth:rocket_advancement"
+					icon: "ad_astra:steel_engine"
+					advancement: "ad_astra:tier_1_rocket"
 					criterion: ""
 				}
 			]
@@ -237,22 +237,22 @@
 				tag: {
 					Properties: { }
 					BlockEntityTag: {
+						AmountIn: 1000
 						AmountOut: 1000
 						RSControl: {
-							RSThreshold: 0b
 							RSMode: 0b
-						}
-						Xfer: {
-							XferOut: 1b
-							XferIn: 0b
+							RSThreshold: 0b
 						}
 						TankInv: [{
+							Amount: 32000
 							FluidName: "kubejs:matrix"
 							Capacity: 32000
 							Tank: 0b
-							Amount: 32000
 						}]
-						AmountIn: 1000
+						Xfer: {
+							XferIn: 0b
+							XferOut: 1b
+						}
 					}
 				}
 			}
@@ -609,7 +609,7 @@
 								Count: 1b
 							}
 							{
-								id: "beyond_earth:oil_bucket"
+								id: "ad_astra:oil_bucket"
 								Count: 1b
 							}
 							{
@@ -706,7 +706,7 @@
 		{
 			title: "{quest.stage_5.space_suit.title}"
 			icon: {
-				id: "beyond_earth:oxygen_mask"
+				id: "ad_astra:space_helmet"
 				Count: 1b
 				tag: {
 					Damage: 0
@@ -724,7 +724,7 @@
 					id: "56A2E1E0A96EACBA"
 					type: "item"
 					item: {
-						id: "beyond_earth:space_suit"
+						id: "ad_astra:space_suit"
 						Count: 1b
 						tag: {
 							Damage: 0
@@ -736,7 +736,7 @@
 					id: "598FED4FD472DB12"
 					type: "item"
 					item: {
-						id: "beyond_earth:space_pants"
+						id: "ad_astra:space_pants"
 						Count: 1b
 						tag: {
 							Damage: 0
@@ -748,7 +748,7 @@
 					id: "589FEF2FC0E28BB2"
 					type: "item"
 					item: {
-						id: "beyond_earth:space_boots"
+						id: "ad_astra:space_boots"
 						Count: 1b
 						tag: {
 							Damage: 0
@@ -760,7 +760,7 @@
 					id: "3AE9047B212D4AE9"
 					type: "item"
 					item: {
-						id: "beyond_earth:oxygen_mask"
+						id: "ad_astra:space_helmet"
 						Count: 1b
 						tag: {
 							Damage: 0
@@ -783,13 +783,13 @@
 			tasks: [{
 				id: "38E9BC3E7DB087E2"
 				type: "item"
-				item: "beyond_earth:oxygen_bubble_distributor"
+				item: "ad_astra:oxygen_distributor"
 				consume_items: false
 			}]
 		}
 		{
 			title: "{quest.stage_5.oxygen_loader.title}"
-			icon: "beyond_earth:oxygen_loader"
+			icon: "ad_astra:oxygen_loader"
 			x: -0.5d
 			y: 7.0d
 			shape: "circle"
@@ -800,13 +800,13 @@
 			tasks: [{
 				id: "68DF42669BD15D28"
 				type: "item"
-				item: "beyond_earth:oxygen_loader"
+				item: "ad_astra:oxygen_loader"
 				consume_items: false
 			}]
 		}
 		{
 			title: "{quest.stage_5.launch_pad.title}"
-			icon: "beyond_earth:rocket_launch_pad"
+			icon: "ad_astra:launch_pad"
 			x: 1.0d
 			y: 7.0d
 			shape: "circle"
@@ -821,7 +821,7 @@
 			tasks: [{
 				id: "08BC34B95D7F8F34"
 				type: "item"
-				item: "beyond_earth:rocket_launch_pad"
+				item: "ad_astra:launch_pad"
 				count: 9L
 				consume_items: false
 			}]
@@ -870,7 +870,7 @@
 		{
 			title: "{quest.stage_5.rocket.title}"
 			icon: {
-				id: "beyond_earth:rocket_t1"
+				id: "ad_astra:tier_1_rocket"
 				Count: 1b
 				tag: { }
 			}
@@ -895,7 +895,7 @@
 				{
 					id: "4F5AC76FDE591398"
 					type: "item"
-					item: "kubejs:guide_computer"
+					item: "kubejs:guide_computer_tier1"
 					consume_items: false
 				}
 				{
@@ -949,12 +949,12 @@
 			rewards: [{
 				id: "3545A2F4AD994980"
 				type: "item"
-				item: "beyond_earth:fuel_bucket"
+				item: "ad_astra:fuel_bucket"
 			}]
 		}
 		{
 			icon: {
-				id: "beyond_earth:rover"
+				id: "ad_astra:tier_1_rover"
 				Count: 1b
 				tag: { }
 			}
@@ -971,7 +971,7 @@
 					id: "06D1C5D22D18E554"
 					type: "item"
 					item: {
-						id: "beyond_earth:rover"
+						id: "ad_astra:tier_1_rover"
 						Count: 1b
 						tag: { }
 					}
@@ -996,7 +996,7 @@
 			tasks: [{
 				id: "589110962F215DA7"
 				type: "item"
-				item: "beyond_earth:fuel_bucket"
+				item: "ad_astra:fuel_bucket"
 				consume_items: false
 			}]
 		}

@@ -1,0 +1,21 @@
+{
+  "type": "thermal:tree_extractor",
+  "trunk": {
+    "Name": "create_dd:rubber_log",
+    "Properties": {
+      "axis": "y"
+    }
+  },
+  "leaves": {
+    "Name": "create_dd:rubber_leaves"
+  },
+  "sapling": "create_dd:rubber_sapling",
+  "min_height": 4,
+  "max_height": 16,
+  "min_leaves": 16,
+  "max_leaves": 24,
+  "result": {
+    "fluid": "thermal:resin",
+    "amount": 50
+  }
+}

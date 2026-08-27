@@ -1,6 +1,6 @@
 {
 	version: 13
-	title: "&d Above \\& Beyond : Refresh-Ex"
+	title: "&d Above \\& Beyond : Refresh"
 	icon: "kubejs:abstruse_mechanism"
 	disable_toast: true
 	default_reward_team: true

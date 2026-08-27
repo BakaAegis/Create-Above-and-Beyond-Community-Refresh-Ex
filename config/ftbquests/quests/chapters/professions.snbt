@@ -15,14 +15,19 @@
 				Count: 1b
 				tag: {
 					tic_persistent: { }
+					Damage: 0
 					tic_stats: {
-						"tconstruct:attack_speed": 1.2f
-						"tconstruct:mining_speed": 7.475f
 						"tconstruct:attack_damage": 3.25f
 						"tconstruct:harvest_tier": "minecraft:diamond"
 						"tconstruct:durability": 721.0f
+						"tconstruct:mining_speed": 7.475f
+						"tconstruct:attack_speed": 1.2f
 					}
-					tic_broken: 0b
+					tic_materials: [
+						"tconstruct:bronze"
+						"tconstruct:constantan"
+						"tconstruct:electrum"
+					]
 					tic_modifiers: [
 						{
 							name: "tconstruct:pierce"
@@ -41,15 +46,10 @@
 							level: 1s
 						}
 					]
-					Damage: 0
-					tic_materials: [
-						"tconstruct:bronze"
-						"tconstruct:constantan"
-						"tconstruct:electrum"
-					]
+					tic_broken: 0b
 					tic_volatile_data: {
-						abilities: 1
 						upgrades: 3
+						abilities: 1
 					}
 				}
 			}
@@ -81,18 +81,23 @@
 				id: "tconstruct:kama"
 				Count: 1b
 				tag: {
-					tic_persistent: { }
 					tic_multipliers: {
 						"tconstruct:attack_damage": 0.5f
 					}
+					tic_persistent: { }
+					Damage: 0
 					tic_stats: {
-						"tconstruct:attack_speed": 1.6f
-						"tconstruct:mining_speed": 7.475f
 						"tconstruct:attack_damage": 1.625f
 						"tconstruct:harvest_tier": "minecraft:diamond"
 						"tconstruct:durability": 721.0f
+						"tconstruct:mining_speed": 7.475f
+						"tconstruct:attack_speed": 1.6f
 					}
-					tic_broken: 0b
+					tic_materials: [
+						"tconstruct:bronze"
+						"tconstruct:constantan"
+						"tconstruct:electrum"
+					]
 					tic_modifiers: [
 						{
 							name: "tconstruct:tilling"
@@ -119,15 +124,10 @@
 							level: 1s
 						}
 					]
-					Damage: 0
-					tic_materials: [
-						"tconstruct:bronze"
-						"tconstruct:constantan"
-						"tconstruct:electrum"
-					]
+					tic_broken: 0b
 					tic_volatile_data: {
-						abilities: 1
 						upgrades: 3
+						abilities: 1
 					}
 				}
 			}
@@ -160,14 +160,19 @@
 				Count: 1b
 				tag: {
 					tic_persistent: { }
+					Damage: 0
 					tic_stats: {
-						"tconstruct:attack_speed": 0.9f
-						"tconstruct:mining_speed": 7.475f
 						"tconstruct:attack_damage": 8.25f
 						"tconstruct:harvest_tier": "minecraft:diamond"
 						"tconstruct:durability": 721.0f
+						"tconstruct:mining_speed": 7.475f
+						"tconstruct:attack_speed": 0.9f
 					}
-					tic_broken: 0b
+					tic_materials: [
+						"tconstruct:bronze"
+						"tconstruct:constantan"
+						"tconstruct:electrum"
+					]
 					tic_modifiers: [
 						{
 							name: "tconstruct:stripping"
@@ -186,15 +191,10 @@
 							level: 1s
 						}
 					]
-					Damage: 0
-					tic_materials: [
-						"tconstruct:bronze"
-						"tconstruct:constantan"
-						"tconstruct:electrum"
-					]
+					tic_broken: 0b
 					tic_volatile_data: {
-						abilities: 1
 						upgrades: 3
+						abilities: 1
 					}
 				}
 			}
@@ -257,20 +257,26 @@
 				id: "tconstruct:sledge_hammer"
 				Count: 1b
 				tag: {
-					tic_persistent: { }
 					tic_multipliers: {
 						"tconstruct:mining_speed": 0.4f
-						"tconstruct:attack_damage": 1.35f
 						"tconstruct:durability": 4.0f
+						"tconstruct:attack_damage": 1.35f
 					}
+					tic_persistent: { }
+					Damage: 0
 					tic_stats: {
-						"tconstruct:attack_speed": 0.75f
-						"tconstruct:mining_speed": 3.45f
 						"tconstruct:attack_damage": 6.58125f
 						"tconstruct:harvest_tier": "minecraft:diamond"
 						"tconstruct:durability": 1868.0f
+						"tconstruct:mining_speed": 3.45f
+						"tconstruct:attack_speed": 0.75f
 					}
-					tic_broken: 0b
+					tic_materials: [
+						"tconstruct:electrum"
+						"tconstruct:constantan"
+						"tconstruct:bronze"
+						"tconstruct:bronze"
+					]
 					tic_modifiers: [
 						{
 							name: "tconstruct:smite"
@@ -289,16 +295,10 @@
 							level: 2s
 						}
 					]
-					Damage: 0
-					tic_materials: [
-						"tconstruct:electrum"
-						"tconstruct:constantan"
-						"tconstruct:bronze"
-						"tconstruct:bronze"
-					]
+					tic_broken: 0b
 					tic_volatile_data: {
-						abilities: 1
 						upgrades: 2
+						abilities: 1
 					}
 				}
 			}
@@ -330,19 +330,24 @@
 				id: "tconstruct:sword"
 				Count: 1b
 				tag: {
-					tic_persistent: { }
 					tic_multipliers: {
 						"tconstruct:mining_speed": 0.5f
 						"tconstruct:durability": 1.1f
 					}
+					tic_persistent: { }
+					Damage: 0
 					tic_stats: {
-						"tconstruct:attack_speed": 1.6f
-						"tconstruct:mining_speed": 3.7375f
 						"tconstruct:attack_damage": 5.25f
 						"tconstruct:harvest_tier": "minecraft:diamond"
 						"tconstruct:durability": 793.10004f
+						"tconstruct:mining_speed": 3.7375f
+						"tconstruct:attack_speed": 1.6f
 					}
-					tic_broken: 0b
+					tic_materials: [
+						"tconstruct:bronze"
+						"tconstruct:constantan"
+						"tconstruct:constantan"
+					]
 					tic_modifiers: [
 						{
 							name: "tconstruct:maintained"
@@ -357,15 +362,10 @@
 							level: 1s
 						}
 					]
-					Damage: 0
-					tic_materials: [
-						"tconstruct:bronze"
-						"tconstruct:constantan"
-						"tconstruct:constantan"
-					]
+					tic_broken: 0b
 					tic_volatile_data: {
-						abilities: 1
 						upgrades: 3
+						abilities: 1
 					}
 				}
 			}
@@ -572,7 +572,7 @@
 				{
 					id: "6467B7BC46B95AB7"
 					type: "item"
-					item: "biomesoplenty:white_cherry_sapling"
+					item: "biomesoplenty:mahogany_sapling"
 				}
 				{
 					id: "53B388480793BD58"
@@ -816,7 +816,7 @@
 				{
 					id: "4A4F88C99DB35EF3"
 					type: "item"
-					item: "darkerdepths:shale"
+					item: "darkerdepths:polished_aridrock"
 					count: 8L
 				}
 				{
@@ -1190,6 +1190,9 @@
 						id: "minecraft:white_banner"
 						Count: 1b
 						tag: {
+							display: {
+								Name: "{\"color\":\"gold\",\"translate\":\"block.minecraft.ominous_banner\"}"
+							}
 							HideFlags: 32
 							BlockEntityTag: {
 								Patterns: [
@@ -1226,9 +1229,6 @@
 										Color: 15
 									}
 								]
-							}
-							display: {
-								Name: "{\"color\":\"gold\",\"translate\":\"block.minecraft.ominous_banner\"}"
 							}
 						}
 					}
@@ -1471,36 +1471,36 @@
 					id: "0CFF8BC4326BEC18"
 					type: "dimension"
 					title: "{quest.bulletin.explore_all_dimensions.target3}"
-					icon: "beyond_earth:moon_globe"
-					dimension: "beyond_earth:moon"
+					icon: "ad_astra:moon_globe"
+					dimension: "ad_astra:moon"
 				}
 				{
 					id: "6251549098DF50E3"
 					type: "dimension"
 					title: "{quest.bulletin.explore_all_dimensions.target4}"
-					icon: "beyond_earth:mercury_globe"
-					dimension: "beyond_earth:mercury"
+					icon: "ad_astra:mercury_globe"
+					dimension: "ad_astra:mercury"
 				}
 				{
 					id: "5AB19492CE1F8E2E"
 					type: "dimension"
 					title: "{quest.bulletin.explore_all_dimensions.target5}"
-					icon: "beyond_earth:mars_globe"
-					dimension: "beyond_earth:mars"
+					icon: "ad_astra:mars_globe"
+					dimension: "ad_astra:mars"
 				}
 				{
 					id: "33D98D55520B34BE"
 					type: "dimension"
 					title: "{quest.bulletin.explore_all_dimensions.target6}"
-					icon: "beyond_earth:glacio_globe"
-					dimension: "beyond_earth:glacio"
+					icon: "ad_astra:glacio_globe"
+					dimension: "ad_astra:glacio"
 				}
 				{
 					id: "114EDF482383D47D"
 					type: "dimension"
 					title: "{quest.bulletin.explore_all_dimensions.target7}"
-					icon: "beyond_earth:venus_globe"
-					dimension: "beyond_earth:venus"
+					icon: "ad_astra:venus_globe"
+					dimension: "ad_astra:venus"
 				}
 			]
 			rewards: [{
@@ -1562,12 +1562,12 @@
 					type: "advancement"
 					title: "{quest.bulletin.complete_all_mods.target2}"
 					icon: {
-						id: "beyond_earth:rocket_t1"
+						id: "ad_astra:tier_1_rocket"
 						Count: 1b
 						tag: { }
 					}
 					disable_toast: true
-					advancement: "beyond_earth:rocket_tier_4_advancement"
+					advancement: "ad_astra:tier_4_rocket"
 					criterion: ""
 				}
 				{
@@ -1593,7 +1593,7 @@
 				{
 					id: "0ACEF1EE62D70789"
 					type: "item"
-					item: "beyond_earth:earth_globe"
+					item: "ad_astra:earth_globe"
 				}
 				{
 					id: "463A067746D4BED3"

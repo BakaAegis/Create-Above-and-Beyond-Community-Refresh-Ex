@@ -10,7 +10,7 @@
 	quests: [
 		{
 			title: "运算变速"
-			icon: "beyond_earth:moon_globe"
+			icon: "ad_astra:moon_globe"
 			x: -7.0d
 			y: -10.0d
 			shape: "hexagon"
@@ -35,7 +35,7 @@
 				{
 					id: "6FEEF69E235EA076"
 					type: "dimension"
-					dimension: "beyond_earth:moon"
+					dimension: "ad_astra:moon"
 				}
 			]
 			rewards: [{
@@ -46,7 +46,7 @@
 		}
 		{
 			title: "一出一，一出二"
-			icon: "beyond_earth:moon_stone"
+			icon: "ad_astra:moon_stone"
 			x: -7.0d
 			y: -8.0d
 			description: ["这是一块月石，但是…很显然这种石头在一种特定的氛围里可以把普普通通的石头变成更多的月石，大概会有点用处……"]
@@ -61,7 +61,7 @@
 				{
 					id: "245C1A2727D5A7FD"
 					type: "item"
-					item: "beyond_earth:moon_stone"
+					item: "ad_astra:moon_stone"
 					consume_items: false
 				}
 			]
@@ -211,7 +211,7 @@
 		{
 			title: "建个新家"
 			icon: {
-				id: "beyond_earth:rocket_t1"
+				id: "ad_astra:tier_1_rocket"
 				Count: 1b
 				tag: { }
 			}
@@ -227,7 +227,7 @@
 			tasks: [{
 				id: "059BBC81AD054C57"
 				type: "dimension"
-				dimension: "beyond_earth:moon_orbit"
+				dimension: "ad_astra:moon_orbit"
 			}]
 		}
 		{
@@ -294,7 +294,7 @@
 			]
 		}
 		{
-			icon: "beyond_earth:moon_sand"
+			icon: "ad_astra:moon_sand"
 			x: -7.0d
 			y: -6.0d
 			description: ["粉碎一下，真是松软！"]
@@ -304,7 +304,7 @@
 				{
 					id: "329C65A464CB9DAD"
 					type: "item"
-					item: "beyond_earth:moon_sand"
+					item: "ad_astra:moon_sand"
 					consume_items: false
 				}
 				{
@@ -325,7 +325,7 @@
 			tasks: [{
 				id: "14CC79AFBFB70B1E"
 				type: "item"
-				item: "beyond_earth:desh_ingot"
+				item: "ad_astra:desh_ingot"
 				count: 4L
 				consume_items: false
 			}]
@@ -433,7 +433,7 @@
 		}
 		{
 			title: "第六章完成！"
-			icon: "beyond_earth:mars_globe"
+			icon: "ad_astra:mars_globe"
 			x: -10.0d
 			y: -1.0d
 			shape: "hexagon"
@@ -450,8 +450,8 @@
 				id: "408970467E1C1C7F"
 				type: "advancement"
 				title: "制作 二阶火箭"
-				icon: "beyond_earth:desh_engine"
-				advancement: "beyond_earth:rocket_tier_2_advancement"
+				icon: "ad_astra:desh_engine"
+				advancement: "ad_astra:tier_2_rocket"
 				criterion: ""
 			}]
 			rewards: [
@@ -462,18 +462,18 @@
 						id: "create_confectionery:full_black_chocolate_bar"
 						Count: 1b
 						tag: {
-							RepairCost: 0
 							Damage: 0
 							display: {
 								Name: "{\"text\":\"玛氏巧克力\"}"
 							}
+							RepairCost: 0
 						}
 					}
 				}
 				{
 					id: "54F90DD8797A2DE5"
 					type: "item"
-					item: "beyond_earth:mars_globe"
+					item: "ad_astra:mars_globe"
 				}
 			]
 		}
@@ -548,7 +548,7 @@
 		}
 		{
 			title: "在水中结晶"
-			icon: "ae2:certus_crystal_seed"
+			icon: "kubejs:certus_seed"
 			x: -7.0d
 			y: 3.0d
 			description: ["做一些赛特斯石英种子吧，它们在水中就能生长。"]
@@ -560,7 +560,7 @@
 				{
 					id: "19D6AB52D4FF0ACC"
 					type: "item"
-					item: "ae2:certus_crystal_seed"
+					item: "kubejs:certus_seed"
 					consume_items: false
 				}
 				{

@@ -443,7 +443,7 @@
 		}
 		{
 			title: "{quest.overview.stage_5_finish.title}"
-			icon: "beyond_earth:moon_stone"
+			icon: "ad_astra:moon_stone"
 			x: 11.5d
 			y: 0.0d
 			shape: "hexagon"
@@ -464,8 +464,8 @@
 					id: "75A8489F2288E77E"
 					type: "advancement"
 					title: "完成第八章 &7主线&r"
-					icon: "beyond_earth:calorite_engine"
-					advancement: "beyond_earth:rocket_tier_4_advancement"
+					icon: "ad_astra:calorite_engine"
+					advancement: "ad_astra:tier_4_rocket"
 					criterion: ""
 				}
 				{
@@ -579,8 +579,8 @@
 				id: "121B4A19BAEA38CD"
 				type: "advancement"
 				title: "完成第五章 &7主线&r"
-				icon: "beyond_earth:steel_engine"
-				advancement: "beyond_earth:rocket_advancement"
+				icon: "ad_astra:steel_engine"
+				advancement: "ad_astra:tier_1_rocket"
 				criterion: ""
 			}]
 		}
@@ -605,8 +605,8 @@
 				id: "2624337687947925"
 				type: "advancement"
 				title: "完成第六章 &7主线\\"
-				icon: "beyond_earth:desh_engine"
-				advancement: "beyond_earth:rocket_tier_2_advancement"
+				icon: "ad_astra:desh_engine"
+				advancement: "ad_astra:tier_2_rocket"
 				criterion: ""
 			}]
 		}
@@ -744,7 +744,7 @@
 					id: "1BE1B13C1C80B864"
 					type: "command"
 					title: "这是你已经走过的路"
-					icon: "beyond_earth:moon_globe"
+					icon: "ad_astra:moon_globe"
 					auto: "no_toast"
 					ignore_reward_blocking: true
 					command: "/ftbquests change_progress @a reset 58E321BA4B90929F"
@@ -796,8 +796,8 @@
 				id: "64E36B0E11064B8A"
 				type: "advancement"
 				title: "完成第七章 &7主线&r"
-				icon: "beyond_earth:ostrum_engine"
-				advancement: "beyond_earth:rocket_tier_3_advancement"
+				icon: "ad_astra:ostrum_engine"
+				advancement: "ad_astra:tier_3_rocket"
 				criterion: ""
 			}]
 		}

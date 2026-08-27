@@ -1,5 +1,5 @@
 
-onEvent('item.tooltip', tooltip => {
+ItemEvents.tooltip(tooltip => {
 	tooltip.add("cookingforblockheads:sink", Text.translate("tooltip.kubejs.sink"))
 
 	tooltip.add("minecraft:redstone_ore", Text.translate("tooltip.kubejs.redstone_ore"));
@@ -7,7 +7,7 @@ onEvent('item.tooltip', tooltip => {
 
 	tooltip.add("create_dd:rubber_sapling", Text.translate("tooltip.kubejs.rubber_sapling"));
 
-	tooltip.add("beyond_earth:ice_shard", Text.translate("tooltip.kubejs.ice_shard"));
+	tooltip.add("ad_astra:ice_shard", Text.translate("tooltip.kubejs.ice_shard"));
 
 	//tooltip.add("#quark:revertable_chests", [`§6注意右键合成该箱子会导致原箱子物品掉落`]);
 
@@ -40,17 +40,17 @@ onEvent('item.tooltip', tooltip => {
 	//第四章
 	main_assembly('kubejs:calculation_mechanism', "4")
 	//第五章
-	main_assembly_unautomatic('beyond_earth:rocket_t1', "5")
+	main_assembly_unautomatic('ad_astra:tier_1_rocket', "5")
 	//第六章
 	main_assembly('kubejs:overclocking_mechanism', "6")
-	main_assembly_unautomatic('beyond_earth:rocket_t2', "6")
+	main_assembly_unautomatic('ad_astra:tier_2_rocket', "6")
 	bonus_assembly('kubejs:energy_mechanism', "6a")
 	//第七章
 	main_assembly('kubejs:smart_mechanism', "7")
-	main_assembly_unautomatic('beyond_earth:rocket_t3', "7")
+	main_assembly_unautomatic('ad_astra:tier_3_rocket', "7")
 	//第八章
 	main_assembly('kubejs:ultimate_mechanism', "8")
-	main_assembly_unautomatic('beyond_earth:rocket_t4', "8")
+	main_assembly_unautomatic('ad_astra:tier_4_rocket', "8")
 
 	not_consumed('cb_microblock:stone_saw')
 	not_consumed('cb_microblock:iron_saw')
@@ -76,7 +76,7 @@ onEvent('item.tooltip', tooltip => {
 
 })
 
-onEvent('jei.information', event => {
+JEIEvents.information(event => {
 
 	let catalyst = (name, me) =>
 		[
@@ -91,14 +91,14 @@ onEvent('jei.information', event => {
 			"§8可选项：§0 在炼金机的第5格放§9红石促成剂§0或§9荧石促成剂§0获取§9额外提示§0",
 		]
 
-	event.add('kubejs:substrate_igneous', catalyst("火成"))
-	event.add('kubejs:substrate_herbal', catalyst("草本"))
-	event.add('kubejs:substrate_volatile', catalyst("不稳定"))
-	event.add('kubejs:substrate_crystal', catalyst("晶化"))
-	event.add('kubejs:substrate_metal', catalyst("金属"))
-	event.add('kubejs:substrate_gem', catalyst("宝石"))
+	event.addItem(Ingredient.of('kubejs:substrate_igneous'), catalyst("火成"))
+	event.addItem(Ingredient.of('kubejs:substrate_herbal'), catalyst("草本"))
+	event.addItem(Ingredient.of('kubejs:substrate_volatile'), catalyst("不稳定"))
+	event.addItem(Ingredient.of('kubejs:substrate_crystal'), catalyst("晶化"))
+	event.addItem(Ingredient.of('kubejs:substrate_metal'), catalyst("金属"))
+	event.addItem(Ingredient.of('kubejs:substrate_gem'), catalyst("宝石"))
 
-	event.add('kubejs:substrate_chaos', catalyst("催化剂", "混沌催化剂").concat([
+	event.addItem(Ingredient.of('kubejs:substrate_chaos'), catalyst("催化剂", "混沌催化剂").concat([
 		" ", "§8用法：§0", "使用§5炼金镭射§0混合§9混沌催化剂§0和任意数量的同种§9反应物§0时，会将该反应物§9嬗变§0成其它的反应物。每个世界都有§9不同的§0嬗变配方。"
 	]))
 

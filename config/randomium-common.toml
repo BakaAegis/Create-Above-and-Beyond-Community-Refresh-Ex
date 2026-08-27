@@ -1,9 +1,4 @@
 
-[spawns]
-	#Spawn attempts per chunk
-	#Range: 0 ~ 200
-	spawn_attempts_per_chunk = 2
-
 [interactions]
 	#Chance for the block to try to move when it's attacked, picking one of the following actions
 	#Range: 0 ~ 100
@@ -44,4 +39,6 @@
 	fortune_multiplier = 0.2
 	#Allow the block to be silk touched
 	allow_silk_touch = true
+	#Allow the block to drop dev items (like command blocks). This still checks the whitelist/blacklist tags
+	drop_dev_items = false
 

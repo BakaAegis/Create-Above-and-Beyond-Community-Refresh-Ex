@@ -1,4 +1,5 @@
 {
+    "type": "architects_palette:wither_skeleton_bones",
     "conditions": [],
     "bone": "tconstruct:necrotic_bone",
     "replaces": "minecraft:bone"

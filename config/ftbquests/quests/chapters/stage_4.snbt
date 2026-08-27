@@ -104,7 +104,7 @@
 				{
 					id: "6865BCC1D30BBFC2"
 					type: "item"
-					item: "buddycardsexp:buddycard_pack_create"
+					item: "buddycards:buddycard_pack_base"
 					count: 2
 				}
 			]

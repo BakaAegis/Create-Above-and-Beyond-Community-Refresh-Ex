@@ -1,0 +1,32 @@
+#Various fixes and improvements
+"Enable Fixes" = true
+#If true, game time and day time, will not advance if no players are online. This can break anything that relies on game time
+"Enable Time stop no player online" = false
+
+#Various fixes and improvements
+[Fixes]
+	#If true, mobs will have their follow range fixed. https://bugs.mojang.com/browse/MC-145656. Only affects entities in `insanelib:fix_follow_range` entity type tag (all vanilla mobs by default) and entities that use the NearestAttackableTargetGoal goal.
+	"Fix follow range" = true
+	#Removes the random bonus health given to Leader Zombies. In vanilla it's useless since doesn't work. https://minecraft.wiki/Attribute#Vanilla_modifiers
+	"Remove zombies bonus health" = true
+	#When affected by slowness the player can still jump really far away. When true, jumps length will be calculated based off player's movement speed.
+	"Fix jump movement factor" = true
+	#The fix for Jump Movement Factor is applied only when the player is slowed down. If false, the player will jump really farther when going faster.
+	"Fix jump movement factor slowdown only" = true
+
+#If true, game time and day time, will not advance if no players are online. This can break anything that relies on game time
+["Time stop no player online"]
+	#If true, also prevents weather from advancing if no players are online. This needs to be disabled in order to allow to set the gamerule again.
+	"Also weather" = true
+	#If true, also prevents game time from advancing if no players are online with Time Control installed. This needs to be disabled in order to allow to set the gamerule again.
+	"Time control integration" = true
+	#If true, also prevents seasons from advancing if no players are online with Serene Seasons installed. This needs to be disabled in order to allow to set the gamerule again.
+	"Serene seasons integration" = true
+
+#Changes the behaviour of Falling Blocks to be smarter by preventing them from getting stuck when landing on a block but their center has air below, or try to stack or move them when inside a block.
+["Better falling blocks"]
+	#If true, falling blocks will break blocks that are instabreakable and place instead of dropping. If the falling block ends in a non-insta-break block, it will move to the side instead.
+	"Break instabreak blocks" = true
+	#Fix dupe exploit through dimensions.
+	"Fix dupe exploit" = true
+

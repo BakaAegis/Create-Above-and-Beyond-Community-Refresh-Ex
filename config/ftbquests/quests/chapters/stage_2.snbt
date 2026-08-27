@@ -148,7 +148,7 @@
 			tasks: [{
 				id: "4D592B701A2AE0BC"
 				type: "item"
-				item: "ae2:certus_crystal_seed"
+				item: "kubejs:certus_seed"
 				consume_items: false
 			}]
 		}
@@ -510,7 +510,7 @@
 				{
 					id: "58FD91E5AF10BE0A"
 					type: "item"
-					item: "buddycardsexp:buddycard_pack_create"
+					item: "buddycards:buddycard_pack_base"
 					count: 2
 				}
 			]

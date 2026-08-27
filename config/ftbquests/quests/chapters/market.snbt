@@ -35,18 +35,18 @@
 				id: "kubejs:netherite_saw"
 				Count: 1b
 				tag: {
-					Unbreakable: 1b
-					HideFlags: 1b
+					Modifier: "forbidden_arcanus:eternal"
 					display: {
-						Lore: ["[\"千万不要在物品栏中合成\"]"]
 						Name: "[\"附魔手锯\"]"
+						Lore: ["[\"千万不要在物品栏中合成\"]"]
 					}
 					Enchantments: [{
 						id: "minecraft:mending"
 						lvl: 3s
 					}]
+					Unbreakable: 1b
 					Damage: 0
-					Modifier: "forbidden_arcanus:eternal"
+					HideFlags: 1b
 				}
 			}
 			x: -8.5d
@@ -83,18 +83,18 @@
 					id: "kubejs:netherite_saw"
 					Count: 1b
 					tag: {
-						Unbreakable: 1b
-						HideFlags: 1b
+						Modifier: "forbidden_arcanus:eternal"
 						display: {
-							Lore: ["{\"translate\":\"tip.enchanted_saw.description\",\"italic\":false}"]
 							Name: "{\"translate\":\"tip.enchanted_saw.name\",\"italic\":false}"
+							Lore: ["{\"translate\":\"tip.enchanted_saw.description\",\"italic\":false}"]
 						}
 						Enchantments: [{
 							id: "minecraft:mending"
 							lvl: 3s
 						}]
+						Unbreakable: 1b
 						Damage: 0
-						Modifier: "forbidden_arcanus:eternal"
+						HideFlags: 1b
 					}
 				}
 			}]
@@ -105,8 +105,7 @@
 				id: "projectred_core:screwdriver"
 				Count: 1b
 				tag: {
-					Unbreakable: 1b
-					HideFlags: 1b
+					Modifier: "forbidden_arcanus:eternal"
 					display: {
 						Name: "[\"附魔螺丝刀\"]"
 					}
@@ -114,8 +113,9 @@
 						id: "minecraft:mending"
 						lvl: 3s
 					}]
+					Unbreakable: 1b
 					Damage: 0
-					Modifier: "forbidden_arcanus:eternal"
+					HideFlags: 1b
 				}
 			}
 			x: -7.0d
@@ -151,8 +151,7 @@
 					id: "projectred_core:screwdriver"
 					Count: 1b
 					tag: {
-						Unbreakable: 1b
-						HideFlags: 1b
+						Modifier: "forbidden_arcanus:eternal"
 						display: {
 							Name: "{\"translate\":\"tip.enchanted_screwdriver.name\",\"italic\":false}"
 						}
@@ -160,8 +159,9 @@
 							id: "minecraft:mending"
 							lvl: 3s
 						}]
+						Unbreakable: 1b
 						Damage: 0
-						Modifier: "forbidden_arcanus:eternal"
+						HideFlags: 1b
 					}
 				}
 			}]
@@ -212,8 +212,7 @@
 					id: "kubejs:chromatic_resonator"
 					Count: 1b
 					tag: {
-						Unbreakable: 1b
-						HideFlags: 1b
+						Modifier: "forbidden_arcanus:eternal"
 						display: {
 							Name: "{\"translate\":\"tip.enchanted_resonator.name\",\"italic\":false}"
 						}
@@ -221,8 +220,9 @@
 							id: "minecraft:mending"
 							lvl: 3s
 						}]
+						Unbreakable: 1b
 						Damage: 0
-						Modifier: "forbidden_arcanus:eternal"
+						HideFlags: 1b
 					}
 				}
 			}]
@@ -412,8 +412,12 @@
 					id: "minecraft:barrel"
 					Count: 1b
 					tag: {
-						HideFlags: 1
+						Enchantments: [{
+							id: "minecraft:unbreaking"
+							lvl: 1s
+						}]
 						BlockEntityTag: {
+							id: "minecraft:barrel"
 							Items: [
 								{
 									Slot: 11b
@@ -430,7 +434,11 @@
 								{
 									Slot: 15b
 									tag: {
+										display: {
+											Lore: ["{\"translate\": \"tip.kubejs.patience_test_description\",\"italic\": true,\"color\": \"gray\"}"]
+										}
 										BlockEntityTag: {
+											id: "minecraft:barrel"
 											Items: [
 												{
 													Slot: 3b
@@ -446,16 +454,20 @@
 												{
 													Slot: 23b
 													tag: {
+														display: {
+															Lore: ["{\"translate\": \"tip.kubejs.patience_test_description\",\"italic\": true,\"color\": \"gray\"}"]
+														}
 														BlockEntityTag: {
+															id: "minecraft:barrel"
 															Items: [
 																{
 																	Slot: 11b
 																	tag: {
-																		BlockEntityTag: {
-																			LootTable: "custom:chests/patience_1"
-																		}
 																		display: {
 																			Lore: ["{\"italic\":true,\"color\":\"gray\",\"translate\": \"tip.kubejs.patience_test_description\"}"]
+																		}
+																		BlockEntityTag: {
+																			LootTable: "custom:chests/patience_1"
 																		}
 																	}
 																	Count: 1b
@@ -483,36 +495,24 @@
 																	id: "minecraft:apple"
 																}
 															]
-															id: "minecraft:barrel"
-														}
-														display: {
-															Lore: ["{\"translate\": \"tip.kubejs.patience_test_description\",\"italic\": true,\"color\": \"gray\"}"]
 														}
 													}
 													Count: 1b
 													id: "minecraft:barrel"
 												}
 											]
-											id: "minecraft:barrel"
-										}
-										display: {
-											Lore: ["{\"translate\": \"tip.kubejs.patience_test_description\",\"italic\": true,\"color\": \"gray\"}"]
 										}
 									}
 									Count: 1b
 									id: "minecraft:barrel"
 								}
 							]
-							id: "minecraft:barrel"
 						}
-						Enchantments: [{
-							id: "minecraft:unbreaking"
-							lvl: 1s
-						}]
 						display: {
-							Lore: ["{\"italic\":true,\"color\":\"gray\",\"translate\": \"tip.kubejs.patience_test_description\"}"]
 							Name: "{\"italic\":false,\"translate\":\"tip.kubejs.patience_test_name\",\"color\":\"dark_purple\"}"
+							Lore: ["{\"italic\":true,\"color\":\"gray\",\"translate\": \"tip.kubejs.patience_test_description\"}"]
 						}
+						HideFlags: 1
 					}
 				}
 			}]
@@ -578,13 +578,13 @@
 					id: "minecraft:chest"
 					Count: 1b
 					tag: {
-						BlockEntityTag: {
-							LootTable: "custom:chests/tinker"
-							id: "minecraft:chest"
-						}
 						display: {
-							Lore: ["{\"translate\":\"tip.kubejs.has_item\",\"color\":\"gray\",\"italic\":\"false\"}"]
 							Name: "{\"translate\":\"tip.kubejs.toolbox\",\"italic\":false}"
+							Lore: ["{\"translate\":\"tip.kubejs.has_item\",\"color\":\"gray\",\"italic\":\"false\"}"]
+						}
+						BlockEntityTag: {
+							id: "minecraft:chest"
+							LootTable: "custom:chests/tinker"
 						}
 					}
 				}
@@ -687,8 +687,7 @@
 					id: "kubejs:flash_drive"
 					Count: 1b
 					tag: {
-						Unbreakable: 1b
-						HideFlags: 1b
+						Modifier: "forbidden_arcanus:eternal"
 						display: {
 							Name: "{\"translate\":\"tip.enchanted_flash_drive.name\",\"italic\":false}"
 						}
@@ -696,8 +695,9 @@
 							id: "minecraft:mending"
 							lvl: 3s
 						}]
+						Unbreakable: 1b
 						Damage: 0
-						Modifier: "forbidden_arcanus:eternal"
+						HideFlags: 1b
 					}
 				}
 			}]
@@ -1126,7 +1126,7 @@
 			rewards: [{
 				id: "5030C2BE38C8EC30"
 				type: "item"
-				item: "structures_compass:structures_compass"
+				item: "structurecompass:structure_compass"
 			}]
 		}
 		{
@@ -1170,8 +1170,6 @@
 					id: "minecraft:netherite_sword"
 					Count: 1b
 					tag: {
-						Unbreakable: 1b
-						Damage: 1048576
 						Enchantments: [
 							{
 								id: "minecraft:bane_of_arthropods"
@@ -1186,6 +1184,8 @@
 								lvl: 5s
 							}
 						]
+						Unbreakable: 1b
+						Damage: 1048576
 						display: {
 							Name: "[{\"text\":\"附魔下界合金剑\",\"color\":\"aqua\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]"
 						}
@@ -1234,11 +1234,11 @@
 					id: "kubejs:data_module"
 					Count: 1b
 					tag: {
-						Unbreakable: 1b
 						Damage: 1048576
 						display: {
 							Name: "[{\"text\":\"附魔数据模块\",\"color\":\"aqua\",\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false}]"
 						}
+						Unbreakable: 1b
 					}
 				}
 			}]

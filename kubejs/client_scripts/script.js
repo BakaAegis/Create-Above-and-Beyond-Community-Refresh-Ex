@@ -2,20 +2,9 @@
 
 console.info('Client script load phase...');
 
-onEvent('rei.add.items', event => {
-    event.add(Item.of('create:refined_radiance'));
-    event.add(Item.of('create:shadow_steel'));
-    event.add(Item.of('create:chromatic_compound'));
-    event.add('thermal:ruby')
-	  event.add('thermal:ruby_dust')
-	  event.add('thermal:ruby_ore')
-	  event.add('thermal:apatite_ore')
-	  event.add('thermal:sapphire')
-	  event.add('thermal:sapphire_dust')
-	  event.add('thermal:sapphire_ore')
-  })
+// REIEvents 块已移除（未安装 REI，KubeJS 6 不绑定 REIEvents）
 
-  onEvent('jei.hide.items', event => {
+  JEIEvents.hideItems(event => {
     event.hide('ae2:facade')
     event.hide(`#buddycards:cards`)
     event.hide(`#buddycards:gummy_cards`)
@@ -38,7 +27,7 @@ onEvent('rei.add.items', event => {
     event.hide(`createdeco:cast_iron_ingot`)
     event.hide(`create_dd:tin_ore`)
     event.hide(`create_dd:deepslate_tin_ore`)
-    event.hide(`beyond_earth:nasa_workbench`)
+    event.hide(`ad_astra:nasa_workbench`)
     event.hide(`thermal:steel_coin`)
     event.hide(`thermal:rose_gold_coin`)
     event.hide(`thermal:iron_coin`)
@@ -92,8 +81,8 @@ onEvent('rei.add.items', event => {
     event.hide(`vintageimprovements:tin_sheet`)
     event.hide(`thermal:iron_plate`)
     event.hide(`create_dd:raw_tin`)
-    event.hide(`beyond_earth:iron_plate`)
-    event.hide(`beyond_earth:iron_stick`)
+    event.hide(`ad_astra:iron_plate`)
+    event.hide(`ad_astra:iron_rod`)
     event.hide(`create_dd:raw_tin_block`)
     event.hide(`thermal:tin_plate`)
     event.hide(`thermal:tin_nugget`)
@@ -107,7 +96,7 @@ onEvent('rei.add.items', event => {
     event.hide(`waterstrainer:strainer_survivalist_reinforced`)
     event.hide(`waterstrainer:strainer_fisherman_solid`)
     event.hide(`exchangers:bee_exchanger`)
-    event.hide(`beyond_earth:nasa_workbench`)
+    event.hide(`ad_astra:nasa_workbench`)
     event.hide(/^mekanism:module_[a-z_]+_unit$/)
     event.hide(/^mekanismgenerators:module_[a-z_]+_unit$/)
     event.hide('kubejs:advanced_computation_matrix')
@@ -144,11 +133,7 @@ onEvent('rei.add.items', event => {
 	  event.hide('mekanism:diversion_transporter')
   })
   
-onEvent('jei.remove.recipes', event =>{
-  event.remove('kubejs:advanced_computation_matrix')
-})
-
-onEvent('jei.hide.recipes', event =>{
+JEIEvents.hideItems(event =>{
   event.hide('kubejs:advanced_computation_matrix')
   
 })

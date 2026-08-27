@@ -1,9 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "kubejs:block/advanced_computation_matrix",
-		"1": "kubejs:block/advanced_computation_matrix_2",
-		"particle": "kubejs:block/advanced_computation_matrix"
+		"0": "kubejs:item/advanced_computation_matrix",
+		"1": "kubejs:item/advanced_computation_matrix_2",
+		"particle": "kubejs:item/advanced_computation_matrix"
 	},
 	"elements": [
 		{

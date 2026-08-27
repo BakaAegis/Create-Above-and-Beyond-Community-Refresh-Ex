@@ -447,7 +447,7 @@
 		#Determines if salt should be added to world generation.
 		shouldGenerate = false
 		#Chance that salt generates in a chunk.
-		#Range: 1 ~ 2031
+		#Range: 1 ~ 256
 		perChunk = 2
 		#Base radius of a vein of salt.
 		#Range: 1 ~ 4

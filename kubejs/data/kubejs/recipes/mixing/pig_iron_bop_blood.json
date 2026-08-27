@@ -1,0 +1,21 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "fluid": "createbigcannons:molten_cast_iron",
+      "amount": 1
+    },
+    {
+      "fluid": "biomesoplenty:blood",
+      "amount": 5
+    }
+  ],
+  "results": [
+    {
+      "fluid": "tconstruct:molten_pig_iron",
+      "amount": 5
+    }
+  ],
+  "heatRequirement": "heated",
+  "processingTime": 1
+}

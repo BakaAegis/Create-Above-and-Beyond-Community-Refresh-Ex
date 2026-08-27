@@ -19,8 +19,8 @@
 		{ item: "biomesoplenty:maple_sapling", count: 4, weight: 5 }
 		{ item: "biomesoplenty:fir_sapling", count: 4, weight: 5 }
 		{ item: "biomesoplenty:redwood_sapling", count: 4, weight: 3 }
-		{ item: "biomesoplenty:white_cherry_sapling", count: 4, weight: 3 }
-		{ item: "biomesoplenty:pink_cherry_sapling", count: 4, weight: 2 }
+		{ item: "biomesoplenty:snowblossom_sapling", count: 4, weight: 3 }
+		{ item: "biomesoplenty:rainbow_birch_sapling", count: 4, weight: 2 }
 		{ item: "biomesoplenty:mahogany_sapling", count: 4, weight: 3 }
 		{ item: "biomesoplenty:jacaranda_sapling", count: 4 }
 		{ item: "biomesoplenty:palm_sapling", count: 4, weight: 4 }
@@ -37,8 +37,5 @@
 			}
 			weight: 7
 		}
-		{ item: "caupona:wolfberry_sapling", count: 2, weight: 3 }
-		{ item: "caupona:fig_sapling", count: 2, weight: 3 }
-		{ item: "caupona:walnut_sapling", count: 2, weight: 3 }
 	]
 }
