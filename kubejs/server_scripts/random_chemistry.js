@@ -42,6 +42,7 @@ function attackNearby(world, x, y, z) {
     world.getEntitiesWithin(AABB.of(x-3.5,y-2.5,z-3.5,x+3,y+3.5,z+3)).forEach(entity => {
     if (!entity.isLiving())
             return
+        // KubeJS 1.20.1 attack(float) delegates to DamageSources.magic(), matching 1.18.2.
         entity.attack(6)
         }
     )}
@@ -367,13 +368,15 @@ function process(world, block, entity, face) {
         let mapping = global.substrate_mapping[e.id.replace('kubejs:substrate_', "")]
         if (!mapping)
             return
-        if (catCode != -1 && catCode != mapping.category)
+        if (catCode != -1 && catCode != mapping.category) {
             return
+        }
         catCode = mapping.category
         guessedSet.push(mapping.index)
         reagents.push(e.id)
         count++
-        guessedString = guessedString + "§6" + mapping.name + "§7" + (count < 4 ? ", " : "")
+        let reagentName = mapping.name || e.id.replace('kubejs:substrate_', "")
+        guessedString = guessedString + "§6" + reagentName + "§7" + (count < 4 ? ", " : "")
     })
 
     if (!valid)
@@ -472,6 +475,8 @@ function process(world, block, entity, face) {
     if (result[0] == 0) {
         if (result[1] == 4)
             errorId = 10
+        if (result[1] == 0)
+            errorId = 11
         if (result[1] == 3)
             errorId = 12
         if (result[1] == 1)
@@ -534,7 +539,7 @@ BlockEvents.leftClicked(event => {
 
     if (!item.empty)
         return
-    if (!player.name == "Deployer")
+    if (!player.isFake())
         return
 
     let sound = false
@@ -551,14 +556,18 @@ BlockEvents.leftClicked(event => {
 
         let invert
 
-        if(laser.entityData.parts[0].id.endsWith("inverted_cage_light")) invert=true
-        else if(laser.entityData.parts[0].id.endsWith("cage_light")) invert=false
+        let parts = laser.entityData && laser.entityData.parts
+        if (!parts || !parts[0])
+            return
+        let part = parts[0]
+        if(part.id.endsWith("inverted_cage_light")) invert=true
+        else if(part.id.endsWith("cage_light")) invert=false
         else return
 
-        let pow=laser.entityData.parts[0].pow
+        let pow=part.pow
         if(pow&&invert||!pow&&!invert) return
 
-        let side=laser.entityData.parts[0].side
+        let side=part.side
         if(FACES[face]!=side) return
 
         let x = laser.x

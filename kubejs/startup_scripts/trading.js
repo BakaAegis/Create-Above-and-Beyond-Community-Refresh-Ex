@@ -497,7 +497,7 @@ StartupEvents.registry('item', event => {
 		simple("Tin Ingot", CRD('tin_ingot', 8), 48, S, 0xa6bdc6, 0xdcf3f7)
 		
 		simple("Andesite Alloy", CR('andesite_alloy', 16), 8, S, 0x505050, 0x878787)
-		simple("Silica Steel", CRD('steel_ingot', 8), 16, S, 0x3E4644, 0xB8DAC8)
+		simple("Silica Steel", "8x moreminecarts:silica_steel", 16, S, 0x3E4644, 0xB8DAC8)
 		simple("Brass Ingot", CR('brass_ingot', 8), 48, S, 0x6F3C2D, 0xFCF085)
 		simple("Invar Ingot", TE('invar_ingot', 4), 64, S, 0x406D6C, 0xC3CAC1)
 		

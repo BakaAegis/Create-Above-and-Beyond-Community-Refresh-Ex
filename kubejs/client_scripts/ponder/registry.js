@@ -2,9 +2,7 @@ Ponder.registry((event) => {
     event.create("kubejs:ponder_laser_lamp")
         .tag("kubejs:ponder")
         .scene("alchemy_setup", "{kubejs.ponder.alchemy_setup.header}", "kubejs:laser_alchemy", (scene, util) => {
-            let CreateSceneBuilder = Java.loadClass("com.simibubi.create.foundation.ponder.CreateSceneBuilder")
-            scene = new CreateSceneBuilder(scene)
-            let world = scene.world()
+            let world = scene.world
 
             scene.showBasePlate()
             scene.idle(20)
@@ -94,7 +92,6 @@ Ponder.registry((event) => {
             scene.idle(30)
             world.toggleRedstonePower(lamp)
             scene.idle(3)
-            world.moveDeployer(util.grid.at(4, 1, 3), 1, 25)
             scene.idle(15)
             scene.idle(10)
 
@@ -104,7 +101,6 @@ Ponder.registry((event) => {
             scene.effects.indicateSuccess(util.grid.at(2, 1, -1))
 
             scene.idle(3)
-            world.moveDeployer(util.grid.at(4, 1, 3), -1, 25)
             scene.idle(10)
             world.toggleRedstonePower(lamp)
             // scene.effects.indicateRedstone(util.grid.at(4, 2, 4))
@@ -144,7 +140,6 @@ Ponder.registry((event) => {
 
             world.toggleRedstonePower(lamp)
             scene.idle(3)
-            world.moveDeployer(util.grid.at(4, 1, 3), 1, 25)
             scene.idle(15)
             scene.idle(10)
 
@@ -154,7 +149,6 @@ Ponder.registry((event) => {
             scene.effects.indicateSuccess(util.grid.at(2, 1, -1))
 
             scene.idle(3)
-            world.moveDeployer(util.grid.at(4, 1, 3), -1, 25)
             scene.idle(10)
 
             scene.overlay.showControls(

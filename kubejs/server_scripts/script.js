@@ -38,7 +38,6 @@ let CRD = (id, x) => MOD("create_dd", id, x)
 let CRC = (id, x) => MOD("create_connected", id, x)
 let UA = (id, x) => MOD("upgrade_aquatic", id, x)
 let CEI = (id,x) => MOD("create_enchantment_industry", id, x)
-let BE = (id,x) => MOD("beyond_earth", id, x)
 console.info('Starting to load KubeJS recipes...')
 
 ServerEvents.recipes(event => {
@@ -46,7 +45,6 @@ ServerEvents.recipes(event => {
 	beforeNuke(event)
 	unwantedRecipes(event)
 	tweaks(event)
-	waterstrainer(event)
 	project_red(event)
 	casing(event)
 	computercraft(event)
@@ -213,10 +211,9 @@ function unwantedRecipes(event) {
 	event.remove({ output: AE2('quartz_glass') })
 	event.remove({ output: CR('chromatic_compound') })
 	event.remove({ input: '#forge:coins' })
-	event.remove({ type: AE2('grinder') })
 	event.remove({ type: TE('press') })
 	event.remove({ id: /thermal:earth_charge\/.*/ })
-	event.remove({ id: /thermal:machine\/smelter\/.*dust/ })
+	event.remove({ id: /thermal:machines\/smelter\/.*dust/ })
 	event.remove({ id: /tconstruct:smeltery\/.*\/ore/ })
 	event.remove({ id: "tconstruct:tables/tinkers_forge" })
 	event.remove({ id: "tconstruct:tables/scorched_forge" })
@@ -274,24 +271,23 @@ function unwantedRecipes(event) {
 	// event.remove({ output: '#forge:gears/tin' })
 	// event.remove({ output: '#forge:gears/silver' })
 
-	event.remove({ id: TE('machine/pulverizer/pulverizer_cinnabar') })
-	event.remove({ id: TE('machine/smelter/smelter_alloy_signalum') })
-	event.remove({ id: TE('machine/smelter/smelter_alloy_lumium') })
-	event.remove({ id: TE('machine/smelter/smelter_alloy_electrum') })
-	event.remove({ id: TE('machine/smelter/smelter_alloy_enderium') })
-	event.remove({ id: TE('machine/smelter/smelter_alloy_invar') })
-	event.remove({ id: TE('machine/smelter/smelter_alloy_constantan') })
-	event.remove({ id: TE('machine/smelter/smelter_alloy_bronze') })
+	event.remove({ id: TE('machines/pulverizer/pulverizer_cinnabar') })
+	event.remove({ id: TE('machines/smelter/smelter_alloy_signalum') })
+	event.remove({ id: TE('machines/smelter/smelter_alloy_lumium') })
+	event.remove({ id: TE('machines/smelter/smelter_alloy_electrum') })
+	event.remove({ id: TE('machines/smelter/smelter_alloy_enderium') })
+	event.remove({ id: TE('machines/smelter/smelter_alloy_invar') })
+	event.remove({ id: TE('machines/smelter/smelter_alloy_constantan') })
+	event.remove({ id: TE('machines/smelter/smelter_alloy_bronze') })
 
 	event.remove({ id: TE('compat/create/smelter_create_alloy_brass') })
 	event.remove({ id: TE('compat/tconstruct/smelter_alloy_tconstruct_rose_gold_ingot') })
-	event.remove({ id: TE('machine/pulverizer/pulverizer_ender_pearl') })
+	event.remove({ id: TE('machines/pulverizer/pulverizer_ender_pearl') })
 	event.remove({ id: TE('storage/electrum_block') })
 	event.remove({ id: TE('storage/electrum_nugget_from_ingot') })
-	event.remove({ id: TE('machine/pulverizer/pulverizer_electrum_ingot_to_dust') })
+	event.remove({ id: TE('machines/pulverizer/pulverizer_electrum_ingot_to_dust') })
 	event.remove({ id: TE('parts/electrum_gear') })
 	event.remove({ id: AP('smelting/charcoal_block_from_logs_that_burn_smoking') })
-	//event.remove({ id: 'portality:generator' })
 
 	// event.remove({ input: TE('signalum_dust'), output: TE('signalum_ingot') })
 	// event.remove({ output: TE('signalum_dust'), input: TE('signalum_ingot') })
@@ -846,7 +842,7 @@ function tweaks(event) {
 		"output":{"infuse_type":"mekanism:redstone","amount":20}}
 	)
 
-	event.recipes.thermal.refinery([Fluid.of('kubejs:liquid_oil_gas', 100), Fluid.of('createdieselgenerators:gasoline', 100), Item.of('thermal:sulfur_dust').withChance(0.20)], Fluid.of('thermal:light_oil', 100)).energy(6000)
+	event.recipes.thermal.refinery([Fluid.of('kubejs:liquid_oil_gas', 100), Fluid.of('createdieselgenerators:gasoline', 100), Item.of('thermal:sulfur').withChance(0.20)], Fluid.of('thermal:light_oil', 100)).energy(6000)
 	event.recipes.thermal.refinery([Fluid.of('kubejs:liquid_oil_gas', 100), Fluid.of('createdieselgenerators:diesel', 100), Item.of('thermal:tar').withChance(0.20)], Fluid.of('thermal:heavy_oil', 100)).energy(6000)
 	event.recipes.thermal.refinery([Fluid.of('mekanism:ethene', 100)], Fluid.of('ad_astra:fuel', 100)).energy(9000)
 	event.remove({ id: 'mekanism:reaction/substrate/water_hydrogen' })
@@ -928,53 +924,13 @@ event.recipes.create.mixing(MEK('elite_control_circuit'), [Fluid.of("mekanism:hy
 	})
 }
 
-// ===== 恢复：compostables + waterstrainer..smartMachine（源自 1.18.2 源脚本 L796-3882） =====
+// ===== 恢复：compostables + smartMachine（源自 1.18.2 源脚本 L796-3882） =====
 ServerEvents.compostableRecipes(event=>{
 	event.add('kubejs:earth_slimy_fern_leaf',0.3)
 	event.add('kubejs:ender_slimy_fern_leaf',0.3)
 	event.add('kubejs:sky_slimy_fern_leaf',0.3)
 })
 
-
-function waterstrainer(event) {
-	event.remove({ id: 'waterstrainer:string_mesh' })
-	event.remove({ id: 'waterstrainer:iron_mesh' })
-	event.remove({ id: 'waterstrainer:obsidian_mesh' })
-	event.remove({ id: 'waterstrainer:strainer_survivalist' })
-	event.remove({ id: 'waterstrainer:strainer_survivalist_solid' })
-	event.remove({ id: 'waterstrainer:strainer_survivalist_reinforced' })
-	event.remove({ id: 'waterstrainer:strainer_fisherman' })
-	event.remove({ id: 'waterstrainer:strainer_fisherman_solid' })
-	event.remove({ id: 'waterstrainer:strainer_fisherman_reinforced' })
-
-// 	event.shaped('waterstrainer:strainer_survivalist', [
-// 		'SSS',
-// 		'MMM',
-// 		'SSS'
-// 	], {
-// 		M: FD('canvas'),
-// 		S: 'minecraft:stick'
-// 	})
-
-// 	event.shaped('waterstrainer:strainer_fisherman', [
-// 		'SSS',
-// 		'MMM',
-// 		'SSS'
-// 	], {
-// 		M: FD('canvas'),
-// 		S: MC('bamboo')
-// 	})
-
-// 	event.shaped('waterstrainer:strainer_fisherman_reinforced', [
-// 		'SSS',
-// 		'MAM',
-// 		'SSS'
-// 	], {
-// 		A: AC('neptunium_ingot'),
-// 		M: FD('canvas'),
-// 		S: MC('bamboo')
-// 	})
-}
 
 function project_red(event) {
 
@@ -1403,7 +1359,7 @@ function pipes(event) {
 
 function leather(event) {
 	//鞣制皮革
-	donutCraft(event, '8x minecraft:leather', 'thermal:niter_dust', MC("rotten_flesh"))
+	donutCraft(event, '8x minecraft:leather', 'thermal:niter', MC("rotten_flesh"))
 	donutCraft(event, '8x minecraft:leather', 'occultism:tallow', MC("rotten_flesh"))
 
 	//腐肉制取
@@ -2432,20 +2388,20 @@ bedrock_cobblegen(FA("dark_rune_block"), FA("darkstone"))
 	
 // 沙子洗涤
 event.recipes.create.splashing([// 白沙
-	Item.of('thermal:quartz_dust').withChance(0.25)
+	Item.of('mekanism:dust_quartz').withChance(0.25)
 ], 'biomesoplenty:white_sand')
 
 event.recipes.create.splashing([// 橙沙
-	Item.of('thermal:quartz_dust').withChance(0.25),
+	Item.of('mekanism:dust_quartz').withChance(0.25),
 	Item.of('minecraft:iron_nugget').withChance(0.125)
 ], 'biomesoplenty:orange_sand')
 
 event.recipes.create.splashing([// 黑沙
-	Item.of('thermal:quartz_dust').withChance(0.25),
+	Item.of('mekanism:dust_quartz').withChance(0.25),
 	Item.of('vintageimprovements:vanadium_nugget').withChance(0.125)
 ], 'biomesoplenty:black_sand')
 
-event.recipes.create.mixing(['biomesoplenty:white_sand'], ['thermal:quartz_dust', 'minecraft:sand'])
+event.recipes.create.mixing(['biomesoplenty:white_sand'], ['mekanism:dust_quartz', 'minecraft:sand'])
 event.recipes.create.mixing(['biomesoplenty:orange_sand'], ['minecraft:iron_nugget', 'biomesoplenty:white_sand'])
 
 event.recipes.create.mixing([MC('mud')], [MC('dirt'), Fluid.of(MC("water"), 200)])
@@ -2675,7 +2631,6 @@ function andesiteMachine(event) {
 	andesite_machine('create:portable_storage_interface', 2)
 	andesite_machine('create:encased_fan', 1, CR('propeller'))
 	andesite_machine('create:mechanical_press', 1, MC('iron_block'))
-	// andesite_machine('waterstrainer:strainer_base', 1, MC('iron_bars')) // waterstrainer 未安装
 	andesite_machine('create:mechanical_mixer', 1, CR('whisk'))
 	andesite_machine('create:mechanical_drill', 1, TE('drill_head'))
 	andesite_machine('create:mechanical_saw', 1, TE('saw_blade'))
@@ -2713,7 +2668,7 @@ function rubberMatters(event) {
 	event.remove({ id: 'thermal:rubber_from_dandelion' })
 	event.remove({ id: 'thermal:rubber_from_vine' })
 	event.remove({ id: /create_dd:emptying\/sap_from_.*/ })
-	event.remove({ id: 'create_dd:mixing/rubber' })
+	event.remove({ id: 'create_dd:mixing/raw_rubber' })
 	event.remove({ id: 'create_dd:compacting/crystallized_sap' })
 	event.remove({ input: 'create_dd:raw_rubber' })
 	event.remove({ input: 'create_dd:rubber' })
@@ -2920,7 +2875,7 @@ function electronTube(event) {
 	// grow(KJ("small_arcane_crystal"), KJ('growing_small_arcane_crystal'), KJ('purified_arcane_crystal'), "arcane_crystal")
 
 	event.recipes.create.mixing(Fluid.of(KJ("sky_stone"), 500), [AE2('sky_dust', 4), Fluid.of(MC('water'), 500)])
-	event.recipes.create.mixing(CR('polished_rose_quartz'), [[AE2('certus_quartz_crystal'), KJ('purified_certus_quartz_crystal')], Fluid.of(TE("redstone"), 250)])
+	event.recipes.create.mixing(CR('polished_rose_quartz'), [AE2('certus_quartz_crystal'), Fluid.of(TE("redstone"), 250)])
 
 	// 不稳红石
 	event.custom({
@@ -3172,7 +3127,16 @@ function overclocking_mechanism(event) {
 	event.remove({ input: 'mekanism:energy_tablet' })
 	event.remove({ output: 'mekanism:modification_station' })
 	event.remove({ output: 'mekanismgenerators:fusion_reactor_frame' })
-	event.remove({ output: '#minecraft:freeze_immune_wearables' })
+	// Keep the 1.18.2 restriction without catching MekaSuit, which joined this tag in 1.20.1.
+	event.remove({ output: 'minecraft:leather_boots' })
+	event.remove({ output: 'minecraft:leather_leggings' })
+	event.remove({ output: 'minecraft:leather_chestplate' })
+	event.remove({ output: 'minecraft:leather_helmet' })
+	event.remove({ output: 'minecraft:leather_horse_armor' })
+	event.remove({ output: 'tconstruct:travelers_boots' })
+	event.remove({ output: 'tconstruct:travelers_leggings' })
+	event.remove({ output: 'tconstruct:travelers_chestplate' })
+	event.remove({ output: 'tconstruct:travelers_helmet' })
 	event.remove({ output: /^mekanism:module_[a-z_]+_unit$/ })
 	event.remove({ output: /^mekanismgenerators:module_[a-z_]+_unit$/ })
 	event.remove({ id: /^mekanism:module_[a-z_]+_unit$/ })
@@ -3354,7 +3318,7 @@ function smartMachine(event) {
 	event.remove({ output: 'mekanism:ingot_refined_glowstone' })
 	event.remove({ input: 'mekanism:ingot_refined_glowstone' })
 	event.remove({ id: 'create:crushing/diorite_recycling' })
-	event.remove({ id: 'mekanism:chemical_infusing/sulfuric_trioxide' })
+	event.remove({ id: 'mekanism:chemical_infusing/sulfur_trioxide' })
 	event.remove({ id: 'mekanism:chemical_infusing/sulfuric_acid' })
 	event.remove({ id: 'mekanism:processing/steel/enriched_iron_to_dust' })
 	event.remove({ id: 'mekanism:metallurgic_infuser' })
@@ -3364,6 +3328,9 @@ function smartMachine(event) {
 	event.remove({ output:'mekanism:antiprotonic_nucleosynthesizer'})
 	event.replaceInput({mod: 'mekanism'}, MEK('steel_casing'), KJ('overclocking_machine'))
 
+	// This intentionally preserves the 1.18.2 nine-output tuff recipe.  It has
+	// been verified in JEI in the current instance.
+	event.remove({ input: 'minecraft:tuff', type: 'create:crushing' })
 	event.custom({ // 凝灰岩
 		"type": "thermal:rock_gen",
 		"adjacent": MC("packed_ice"),
@@ -3379,15 +3346,14 @@ function smartMachine(event) {
     		{"item": "minecraft:gold_nugget","chance": 0.1},
 			{"item": "create:copper_nugget","chance": 0.1},
     		{"item": "create:zinc_nugget","chance": 0.1},
-    		{"item": "minecraft:iron_nugget","chance": 0.1},
+			{"item": "minecraft:iron_nugget","chance": 0.1},
 			{"item": "thermal:nickel_nugget","chance": 0.1},
 			{"item": "create_dd:tin_nugget","chance": 0.1},
 			{"item": "vintageimprovements:vanadium_nugget", "chance": 0.1},
 			{"item": "thermal:lead_nugget", "chance": 0.1}
-  		],
-  		"processingTime": 350
+		],
+		"processingTime": 350
 	}).id('create:crushing/tuff')
-	event.remove({ input: 'minecraft:tuff' ,type: 'create:crushing'})
 	//合金
 	event.recipes.create.mixing([Fluid.of('kubejs:condensed_skyslime', 100)], [Fluid.of('tconstruct:sky_slime', 300)]).superheated()	
 	event.recipes.create.filling(KJ('incomplete_alloy_reinforced'), [MEK('alloy_infused'), Fluid.of('kubejs:condensed_skyslime', 100)])
@@ -3592,7 +3558,7 @@ function ultimateStage(event) {
 
 	let zero = event.recipes.create.deploying(KJ('computation_matrix'), [KJ('computation_matrix'), KJ('bzero')]);
 	let one = event.recipes.create.deploying(KJ('computation_matrix'), [KJ('computation_matrix'), KJ('bone')]);
-	let enter = event.recipes.create.deploying(KJ('advanced_computation_matrix'), [KJ('advanced_computation_matrix'), '#minecraft:buttons']);
+	let enter = event.recipes.create.deploying(KJ('computation_matrix'), [KJ('computation_matrix'), '#minecraft:buttons']);
 	event.recipes.create.sequenced_assembly([
 	Item.of(KJ('advanced_computation_matrix')),
 	], KJ('computation_matrix'), [
@@ -3927,7 +3893,6 @@ function invarMachine(event) {
 	let dyes = [MC('orange_dye'), MC('magenta_dye'), MC('light_blue_dye'), MC('yellow_dye'), MC('lime_dye'), MC('pink_dye'), MC('cyan_dye'), MC('purple_dye'), MC('blue_dye'), MC('brown_dye'), MC('green_dye'), MC('red_dye')]
 	event.recipes.create.compacting('1x ' + KJ("dye_entangled_singularity"), [dyes, Item.of(AE2('quantum_entangled_singularity'), 1)])
 	event.recipes.create.compacting('1x ' + KJ("dye_entangled_singularity"), [dyes, Item.of(KJ('quantum_entangled_singularity_stackable'), 1)])
-	event.custom({ type: 'create:conversion', ingredients: [AE2("singularity")], results: [AE2('quantum_entangled_singularity')] })
 	event.recipes.create.crushing([
 		Item.of(AE2("red_paint_ball"), 1).withChance(.90),
 		Item.of(AE2("yellow_paint_ball"), 1).withChance(.80),
@@ -4161,7 +4126,6 @@ function enderMachine(event) {
 	ender_machine("enderstorage:ender_chest", 1, MC('chest'))
 	ender_machine("enderstorage:ender_tank", 1, CR('fluid_tank'))
 	ender_machine("createutilities:void_battery", 1, "createaddition:modular_accumulator")
-	//ender_machine("portality:controller", 1, MC('diamond'))
 	ender_machine(TE("upgrade_augment_3"), 1, MC('redstone'))
 	ender_machine(AE2("quantum_ring"), 1, AE2('energy_cell'))
 	ender_machine(AE2("quantum_link"), 1, AE2('fluix_pearl'))
@@ -4383,7 +4347,7 @@ function madMaths(event) {
 				"item": KJ(e + '_cast')
 			},
 			"fluid": {
-				"name": "kubejs:raw_logic",
+				"fluid": "kubejs:raw_logic",
 				"amount": 1
 			},
 			"result": Item.of(KJ(e)).toJson(),
@@ -4456,7 +4420,7 @@ function madMaths(event) {
 		"type": "tconstruct:casting_basin",
 		"cast_consumed": true,
 		"fluid": {
-			"name": "kubejs:matrix",
+			"fluid": "kubejs:matrix",
 			"amount": 1000
 		},
 		"result": Item.of(KJ("computation_matrix")).toJson(),
@@ -4531,7 +4495,7 @@ function alchemy(event) {
 		KJ('coke_chunk'),
 	], TE('coal_coke'), [
 		event.recipes.create.filling(t, [t, Fluid.of(MC("water"), 250)]),
-		event.recipes.create.pressing(Item.of(t), Ingredient.of(t)).processingTime(100)
+		event.recipes.create.cutting(t, t).processingTime(100)
 	]).transitionalItem(t)
 		.loops(2)
 		.id('kubejs:coke_cutting')
@@ -4605,7 +4569,7 @@ function alchemy(event) {
 	event.recipes.thermal.numismatic_fuel(TE('gold_coin')).energy(6400000)
 	event.recipes.thermal.numismatic_fuel('ad_astra:ice_shard').energy(2000000)
 
-	event.remove({ id: TE("machine/pyrolyzer/pyrolyzer_logs") })
+	event.remove({ id: TE("machines/pyrolyzer/pyrolyzer_logs") })
 	event.remove({ id: CR("crushing/obsidian") })
 	// event.remove({ type: TE("sawmill") })
 	// event.remove({ type: TE("centrifuge") })
@@ -4665,7 +4629,7 @@ function alchemy(event) {
 		let jsonOut = []
 		if (outputs[0] > 0)
 			jsonOut.push({
-				"item": "thermal:slag",
+				"item": "darkerdepths:ash",
 				"count": outputs[0]
 			})
 		if (outputs[1] > 0)
@@ -4712,12 +4676,9 @@ function alchemy(event) {
 	// }
 
 	// recompact(CR("powdered_obsidian"), MC("obsidian"))
-	// recompact(TE("diamond_dust"), MC("diamond"))
-	// recompact(TE("emerald_dust"), MC("emerald"))
-	// recompact(TE("lapis_dust"), MC("lapis_lazuli"))
-	// recompact(TE("sulfur_dust"), TE("sulfur"))
-	// recompact(TE("apatite_dust"), TE("apatite"))
-	// recompact(TE("niter_dust"), TE("niter"))
+	// recompact(MEK("dust_diamond"), MC("diamond"))
+	// recompact(MEK("dust_emerald"), MC("emerald"))
+	// recompact(MEK("dust_lapis_lazuli"), MC("lapis_lazuli"))
 	// recompact(TE("sapphire_dust"), TE("sapphire"))
 	// recompact(TE("ruby_dust"), TE("ruby"))
 	// recompact("forbidden_arcanus:arcane_crystal_dust", "forbidden_arcanus:arcane_crystal")
@@ -4883,7 +4844,7 @@ function oil(event) {
 				"amount": 100
 			},
 			{
-				"item": "thermal:sulfur_dust",
+				"item": "thermal:sulfur",
 				"chance": 0.20
 			}
 		],
@@ -4932,7 +4893,7 @@ function oil(event) {
 
 
 	// 航空燃油
-	event.remove({ id: "ad_astra:fuel_refining/fuel_from_oil" })
+	event.remove({ id: "ad_astra:refining/fuel_from_refining_oil" })
 	// 机动蒸馏
 	event.custom({
 		"type": "createdieselgenerators:distillation",
@@ -5001,8 +4962,6 @@ function oil(event) {
 	// 移除Create: Diesel Generators的植物油冲突配方
 	event.remove({ id: "createdieselgenerators:compacting/plant_oil" });
 
-	//event.recipes.thermal.compression_fuel(Fluid.of("advancedrocketry:hydrogen")).energy(100000)
-	//event.recipes.thermal.compression_fuel(Fluid.of("advancedrocketry:oxygen")).energy(10000)
 
 }
 
@@ -5018,7 +4977,6 @@ function rocketScience(event) {
 	event.remove({ output: 'ad_astra:rocket_fin' })
 	event.remove({ output: 'ad_astra:iron_rod' })
 	event.remove({ output: 'ad_astra:oxygen_gear' })
-	event.remove({ type: 'ad_astra:compressor' })
 
 	let gear = TE("diamond_gear")
 	let plastic = KJ("matter_plastics")
@@ -5108,7 +5066,7 @@ function rocketScience(event) {
 
 
 	// 钢引擎
-	event.remove({ id: 'ad_astra:iron_engine' })
+	event.remove({ id: 'ad_astra:steel_engine' })
 	event.recipes.create.mechanical_crafting("ad_astra:steel_engine", [
 		'ABC',
 	], {
@@ -5118,7 +5076,7 @@ function rocketScience(event) {
 	})
 
 	// 钢储罐
-	event.remove({ id: 'ad_astra:iron_tank' })
+	event.remove({ id: 'ad_astra:steel_tank' })
 	event.custom({
 		"type": "vintageimprovements:turning",
 		"ingredients": [
@@ -5136,7 +5094,7 @@ function rocketScience(event) {
 
 
 	// 戴斯引擎
-	event.remove({ id: 'ad_astra:gold_engine' })
+	event.remove({ id: 'ad_astra:desh_engine' })
 	event.recipes.create.mechanical_crafting("ad_astra:desh_engine", [
 		'ABC',
 	], {
@@ -5146,7 +5104,7 @@ function rocketScience(event) {
 	})
 
 	// 戴斯储罐
-	event.remove({ id: 'ad_astra:gold_tank' })
+	event.remove({ id: 'ad_astra:desh_tank' })
 	event.custom({
 		"type": "vintageimprovements:turning",
 		"ingredients": [
@@ -5164,7 +5122,7 @@ function rocketScience(event) {
 
 
 	// 紫金引擎
-	event.remove({ id: 'ad_astra:diamond_engine' })
+	event.remove({ id: 'ad_astra:ostrum_engine' })
 	event.recipes.create.mechanical_crafting("ad_astra:ostrum_engine", [
 		'ABC',
 	], {
@@ -5174,7 +5132,7 @@ function rocketScience(event) {
 	})
 
 	// 紫金储罐
-	event.remove({ id: 'ad_astra:diamond_tank' })
+	event.remove({ id: 'ad_astra:ostrum_tank' })
 	event.custom({
 		"type": "vintageimprovements:turning",
 		"ingredients": [
@@ -5932,8 +5890,10 @@ function unify(event) {
 	event.remove({ id: "createbigcannons:melting/melt_steel_ingot" });
 	event.remove({ id: "createbigcannons:melting/melt_steel_nugget" });
 
-	event.remove({ id: "ad_astra:desh_plate" });
-	event.remove({ id: "ad_astra:iron_plate" });
+	event.remove({ id: "ad_astra:compressing/desh_plate_from_compressing_desh_ingots" });
+	event.remove({ id: "ad_astra:compressing/desh_plate_from_compressing_desh_blocks" });
+	event.remove({ id: "ad_astra:compressing/iron_plate_from_compressing_iron_ingot" });
+	event.remove({ id: "ad_astra:compressing/iron_plate_from_compressing_iron_block" });
 
 	const blackList = {
 		not: [
@@ -6096,25 +6056,25 @@ function unify(event) {
 	event.recipes.create.milling([Item.of('2x occultism:crushed_end_stone')], 'minecraft:end_stone').processingTime(100);
 
 	// 硬化硝
-	event.remove({ id: "createbigcannons:milling/alloy_nethersteel_cast_iron" });
-	event.recipes.create.milling([Item.of('2x thermal:niter_dust')], 'createbigcannons:hardened_nitro').processingTime(100);
+	event.remove({ id: "createbigcannons:milling/nitropowder" });
+	event.recipes.create.milling([Item.of('2x createbigcannons:nitropowder')], 'createbigcannons:hardened_nitro').processingTime(100).id('kubejs:nitropowder_from_hardened_nitro');
 
 	// 硫粉
-	replaceIO("#forge:dusts/sulfur", "thermal:sulfur_dust");
-	event.recipes.create.milling(["thermal:sulfur_dust"], "#forge:gems/sulfur").processingTime(200);
+	replaceIO("#forge:dusts/sulfur", "mekanism:dust_sulfur");
+	event.recipes.create.milling(["mekanism:dust_sulfur"], "#forge:gems/sulfur").processingTime(200);
 
 	// 硝粉
 	event.remove({ output: "vintageimprovements:sulfur_block" });
-	replaceIO("#forge:dusts/saltpeter", "thermal:niter_dust");
-	event.recipes.create.milling(["thermal:niter_dust"], "#forge:gems/niter").processingTime(200);
+	replaceIO("#forge:dusts/saltpeter", "createbigcannons:nitropowder");
+	event.recipes.create.milling(["createbigcannons:nitropowder"], "#forge:gems/niter").processingTime(200);
 
 	// 磷灰石粉
-	replaceIO("#forge:dusts/apatite", "thermal:apatite_dust");
-	event.recipes.create.milling(["thermal:apatite_dust"], "#forge:gems/apatite").processingTime(200);
+	replaceIO("#forge:dusts/apatite", "thermal:apatite");
+	event.recipes.create.milling(["thermal:apatite"], "#forge:ores/apatite").processingTime(200);
 
 	// 石英粉
-	replaceIO("#forge:dusts/quartz", "thermal:quartz_dust");
-	event.recipes.create.milling(["thermal:quartz_dust"], "#forge:gems/quartz").processingTime(200);
+	replaceIO("#forge:dusts/quartz", "mekanism:dust_quartz");
+	event.recipes.create.milling(["mekanism:dust_quartz"], "#forge:gems/quartz").processingTime(200);
 
 	// 福鲁伊克斯石英粉
 	replaceIO("#forge:dusts/fluix", "ae2:fluix_dust");
@@ -6192,7 +6152,7 @@ function unify(event) {
 	event.stonecutting(Item.of('ad_astra:mars_ostrum_ore'), Item.of('ad_astra:raw_ostrum'))
 	event.stonecutting(Item.of('ad_astra:venus_calorite_ore'), Item.of('ad_astra:raw_calorite'))
 
-	event.replaceInput({ id: "create:milling/lapis_lazuli" }, MC("lapis_lazuli"), TE("lapis_dust"))
+	event.replaceInput({ id: "create:milling/lapis_lazuli" }, MC("lapis_lazuli"), MEK("dust_lapis_lazuli"))
 
 	event.replaceInput({}, MC("quartz"), AE2("#all_nether_quartz"));
 	event.replaceInput({}, F("#gems/quartz"), AE2("#all_nether_quartz"));
@@ -6208,8 +6168,6 @@ function unify(event) {
 	replaceIO('create:refined_radiance', 'create_dd:refined_radiance');
 	replaceIO('create:shadow_steel', 'create_dd:shadow_steel');
 	replaceIO('#forge:ingots/shadow_steel', 'create_dd:shadow_steel');
-
-	event.remove({ output: "thermal:cinnabar_dust" });
 
 	event.remove({ output: "occultism:silver_ingot" });
 
@@ -6416,7 +6374,7 @@ function unify(event) {
 		"minecraft:copper_ingot",
 		"create:copper_nugget",
 		"",
-		"thermal:copper_dust",
+		"mekanism:dust_copper",
 		"tconstruct:molten_copper",
 		"thermal:copper_gear",
 		"create:copper_sheet",
@@ -6438,7 +6396,7 @@ function unify(event) {
 		"",
 		"",
 		"minecraft:diamond",
-		"thermal:diamond_dust",
+		"mekanism:dust_diamond",
 		"tconstruct:molten_diamond",
 		"thermal:diamond_gear",
 		"",
@@ -6527,7 +6485,7 @@ function unify(event) {
 		"",
 		"",
 		"minecraft:emerald",
-		"thermal:emerald_dust",
+		"mekanism:dust_emerald",
 		"tconstruct:molten_emerald",
 		"thermal:emerald_gear",
 		"",
@@ -6593,7 +6551,7 @@ function unify(event) {
 		"minecraft:gold_ingot",
 		"minecraft:gold_nugget",
 		"",
-		"thermal:gold_dust",
+		"mekanism:dust_gold",
 		"tconstruct:molten_gold",
 		"thermal:gold_gear",
 		"create:golden_sheet",
@@ -6637,7 +6595,7 @@ function unify(event) {
 		"minecraft:iron_ingot",
 		"minecraft:iron_nugget",
 		"",
-		"thermal:iron_dust",
+		"mekanism:dust_iron",
 		"tconstruct:molten_iron",
 		"thermal:iron_gear",
 		"create:iron_sheet",
@@ -6659,7 +6617,7 @@ function unify(event) {
 		"",
 		"",
 		"minecraft:lapis_lazuli",
-		"thermal:lapis_dust",
+		"mekanism:dust_lapis_lazuli",
 		"",
 		"thermal:lapis_gear",
 		"",
@@ -6687,7 +6645,7 @@ function unify(event) {
 		"thermal:lead_plate",
 		"vintageimprovements:lead_rod",
 		"create:crushed_raw_lead",
-		"vintageimprovements:lead_spring",
+		"vintageimprovements:lead_wire",
 		"vintageimprovements:lead_spring",
 		"minecraft:iron_nugget",
 		"tconstruct:molten_iron"
@@ -6813,7 +6771,7 @@ function unify(event) {
 		"",
 		"",
 		"minecraft:quartz",
-		"thermal:quartz_dust",
+		"mekanism:dust_quartz",
 		"tconstruct:molten_quartz",
 		"thermal:quartz_gear",
 		"",
@@ -6886,7 +6844,7 @@ function unify(event) {
 		"vintageimprovements:steel_rod",
 		"",
 		"vintageimprovements:steel_wire",
-		"vintageimprovements:steel_wire",
+		"vintageimprovements:steel_spring",
 		"",
 		""
 	);
@@ -7266,7 +7224,7 @@ const tinkersPlate = (name, item, fluid, gem, event) => {
 			type: 'tconstruct:casting_table',
 			cast: { item: 'tconstruct:plate_sand_cast' },
 			cast_consumed: true,
-			fluid: { name: fluid, amount: gem ? 100 : 90 },
+			fluid: { fluid: fluid, amount: gem ? 100 : 90 },
 			result: Item.of(item),
 			cooling_time: 60
 		}).id(`unify:tconstruct/plate/single_${name}`);
@@ -7275,7 +7233,7 @@ const tinkersPlate = (name, item, fluid, gem, event) => {
 			type: 'tconstruct:casting_table',
 			cast: { item: 'tconstruct:plate_cast' },
 			cast_consumed: false,
-			fluid: { name: fluid, amount: gem ? 100 : 90 },
+			fluid: { fluid: fluid, amount: gem ? 100 : 90 },
 			result: item,
 			cooling_time: 60
 		}).id(`unify:tconstruct/plate/multi_${name}`);
@@ -7337,7 +7295,7 @@ const tinkersRod = (name, item, fluid, event) => {
 			type: 'tconstruct:casting_table',
 			cast: { item: 'tconstruct:rod_sand_cast' },
 			cast_consumed: true,
-			fluid: { name: fluid, amount: 45 },
+			fluid: { fluid: fluid, amount: 45 },
 			result: Item.of(item),
 			cooling_time: 60
 		}).id(`unify:tconstruct/rod/single_${name}`);
@@ -7346,7 +7304,7 @@ const tinkersRod = (name, item, fluid, event) => {
 			type: 'tconstruct:casting_table',
 			cast: { item: 'tconstruct:rod_cast' },
 			cast_consumed: false,
-			fluid: { name: fluid, amount: 45 },
+			fluid: { fluid: fluid, amount: 45 },
 			result: item,
 			cooling_time: 60
 		}).id(`unify:tconstruct/rod/multi_${name}`);
@@ -7382,7 +7340,7 @@ const tinkersWire = (name, item, fluid, event) => {
 			type: 'tconstruct:casting_table',
 			cast: { item: 'tconstruct:wire_sand_cast' },
 			cast_consumed: true,
-			fluid: { name: fluid, amount: 45 },
+			fluid: { fluid: fluid, amount: 45 },
 			result: Item.of(item),
 			cooling_time: 60
 		}).id(`unify:tconstruct/wire/single_${name}`);
@@ -7391,7 +7349,7 @@ const tinkersWire = (name, item, fluid, event) => {
 			type: 'tconstruct:casting_table',
 			cast: { item: 'tconstruct:wire_cast' },
 			cast_consumed: false,
-			fluid: { name: fluid, amount: 45 },
+			fluid: { fluid: fluid, amount: 45 },
 			result: item,
 			cooling_time: 60
 		}).id(`unify:tconstruct/wire/multi_${name}`);
@@ -7474,7 +7432,7 @@ const tinkersGear = (name, item, fluid, gem, event) => {
 			type: 'tconstruct:casting_table',
 			cast: { item: 'tconstruct:gear_sand_cast' },
 			cast_consumed: true,
-			fluid: { name: fluid, amount: gem ? 100 : 90 },
+			fluid: { fluid: fluid, amount: gem ? 100 : 90 },
 			result: Item.of(item),
 			cooling_time: 60
 		}).id(`unify:tconstruct/gear/single_${name}`);
@@ -7483,7 +7441,7 @@ const tinkersGear = (name, item, fluid, gem, event) => {
 			type: 'tconstruct:casting_table',
 			cast: { item: 'tconstruct:gear_cast' },
 			cast_consumed: false,
-			fluid: { name: fluid, amount: gem ? 100 : 90 },
+			fluid: { fluid: fluid, amount: gem ? 100 : 90 },
 			result: item,
 			cooling_time: 60
 		}).id(`unify:tconstruct/gear/multi_${name}`);
@@ -7996,7 +7954,7 @@ const Blocks = (name, item, fluid, gem, event) => {
 	if (name !== "quartz") {
 		event.custom({
 			type: 'tconstruct:casting_basin',
-			fluid: { name: fluid, amount: gem ? 900 : 810 },
+			fluid: { fluid: fluid, amount: gem ? 900 : 810 },
 			result: Item.of(item),
 			cooling_time: 200
 		}).id(`unify:tconstruct/storage_block/${name}`);
@@ -8036,7 +7994,7 @@ const tinkersIngot = (name, item, fluid, gem, event) => {
 			type: 'tconstruct:casting_table',
 			cast: { item: 'tconstruct:ingot_sand_cast' },
 			cast_consumed: true,
-			fluid: { name: fluid, amount: gem ? 100 : 90 },
+			fluid: { fluid: fluid, amount: gem ? 100 : 90 },
 			result: Item.of(item),
 			cooling_time: 90
 		}).id(`unify:tconstruct/ingot/single_${name}`);
@@ -8045,7 +8003,7 @@ const tinkersIngot = (name, item, fluid, gem, event) => {
 			type: 'tconstruct:casting_table',
 			cast: { item: 'tconstruct:ingot_cast' },
 			cast_consumed: false,
-			fluid: { name: fluid, amount: gem ? 100 : 90 },
+			fluid: { fluid: fluid, amount: gem ? 100 : 90 },
 			result: item,
 			cooling_time: 90
 		}).id(`unify:tconstruct/ingot/multi_${name}`);

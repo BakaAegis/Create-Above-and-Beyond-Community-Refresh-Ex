@@ -3,7 +3,7 @@
         "ctm_version": 1,
         "type": "ctm",
         "textures": [
-            "advancedrocketry:blocks/scaffold-ctm"
+            "kubejs:block/rocket/scaffold"
         ]
     }
 }

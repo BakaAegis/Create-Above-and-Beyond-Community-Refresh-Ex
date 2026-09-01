@@ -80,7 +80,6 @@ ServerEvents.tags('item', event => {
 	event.get("forbidden_arcanus:indestructible_blacklisted")
 		.add(/exchangers:.*/)
 		.add(/reliquary:.*/)
-		.add(/waterstrainer:.*/)
 		.add(OC("#miners/ores"))
 		.add(PR_C("draw_plate"))
 		.add(PR_C("multimeter"))
@@ -129,7 +128,6 @@ ServerEvents.tags('item', event => {
 		.add(/kubejs:failed_alchemy.*/)
 		.add(/ftblibrary.*/)
 		.add(/projectred-core.*/)
-		.add(/waterstrainer.*/)
 		.add(/ftbquests.*/)
 		.add(/occultism.*/)
 		.add(/tconstruct:molten_.*_bucket/)
@@ -144,7 +142,6 @@ ServerEvents.tags('item', event => {
 		.add("culinaryconstruct:food_bowl")
 		.add("patchouli:guide_book")
 		.add("randomium:randomium")
-		// .add("portality:generator")
 		.add("kubejs:ponder_laser_lamp_on")
 		.add("kubejs:ponder_laser_lamp")
 		.add("chiselsandbits:block_bit")
@@ -173,8 +170,13 @@ ServerEvents.tags('item', event => {
 		.add('#thermal:crafting/dies')
 
 
+	// Thermal 1.20.1 exposes these mined materials without the old *_dust IDs.
+	event.get('forge:gems/apatite').add('thermal:apatite')
+	event.get('forge:gems/niter').add('thermal:niter')
+	event.get('forge:gems/sulfur').add('thermal:sulfur')
+	event.get('forge:dusts/apatite').add('thermal:apatite')
+
 	event.get('forge:dusts/saltpeter')
-		.add('thermal:niter_dust')
 		.add('createbigcannons:nitropowder')
 
 	event.get('createbigcannons:nitropowder')
