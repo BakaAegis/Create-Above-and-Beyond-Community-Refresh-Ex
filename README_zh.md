@@ -28,7 +28,7 @@
 
 感谢 Ein_Name 提供美工和建议。
 
-感谢 Qi-Month、Vanilla、Keyxel、Crpbnrz 提供技术支持。
+感谢 Vanilla、Keyxel、Crpbnrz 提供技术支持。
 
 感谢 Kristin_Ketra 提供建议。
 
