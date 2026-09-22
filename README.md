@@ -35,7 +35,7 @@ Mekanism 内容经过大幅重构，并与 Create 紧密适配，实现了化学
 
 感谢 ein_Name 负责美术工作并提供设计建议。
 
-感谢 Qi-Month、Vanilla、Keyxel 和 Crpbnrz 提供技术支持。
+感谢 Vanilla、Keyxel 和 Crpbnrz 提供技术支持。
 
 感谢 Kristin_Ketra 提供建议与反馈。
 
