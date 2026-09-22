@@ -37,7 +37,7 @@ Thanks to Original CABR Developing Team, they made the original verison of this 
 
 Thanks to Ein_Name for making the icon and giving some ideas.
 
-Thanks to Qi-Month, Vanilla, Keyxel, Crpbnrz for technical support.
+Thanks to Vanilla, Keyxel, Crpbnrz for technical support.
 
 Thanks to Kristin_Ketra for giving ideas. 
 
